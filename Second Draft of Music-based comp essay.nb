@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    125457,       3322]
-NotebookOptionsPosition[    116169,       3175]
-NotebookOutlinePosition[    116512,       3190]
-CellTagsIndexPosition[    116469,       3187]
+NotebookDataLength[    130210,       3438]
+NotebookOptionsPosition[    120791,       3288]
+NotebookOutlinePosition[    121134,       3303]
+CellTagsIndexPosition[    121091,       3300]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2430,15 +2430,16 @@ Cell[BoxData[
       RowBox[{
        RowBox[{"Vertex", "[", "4", "]"}], "[", "2", "]"}], ",", " ", 
       RowBox[{
-       RowBox[{"Vertex", "[", "4", "]"}], "[", "5", "]"}]}], " ", "]"}]}], 
-   "\[IndentingNewLine]", "]"}], "]"}]], "Input",
+       RowBox[{"Vertex", "[", "4", "]"}], "[", "5", "]"}], " ", ",", " ", 
+      RowBox[{"V", "[", "1", "]"}]}], "]"}]}], "\[IndentingNewLine]", "]"}], 
+  "]"}]], "Input",
  CellChangeTimes->{
   3.770636795515442*^9, 3.770636852530166*^9, {3.770636990145974*^9, 
    3.7706369986720414`*^9}, {3.7706371115603423`*^9, 3.770637173960692*^9}, {
    3.7706378085938044`*^9, 3.7706378204982657`*^9}, {3.7706378724541907`*^9, 
-   3.770637875550393*^9}},
+   3.770637875550393*^9}, {3.770639866743801*^9, 3.7706398767989473`*^9}},
  CellLabel->
-  "In[297]:=",ExpressionUUID->"919d7898-fe6f-47df-9823-c49f9b78109c"],
+  "In[307]:=",ExpressionUUID->"919d7898-fe6f-47df-9823-c49f9b78109c"],
 
 Cell[BoxData[
  FormBox[
@@ -2504,13 +2505,14 @@ Cell[BoxData[
           RowBox[{"(", "2", ")"}]}], ",", 
          RowBox[{
           RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
-          RowBox[{"(", "5", ")"}]}]}], ")"}]}]}], ")"}]}], ")"}], 
+          RowBox[{"(", "5", ")"}]}], ",", 
+         RowBox[{"V", "(", "1", ")"}]}], ")"}]}]}], ")"}]}], ")"}], 
   TraditionalForm]], "Output",
  CellChangeTimes->{3.7706368532566977`*^9, 3.770636999727784*^9, 
   3.7706370781806173`*^9, 3.7706371253951716`*^9, 3.7706371588609433`*^9, 
-  3.770637822970039*^9, 3.7706378768433104`*^9},
+  3.770637822970039*^9, 3.7706378768433104`*^9, 3.7706398779848084`*^9},
  CellLabel->
-  "Out[297]=",ExpressionUUID->"14d68da1-7f4a-4173-9875-3d95a7d8273e"]
+  "Out[307]=",ExpressionUUID->"d2e3f8f4-3399-480b-8ef0-3567be858926"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2737,23 +2739,15 @@ Cell[BoxData[{
        RowBox[{
         RowBox[{"Vertex", "[", "4", "]"}], "[", "2", "]"}], ",", " ", 
        RowBox[{
-        RowBox[{"Vertex", "[", "4", "]"}], "[", "4", "]"}], ",", " ", 
-       RowBox[{"F", "[", 
-        RowBox[{"2", ",", " ", 
-         RowBox[{"{", "3", "}"}]}], "]"}]}], "]"}], ",", 
-     "\[IndentingNewLine]", 
+        RowBox[{"Vertex", "[", "4", "]"}], "[", "4", "]"}]}], " ", "]"}], ",",
+      "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{"Propagator", "[", "Internal", "]"}], "[", 
       RowBox[{
        RowBox[{
         RowBox[{"Vertex", "[", "4", "]"}], "[", "2", "]"}], ",", " ", 
        RowBox[{
-        RowBox[{"Vertex", "[", "4", "]"}], "[", "5", "]"}], ",", " ", 
-       RowBox[{"-", 
-        RowBox[{"F", "[", 
-         RowBox[{"3", ",", " ", 
-          RowBox[{"{", 
-           RowBox[{"3", ","}], "}"}]}], "]"}]}]}], "]"}], ",", 
+        RowBox[{"Vertex", "[", "4", "]"}], "[", "5", "]"}]}], "]"}], ",", 
      "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{"Propagator", "[", "Internal", "]"}], "[", 
@@ -2761,11 +2755,7 @@ Cell[BoxData[{
        RowBox[{
         RowBox[{"Vertex", "[", "4", "]"}], "[", "3", "]"}], ",", " ", 
        RowBox[{
-        RowBox[{"Vertex", "[", "4", "]"}], "[", "5", "]"}], ",", " ", 
-       RowBox[{"F", "[", 
-        RowBox[{"3", ",", " ", 
-         RowBox[{"{", 
-          RowBox[{"3", ","}], "}"}]}], "]"}]}], "]"}], ",", 
+        RowBox[{"Vertex", "[", "4", "]"}], "[", "5", "]"}]}], "]"}], ",", 
      "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{"Propagator", "[", "Internal", "]"}], "[", 
@@ -2781,11 +2771,7 @@ Cell[BoxData[{
        RowBox[{
         RowBox[{"Vertex", "[", "4", "]"}], "[", "6", "]"}], ",", " ", 
        RowBox[{
-        RowBox[{"Vertex", "[", "4", "]"}], "[", "7", "]"}], ",", " ", 
-       RowBox[{"F", "[", 
-        RowBox[{"4", ",", " ", 
-         RowBox[{"{", 
-          RowBox[{"2", ","}], "}"}]}], "]"}]}], "]"}], ",", 
+        RowBox[{"Vertex", "[", "4", "]"}], "[", "7", "]"}]}], "]"}], ",", 
      "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{"Propagator", "[", "Internal", "]"}], "[", 
@@ -2793,11 +2779,7 @@ Cell[BoxData[{
        RowBox[{
         RowBox[{"Vertex", "[", "4", "]"}], "[", "6", "]"}], ",", " ", 
        RowBox[{
-        RowBox[{"Vertex", "[", "4", "]"}], "[", "8", "]"}], ",", " ", 
-       RowBox[{"F", "[", 
-        RowBox[{"4", ",", " ", 
-         RowBox[{"{", 
-          RowBox[{"2", ","}], "}"}]}], "]"}]}], "]"}], ",", 
+        RowBox[{"Vertex", "[", "4", "]"}], "[", "8", "]"}]}], "]"}], ",", 
      "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{"Propagator", "[", "Outgoing", "]"}], "[", 
@@ -2805,11 +2787,7 @@ Cell[BoxData[{
        RowBox[{
         RowBox[{"Vertex", "[", "4", "]"}], "[", "7", "]"}], ",", " ", 
        RowBox[{
-        RowBox[{"Vertex", "[", "1", "]"}], "[", "9", "]"}], ",", " ", 
-       RowBox[{"F", "[", 
-        RowBox[{"3", ",", 
-         RowBox[{"{", 
-          RowBox[{"2", ","}], "}"}]}], "]"}]}], "]"}], ",", 
+        RowBox[{"Vertex", "[", "1", "]"}], "[", "9", "]"}]}], "]"}], ",", 
      "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{"Propagator", "[", "Internal", "]"}], "[", 
@@ -2825,11 +2803,7 @@ Cell[BoxData[{
        RowBox[{
         RowBox[{"Vertex", "[", "4", "]"}], "[", "10", "]"}], ",", " ", 
        RowBox[{
-        RowBox[{"Vertex", "[", "1", "]"}], "[", "11", "]"}], ",", " ", 
-       RowBox[{"-", 
-        RowBox[{"F", "[", 
-         RowBox[{"1", ",", " ", 
-          RowBox[{"{", "2", "}"}]}], "]"}]}]}], "]"}], ",", 
+        RowBox[{"Vertex", "[", "1", "]"}], "[", "11", "]"}]}], "]"}], ",", 
      "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{"Propagator", "[", "Outgoing", "]"}], "[", 
@@ -2837,10 +2811,7 @@ Cell[BoxData[{
        RowBox[{
         RowBox[{"Vertex", "[", "4", "]"}], "[", "10", "]"}], ",", " ", 
        RowBox[{
-        RowBox[{"Vertex", "[", "1", "]"}], "[", "12", "]"}], ",", " ", 
-       RowBox[{"F", "[", 
-        RowBox[{"2", ",", " ", 
-         RowBox[{"{", "2", "}"}]}], "]"}]}], "]"}], ",", 
+        RowBox[{"Vertex", "[", "1", "]"}], "[", "12", "]"}]}], "]"}], ",", 
      "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{"Propagator", "[", "Outgoing", "]"}], "[", 
@@ -2848,11 +2819,7 @@ Cell[BoxData[{
        RowBox[{
         RowBox[{"Vertex", "[", "4", "]"}], "[", "8", "]"}], ",", " ", 
        RowBox[{
-        RowBox[{"Vertex", "[", "1", "]"}], "[", "13", "]"}], ",", " ", 
-       RowBox[{"F", "[", 
-        RowBox[{"3", ",", 
-         RowBox[{"{", 
-          RowBox[{"2", ","}], "}"}]}], "]"}]}], "]"}], ",", 
+        RowBox[{"Vertex", "[", "1", "]"}], "[", "13", "]"}]}], "]"}], ",", 
      "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{"Propagator", "[", "Internal", "]"}], "[", 
@@ -2868,12 +2835,7 @@ Cell[BoxData[{
        RowBox[{
         RowBox[{"Vertex", "[", "4", "]"}], "[", "14", "]"}], ",", " ", 
        RowBox[{
-        RowBox[{"Vertex", "[", "1", "]"}], "[", "15", "]"}], ",", " ", 
-       RowBox[{"-", 
-        RowBox[{"F", "[", 
-         RowBox[{"3", ",", " ", 
-          RowBox[{"{", 
-           RowBox[{"1", ","}], "}"}]}], "]"}]}]}], "]"}], ",", 
+        RowBox[{"Vertex", "[", "1", "]"}], "[", "15", "]"}]}], "]"}], ",", 
      "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{"Propagator", "[", "Outgoing", "]"}], "[", 
@@ -2881,19 +2843,16 @@ Cell[BoxData[{
        RowBox[{
         RowBox[{"Vertex", "[", "4", "]"}], "[", "14", "]"}], ",", " ", 
        RowBox[{
-        RowBox[{"Vertex", "[", "1", "]"}], "[", "16", "]"}], ",", " ", 
-       RowBox[{"F", "[", 
-        RowBox[{"4", ",", " ", 
-         RowBox[{"{", "1", "}"}]}], "]"}]}], "]"}]}], "\[IndentingNewLine]", 
-    "]"}], "]"}], "\[IndentingNewLine]", 
+        RowBox[{"Vertex", "[", "1", "]"}], "[", "16", "]"}]}], "]"}]}], 
+    "\[IndentingNewLine]", "]"}], "]"}], "\[IndentingNewLine]", 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
  CellChangeTimes->{{3.7706371979096947`*^9, 3.7706372295322857`*^9}, {
   3.7706375264540453`*^9, 3.770637620652697*^9}, {3.7706377181820135`*^9, 
   3.7706377988909082`*^9}, {3.770637899626504*^9, 3.7706379620552874`*^9}, {
   3.7706380003475*^9, 3.770638161589669*^9}, {3.770638203865697*^9, 
-  3.7706386930456505`*^9}},
+  3.7706386930456505`*^9}, {3.770639509559928*^9, 3.7706395666575084`*^9}},
  CellLabel->
-  "In[301]:=",ExpressionUUID->"628b157a-a10d-4137-be27-c54d2d288fac"],
+  "In[304]:=",ExpressionUUID->"628b157a-a10d-4137-be27-c54d2d288fac"],
 
 Cell[BoxData[
  FormBox[
@@ -2936,10 +2895,7 @@ Cell[BoxData[
           RowBox[{"(", "2", ")"}]}], ",", 
          RowBox[{
           RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
-          RowBox[{"(", "4", ")"}]}], ",", 
-         RowBox[{"F", "(", 
-          RowBox[{"2", ",", 
-           RowBox[{"{", "3", "}"}]}], ")"}]}], ")"}]}], ",", 
+          RowBox[{"(", "4", ")"}]}]}], ")"}]}], ",", 
       RowBox[{
        RowBox[{"Propagator", "(", "Internal", ")"}], 
        "\[InvisibleApplication]", 
@@ -2950,12 +2906,7 @@ Cell[BoxData[
           RowBox[{"(", "2", ")"}]}], ",", 
          RowBox[{
           RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
-          RowBox[{"(", "5", ")"}]}], ",", 
-         RowBox[{"-", 
-          RowBox[{"F", "(", 
-           RowBox[{"3", ",", 
-            RowBox[{"{", 
-             RowBox[{"3", ",", "Null"}], "}"}]}], ")"}]}]}], ")"}]}], ",", 
+          RowBox[{"(", "5", ")"}]}]}], ")"}]}], ",", 
       RowBox[{
        RowBox[{"Propagator", "(", "Internal", ")"}], 
        "\[InvisibleApplication]", 
@@ -2966,11 +2917,7 @@ Cell[BoxData[
           RowBox[{"(", "3", ")"}]}], ",", 
          RowBox[{
           RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
-          RowBox[{"(", "5", ")"}]}], ",", 
-         RowBox[{"F", "(", 
-          RowBox[{"3", ",", 
-           RowBox[{"{", 
-            RowBox[{"3", ",", "Null"}], "}"}]}], ")"}]}], ")"}]}], ",", 
+          RowBox[{"(", "5", ")"}]}]}], ")"}]}], ",", 
       RowBox[{
        RowBox[{"Propagator", "(", "Internal", ")"}], 
        "\[InvisibleApplication]", 
@@ -2993,11 +2940,7 @@ Cell[BoxData[
           RowBox[{"(", "6", ")"}]}], ",", 
          RowBox[{
           RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
-          RowBox[{"(", "7", ")"}]}], ",", 
-         RowBox[{"F", "(", 
-          RowBox[{"4", ",", 
-           RowBox[{"{", 
-            RowBox[{"2", ",", "Null"}], "}"}]}], ")"}]}], ")"}]}], ",", 
+          RowBox[{"(", "7", ")"}]}]}], ")"}]}], ",", 
       RowBox[{
        RowBox[{"Propagator", "(", "Internal", ")"}], 
        "\[InvisibleApplication]", 
@@ -3008,11 +2951,7 @@ Cell[BoxData[
           RowBox[{"(", "6", ")"}]}], ",", 
          RowBox[{
           RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
-          RowBox[{"(", "8", ")"}]}], ",", 
-         RowBox[{"F", "(", 
-          RowBox[{"4", ",", 
-           RowBox[{"{", 
-            RowBox[{"2", ",", "Null"}], "}"}]}], ")"}]}], ")"}]}], ",", 
+          RowBox[{"(", "8", ")"}]}]}], ")"}]}], ",", 
       RowBox[{
        RowBox[{"Propagator", "(", "Outgoing", ")"}], 
        "\[InvisibleApplication]", 
@@ -3023,11 +2962,7 @@ Cell[BoxData[
           RowBox[{"(", "7", ")"}]}], ",", 
          RowBox[{
           RowBox[{"Vertex", "(", "1", ")"}], "\[InvisibleApplication]", 
-          RowBox[{"(", "9", ")"}]}], ",", 
-         RowBox[{"F", "(", 
-          RowBox[{"3", ",", 
-           RowBox[{"{", 
-            RowBox[{"2", ",", "Null"}], "}"}]}], ")"}]}], ")"}]}], ",", 
+          RowBox[{"(", "9", ")"}]}]}], ")"}]}], ",", 
       RowBox[{
        RowBox[{"Propagator", "(", "Internal", ")"}], 
        "\[InvisibleApplication]", 
@@ -3050,11 +2985,7 @@ Cell[BoxData[
           RowBox[{"(", "10", ")"}]}], ",", 
          RowBox[{
           RowBox[{"Vertex", "(", "1", ")"}], "\[InvisibleApplication]", 
-          RowBox[{"(", "11", ")"}]}], ",", 
-         RowBox[{"-", 
-          RowBox[{"F", "(", 
-           RowBox[{"1", ",", 
-            RowBox[{"{", "2", "}"}]}], ")"}]}]}], ")"}]}], ",", 
+          RowBox[{"(", "11", ")"}]}]}], ")"}]}], ",", 
       RowBox[{
        RowBox[{"Propagator", "(", "Outgoing", ")"}], 
        "\[InvisibleApplication]", 
@@ -3065,10 +2996,7 @@ Cell[BoxData[
           RowBox[{"(", "10", ")"}]}], ",", 
          RowBox[{
           RowBox[{"Vertex", "(", "1", ")"}], "\[InvisibleApplication]", 
-          RowBox[{"(", "12", ")"}]}], ",", 
-         RowBox[{"F", "(", 
-          RowBox[{"2", ",", 
-           RowBox[{"{", "2", "}"}]}], ")"}]}], ")"}]}], ",", 
+          RowBox[{"(", "12", ")"}]}]}], ")"}]}], ",", 
       RowBox[{
        RowBox[{"Propagator", "(", "Outgoing", ")"}], 
        "\[InvisibleApplication]", 
@@ -3079,11 +3007,7 @@ Cell[BoxData[
           RowBox[{"(", "8", ")"}]}], ",", 
          RowBox[{
           RowBox[{"Vertex", "(", "1", ")"}], "\[InvisibleApplication]", 
-          RowBox[{"(", "13", ")"}]}], ",", 
-         RowBox[{"F", "(", 
-          RowBox[{"3", ",", 
-           RowBox[{"{", 
-            RowBox[{"2", ",", "Null"}], "}"}]}], ")"}]}], ")"}]}], ",", 
+          RowBox[{"(", "13", ")"}]}]}], ")"}]}], ",", 
       RowBox[{
        RowBox[{"Propagator", "(", "Internal", ")"}], 
        "\[InvisibleApplication]", 
@@ -3106,12 +3030,7 @@ Cell[BoxData[
           RowBox[{"(", "14", ")"}]}], ",", 
          RowBox[{
           RowBox[{"Vertex", "(", "1", ")"}], "\[InvisibleApplication]", 
-          RowBox[{"(", "15", ")"}]}], ",", 
-         RowBox[{"-", 
-          RowBox[{"F", "(", 
-           RowBox[{"3", ",", 
-            RowBox[{"{", 
-             RowBox[{"1", ",", "Null"}], "}"}]}], ")"}]}]}], ")"}]}], ",", 
+          RowBox[{"(", "15", ")"}]}]}], ")"}]}], ",", 
       RowBox[{
        RowBox[{"Propagator", "(", "Outgoing", ")"}], 
        "\[InvisibleApplication]", 
@@ -3122,21 +3041,215 @@ Cell[BoxData[
           RowBox[{"(", "14", ")"}]}], ",", 
          RowBox[{
           RowBox[{"Vertex", "(", "1", ")"}], "\[InvisibleApplication]", 
-          RowBox[{"(", "16", ")"}]}], ",", 
-         RowBox[{"F", "(", 
-          RowBox[{"4", ",", 
-           RowBox[{"{", "1", "}"}]}], ")"}]}], ")"}]}]}], ")"}]}], ")"}], 
+          RowBox[{"(", "16", ")"}]}]}], ")"}]}]}], ")"}]}], ")"}], 
   TraditionalForm]], "Output",
- CellChangeTimes->{3.7706388404703555`*^9},
+ CellChangeTimes->{3.7706388404703555`*^9, 3.770639586764799*^9},
  CellLabel->
-  "Out[302]=",ExpressionUUID->"c3140ca3-6db9-40ea-a002-a168932b9142"]
+  "Out[305]=",ExpressionUUID->"ae5d3792-e4d8-4548-98fa-8c19a19dfcbd"]
 }, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"Print", "[", "%", "]"}]], "Input",
  CellChangeTimes->{{3.7706386705986967`*^9, 3.7706386730474377`*^9}},
  CellLabel->
-  "In[300]:=",ExpressionUUID->"0e9f4b1f-8aea-4c14-9f8b-b727fe5f0bd7"],
+  "In[306]:=",ExpressionUUID->"0e9f4b1f-8aea-4c14-9f8b-b727fe5f0bd7"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"TopologyList", "(", 
+   RowBox[{
+    RowBox[{"Topology", "(", "2", ")"}], "\[InvisibleApplication]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Propagator", "(", "Incoming", ")"}], 
+       "\[InvisibleApplication]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Vertex", "(", "1", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "1", ")"}]}], ",", 
+         RowBox[{
+          RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "2", ")"}]}], ",", 
+         RowBox[{"V", "(", "5", ")"}]}], ")"}]}], ",", 
+      RowBox[{
+       RowBox[{"Propagator", "(", "Incoming", ")"}], 
+       "\[InvisibleApplication]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Vertex", "(", "1", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "3", ")"}]}], ",", 
+         RowBox[{
+          RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "4", ")"}]}], ",", 
+         RowBox[{"V", "(", "5", ")"}]}], ")"}]}], ",", 
+      RowBox[{
+       RowBox[{"Propagator", "(", "Internal", ")"}], 
+       "\[InvisibleApplication]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "2", ")"}]}], ",", 
+         RowBox[{
+          RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "4", ")"}]}]}], ")"}]}], ",", 
+      RowBox[{
+       RowBox[{"Propagator", "(", "Internal", ")"}], 
+       "\[InvisibleApplication]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "2", ")"}]}], ",", 
+         RowBox[{
+          RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "5", ")"}]}]}], ")"}]}], ",", 
+      RowBox[{
+       RowBox[{"Propagator", "(", "Internal", ")"}], 
+       "\[InvisibleApplication]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "3", ")"}]}], ",", 
+         RowBox[{
+          RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "5", ")"}]}]}], ")"}]}], ",", 
+      RowBox[{
+       RowBox[{"Propagator", "(", "Internal", ")"}], 
+       "\[InvisibleApplication]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "5", ")"}]}], ",", 
+         RowBox[{
+          RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "6", ")"}]}], ",", 
+         RowBox[{"S", "(", "1", ")"}]}], ")"}]}], ",", 
+      RowBox[{
+       RowBox[{"Propagator", "(", "Internal", ")"}], 
+       "\[InvisibleApplication]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "6", ")"}]}], ",", 
+         RowBox[{
+          RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "7", ")"}]}]}], ")"}]}], ",", 
+      RowBox[{
+       RowBox[{"Propagator", "(", "Internal", ")"}], 
+       "\[InvisibleApplication]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "6", ")"}]}], ",", 
+         RowBox[{
+          RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "8", ")"}]}]}], ")"}]}], ",", 
+      RowBox[{
+       RowBox[{"Propagator", "(", "Outgoing", ")"}], 
+       "\[InvisibleApplication]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "7", ")"}]}], ",", 
+         RowBox[{
+          RowBox[{"Vertex", "(", "1", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "9", ")"}]}]}], ")"}]}], ",", 
+      RowBox[{
+       RowBox[{"Propagator", "(", "Internal", ")"}], 
+       "\[InvisibleApplication]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "7", ")"}]}], ",", 
+         RowBox[{
+          RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "10", ")"}]}], ",", 
+         RowBox[{"V", "(", "3", ")"}]}], ")"}]}], ",", 
+      RowBox[{
+       RowBox[{"Propagator", "(", "Outgoing", ")"}], 
+       "\[InvisibleApplication]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "10", ")"}]}], ",", 
+         RowBox[{
+          RowBox[{"Vertex", "(", "1", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "11", ")"}]}]}], ")"}]}], ",", 
+      RowBox[{
+       RowBox[{"Propagator", "(", "Outgoing", ")"}], 
+       "\[InvisibleApplication]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "10", ")"}]}], ",", 
+         RowBox[{
+          RowBox[{"Vertex", "(", "1", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "12", ")"}]}]}], ")"}]}], ",", 
+      RowBox[{
+       RowBox[{"Propagator", "(", "Outgoing", ")"}], 
+       "\[InvisibleApplication]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "8", ")"}]}], ",", 
+         RowBox[{
+          RowBox[{"Vertex", "(", "1", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "13", ")"}]}]}], ")"}]}], ",", 
+      RowBox[{
+       RowBox[{"Propagator", "(", "Internal", ")"}], 
+       "\[InvisibleApplication]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "8", ")"}]}], ",", 
+         RowBox[{
+          RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "14", ")"}]}], ",", 
+         RowBox[{"V", "(", "3", ")"}]}], ")"}]}], ",", 
+      RowBox[{
+       RowBox[{"Propagator", "(", "Outgoing", ")"}], 
+       "\[InvisibleApplication]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "14", ")"}]}], ",", 
+         RowBox[{
+          RowBox[{"Vertex", "(", "1", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "15", ")"}]}]}], ")"}]}], ",", 
+      RowBox[{
+       RowBox[{"Propagator", "(", "Outgoing", ")"}], 
+       "\[InvisibleApplication]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Vertex", "(", "4", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "14", ")"}]}], ",", 
+         RowBox[{
+          RowBox[{"Vertex", "(", "1", ")"}], "\[InvisibleApplication]", 
+          RowBox[{"(", "16", ")"}]}]}], ")"}]}]}], ")"}]}], ")"}], 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.7706390732969613`*^9, 3.7706395947625017`*^9},
+ CellLabel->
+  "During evaluation of \
+In[306]:=",ExpressionUUID->"12d71597-575d-4e5e-8259-0523efc935c3"]
+}, Open  ]],
 
 Cell[BoxData[
  FormBox["", TraditionalForm]], "Input",
@@ -3283,11 +3396,11 @@ Cell[68157, 1882, 258, 6, 32, "Output",ExpressionUUID->"e9ad221f-2f57-4e40-89bc-
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[68452, 1893, 444, 9, 48, "Input",ExpressionUUID->"34b37b25-1e46-4c5e-b307-02ef259fa365"],
-Cell[68899, 1904, 8998, 233, 223, "Output",ExpressionUUID->"78eccb96-decb-4a2a-8dff-c864ab573e21"]
+Cell[68899, 1904, 8998, 233, 90, "Output",ExpressionUUID->"78eccb96-decb-4a2a-8dff-c864ab573e21"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[77934, 2142, 5056, 123, 460, "Input",ExpressionUUID->"cab08ddd-4606-4e27-96f0-9ea83c5b4865"],
-Cell[82993, 2267, 2717, 69, 71, "Output",ExpressionUUID->"12adf0d4-4bdb-4d1c-ad5b-b900f7736505"]
+Cell[77934, 2142, 5056, 123, 384, "Input",ExpressionUUID->"cab08ddd-4606-4e27-96f0-9ea83c5b4865"],
+Cell[82993, 2267, 2717, 69, 52, "Output",ExpressionUUID->"12adf0d4-4bdb-4d1c-ad5b-b900f7736505"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[85747, 2341, 354, 6, 28, "Input",ExpressionUUID->"ea65992f-7573-4f30-9ca5-845537d5e1e0"],
@@ -3298,32 +3411,35 @@ Cell[86689, 2366, 231, 6, 23, "Print",ExpressionUUID->"e1f59dce-1e5d-4004-8ea6-6
 }, Open  ]],
 Cell[86947, 2376, 249, 7, 28, "Input",ExpressionUUID->"311f5edc-de6b-4821-80d2-852b2268722e"],
 Cell[CellGroupData[{
-Cell[87221, 2387, 2073, 53, 162, "Input",ExpressionUUID->"919d7898-fe6f-47df-9823-c49f9b78109c"],
-Cell[89297, 2442, 2698, 70, 71, "Output",ExpressionUUID->"14d68da1-7f4a-4173-9875-3d95a7d8273e"]
+Cell[87221, 2387, 2167, 54, 162, "Input",ExpressionUUID->"919d7898-fe6f-47df-9823-c49f9b78109c"],
+Cell[89391, 2443, 2767, 71, 52, "Output",ExpressionUUID->"d2e3f8f4-3399-480b-8ef0-3567be858926"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[92032, 2517, 260, 5, 28, "Input",ExpressionUUID->"74dfce6c-1c00-4519-a2ad-ccac61fc6b75"],
+Cell[92195, 2519, 260, 5, 28, "Input",ExpressionUUID->"74dfce6c-1c00-4519-a2ad-ccac61fc6b75"],
 Cell[CellGroupData[{
-Cell[92317, 2526, 653, 14, 23, "Print",ExpressionUUID->"5b6ec440-a7ea-4771-be75-0b05bd459618"],
-Cell[92973, 2542, 2446, 63, 296, "Print",ExpressionUUID->"0f8ad6ce-d88d-4c19-8902-69dae1e679cf"]
+Cell[92480, 2528, 653, 14, 23, "Print",ExpressionUUID->"5b6ec440-a7ea-4771-be75-0b05bd459618"],
+Cell[93136, 2544, 2446, 63, 296, "Print",ExpressionUUID->"0f8ad6ce-d88d-4c19-8902-69dae1e679cf"]
 }, Open  ]],
-Cell[95434, 2608, 1305, 35, 65, "Output",ExpressionUUID->"2ba85f22-1802-43de-9787-948411b263e5"],
-Cell[96742, 2645, 260, 7, 23, "Print",ExpressionUUID->"9bc1900d-851a-45ea-999d-2cb730305238"],
-Cell[97005, 2654, 1154, 32, 65, "Output",ExpressionUUID->"69c9c7ed-0f5b-46a5-9fba-6fa65833fece"],
-Cell[98162, 2688, 260, 7, 23, "Print",ExpressionUUID->"a7f90b42-f2af-43e0-9a1c-981ef90e0070"]
+Cell[95597, 2610, 1305, 35, 65, "Output",ExpressionUUID->"2ba85f22-1802-43de-9787-948411b263e5"],
+Cell[96905, 2647, 260, 7, 23, "Print",ExpressionUUID->"9bc1900d-851a-45ea-999d-2cb730305238"],
+Cell[97168, 2656, 1154, 32, 65, "Output",ExpressionUUID->"69c9c7ed-0f5b-46a5-9fba-6fa65833fece"],
+Cell[98325, 2690, 260, 7, 23, "Print",ExpressionUUID->"a7f90b42-f2af-43e0-9a1c-981ef90e0070"]
 }, Open  ]],
-Cell[98437, 2698, 182, 4, 28, InheritFromParent,ExpressionUUID->"1fd9753c-823b-4b19-87f8-c3b604f82d0a"],
+Cell[98600, 2700, 182, 4, 28, InheritFromParent,ExpressionUUID->"1fd9753c-823b-4b19-87f8-c3b604f82d0a"],
 Cell[CellGroupData[{
-Cell[98644, 2706, 7256, 189, 447, "Input",ExpressionUUID->"628b157a-a10d-4137-be27-c54d2d288fac"],
-Cell[105903, 2897, 8837, 234, 90, "Output",ExpressionUUID->"c3140ca3-6db9-40ea-a002-a168932b9142"]
+Cell[98807, 2708, 5825, 146, 447, "Input",ExpressionUUID->"628b157a-a10d-4137-be27-c54d2d288fac"],
+Cell[104635, 2856, 7333, 191, 90, "Output",ExpressionUUID->"ae5d3792-e4d8-4548-98fa-8c19a19dfcbd"]
 }, Open  ]],
-Cell[114755, 3134, 211, 4, 28, "Input",ExpressionUUID->"0e9f4b1f-8aea-4c14-9f8b-b727fe5f0bd7"],
-Cell[114969, 3140, 237, 5, 28, InheritFromParent,ExpressionUUID->"370f3110-206c-4db3-8794-dc53beddc7ef"],
-Cell[115209, 3147, 152, 3, 28, InheritFromParent,ExpressionUUID->"b480fa49-3b10-4bfd-8632-66b133856483"],
-Cell[115364, 3152, 281, 5, 28, "Input",ExpressionUUID->"9d4298c2-19d8-4b26-b319-e968654f4f79"],
-Cell[115648, 3159, 154, 3, 28, "Input",ExpressionUUID->"d6683557-ab9b-41dc-90df-dba46644953a"],
-Cell[115805, 3164, 154, 3, 28, InheritFromParent,ExpressionUUID->"ed19e6b5-8707-4dc5-b4ed-05e67c12c4b7"],
-Cell[115962, 3169, 203, 4, 28, "Input",ExpressionUUID->"d208591c-9724-46aa-9bad-8b1e3dfd4fd8"]
+Cell[CellGroupData[{
+Cell[112005, 3052, 211, 4, 28, "Input",ExpressionUUID->"0e9f4b1f-8aea-4c14-9f8b-b727fe5f0bd7"],
+Cell[112219, 3058, 7357, 192, 81, "Print",ExpressionUUID->"12d71597-575d-4e5e-8259-0523efc935c3"]
+}, Open  ]],
+Cell[119591, 3253, 237, 5, 28, InheritFromParent,ExpressionUUID->"370f3110-206c-4db3-8794-dc53beddc7ef"],
+Cell[119831, 3260, 152, 3, 28, InheritFromParent,ExpressionUUID->"b480fa49-3b10-4bfd-8632-66b133856483"],
+Cell[119986, 3265, 281, 5, 28, "Input",ExpressionUUID->"9d4298c2-19d8-4b26-b319-e968654f4f79"],
+Cell[120270, 3272, 154, 3, 28, "Input",ExpressionUUID->"d6683557-ab9b-41dc-90df-dba46644953a"],
+Cell[120427, 3277, 154, 3, 28, InheritFromParent,ExpressionUUID->"ed19e6b5-8707-4dc5-b4ed-05e67c12c4b7"],
+Cell[120584, 3282, 203, 4, 28, "Input",ExpressionUUID->"d208591c-9724-46aa-9bad-8b1e3dfd4fd8"]
 }
 ]
 *)
