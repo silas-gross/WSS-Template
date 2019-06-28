@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     63454,       1145]
-NotebookOptionsPosition[     61316,       1097]
-NotebookOutlinePosition[     62282,       1130]
-CellTagsIndexPosition[     62213,       1125]
+NotebookDataLength[     65707,       1202]
+NotebookOptionsPosition[     62926,       1144]
+NotebookOutlinePosition[     63892,       1177]
+CellTagsIndexPosition[     63823,       1172]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1020,10 +1020,56 @@ BQAgMhIuAAAxaU24/wfjEZlm
   3.7706463230004263`*^9}},ExpressionUUID->"6973d144-e783-4863-8c67-\
 77052d6f0838"],
 
-Cell["Then, the musical equivalent of these is e", "Text",
+Cell["Then, the musical equivalents of these are:", "Text",
  CellChangeTimes->{{3.7706463556832104`*^9, 3.7706464049396915`*^9}, 
-   3.7706519542519827`*^9},ExpressionUUID->"bc7be055-9351-4566-a16e-\
+   3.7706519542519827`*^9, {3.7706682998574553`*^9, 
+   3.770668315795226*^9}},ExpressionUUID->"bc7be055-9351-4566-a16e-\
 95d32e98a296"],
+
+Cell["\<\
+One notes that the music is hard to play for a string instrument and not \
+particularly well motivated. There is no relation between the members of a \
+generation, and the bosons are discordant. Thus, one is motivated to define a \
+more careful mapping to reflect the interconnection of the fermions. 
+\
+\>", "Text",
+ CellChangeTimes->{{3.7706683348758907`*^9, 3.7706685779725447`*^9}, {
+  3.7706687542714276`*^9, 
+  3.770668757438776*^9}},ExpressionUUID->"549f71ba-ca7a-4168-b25b-\
+06f0b21bce41"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["A Careful Mapping and the Neutrino Problem", "Section",
+ CellChangeTimes->{{3.7706685943946247`*^9, 
+  3.7706686131988773`*^9}},ExpressionUUID->"01367974-e5d8-45c7-affc-\
+d19fe316db10"],
+
+Cell[CellGroupData[{
+
+Cell["Seventh Chords", "Subsection",
+ CellChangeTimes->{{3.7706686590528655`*^9, 
+  3.7706687241224833`*^9}},ExpressionUUID->"9086653a-b564-4975-a4f6-\
+197dea4e7106"],
+
+Cell["\<\
+In order to reflect the connection of the four particles in a generation \
+\>", "Text",
+ CellChangeTimes->{{3.770668627328725*^9, 3.770668639780361*^9}, {
+   3.7706687273205757`*^9, 3.7706687603557215`*^9}, 
+   3.770674687473499*^9},ExpressionUUID->"31b2781d-f4af-4aba-9786-\
+8c05c7efe835"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7706686198950214`*^9, 
+  3.770668621405182*^9}},ExpressionUUID->"c9aab9e0-1cc8-4d06-87c5-\
+70b2c264ac26"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7706683193094816`*^9, 
+  3.77066832642649*^9}},ExpressionUUID->"5366b6eb-bb72-44f1-b75c-\
+969ce7628e9e"],
 
 Cell[BoxData[
  GraphicsBox[{{}, 
@@ -1094,6 +1140,7 @@ Cell[BoxData[""], "Input",
 3b6df8da37ba"]
 }, Open  ]]
 }, Open  ]]
+}, Open  ]]
 },
 WindowSize->{766, 772},
 WindowMargins->{{-7, Automatic}, {Automatic, 0}},
@@ -1124,7 +1171,7 @@ CellTagsIndex->{
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"Title", 62074, 1119}
+ {"Title", 63684, 1166}
  }
 *)
 (*NotebookFileOutline
@@ -1141,10 +1188,20 @@ Cell[3948, 90, 820, 24, 270, "Text",ExpressionUUID->"a828973e-46b1-4249-91e2-39d
 Cell[4771, 116, 152, 3, 28, "Input",ExpressionUUID->"0fce87e4-e2e6-45e0-88c6-a10a56148122"],
 Cell[4926, 121, 2867, 56, 320, "Text",ExpressionUUID->"9953483c-b9b4-436e-ae0e-ffc136d544ff"],
 Cell[7796, 179, 50666, 841, 360, "Input",ExpressionUUID->"6973d144-e783-4863-8c67-77052d6f0838"],
-Cell[58465, 1022, 213, 3, 34, "Text",ExpressionUUID->"bc7be055-9351-4566-a16e-95d32e98a296"],
-Cell[58681, 1027, 2295, 56, 390, "Input",ExpressionUUID->"bf1f4ef1-235d-481f-9ac3-887c9a4f4cdc"],
-Cell[60979, 1085, 152, 3, 28, "Input",ExpressionUUID->"4547e0b0-c9f2-4e68-9d42-fab1a43fa01f"],
-Cell[61134, 1090, 154, 3, 28, "Input",ExpressionUUID->"45262f07-88df-4eb9-988e-3b6df8da37ba"]
+Cell[58465, 1022, 266, 4, 34, "Text",ExpressionUUID->"bc7be055-9351-4566-a16e-95d32e98a296"],
+Cell[58734, 1028, 507, 10, 100, "Text",ExpressionUUID->"549f71ba-ca7a-4168-b25b-06f0b21bce41"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[59278, 1043, 191, 3, 67, "Section",ExpressionUUID->"01367974-e5d8-45c7-affc-d19fe316db10"],
+Cell[CellGroupData[{
+Cell[59494, 1050, 166, 3, 53, "Subsection",ExpressionUUID->"9086653a-b564-4975-a4f6-197dea4e7106"],
+Cell[59663, 1055, 300, 6, 34, "Text",ExpressionUUID->"31b2781d-f4af-4aba-9786-8c05c7efe835"],
+Cell[59966, 1063, 154, 3, 28, "Input",ExpressionUUID->"c9aab9e0-1cc8-4d06-87c5-70b2c264ac26"],
+Cell[60123, 1068, 153, 3, 28, "Input",ExpressionUUID->"5366b6eb-bb72-44f1-b75c-969ce7628e9e"],
+Cell[60279, 1073, 2295, 56, 390, "Input",ExpressionUUID->"bf1f4ef1-235d-481f-9ac3-887c9a4f4cdc"],
+Cell[62577, 1131, 152, 3, 28, "Input",ExpressionUUID->"4547e0b0-c9f2-4e68-9d42-fab1a43fa01f"],
+Cell[62732, 1136, 154, 3, 28, "Input",ExpressionUUID->"45262f07-88df-4eb9-988e-3b6df8da37ba"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }
