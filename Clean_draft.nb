@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     30981,        817]
-NotebookOptionsPosition[     29243,        784]
-NotebookOutlinePosition[     29584,        799]
-CellTagsIndexPosition[     29541,        796]
+NotebookDataLength[     31761,        834]
+NotebookOptionsPosition[     29928,        800]
+NotebookOutlinePosition[     30269,        815]
+CellTagsIndexPosition[     30226,        812]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -613,13 +613,14 @@ Cell[BoxData[
    RowBox[{"PlotTheme", "\[Rule]", "\"\<Scientific\>\""}], ",", " ", 
    RowBox[{"PlotLabel", "\[Rule]", 
     RowBox[{"HoldForm", "[", 
-     RowBox[{"Unmapped", " ", "Notes"}], "]"}]}]}], " ", "]"}]], "Input",
+     RowBox[{"Unmapped", " ", "Notes", " ", "From", " ", "Seventh"}], 
+     "]"}]}]}], " ", "]"}]], "Input",
  CellChangeTimes->{{3.7706692501417465`*^9, 3.7706692610361648`*^9}, {
   3.770669295239272*^9, 3.770669352961985*^9}, {3.770669421783307*^9, 
   3.770669457769064*^9}, {3.7706700668257847`*^9, 3.770670071145321*^9}, {
   3.77067011076818*^9, 3.770670228066105*^9}, {3.770670283470106*^9, 
-  3.770670331574344*^9}},
- CellLabel->"In[41]:=",ExpressionUUID->"b7af0052-d027-4165-ab61-8807b75a5ae5"],
+  3.770670331574344*^9}, {3.7706706974313717`*^9, 3.7706707054292774`*^9}},
+ CellLabel->"In[42]:=",ExpressionUUID->"b7af0052-d027-4165-ab61-8807b75a5ae5"],
 
 Cell[BoxData[
  FormBox[
@@ -769,7 +770,8 @@ Cell[BoxData[
    LabelStyle->{FontFamily -> "Times"},
    PlotLabel->FormBox[
      TagBox[
-      RowBox[{"Unmapped", " ", "Notes"}], HoldForm], TraditionalForm],
+      RowBox[{"Unmapped", " ", "Notes", " ", "From", " ", "Seventh"}], 
+      HoldForm], TraditionalForm],
    PlotRange->{{1.5, 8.5}, {All, All}},
    PlotRangePadding->{{
       Scaled[0.02], 
@@ -778,9 +780,23 @@ Cell[BoxData[
    Ticks->{Automatic, Automatic}], TraditionalForm]], "Output",
  CellChangeTimes->{
   3.770670102362462*^9, {3.770670286895043*^9, 3.77067029607626*^9}, 
-   3.7706703350436444`*^9},
- CellLabel->"Out[41]=",ExpressionUUID->"d5aa5c25-01dd-44e0-a904-40b26e5a1dc9"]
-}, Open  ]]
+   3.7706703350436444`*^9, 3.770670709710586*^9},
+ CellLabel->"Out[42]=",ExpressionUUID->"54605064-1020-4891-b8e0-38851f544a7c"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+   "Now", " ", "I", " ", "need", " ", "to", " ", "do", " ", "this", " ", "on",
+     " ", "all", " ", "the", " ", "remaining"}], ",", " ", 
+   RowBox[{
+   "I", " ", "think", " ", "this", " ", "would", " ", "be", " ", "a", " ", 
+    "through", " ", "not", " ", "sure", " ", "though"}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.7706707541189938`*^9, 3.7706707957103915`*^9}, {
+  3.7706710044495125`*^9, 
+  3.7706710087072506`*^9}},ExpressionUUID->"024ca011-eebc-4cd2-94af-\
+251a6c8c06d2"]
 },
 WindowSize->{766, 772},
 WindowMargins->{{Automatic, -7}, {Automatic, 0}},
@@ -816,9 +832,10 @@ Cell[20958, 562, 717, 16, 67, "Input",ExpressionUUID->"b263f9be-d856-4284-86f3-0
 Cell[21678, 580, 510, 10, 28, "Input",ExpressionUUID->"4232a59e-d5b0-4340-9d85-9b20b42cc7e2"],
 Cell[22191, 592, 395, 8, 48, "Input",ExpressionUUID->"c4e90de9-5434-41f0-b768-ddc0dd2e9aff"],
 Cell[CellGroupData[{
-Cell[22611, 604, 853, 17, 48, "Input",ExpressionUUID->"b7af0052-d027-4165-ab61-8807b75a5ae5"],
-Cell[23467, 623, 5760, 158, 292, "Output",ExpressionUUID->"d5aa5c25-01dd-44e0-a904-40b26e5a1dc9"]
-}, Open  ]]
+Cell[22611, 604, 938, 18, 48, "Input",ExpressionUUID->"b7af0052-d027-4165-ab61-8807b75a5ae5"],
+Cell[23552, 624, 5818, 159, 259, "Output",ExpressionUUID->"54605064-1020-4891-b8e0-38851f544a7c"]
+}, Open  ]],
+Cell[29385, 786, 539, 12, 48, "Input",ExpressionUUID->"024ca011-eebc-4cd2-94af-251a6c8c06d2"]
 }
 ]
 *)
