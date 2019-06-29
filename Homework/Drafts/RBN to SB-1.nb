@@ -1,0 +1,642 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     25487,        634]
+NotebookOptionsPosition[     24037,        603]
+NotebookOutlinePosition[     24405,        619]
+CellTagsIndexPosition[     24362,        616]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Comments on ComputationalEssayTemplate.nb", "Section",
+ CellChangeTimes->{{3.7707077036649857`*^9, 
+  3.770707717359805*^9}},ExpressionUUID->"6ae5e291-cc8c-4737-bf1f-\
+ba34b82f9bd0"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "II think you\[CloseCurlyQuote]ll need a brief explanation of Feynman \
+Diagrams for the uninitiated (",
+ StyleBox["e.g.",
+  FontSlant->"Italic"],
+ ", those like me)"
+}], "Item",
+ CellChangeTimes->{{3.770708057733699*^9, 
+  3.7707081220094357`*^9}},ExpressionUUID->"42658ee8-e85f-49aa-a827-\
+c00a4a2647bb"],
+
+Cell[TextData[{
+ "Add the traditional symbols for the particles to the table. E.g. ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox["\"\<\!\(\*SuperscriptBox[\(e\), \(-\)]\)\>\"", "Input"], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "60f46256-e721-4ed8-ac8d-1e96f60ff03b"],
+ " for the electron"
+}], "Item",
+ CellChangeTimes->{{3.770707778749139*^9, 3.770707837652627*^9}, {
+  3.770708054218507*^9, 
+  3.77070805484324*^9}},ExpressionUUID->"9e02052e-5cc0-48a0-8774-\
+13a6c29bb08e"],
+
+Cell[TextData[{
+ "you' ll also have to add the option ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"ShowStringCharacters", "\[Rule]", "False"}], "Input"], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "ce85c0f9-e52e-4897-a542-4bfaff3d7246"],
+ " to the ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox["Grid", "Input"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "91002701-f188-4fd3-909b-76859ebd2786"],
+ " that generated it"
+}], "Subitem",
+ CellChangeTimes->{{3.770707778749139*^9, 3.770707941178301*^9}, {
+  3.770708138197295*^9, 
+  3.770708138197455*^9}},ExpressionUUID->"11feda02-e051-469b-9d29-\
+0a9e595c8343"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   StyleBox["\"\<--\>\"", "Input"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "b563733c-edf5-413b-9163-85dd6baec4dc"],
+ " \[LongRightArrow] ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox["\"\<\[LongDash]\>\"", "Input"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "ff62830b-de72-4d00-aa7c-95e666a4deee"]
+}], "Item",
+ CellChangeTimes->{{3.770707778749139*^9, 3.770707941178301*^9}, {
+  3.770708142389804*^9, 
+  3.770708228549863*^9}},ExpressionUUID->"799926c3-098b-4139-963d-\
+1698f53a4118"],
+
+Cell["<esc>--<esc> for the long dash", "Subitem",
+ CellChangeTimes->{{3.770707778749139*^9, 3.770707941178301*^9}, {
+  3.770708142389804*^9, 
+  3.7707082410293217`*^9}},ExpressionUUID->"e1e1b4ef-99df-4af0-8de1-\
+54223aa7ffc6"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   StyleBox["\"\<reaminder\>\"", "Input"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "2aafd634-cfc4-492d-943d-4c468ec77434"],
+ " \[LongRightArrow] ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox["\"\<remainder\>\"", "Input"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "f9c76950-7592-423d-b29d-eb9cf42dac1a"]
+}], "Item",
+ CellChangeTimes->{{3.770707778749139*^9, 3.770707941178301*^9}, {
+  3.770708142389804*^9, 
+  3.770708169456667*^9}},ExpressionUUID->"6809aa7a-b1a5-4030-873b-\
+5336b6ce1215"],
+
+Cell["\<\
+looks like some some code is missing below the paragraph below the Feynman \
+Diagram\
+\>", "Item",
+ CellChangeTimes->{{3.770708300513858*^9, 
+  3.7707083642415323`*^9}},ExpressionUUID->"94700c33-ac7f-4ae6-9b73-\
+345ec4198d52"],
+
+Cell[TextData[{
+ "could you use ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox["Play", "Input"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "6f43ec9f-7c00-4107-94af-3712afea78f6"],
+ " to play the notes?"
+}], "Subitem",
+ CellChangeTimes->{{3.770708300513858*^9, 
+  3.7707084231558743`*^9}},ExpressionUUID->"553b5e44-57e9-4a94-ba91-\
+f4f789865d3b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "Play"}]], "Input",
+ CellChangeTimes->{{3.770708385128289*^9, 3.770708391838304*^9}},
+ CellLabel->"In[33]:=",ExpressionUUID->"a44687bf-eba9-48f9-bf86-764280ac01b2"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox[
+           PaneBox[
+            TooltipBox[
+             ButtonBox[
+              PaneSelectorBox[{False->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIcon"]], True->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIconHot"]]}, Dynamic[
+                CurrentValue["MouseOver"]]],
+              Appearance->None,
+              BaseStyle->"Link",
+              ButtonData->"paclet:ref/Play",
+              ButtonNote->"paclet:ref/Play"],
+             "\"paclet:ref/Play\""],
+            FrameMargins->{{0, 4}, {0, 2}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"\\!\\(\\*RowBox[{\\\"Play\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"f\\\", \\\"TI\\\"], \\\",\\\", RowBox[{\\\"{\\\", \
+RowBox[{StyleBox[\\\"t\\\", \\\"TI\\\"], \\\",\\\", \
+SubscriptBox[StyleBox[\\\"t\\\", \\\"TI\\\"], StyleBox[\\\"min\\\", \
+\\\"TI\\\"]], \\\",\\\", SubscriptBox[StyleBox[\\\"t\\\", \\\"TI\\\"], \
+StyleBox[\\\"max\\\", \\\"TI\\\"]]}], \\\"}\\\"}]}], \\\"]\\\"}]\\) creates \
+an object that plays as a sound whose amplitude is given by \
+\\!\\(\\*StyleBox[\\\"f\\\", \\\"TI\\\"]\\) as a function of time \
+\\!\\(\\*StyleBox[\\\"t\\\", \\\"TI\\\"]\\) in seconds between \
+\\!\\(\\*SubscriptBox[StyleBox[\\\"t\\\", \\\"TI\\\"], StyleBox[\\\"min\\\", \
+\\\"TI\\\"]]\\) and \\!\\(\\*SubscriptBox[StyleBox[\\\"t\\\", \\\"TI\\\"], \
+StyleBox[\\\"max\\\", \\\"TI\\\"]]\\). \"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False, False, False, False, 
+                False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Documentation\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Documentation\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Documentation", "Tooltip"]& ], 
+                   
+                   TemplateBox[{
+                    TemplateBox[{
+                    "\"Local \[RightGuillemet]\"", "paclet:ref/Play", 
+                    "paclet:ref/Play", "Link", {
+                    RGBColor[0.9686274509803922, 0.4666666666666667, 0.]}, 
+                    BaseStyle -> {
+                    RGBColor[0.0784313725490196, 0.1568627450980392, 0.6]}}, 
+                    "HyperlinkTemplate"],"\"  \"",StyleBox[
+                    "\"|\"", "InformationRowLabel", StripOnInput -> False],
+                    "\"  \"",TemplateBox[{"\"Web \[RightGuillemet]\"", {
+                    URL[
+                    "http://reference.wolfram.com/language/ref/Play.html"], 
+                    None}, "http://reference.wolfram.com/language/ref/Play.\
+html", "Hyperlink", {
+                    RGBColor[0.9686274509803922, 0.4666666666666667, 0.]}, 
+                    BaseStyle -> {
+                    RGBColor[0.0784313725490196, 0.1568627450980392, 0.6]}}, 
+                    "HyperlinkTemplate"]},
+                    "RowDefault"]},
+                  {
+                   PaneSelectorBox[{True->
+                    ButtonBox[
+                    PaneSelectorBox[{False->
+                    
+                    TemplateBox[{
+                    "\[ThickSpace]","\"\[ThickSpace]\"",StyleBox[
+                    "\"Options\"", "InformationRowLabel", StripOnInput -> 
+                    False],DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "DownPointerOpener"]]},
+                    "RowWithSeparators"], True->
+                    
+                    TemplateBox[{
+                    "\[ThickSpace]","\"\[ThickSpace]\"",StyleBox[
+                    "\"Options\"", "InformationRowLabel", StripOnInput -> 
+                    False],DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "DownPointerOpenerHot"]]},
+                    "RowWithSeparators"]}, Dynamic[
+                    CurrentValue["MouseOver"]],
+                    FrameMargins->0,
+                    ImageSize->Automatic],
+                    Appearance->None,
+                    BaseStyle->None,
+                    
+                    ButtonFunction:>(Part[System`InformationDump`open$$, 9] = 
+                    False),
+                    Evaluator->Automatic,
+                    FrameMargins->0,
+                    ImageMargins->0,
+                    Method->"Preemptive"], False->
+                    ButtonBox[
+                    PaneSelectorBox[{False->
+                    
+                    TemplateBox[{
+                    "\[ThickSpace]","\"\[ThickSpace]\"",StyleBox[
+                    "\"Options\"", "InformationRowLabel", StripOnInput -> 
+                    False],DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "RightPointerOpener"]]},
+                    "RowWithSeparators"], True->
+                    
+                    TemplateBox[{
+                    "\[ThickSpace]","\"\[ThickSpace]\"",StyleBox[
+                    "\"Options\"", "InformationRowLabel", StripOnInput -> 
+                    False],DynamicBox[
+                    FEPrivate`FrontEndResource[
+                    "FEBitmaps", "RightPointerOpenerHot"]]},
+                    "RowWithSeparators"]}, Dynamic[
+                    CurrentValue["MouseOver"]],
+                    FrameMargins->0,
+                    ImageSize->Automatic],
+                    Appearance->None,
+                    BaseStyle->None,
+                    
+                    ButtonFunction:>(Part[System`InformationDump`open$$, 9] = 
+                    True),
+                    Evaluator->Automatic,
+                    FrameMargins->0,
+                    ImageMargins->0,
+                    Method->"Preemptive"]}, Dynamic[
+                    FEPrivate`Part[System`InformationDump`open$$, 9]]], 
+                   PaneSelectorBox[{True->GridBox[{
+                    {
+                    RowBox[{"Compiled", "\[Rule]", "True"}]},
+                    {
+                    RowBox[{
+                    "DisplayFunction", "\[RuleDelayed]", 
+                    "$SoundDisplayFunction"}]},
+                    {
+                    RowBox[{"Epilog", "\[Rule]", 
+                    RowBox[{"{", "}"}]}]},
+                    {
+                    RowBox[{"PlayRange", "\[Rule]", "Automatic"}]},
+                    {
+                    RowBox[{"Prolog", "\[Rule]", 
+                    RowBox[{"{", "}"}]}]},
+                    {
+                    RowBox[{"SampleDepth", "\[Rule]", "8"}]},
+                    {
+                    RowBox[{"SampleRate", "\[Rule]", "8000"}]},
+                    {
+                    StyleBox[
+                    
+                    TemplateBox[{
+                    "\"(\"","\"\[InvisibleSpace]\"","7","\" total)\""},
+                    "RowDefault"], "InformationRowOpener",
+                    StripOnInput->False]}
+                    },
+                    BaselinePosition->{Baseline, {1, 1}},
+                    DefaultBaseStyle->"Column",
+                    GridBoxAlignment->{"Columns" -> {{Left}}},
+                    
+                    GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{1.}}}], False->
+                    RowBox[{
+                    RowBox[{"Compiled", "\[Rule]", "True"}], "\[ThinSpace]", 
+                    StyleBox["\<\"\[Ellipsis]\"\>", "InformationRowOpener",
+                    StripOnInput->False], "\[ThinSpace]", 
+                    StyleBox[
+                    
+                    TemplateBox[{
+                    "\"(\"","\"\[InvisibleSpace]\"","7","\" total)\""},
+                    "RowDefault"], "InformationRowOpener",
+                    StripOnInput->False]}]}, Dynamic[
+                    FEPrivate`Part[System`InformationDump`open$$, 9]],
+                    BaselinePosition->Baseline,
+                    ImageSize->Automatic]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Attributes\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Attributes\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Attributes", "Tooltip"]& ], 
+                   RowBox[{"{", 
+                    RowBox[{"HoldAll", ",", "Protected"}], "}"}]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"System`Play\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->6], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox[
+           PaneBox[
+            TooltipBox[
+             ButtonBox[
+              PaneSelectorBox[{False->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIcon"],
+                ImageSizeCache->{16., {5., 11.}}], True->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIconHot"],
+                ImageSizeCache->{16., {5., 11.}}]}, Dynamic[
+                CurrentValue["MouseOver"]]],
+              Appearance->None,
+              BaseStyle->"Link",
+              ButtonData->"paclet:ref/Play",
+              ButtonNote->"paclet:ref/Play"],
+             "\"paclet:ref/Play\""],
+            FrameMargins->{{0, 4}, {0, 2}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"\\!\\(\\*RowBox[{\\\"Play\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"f\\\", \\\"TI\\\"], \\\",\\\", RowBox[{\\\"{\\\", \
+RowBox[{StyleBox[\\\"t\\\", \\\"TI\\\"], \\\",\\\", \
+SubscriptBox[StyleBox[\\\"t\\\", \\\"TI\\\"], StyleBox[\\\"min\\\", \
+\\\"TI\\\"]], \\\",\\\", SubscriptBox[StyleBox[\\\"t\\\", \\\"TI\\\"], \
+StyleBox[\\\"max\\\", \\\"TI\\\"]]}], \\\"}\\\"}]}], \\\"]\\\"}]\\) creates \
+an object that plays as a sound whose amplitude is given by \
+\\!\\(\\*StyleBox[\\\"f\\\", \\\"TI\\\"]\\) as a function of time \
+\\!\\(\\*StyleBox[\\\"t\\\", \\\"TI\\\"]\\) in seconds between \
+\\!\\(\\*SubscriptBox[StyleBox[\\\"t\\\", \\\"TI\\\"], StyleBox[\\\"min\\\", \
+\\\"TI\\\"]]\\) and \\!\\(\\*SubscriptBox[StyleBox[\\\"t\\\", \\\"TI\\\"], \
+StyleBox[\\\"max\\\", \\\"TI\\\"]]\\). \"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{13., {3., 10.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{13., {3., 10.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[
+   Association[
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "\!\(\*RowBox[{\"Play\", \"[\", RowBox[{StyleBox[\"f\", \"TI\"], \",\", \
+RowBox[{\"{\", RowBox[{StyleBox[\"t\", \"TI\"], \",\", SubscriptBox[StyleBox[\
+\"t\", \"TI\"], StyleBox[\"min\", \"TI\"]], \",\", \
+SubscriptBox[StyleBox[\"t\", \"TI\"], StyleBox[\"max\", \"TI\"]]}], \
+\"}\"}]}], \"]\"}]\) creates an object that plays as a sound whose amplitude \
+is given by \!\(\*StyleBox[\"f\", \"TI\"]\) as a function of time \
+\!\(\*StyleBox[\"t\", \"TI\"]\) in seconds between \
+\!\(\*SubscriptBox[StyleBox[\"t\", \"TI\"], StyleBox[\"min\", \"TI\"]]\) and \
+\!\(\*SubscriptBox[StyleBox[\"t\", \"TI\"], StyleBox[\"max\", \"TI\"]]\). ", 
+    "Documentation" -> 
+    Association[
+     "Local" -> "paclet:ref/Play", "Web" -> 
+      "http://reference.wolfram.com/language/ref/Play.html"], "OwnValues" -> 
+    None, "UpValues" -> None, "DownValues" -> None, "SubValues" -> None, 
+    "DefaultValues" -> None, "NValues" -> None, "FormatValues" -> None, 
+    "Options" -> {
+     Compiled -> True, DisplayFunction :> $SoundDisplayFunction, Epilog -> {},
+       PlayRange -> Automatic, Prolog -> {}, SampleDepth -> 8, SampleRate -> 
+      8000}, "Attributes" -> {HoldAll, Protected}, "FullName" -> 
+    "System`Play"], False]]], "Output",
+ CellChangeTimes->{3.7707083926296263`*^9},
+ CellLabel->"Out[33]=",ExpressionUUID->"5b54dc14-f776-402a-b979-c2c813f2f975"]
+}, Open  ]],
+
+Cell[TextData[{
+ "use ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"FrameLabel", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<x-axis label\>\"", ",", "\"\<y-axis label\>\""}], "}"}]}], 
+    "Input"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "39ef8033-afa5-4c33-ad9f-c3a5352e73fa"],
+ " in the ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox["ListPlot", "Input"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "0b1e4fb4-bcd5-4fad-81fd-b3b39ed389f9"]
+}], "Item",
+ CellChangeTimes->{{3.770708481952815*^9, 
+  3.770708526526726*^9}},ExpressionUUID->"86f3237b-361b-4ee8-89bd-\
+f8f3285676c1"]
+}, Open  ]]
+},
+WindowSize->{730, 654},
+WindowMargins->{{Automatic, 32}, {57, Automatic}},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 188, 3, 132, "Section",ExpressionUUID->"6ae5e291-cc8c-4737-bf1f-ba34b82f9bd0"],
+Cell[CellGroupData[{
+Cell[793, 29, 323, 9, 67, "Item",ExpressionUUID->"42658ee8-e85f-49aa-a827-c00a4a2647bb"],
+Cell[1119, 40, 503, 13, 67, "Item",ExpressionUUID->"9e02052e-5cc0-48a0-8774-13a6c29bb08e"],
+Cell[1625, 55, 670, 20, 58, "Subitem",ExpressionUUID->"11feda02-e051-469b-9d29-0a9e595c8343"],
+Cell[2298, 77, 580, 16, 40, "Item",ExpressionUUID->"799926c3-098b-4139-963d-1698f53a4118"],
+Cell[2881, 95, 226, 4, 34, "Subitem",ExpressionUUID->"e1e1b4ef-99df-4af0-8de1-54223aa7ffc6"],
+Cell[3110, 101, 585, 16, 40, "Item",ExpressionUUID->"6809aa7a-b1a5-4030-873b-5336b6ce1215"],
+Cell[3698, 119, 236, 6, 67, "Item",ExpressionUUID->"94700c33-ac7f-4ae6-9b73-345ec4198d52"],
+Cell[3937, 127, 367, 11, 34, "Subitem",ExpressionUUID->"553b5e44-57e9-4a94-ba91-f4f789865d3b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4341, 143, 192, 3, 37, "Input",ExpressionUUID->"a44687bf-eba9-48f9-bf86-764280ac01b2"],
+Cell[4536, 148, 18825, 429, 177, "Output",ExpressionUUID->"5b54dc14-f776-402a-b979-c2c813f2f975"]
+}, Open  ]],
+Cell[23376, 580, 645, 20, 40, "Item",ExpressionUUID->"86f3237b-361b-4ee8-89bd-f8f3285676c1"]
+}, Open  ]]
+}
+]
+*)
+
