@@ -1,0 +1,175 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6008,        167]
+NotebookOptionsPosition[      4875,        141]
+NotebookOutlinePosition[      5243,        157]
+CellTagsIndexPosition[      5200,        154]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Comments on ComputationalEssayTemplate.nb", "Section",
+ CellChangeTimes->{{3.7707077036649857`*^9, 
+  3.770707717359805*^9}},ExpressionUUID->"6ae5e291-cc8c-4737-bf1f-\
+ba34b82f9bd0"],
+
+Cell[CellGroupData[{
+
+Cell["the code in the Base Cord section does not evaluate properly", "Item",
+ CellChangeTimes->{{3.7708081645512543`*^9, 
+  3.7708081900421247`*^9}},ExpressionUUID->"2c19b13a-0cf4-4233-8f53-\
+8cac208cc044"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   StyleBox["=", "Input"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "d1d526c1-6743-4d35-bf92-94d400884df6"],
+ " was used instead of ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[":=", "Input"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "8ea1c18e-60f1-4682-9189-dae615d5e08f"],
+ " for ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox["BaseGroup", "Input"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "90bcf5ba-b8b3-494a-b0d5-9f2226d29665"]
+}], "Subitem",
+ CellChangeTimes->{{3.7708081645512543`*^9, 
+  3.770808224080304*^9}},ExpressionUUID->"58d756c8-eb09-4e9a-9018-\
+7c7ed7b0c2e5"],
+
+Cell[TextData[{
+ "the elements of ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox["ChrS", "Input"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "0a7785d7-0f13-4320-ad97-964c6d580c02"],
+ " don\[CloseCurlyQuote]t appear to match the note in the first table, unless \
+",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"A\[Sharp]", "\[Congruent]", "B\[Flat]"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "be3e6500-0493-4dff-9003-51052e6111fd"]
+}], "Item",
+ CellChangeTimes->{{3.7708089501502934`*^9, 3.770808990528185*^9}, {
+  3.77080902757073*^9, 
+  3.770809103260892*^9}},ExpressionUUID->"eee0774d-4372-4cb0-8d10-\
+ee2be0ebadaa"],
+
+Cell[TextData[{
+ "even then, I don\[CloseCurlyQuote]t see the chord (A, B\[Flat], B) \
+\[Congruent] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"{", 
+    RowBox[{"An", ",", "As", ",", "Bn"}], "}"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "5731a658-4dbc-4b02-9fcb-0f593df7a928"],
+ " present inthe list of candidates"
+}], "Subitem",
+ CellChangeTimes->{{3.770809224043119*^9, 3.7708093004440117`*^9}, {
+  3.770809435072287*^9, 
+  3.770809435072413*^9}},ExpressionUUID->"ff7c0224-cf1a-4bd4-b6ff-\
+495a6e2ecbe6"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   StyleBox["Seventhdata", "Input"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "81efb834-99c8-44a8-9696-4205c6d56db2"],
+ " is not defined before it is used in the pie chart"
+}], "Item",
+ CellChangeTimes->{{3.770809224043119*^9, 3.7708093004440117`*^9}, {
+  3.77080943733246*^9, 3.770809453027841*^9}, {3.7708094954716043`*^9, 
+  3.770809495471718*^9}},ExpressionUUID->"115e36c1-f4a6-419b-8495-\
+f2f2dff60d04"],
+
+Cell["\<\
+I also got a pie chat with 3 sectors, not 2 as in your submission\
+\>", "Subitem",
+ CellChangeTimes->{{3.770809224043119*^9, 3.7708093004440117`*^9}, {
+  3.77080943733246*^9, 3.770809453027841*^9}, {3.7708094967243633`*^9, 
+  3.7708095226437683`*^9}, {3.770810230681364*^9, 
+  3.77081023068145*^9}},ExpressionUUID->"d49f59f2-3ffb-4265-8a0d-\
+982d96b76a0a"],
+
+Cell["\<\
+do you think it would be possible to \[OpenCurlyDoubleQuote]animate\
+\[CloseCurlyDoubleQuote] a Feynman diagram, say with a red dot that moved \
+along the interaction with time and corresponded to the time at which the \
+sound is emitted?\
+\>", "Item",
+ CellChangeTimes->{{3.770809224043119*^9, 3.7708093004440117`*^9}, {
+  3.77080943733246*^9, 3.770809453027841*^9}, {3.7708094967243633`*^9, 
+  3.7708095226437683`*^9}, {3.7708102335404167`*^9, 
+  3.770810326258481*^9}},ExpressionUUID->"becc8975-6bd7-483c-9972-\
+af68b5c6accc"],
+
+Cell["\<\
+I must admit, the essay was hard for me to follow because \
+I\[CloseCurlyQuote]ve not encountered Feynman Diagrams before, and I know no \
+music theory. Things like thirds, fifths, and sixths conjure up fractions for \
+me rather than musical notes.\
+\>", "Item",
+ CellChangeTimes->{{3.770809224043119*^9, 3.7708093004440117`*^9}, {
+  3.77080943733246*^9, 3.770809453027841*^9}, {3.7708094967243633`*^9, 
+  3.7708095226437683`*^9}, {3.7708102335404167`*^9, 
+  3.7708104818286867`*^9}},ExpressionUUID->"ee1c3124-7284-4df5-8308-\
+82c100fbcb2e"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{730, 654},
+WindowMargins->{{Automatic, 34}, {10, Automatic}},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 188, 3, 132, "Section",ExpressionUUID->"6ae5e291-cc8c-4737-bf1f-ba34b82f9bd0"],
+Cell[CellGroupData[{
+Cell[793, 29, 206, 3, 40, "Item",ExpressionUUID->"2c19b13a-0cf4-4233-8f53-8cac208cc044"],
+Cell[1002, 34, 694, 21, 34, "Subitem",ExpressionUUID->"58d756c8-eb09-4e9a-9018-7c7ed7b0c2e5"],
+Cell[1699, 57, 664, 18, 67, "Item",ExpressionUUID->"eee0774d-4372-4cb0-8d10-ee2be0ebadaa"],
+Cell[2366, 77, 534, 14, 59, "Subitem",ExpressionUUID->"ff7c0224-cf1a-4bd4-b6ff-495a6e2ecbe6"],
+Cell[2903, 93, 479, 11, 40, "Item",ExpressionUUID->"115e36c1-f4a6-419b-8495-f2f2dff60d04"],
+Cell[3385, 106, 366, 7, 34, "Subitem",ExpressionUUID->"d49f59f2-3ffb-4265-8a0d-982d96b76a0a"],
+Cell[3754, 115, 539, 10, 93, "Item",ExpressionUUID->"becc8975-6bd7-483c-9972-af68b5c6accc"],
+Cell[4296, 127, 551, 10, 119, "Item",ExpressionUUID->"ee1c3124-7284-4df5-8308-82c100fbcb2e"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
