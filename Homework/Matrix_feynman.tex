@@ -13,7 +13,7 @@
 \diagram*{
 (q)--[fermion, edge label=$e^-$](q2)--[fermion, edge label=$e^-$](q1);
 (q5)--[fermion, edge label=$e^+$](q3)--[fermion, edge label=$e^+$](q4);
-(q2)--[photon](q3);
+(q2)--[photon, edge label=$\gamma$](q3);
 };
 \end{feynman}
 \end{tikzpicture}  %original and rotation by 180
@@ -29,7 +29,7 @@
 \diagram*{
 (q4)--[fermion, edge label=$e^-$](q3)--[fermion, edge label=$e^-$](q5);
 (q1)--[fermion, edge label=$e^+$](q2)--[fermion, edge label=$e^+$](q);
-(q2)--[photon](q3);
+(q2)--[photon, edge label=$\gamma$](q3);
 };
 \end{feynman}
 \end{tikzpicture} %mirror and mirror + 180 rot
@@ -45,7 +45,7 @@
 \diagram*{
 (q)--[fermion, edge label=$e^-$](q2)--[fermion, edge label=$e^+$](q1);
 (q5)--[fermion, edge label=$e^+$](q3)--[fermion, edge label=$e^-$](q4);
-(q2)--[photon](q3);
+(q2)--[photon, edge label=$\gamma$](q3);
 };
 \end{feynman}
 \end{tikzpicture} %mirror+90/270 degree rot
@@ -62,7 +62,7 @@
 \diagram*{
 (q1)--[fermion, edge label=$e^-$](q2)--[fermion, edge label=$e^+$](q);
 (q4)--[fermion, edge label=$e^+$](q3)--[fermion, edge label=$e^-$](q5);
-(q2)--[photon](q3);
+(q2)--[photon, edge label=$\gamma$](q3);
 };
 \end{feynman}%90, 270 degree rot
 \end{tikzpicture}
@@ -76,9 +76,9 @@
 \vertex[above= 2cm of iq](q2);
 \vertex[right = 2cm of q2](q3);
 \diagram*{
-(q)--[fermion, edge label=$e^-$](q2)--[photon](q1);
+(q)--[fermion, edge label=$e^-$](q2)--[photon, edge label=$\gamma$](q1);
 (q3)--[fermion, edge label=$e^-$](q5);
-(q3)--[photon](q4);
+(q3)--[photon, edge label=$\gamma$](q4);
 (q2)--[fermion, edge label=$e^-$](q3);
 };
 \end{feynman}
@@ -93,9 +93,9 @@
 \vertex[above= 2cm of iq](q2);
 \vertex[right = 2cm of q2](q3);
 \diagram*{
-(q1)--[fermion, edge label=$e^+$](q2)--[photon](q);
+(q1)--[fermion, edge label=$e^+$](q2)--[photon, edge label=$\gamma$](q);
 (q3)--[fermion, edge label=$e^+$](q4);
-(q3)--[photon](q5);
+(q3)--[photon, edge label=$\gamma$](q5);
 (q2)--[fermion, edge label=$e^+$](q3);
 };
 \end{feynman}
@@ -110,9 +110,9 @@
 \vertex[above= 2cm of iq](q2);
 \vertex[right = 2cm of q2](q3);
 \diagram*{
-(q)--[fermion, edge label=$e^-$](q2)--[photon](q1);
+(q)--[fermion, edge label=$e^-$](q2)--[photon, edge label=$\gamma$](q1);
 (q3)--[fermion, edge label=$e^+$](q4);
-(q3)--[photon](q5);
+(q3)--[photon, edge label=$\gamma$](q5);
 (q2)--[fermion, edge label=$e^-$](q3);
 };
 \end{feynman}
@@ -127,9 +127,9 @@
 \vertex[above= 2cm of iq](q2);
 \vertex[right = 2cm of q2](q3);
 \diagram*{
-(q1)--[fermion, edge label=$e^+$](q2)--[photon](q);
+(q1)--[fermion, edge label=$e^+$](q2)--[photon, edge label=$\gamma$](q);
 (q3)--[fermion, edge label=$e^-$](q5);
-(q3)--[photon](q4);
+(q3)--[photon, edge label=$\gamma$](q4);
 (q2)--[fermion, edge label=$e^-$](q3);
 };
 \end{feynman} %rot of 180
@@ -146,9 +146,9 @@
 \vertex[above= 2cm of q2](q3);
 \diagram*{
 (q2)--[fermion, edge label=$e^+$](q);
-(q2)--[photon](q1);
+(q2)--[photon, edge label=$\gamma$](q1);
 (q5)--[fermion, edge label=$e^+$](q3);
-(q3)--[photon](q4);
+(q3)--[photon, edge label=$\gamma$](q4);
 (q3)--[fermion, edge label=$e^+$](q2);
 };
 \end{feynman}
@@ -163,9 +163,9 @@
 \vertex[right= 2cm of iq](q2);
 \vertex[above= 2cm of q2](q3);
 \diagram*{
-(q1)--[fermion, edge label=$e^-$](q2)--[photon](q);
+(q1)--[fermion, edge label=$e^-$](q2)--[photon, edge label=$\gamma$](q);
 (q3)--[fermion, edge label=$e^-$](q4);
-(q3)--[photon](q5);
+(q3)--[photon, edge label=$\gamma$](q5);
 (q2)--[fermion, edge label=$e^-$](q3);
 };
 \end{feynman}
@@ -180,9 +180,9 @@
 \vertex[right= 2cm of iq](q2);
 \vertex[above= 2cm of q2](q3);
 \diagram*{
-(q)--[fermion, edge label=$e^-$](q2)--[photon](q1);
+(q)--[fermion, edge label=$e^-$](q2)--[photon, edge label=$\gamma$](q1);
 (q3)--[fermion, edge label=$e^-$](q4);
-(q3)--[photon](q5);
+(q3)--[photon, edge label=$\gamma$](q5);
 (q2)--[fermion, edge label=$e^-$](q3);
 };
 \end{feynman}
@@ -197,9 +197,9 @@
 \vertex[right= 2cm of iq](q2);
 \vertex[above= 2cm of q2](q3);
 \diagram*{
-(q1)--[fermion, edge label=$e^+$](q2)--[photon](q);
+(q1)--[fermion, edge label=$e^+$](q2)--[photon, edge label=$\gamma$](q);
 (q3)--[fermion, edge label=$e^-$](q5);
-(q3)--[photon](q4);
+(q3)--[photon, edge label=$\gamma$](q4);
 (q2)--[fermion, edge label=$e^-$](q3);
 };
 \end{feynman} %rot of 180
