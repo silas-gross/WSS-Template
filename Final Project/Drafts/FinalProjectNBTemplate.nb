@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     10648,        268]
-NotebookOptionsPosition[      7458,        203]
-NotebookOutlinePosition[      8269,        230]
-CellTagsIndexPosition[      8226,        227]
+NotebookDataLength[     11010,        272]
+NotebookOptionsPosition[      7819,        207]
+NotebookOutlinePosition[      8630,        234]
+CellTagsIndexPosition[      8587,        231]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -58,15 +58,19 @@ Cell["\<\
 \tIn order to automatically grade student problems one must identify the \
 scope and level of the problem and then define equivalent answers appropriate \
 to the context of the question and knowledge of the student. To this end, we \
-first train a classifier on a data set of problems in Algebra 1, Algebra 2 \
-and Calculus
+first train a Neural Network Classifier on a data set of problems in Algebra \
+1, Algebra 2 and Calculus. Then, using a combination of rule based checks and \
+the theorem prover, we define equivalent answers, then check that particular \
+rules were not used in order to maintain equivalence at the level of the \
+student to prevent cheating. All of this is then packaged in a GUI for \
+understandibility.
 \
 \>", "Text",
  CellChangeTimes->{{3.7711739725879726`*^9, 3.7711739738638678`*^9}, {
   3.771244445794286*^9, 3.7712444735330987`*^9}, {3.771244539605034*^9, 
   3.7712445402464895`*^9}, {3.771244649090232*^9, 3.7712446661133833`*^9}, {
-  3.771269184164607*^9, 
-  3.7712692401980762`*^9}},ExpressionUUID->"6850a510-9bfe-4287-82fb-\
+  3.771269184164607*^9, 3.7712692401980762`*^9}, {3.771340769159478*^9, 
+  3.771340921273842*^9}},ExpressionUUID->"6850a510-9bfe-4287-82fb-\
 db29f6231abd"]
 }, Open  ]]
 }, Open  ]],
@@ -236,38 +240,38 @@ Cell[891, 30, 283, 5, 91, "Subsection",ExpressionUUID->"1d58c7a6-305f-4f13-a0bf-
 Cell[1177, 37, 490, 10, 56, "Text",ExpressionUUID->"94536f76-3fd2-4bf6-b228-fa93ec9acae9"],
 Cell[CellGroupData[{
 Cell[1692, 51, 192, 3, 56, "Subsubsection",ExpressionUUID->"fb710aff-fd2a-4bf1-b831-4e6dc439ea7e"],
-Cell[1887, 56, 679, 13, 122, "Text",ExpressionUUID->"6850a510-9bfe-4287-82fb-db29f6231abd"]
+Cell[1887, 56, 1040, 17, 188, "Text",ExpressionUUID->"6850a510-9bfe-4287-82fb-db29f6231abd"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2615, 75, 214, 4, 67, "Section",ExpressionUUID->"29fe6de1-60da-4abd-95c9-87e187494597"],
-Cell[2832, 81, 1218, 18, 210, "Text",ExpressionUUID->"49e65a25-d76b-4675-9ee7-b3dec955efca"]
+Cell[2976, 79, 214, 4, 67, "Section",ExpressionUUID->"29fe6de1-60da-4abd-95c9-87e187494597"],
+Cell[3193, 85, 1218, 18, 210, "Text",ExpressionUUID->"49e65a25-d76b-4675-9ee7-b3dec955efca"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4087, 104, 337, 5, 67, "Section",ExpressionUUID->"604618ba-ba87-4456-819f-37415c3c8c36"],
+Cell[4448, 108, 337, 5, 67, "Section",ExpressionUUID->"604618ba-ba87-4456-819f-37415c3c8c36"],
 Cell[CellGroupData[{
-Cell[4449, 113, 208, 4, 53, "Subsection",ExpressionUUID->"b1b516ac-247d-4f4f-b944-4938f1218eb3"],
-Cell[4660, 119, 167, 3, 44, "Subsubsection",ExpressionUUID->"e7c1494e-c535-46cd-bc14-5791bf096e9b"],
-Cell[4830, 124, 175, 3, 36, "Subsubsection",ExpressionUUID->"5ac55906-849b-4d52-b10d-d033f55accf5"],
-Cell[5008, 129, 183, 3, 36, "Subsubsection",ExpressionUUID->"7c53b2cf-883f-4172-b7d6-cb2708dd7fb3"]
+Cell[4810, 117, 208, 4, 53, "Subsection",ExpressionUUID->"b1b516ac-247d-4f4f-b944-4938f1218eb3"],
+Cell[5021, 123, 167, 3, 44, "Subsubsection",ExpressionUUID->"e7c1494e-c535-46cd-bc14-5791bf096e9b"],
+Cell[5191, 128, 175, 3, 36, "Subsubsection",ExpressionUUID->"5ac55906-849b-4d52-b10d-d033f55accf5"],
+Cell[5369, 133, 183, 3, 36, "Subsubsection",ExpressionUUID->"7c53b2cf-883f-4172-b7d6-cb2708dd7fb3"]
 }, Open  ]],
-Cell[5206, 135, 188, 3, 53, "Subsection",ExpressionUUID->"6b6beba0-b5c4-4022-8b92-3a006474990c"]
+Cell[5567, 139, 188, 3, 53, "Subsection",ExpressionUUID->"6b6beba0-b5c4-4022-8b92-3a006474990c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5431, 143, 205, 3, 67, "Section",ExpressionUUID->"0c299d7e-52e9-44a4-bfe4-741a5a8dfb7a"],
-Cell[5639, 148, 174, 3, 53, "Subsection",ExpressionUUID->"c45ad82d-dd33-4013-a3c2-d0791d4a3802"],
-Cell[5816, 153, 187, 3, 37, "Subsection",ExpressionUUID->"c273f908-ffe4-4ebb-abba-870efb3ad9b2"],
+Cell[5792, 147, 205, 3, 67, "Section",ExpressionUUID->"0c299d7e-52e9-44a4-bfe4-741a5a8dfb7a"],
+Cell[6000, 152, 174, 3, 53, "Subsection",ExpressionUUID->"c45ad82d-dd33-4013-a3c2-d0791d4a3802"],
+Cell[6177, 157, 187, 3, 37, "Subsection",ExpressionUUID->"c273f908-ffe4-4ebb-abba-870efb3ad9b2"],
 Cell[CellGroupData[{
-Cell[6028, 160, 168, 3, 37, "Subsection",ExpressionUUID->"647e2dae-93b0-4b39-a711-72c309ae9b14"],
-Cell[6199, 165, 171, 3, 44, "Subsubsection",ExpressionUUID->"4516df2e-ef90-484a-9d5f-7dd51499795d"],
-Cell[6373, 170, 169, 3, 36, "Subsubsection",ExpressionUUID->"6f3a6d32-6fb6-416b-902c-f2c21d7ca3d3"]
+Cell[6389, 164, 168, 3, 37, "Subsection",ExpressionUUID->"647e2dae-93b0-4b39-a711-72c309ae9b14"],
+Cell[6560, 169, 171, 3, 44, "Subsubsection",ExpressionUUID->"4516df2e-ef90-484a-9d5f-7dd51499795d"],
+Cell[6734, 174, 169, 3, 36, "Subsubsection",ExpressionUUID->"6f3a6d32-6fb6-416b-902c-f2c21d7ca3d3"]
 }, Open  ]]
 }, Open  ]],
-Cell[6569, 177, 149, 2, 67, "Section",ExpressionUUID->"75fa8d16-64b2-4512-bd89-c01a81e7bb49"],
-Cell[6721, 181, 170, 3, 53, "Section",ExpressionUUID->"99fc6342-7af7-4fb5-9314-c7b2eb191ace"],
+Cell[6930, 181, 149, 2, 67, "Section",ExpressionUUID->"75fa8d16-64b2-4512-bd89-c01a81e7bb49"],
+Cell[7082, 185, 170, 3, 53, "Section",ExpressionUUID->"99fc6342-7af7-4fb5-9314-c7b2eb191ace"],
 Cell[CellGroupData[{
-Cell[6916, 188, 167, 3, 53, "Section",ExpressionUUID->"dae36e4e-4dd3-4781-a156-916fecd088b5"],
-Cell[7086, 193, 344, 6, 34, "Text",ExpressionUUID->"b70c649b-a958-4202-9f22-238ea1f9c7d4"]
+Cell[7277, 192, 167, 3, 53, "Section",ExpressionUUID->"dae36e4e-4dd3-4781-a156-916fecd088b5"],
+Cell[7447, 197, 344, 6, 34, "Text",ExpressionUUID->"b70c649b-a958-4202-9f22-238ea1f9c7d4"]
 }, Open  ]]
 }, Open  ]]
 }
