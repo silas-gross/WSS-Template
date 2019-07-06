@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     11012,        272]
-NotebookOptionsPosition[      7821,        207]
-NotebookOutlinePosition[      8632,        234]
-CellTagsIndexPosition[      8589,        231]
+NotebookDataLength[     13470,        320]
+NotebookOptionsPosition[      9680,        249]
+NotebookOutlinePosition[     10491,        276]
+CellTagsIndexPosition[     10448,        273]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -121,6 +121,28 @@ Cell["Classifying Questions to determine the level of the problem", \
   3.771174203128262*^9}},ExpressionUUID->"b1b516ac-247d-4f4f-b944-\
 4938f1218eb3"],
 
+Cell["\<\
+\tThe problem of classification is often solved by machine learning \
+techniques trained on large data sets. In this case, I retrained a series of \
+models in the Wolfram language \[OpenCurlyDoubleQuote]Classify\
+\[CloseCurlyDoubleQuote] function on a 3000 question data set in algebra 1, 2 \
+ and calculus, grouping all the problems and providing the problems and \
+groupings to the network, i.e. training in a supervised manner. Then, the \
+accuracy of each model was tested and is shown below.  All models were given \
+the \[OpenCurlyDoubleQuote]Quality\[CloseCurlyDoubleQuote] goal to improve \
+accuracy at the cost of training time, as the training is taking place ahead \
+of time, and the system is not retrained live. \
+\>", "Text",
+ CellChangeTimes->{{3.771360614249292*^9, 3.771360853478378*^9}, {
+  3.7713609501170626`*^9, 3.77136095740224*^9}, {3.7713609963613443`*^9, 
+  3.7713610535770082`*^9}},ExpressionUUID->"462f756c-54f5-4530-865a-\
+bc0d509c817d"],
+
+Cell["Automatic", "Subsubsection",
+ CellChangeTimes->{{3.771360881674418*^9, 
+  3.771360888543313*^9}},ExpressionUUID->"53e17a2e-e812-46d2-a2ae-\
+57a8cce8642b"],
+
 Cell["Neural Network", "Subsubsection",
  CellChangeTimes->{{3.7711743222709503`*^9, 
   3.771174325800459*^9}},ExpressionUUID->"e7c1494e-c535-46cd-bc14-\
@@ -131,10 +153,30 @@ Cell["Naive Bayesian Model", "Subsubsection",
   3.7711743418020124`*^9}},ExpressionUUID->"5ac55906-849b-4d52-b10d-\
 d033f55accf5"],
 
-Cell["Issues Regarding Training Data", "Subsubsection",
- CellChangeTimes->{{3.771174350426152*^9, 
-  3.7711743758712363`*^9}},ExpressionUUID->"7c53b2cf-883f-4172-b7d6-\
-cb2708dd7fb3"]
+Cell["Random Forrest", "Subsubsection",
+ CellChangeTimes->{{3.771174350426152*^9, 3.7711743758712363`*^9}, {
+  3.7713608648744774`*^9, 
+  3.7713608952050514`*^9}},ExpressionUUID->"7c53b2cf-883f-4172-b7d6-\
+cb2708dd7fb3"],
+
+Cell["Support Vector Machine", "Subsubsection",
+ CellChangeTimes->{{3.771360899545119*^9, 
+  3.771360905842594*^9}},ExpressionUUID->"f153968f-db5c-4c67-bf92-\
+1f286a9e7819"],
+
+Cell["Gradient Descent ", "Subsubsection",
+ CellChangeTimes->{{3.7713609297966194`*^9, 
+  3.771360934490956*^9}},ExpressionUUID->"097eb12d-eea5-4027-b918-\
+f4d4ee033ce3"],
+
+Cell["Nearest Neighbor ", "Subsubsection",
+ CellChangeTimes->{{3.771360941657049*^9, 
+  3.7713609463714*^9}},ExpressionUUID->"0323e150-e97b-4ffb-bd5c-9f27dfd38eb3"],
+
+Cell["Logistic ", "Subsubsection",
+ CellChangeTimes->{{3.771361063135805*^9, 
+  3.7713610647479553`*^9}},ExpressionUUID->"cc7d4999-d1a2-42f7-9373-\
+9f3f47eea3a9"]
 }, Open  ]],
 
 Cell["Identifying the Context of the Problem", "Subsection",
@@ -251,27 +293,33 @@ Cell[CellGroupData[{
 Cell[4450, 108, 337, 5, 67, "Section",ExpressionUUID->"604618ba-ba87-4456-819f-37415c3c8c36"],
 Cell[CellGroupData[{
 Cell[4812, 117, 208, 4, 53, "Subsection",ExpressionUUID->"b1b516ac-247d-4f4f-b944-4938f1218eb3"],
-Cell[5023, 123, 167, 3, 44, "Subsubsection",ExpressionUUID->"e7c1494e-c535-46cd-bc14-5791bf096e9b"],
-Cell[5193, 128, 175, 3, 36, "Subsubsection",ExpressionUUID->"5ac55906-849b-4d52-b10d-d033f55accf5"],
-Cell[5371, 133, 183, 3, 36, "Subsubsection",ExpressionUUID->"7c53b2cf-883f-4172-b7d6-cb2708dd7fb3"]
+Cell[5023, 123, 975, 15, 144, "Text",ExpressionUUID->"462f756c-54f5-4530-865a-bc0d509c817d"],
+Cell[6001, 140, 160, 3, 44, "Subsubsection",ExpressionUUID->"53e17a2e-e812-46d2-a2ae-57a8cce8642b"],
+Cell[6164, 145, 167, 3, 36, "Subsubsection",ExpressionUUID->"e7c1494e-c535-46cd-bc14-5791bf096e9b"],
+Cell[6334, 150, 175, 3, 36, "Subsubsection",ExpressionUUID->"5ac55906-849b-4d52-b10d-d033f55accf5"],
+Cell[6512, 155, 220, 4, 36, "Subsubsection",ExpressionUUID->"7c53b2cf-883f-4172-b7d6-cb2708dd7fb3"],
+Cell[6735, 161, 173, 3, 36, "Subsubsection",ExpressionUUID->"f153968f-db5c-4c67-bf92-1f286a9e7819"],
+Cell[6911, 166, 170, 3, 36, "Subsubsection",ExpressionUUID->"097eb12d-eea5-4027-b918-f4d4ee033ce3"],
+Cell[7084, 171, 164, 2, 36, "Subsubsection",ExpressionUUID->"0323e150-e97b-4ffb-bd5c-9f27dfd38eb3"],
+Cell[7251, 175, 162, 3, 36, "Subsubsection",ExpressionUUID->"cc7d4999-d1a2-42f7-9373-9f3f47eea3a9"]
 }, Open  ]],
-Cell[5569, 139, 188, 3, 53, "Subsection",ExpressionUUID->"6b6beba0-b5c4-4022-8b92-3a006474990c"]
+Cell[7428, 181, 188, 3, 53, "Subsection",ExpressionUUID->"6b6beba0-b5c4-4022-8b92-3a006474990c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5794, 147, 205, 3, 67, "Section",ExpressionUUID->"0c299d7e-52e9-44a4-bfe4-741a5a8dfb7a"],
-Cell[6002, 152, 174, 3, 53, "Subsection",ExpressionUUID->"c45ad82d-dd33-4013-a3c2-d0791d4a3802"],
-Cell[6179, 157, 187, 3, 37, "Subsection",ExpressionUUID->"c273f908-ffe4-4ebb-abba-870efb3ad9b2"],
+Cell[7653, 189, 205, 3, 67, "Section",ExpressionUUID->"0c299d7e-52e9-44a4-bfe4-741a5a8dfb7a"],
+Cell[7861, 194, 174, 3, 53, "Subsection",ExpressionUUID->"c45ad82d-dd33-4013-a3c2-d0791d4a3802"],
+Cell[8038, 199, 187, 3, 37, "Subsection",ExpressionUUID->"c273f908-ffe4-4ebb-abba-870efb3ad9b2"],
 Cell[CellGroupData[{
-Cell[6391, 164, 168, 3, 37, "Subsection",ExpressionUUID->"647e2dae-93b0-4b39-a711-72c309ae9b14"],
-Cell[6562, 169, 171, 3, 44, "Subsubsection",ExpressionUUID->"4516df2e-ef90-484a-9d5f-7dd51499795d"],
-Cell[6736, 174, 169, 3, 36, "Subsubsection",ExpressionUUID->"6f3a6d32-6fb6-416b-902c-f2c21d7ca3d3"]
+Cell[8250, 206, 168, 3, 37, "Subsection",ExpressionUUID->"647e2dae-93b0-4b39-a711-72c309ae9b14"],
+Cell[8421, 211, 171, 3, 44, "Subsubsection",ExpressionUUID->"4516df2e-ef90-484a-9d5f-7dd51499795d"],
+Cell[8595, 216, 169, 3, 36, "Subsubsection",ExpressionUUID->"6f3a6d32-6fb6-416b-902c-f2c21d7ca3d3"]
 }, Open  ]]
 }, Open  ]],
-Cell[6932, 181, 149, 2, 67, "Section",ExpressionUUID->"75fa8d16-64b2-4512-bd89-c01a81e7bb49"],
-Cell[7084, 185, 170, 3, 53, "Section",ExpressionUUID->"99fc6342-7af7-4fb5-9314-c7b2eb191ace"],
+Cell[8791, 223, 149, 2, 67, "Section",ExpressionUUID->"75fa8d16-64b2-4512-bd89-c01a81e7bb49"],
+Cell[8943, 227, 170, 3, 53, "Section",ExpressionUUID->"99fc6342-7af7-4fb5-9314-c7b2eb191ace"],
 Cell[CellGroupData[{
-Cell[7279, 192, 167, 3, 53, "Section",ExpressionUUID->"dae36e4e-4dd3-4781-a156-916fecd088b5"],
-Cell[7449, 197, 344, 6, 34, "Text",ExpressionUUID->"b70c649b-a958-4202-9f22-238ea1f9c7d4"]
+Cell[9138, 234, 167, 3, 53, "Section",ExpressionUUID->"dae36e4e-4dd3-4781-a156-916fecd088b5"],
+Cell[9308, 239, 344, 6, 34, "Text",ExpressionUUID->"b70c649b-a958-4202-9f22-238ea1f9c7d4"]
 }, Open  ]]
 }, Open  ]]
 }

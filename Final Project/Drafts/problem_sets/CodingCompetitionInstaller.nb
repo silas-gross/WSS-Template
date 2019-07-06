@@ -1,0 +1,386 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17137,        376]
+NotebookOptionsPosition[     16646,        356]
+NotebookOutlinePosition[     17124,        376]
+CellTagsIndexPosition[     17081,        373]
+WindowTitle->Coding Competition Installer
+WindowFrame->Palette*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     InterpretationBox[Cell["",
+       FontSize->15,ExpressionUUID->"f7abaa62-5b08-4b90-af62-8d323bf52d84"],
+      TextCell["", FontSize -> 15]]},
+    {
+     ButtonBox[
+      TagBox[GridBox[{
+         {"\<\"Install\"\>", 
+          StyleBox[
+           AdjustmentBox["|",
+            BoxBaselineShift->-0.945],
+           FontSize->7,
+           FontWeight->"Bold"], "\<\"Update\"\>"}
+        },
+        AutoDelete->False,
+        GridBoxAlignment->{"Columns" -> {{Center}}},
+        GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+        GridBoxSpacings->{
+         "ColumnsIndexed" -> {2 -> 0.25, 3 -> 0.25}, "Rows" -> {{Automatic}}}],
+       "Grid"],
+      Appearance->Automatic,
+      ButtonData->CloudObject[
+       "https://www.wolframcloud.com/objects/69a6bade-14a4-494f-a297-\
+07f969db4bd7"],
+      ButtonFunction:>(Which[$VersionNumber < 11.3, 
+        MessageDialog[
+        "You must use Mathematica 11.3 or higher.", WindowFrame -> 
+         "ModalDialog", WindowSize -> {400, All}], 
+        Not[
+         TrueQ[
+          CurrentValue["InternetConnectionAvailable"]]], 
+        MessageDialog[
+        "An internet connection is required.", WindowFrame -> "ModalDialog"], 
+        True, 
+        Module[{$CellContext`UpdatePacletsProgDialog, $CellContext`sstDir = 
+          FileNameJoin[{$UserBaseDirectory, "Applications", 
+             "CodingCompetition"}], $CellContext`app = 
+          FileNameJoin[{$UserBaseDirectory, 
+             "Applications"}], $CellContext`btnb = 
+          ButtonNotebook[], $CellContext`pro, $CellContext`arc, \
+$CellContext`progDialog1}, $CellContext`UpdatePacletsProgDialog = CreateDialog[
+            Column[{
+              Style[
+               TextCell["Please Wait..."], 12], 
+              ProgressIndicator[
+              Appearance -> "Indeterminate", ImageSize -> 120], 
+              TextCell[""]}, Alignment -> Center], WindowFloating -> True, 
+            WindowSize -> FitAll]; If[
+           Not[
+            TrueQ[$CloudConnected]], 
+           NotebookClose[$CellContext`UpdatePacletsProgDialog]; Quiet[
+             CloudConnect["RememberMe" -> True]], 
+           NotebookClose[$CellContext`UpdatePacletsProgDialog]]; If[
+           Not[
+            CurrentValue[$FrontEnd, "AllowChatServices"]], 
+           NotebookPut[
+            Notebook[{
+              Cell["", CellMargins -> {{Automatic, Automatic}, {1, 1}}], 
+              Cell[
+               TextData[{"Enable Chat Services", 
+                 Cell[
+                  BoxData[
+                   ToBoxes[
+                    Spacer[30]]]], 
+                 Cell[
+                  BoxData[
+                   ToBoxes[
+                    Dynamic[
+                    If[
+                    TrueQ[ChatTools`Private`$perc], 
+                    ProgressIndicator[Appearance -> "Necklace"], 
+                    Spacer[10]], 
+                    Initialization :> {
+                    Unprotect[ChatTools`Private`$perc]; 
+                    ChatTools`Private`$perc = False}, 
+                    TrackedSymbols :> {ChatTools`Private`$perc}]]]]}], 
+               "EnableChatTitleText"], 
+              Cell[
+              "This will enable your system to receive Coding Competition \
+questions.", "EnableChatText"], 
+              Cell[
+               BoxData[
+                GridBox[{{
+                   ButtonBox[
+                    StyleBox["Cancel", FontColor -> GrayLevel[0]], 
+                    ButtonFunction :> DialogReturn[], 
+                    Appearance -> {
+                    "ButtonType" -> "Cancel", "Cancel" -> None}, Background -> 
+                    GrayLevel[0.9], Evaluator -> Automatic, Method -> 
+                    "Preemptive", ImageSize -> {70, 25}], 
+                   ButtonBox[
+                    StyleBox["   Enable   ", FontColor -> GrayLevel[1]], 
+                    ButtonFunction :> Quiet[CloudConnect[]; If[
+                    TrueQ[$CloudConnected], 
+                    CurrentValue[$FrontEnd, "AllowChatServices"] = True; 
+                    ChatTools`Private`$perc = True, 
+                    DialogReturn[]], 
+                    MessageName[CloudConnect, "clver"]], 
+                    Appearance -> {
+                    "ButtonType" -> "Default", "Default" -> 
+                    FrontEnd`ToFileName[{"Toolbars", "ChatTools"}, 
+                    "SendButton-Default.9.png"], "Hover" -> 
+                    FrontEnd`ToFileName[{"Toolbars", "ChatTools"}, 
+                    "SendButton-Hover.9.png"]}, Method -> "Queued", Evaluator -> 
+                    Automatic, Background -> 
+                    RGBColor[0., 0.5548332951857786, 1.]]}}, 
+                 GridBoxAlignment -> {"Columns" -> {{Right}}}, 
+                 GridBoxSpacings -> {"Columns" -> {{1}}}]], 
+               "EnableChatButtons"]}, WindowSize -> {490, 200}, 
+             ShowCellBracket -> False, "CellInsertionPointCell" -> {}, 
+             "BlinkingCellInsertionPoint" -> False, "CellInsertionPointColor" -> 
+             GrayLevel[1], WindowFloating -> True, WindowElements -> {}, 
+             WindowFrameElements -> {"CloseBox"}, ShowStringCharacters -> 
+             False, Background -> GrayLevel[1], 
+             ScrollingOptions -> {
+              "PagewiseScrolling" -> False, "PagewiseDisplay" -> True, 
+               "VerticalScrollRange" -> Fit}, ShowCellBracket -> False, 
+             CellMargins -> {{0, 0}, {0, 0}}, AutoMultiplicationSymbol -> 
+             False, Saveable -> False, WindowTitle -> "Wolfram Chat", 
+             Editable -> False, Selectable -> False, StyleDefinitions -> 
+             Notebook[{
+                Cell[
+                 StyleData["EnableChatTitleText"], FontSize -> 20, FontFamily -> 
+                 "Source Sans Pro", FontColor -> RGBColor[0.2, 0.2, 0.2], 
+                 ShowCellBracket -> False, 
+                 CellMargins -> {{30, 30}, {2, 14}}], 
+                Cell[
+                 StyleData["EnableChatText"], FontSize -> 14, FontFamily -> 
+                 "Source Sans Pro", FontColor -> 
+                 RGBColor[0.39215, 0.39215, 0.39215], ShowCellBracket -> 
+                 False, CellMargins -> {{30, 30}, {2, 14}}], 
+                Cell[
+                 StyleData["EnableChatButtons"], TextAlignment -> Right, 
+                 CellMargins -> {{30, 30}, {2, 30}}, 
+                 ButtonBoxOptions -> {
+                  ImageSize -> {80, 24}, 
+                   BaseStyle -> {
+                    FontFamily -> "Source Sans Pro", FontSize -> 14}}]}], 
+             NotebookEventActions -> {"ReturnKeyDown" :> FE`Evaluate[
+                 FEPrivate`FindAndClickDefaultButton[]], {
+                "MenuCommand", "EvaluateCells"} :> FE`Evaluate[
+                 FEPrivate`FindAndClickDefaultButton[]], {
+                "MenuCommand", "HandleShiftReturn"} :> FE`Evaluate[
+                 FEPrivate`FindAndClickDefaultButton[]], {
+                "MenuCommand", "EvaluateNextCell"} :> FE`Evaluate[
+                 FEPrivate`FindAndClickDefaultButton[]], 
+               "EscapeKeyDown" :> (FE`Evaluate[
+                  FEPrivate`FindAndClickCancelButton[]]; 
+                DialogReturn[$Failed]), "WindowClose" :> (FE`Evaluate[
+                  FEPrivate`FindAndClickCancelButton[]]; 
+                DialogReturn[$Failed])}, 
+             TaggingRules -> {"EnableChatServices" -> "True"}, 
+             NotebookDynamicExpression -> Dynamic[
+               Refresh[
+                If[
+                 And[
+                  TrueQ[ChatTools`Private`$perc], FE`Evaluate[
+                    FEPrivate`EvaluatorStatus["ChatServices"]] === "Running"], 
+                 NotebookClose[
+                  SelectFirst[
+                   Notebooks[], 
+                   CurrentValue[#, {TaggingRules, "EnableChatServices"}] === 
+                   "True"& ]]], UpdateInterval -> 1], 
+               TrackedSymbols :> {ChatTools`Private`$perc}]]]]; If[
+           Not[
+            TrueQ[$CloudConnected]], NotebookClose[$CellContext`btnb]; 
+           MessageDialog["You must first log into the cloud."], 
+           NotebookClose[$CellContext`btnb]; Catch[
+             
+             With[{$CellContext`bd = #, $CellContext`btnb1 = \
+$CellContext`btnb, $CellContext`sstDir1 = $CellContext`sstDir}, If[
+                DirectoryQ[$CellContext`sstDir], 
+                If[
+                 MatchQ[
+                  ChoiceDialog[
+                  "A version of CodingCompetition is already installed. Do \
+you wish to overwrite the existing version?", {
+                   "Overwrite" :> Function[$CellContext`u, 
+                    If[$CellContext`u === $Aborted, 
+                    Throw[
+                    NotebookClose[$CellContext`pro]; 
+                    NotebookClose[$CellContext`btnb1]; 
+                    MessageDialog[
+                    "There is a problem with the Cloud. Try again later.", 
+                    WindowFrame -> "ModalDialog", 
+                    WindowSize -> {350, All}]], $CellContext`u]][
+                    TimeConstrained[
+                    If[$CellContext`pro = CreatePalette[
+                    ProgressIndicator[
+                    Dynamic[
+                    Clock[Infinity]], Indeterminate, ImageSize -> {300, 30}], 
+                    WindowMargins -> {{Automatic, Automatic}, {
+                    Automatic, 250}}, WindowTitle -> 
+                    "Checking CodingCompetition Cloud Resource.", 
+                    WindowSize -> {300, Fit}]; Quiet[
+                    TrueQ[
+                    FileExistsQ[$CellContext`bd]]], 
+                    NotebookClose[$CellContext`pro]; 
+                    NotebookClose[$CellContext`btnb1]; Quiet[
+                    
+                    DeleteDirectory[$CellContext`sstDir, DeleteContents -> 
+                    True], {
+                    MessageName[DeleteDirectory, "nodir"], 
+                    MessageName[DeleteDirectory, "dirne"]}], 
+                    Throw[
+                    NotebookClose[$CellContext`pro]; 
+                    NotebookClose[$CellContext`btnb1]; 
+                    MessageDialog[
+                    "There is a problem with the Cloud. Try again later.", 
+                    WindowFrame -> "ModalDialog", WindowSize -> {350, All}]]],
+                     10, $Aborted]], "Cancel" :> $Canceled}, WindowTitle -> 
+                   "Previous Installation", WindowFloating -> 
+                   True], $Canceled], 
+                 Throw[
+                 PacletManager`PacletUpdate["ChannelFramework"]; 
+                  PacletManager`PacletUpdate["ChatTools"]; 
+                  PacletManager`PacletUpdate[
+                   "CloudObject"]; $Canceled]], \
+$CellContext`UpdatePacletsProgDialog = CreateDialog[
+                   Column[{
+                    Style[
+                    TextCell["Please Wait..."], 12], 
+                    ProgressIndicator[
+                    Appearance -> "Indeterminate", ImageSize -> 120], 
+                    TextCell[""]}, Alignment -> Center], WindowFloating -> 
+                   True, WindowSize -> FitAll]; 
+                PacletManager`PacletUpdate["ChannelFramework"]; 
+                PacletManager`PacletUpdate["ChatTools"]; 
+                PacletManager`PacletUpdate["CloudObject"]; 
+                NotebookClose[$CellContext`UpdatePacletsProgDialog]]; \
+$CellContext`progDialog1 = CreateDialog[
+                 Column[{
+                   Style[
+                    TextCell["Installing CodingCompetition..."], 12], 
+                   ProgressIndicator[
+                   Appearance -> "Indeterminate", ImageSize -> 120], 
+                   TextCell[""]}, Alignment -> Center], WindowFloating -> 
+                 True, WindowSize -> FitAll]; Function[$CellContext`u, 
+                If[$CellContext`u === $Aborted, 
+                 Throw[
+                 NotebookClose[$CellContext`progDialog1]; 
+                  NotebookClose[$CellContext`btnb]; 
+                  MessageDialog[
+                   "There is a problem with the Cloud. Try again later.", 
+                    WindowFrame -> "ModalDialog", 
+                    WindowSize -> {350, All}]], $CellContext`u]][
+                TimeConstrained[
+                 If[
+                  Quiet[
+                   And[
+                    TrueQ[
+                    FileExistsQ[#]], $CellContext`arc = 
+                    FileNameJoin[{$CellContext`app, "CodingCompetition.zip"}]; 
+                    TrueQ[
+                    FileExistsQ[
+                    CopyFile[#, $CellContext`arc]]]]], 
+                  Quiet[
+                  ExtractArchive[$CellContext`arc, $CellContext`app]; 
+                   DeleteFile[$CellContext`arc]; 
+                   PacletManager`PacletUpdate["ChannelFramework"]; 
+                   PacletManager`PacletUpdate["ChatTools"]; 
+                   PacletManager`PacletUpdate["CloudObject"]], 
+                  Throw[
+                  NotebookClose[$CellContext`progDialog1]; 
+                   NotebookClose[$CellContext`btnb]; 
+                   MessageDialog[
+                    "There is a problem with the Cloud. Try again later.", 
+                    WindowFrame -> "ModalDialog", WindowSize -> {350, All}]]],
+                  10, $Aborted]]; NotebookClose[$CellContext`progDialog1]; 
+              NotebookClose[$CellContext`btnb]; MessageDialog[
+                StringJoin[
+                "Installation almost complete \[LongDash] please restart ", \
+$ProgramName, " to complete the CodingCompetition installation."], 
+                WindowFloating -> True]]]]]]& ),
+      Evaluator->Automatic,
+      FrameMargins->12,
+      Method->"Queued"]},
+    {
+     ButtonBox[
+      RowBox[{"Uninstall", " ", "Paclet"}],
+      Appearance->Automatic,
+      ButtonFunction:>
+       Module[{$CellContext`sstDir = 
+         FileNameJoin[{$UserBaseDirectory, "Applications", 
+            "CodingCompetition"}], $CellContext`btnb = 
+         ButtonNotebook[], $CellContext`app = 
+         FileNameJoin[{$UserBaseDirectory, 
+            "Applications"}], $CellContext`progDialog1}, Catch[If[
+            DirectoryQ[$CellContext`sstDir], NotebookClose[$CellContext`btnb]; 
+            Quiet[
+              DeleteDirectory[$CellContext`sstDir, DeleteContents -> True], {
+               MessageName[DeleteDirectory, "nodir"], 
+               MessageName[DeleteDirectory, "dirne"]}], 
+            Throw[
+            NotebookClose[$CellContext`btnb]; 
+             MessageDialog[
+              "CodingCompetition is not present.", WindowFrame -> 
+               "ModalDialog"]]]; $CellContext`progDialog1 = CreateDialog[
+             Column[{
+               Style[
+                TextCell["Uninstalling CodingCompetition..."], 12], 
+               ProgressIndicator[
+               Appearance -> "Indeterminate", ImageSize -> 120], 
+               TextCell[""]}, Alignment -> Center], WindowFloating -> True, 
+             WindowSize -> FitAll]; NotebookClose[$CellContext`progDialog1]; 
+          MessageDialog[
+            StringJoin[
+            "Uninstall almost complete \[LongDash] please restart ", \
+$ProgramName, " to complete the CodingCompetition uninstall."], 
+            WindowFloating -> True]]; NotebookClose[$CellContext`btnb]; Null],
+      Evaluator->Automatic,
+      FrameMargins->5,
+      Method->"Queued"]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+   GridBoxSpacings->{"Columns" -> {{Automatic}}, "Rows" -> {{0}}}],
+  "Column"]],
+ CellMargins->{{0, 0}, {0, 0}},
+ CellBracketOptions->{"Color"->RGBColor[0.269993, 0.308507, 0.6]},
+ CellHorizontalScrolling->True,
+ PageBreakAbove->True,
+ PageBreakWithin->False,
+ ShowAutoStyles->True,
+ LineSpacing->{1.25, 0},
+ AutoItalicWords->{},
+ ScriptMinSize->9,
+ ShowStringCharacters->False,
+ FontFamily:>CurrentValue["PanelFontFamily"],
+ FontSize:>CurrentValue[
+  "PanelFontSize"],ExpressionUUID->"1fd49791-2fb3-4f7e-8af9-bc90e7e300e4"]
+},
+Saveable->False,
+WindowSize->{230, 130},
+WindowMargins->{{Automatic, Automatic}, {Automatic, Automatic}},
+WindowElements->{},
+WindowTitle->"Coding Competition Installer",
+DockedCells->{},
+TextAlignment->Center,
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
+StyleDefinitions->"Palette.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[601, 21, 16041, 333, 102, InheritFromParent,ExpressionUUID->"1fd49791-2fb3-4f7e-8af9-bc90e7e300e4",
+ PageBreakAbove->True,
+ PageBreakWithin->False]
+}
+]
+*)
+
+(* End of internal cache information *)
+
