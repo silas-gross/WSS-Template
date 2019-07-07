@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1004784,      17140]
-NotebookOptionsPosition[    987841,      16876]
-NotebookOutlinePosition[    988182,      16891]
-CellTagsIndexPosition[    988139,      16888]
+NotebookDataLength[   1009627,      17257]
+NotebookOptionsPosition[    992210,      16985]
+NotebookOutlinePosition[    992551,      17000]
+CellTagsIndexPosition[    992508,      16997]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -16872,6 +16872,115 @@ Cell[BoxData[
  CellChangeTimes->{3.7715133968080897`*^9},
  CellLabel->
   "Out[160]=",ExpressionUUID->"14379949-4619-4173-8982-dc61b190c254"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"l", "=", 
+  RowBox[{"FormFunction", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\"\<question\>\"", "\[Rule]", " ", "\"\<String\>\""}], ",", 
+      " ", 
+      RowBox[{"\"\<answer\>\"", "\[Rule]", "\"\<String\>\""}]}], "}"}], ",", 
+    " ", "f"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.771520026013891*^9, 3.7715200948754225`*^9}, {
+  3.7715256748460293`*^9, 3.7715257232884007`*^9}},
+ CellLabel->
+  "In[186]:=",ExpressionUUID->"ec1f01e6-0c98-4d27-a5e2-855df66a8109"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["FormFunction",
+    "SummaryHead"], "[", 
+   TemplateBox[{DynamicModuleBox[{Forms`Format`PackagePrivate`values$$}, 
+      DynamicBox[
+       ToBoxes[
+        If[
+         ValueQ[Forms`Format`PackagePrivate`values$$], 
+         Column[{
+           Panel[
+            Style[
+             $CellContext`f[Forms`Format`PackagePrivate`values$$], "Output", 
+             "StandardForm"], Background -> White], 
+           Item[
+            Row[{
+              Spacer[0], 
+              Forms`Format`PackagePrivate`formCancelButton["Back", 
+               Clear[Forms`Format`PackagePrivate`values$$], 
+               FormObject[
+                Association[
+                "question" -> Association["Interpreter" -> "String"], 
+                 "answer" -> Association["Interpreter" -> "String"]]][
+               AppearanceRules, "FormCancelButtonStyle"]]}], Alignment -> 
+            Right]}, Alignment -> Right], 
+         Forms`Format`PackagePrivate`values$$; Forms`PackageScope`bindForm[
+           Forms`PackageScope`changeAppearanceRule[
+            FormObject[
+             Association[
+             "question" -> Association["Interpreter" -> "String"], "answer" -> 
+              Association["Interpreter" -> "String"]]], "CancelLabel" -> 
+            None], Forms`Format`PackagePrivate`values$$]], StandardForm], 
+       ImageSizeCache -> {274., {55.5, 61.5}}, 
+       TrackedSymbols :> {Forms`Format`PackagePrivate`values$$}], 
+      DynamicModuleValues :> {}]},
+    "FormPanel"], "]"}],
+  FormFunction[
+   FormObject[
+    Association[
+    "question" -> Association["Interpreter" -> "String"], "answer" -> 
+     Association["Interpreter" -> "String"]]], $CellContext`f],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{
+  3.7715201000511227`*^9, {3.7715256847937446`*^9, 3.7715257261842623`*^9}},
+ CellLabel->
+  "Out[186]=",ExpressionUUID->"15bc44d2-90c3-471b-84cc-e3d802b233e2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Deploy", "[", "l", "]"}]], "Input",
+ CellChangeTimes->{{3.7715257066513205`*^9, 3.771525709303454*^9}, {
+  3.7715257471297736`*^9, 
+  3.7715257784012823`*^9}},ExpressionUUID->"ffbb0c5a-42e1-43fa-b00e-\
+fbd1167bcc81"],
+
+Cell[BoxData[
+ DynamicModuleBox[{Forms`Format`PackagePrivate`temp$$ = Association[
+  "question" -> Association["Interpreter" -> "String", "Input" -> ""], 
+   "answer" -> Association["Interpreter" -> "String", "Input" -> ""]], 
+  Forms`Format`PackagePrivate`form$$ = FormObject[
+   Association[
+   "question" -> Association["Interpreter" -> "String"], "answer" -> 
+    Association["Interpreter" -> "String"]], 
+   Association[]], Forms`Format`PackagePrivate`vals$$ = Association[]}, 
+  DynamicBox[ToBoxes[
+    Check[
+     Forms`getFormLayout[Forms`Format`PackagePrivate`form$$, 
+      Forms`PackageScope`bindableForm[Forms`Format`PackagePrivate`temp$$, 
+       Evaluate[Forms`Format`PackagePrivate`form$$], 
+       ((Forms`FormFunction`PackagePrivate`values$860377 = $Canceled)& )[
+       Forms`Format`PackagePrivate`vals$$], 
+       Forms`PackageScope`completeAction[
+       Forms`Format`PackagePrivate`form$$, Forms`Format`PackagePrivate`temp$$,
+         Forms`Format`PackagePrivate`vals$$, (
+        Forms`FormFunction`PackagePrivate`values$860377 = #)& , {}]]], Message[
+       MessageName[FormObject, "badformat"], 
+       Part[{}, 1, 2]]; InputForm[Forms`Format`PackagePrivate`form$$], 
+     MessageName[FormObject, "badaccessor"]], StandardForm],
+   ImageSizeCache->{274., {55.5, 61.5}},
+   TrackedSymbols:>{Forms`Format`PackagePrivate`form$$}],
+  DynamicModuleValues:>{}]], "PrintTemporary",
+ CellChangeTimes->{3.771525729300496*^9},
+ CellLabel->
+  "During evaluation of \
+In[187]:=",ExpressionUUID->"61ba2cec-4803-4354-b472-2933cf430891"]
 }, Open  ]]
 },
 WindowSize->{766, 772},
@@ -16890,18 +16999,18 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 1640, 26, 55, "Input",ExpressionUUID->"2333ef13-77fd-4cdf-b6bd-0173171dc2ca"],
+Cell[558, 20, 1640, 26, 113, "Input",ExpressionUUID->"2333ef13-77fd-4cdf-b6bd-0173171dc2ca"],
 Cell[CellGroupData[{
-Cell[2223, 50, 970, 19, 67, "Input",ExpressionUUID->"2d263997-c8cc-4cfe-a7ea-3727e1faf43b"],
-Cell[3196, 71, 816, 15, 71, "Output",ExpressionUUID->"274edfd9-ab05-4757-a26f-8ff52ef29019"]
+Cell[2223, 50, 970, 19, 143, "Input",ExpressionUUID->"2d263997-c8cc-4cfe-a7ea-3727e1faf43b"],
+Cell[3196, 71, 816, 15, 128, "Output",ExpressionUUID->"274edfd9-ab05-4757-a26f-8ff52ef29019"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4049, 91, 1829, 42, 148, "Input",ExpressionUUID->"6c60326b-e42a-4217-9c4b-5a627cce92a1"],
-Cell[5881, 135, 487, 9, 32, "Output",ExpressionUUID->"b93245ec-03bc-4fcf-a576-9dea6fdff793"],
-Cell[6371, 146, 499, 10, 36, "Output",ExpressionUUID->"50a9a7bf-2c90-478a-8b67-6f8038260d64"]
+Cell[4049, 91, 1829, 42, 209, "Input",ExpressionUUID->"6c60326b-e42a-4217-9c4b-5a627cce92a1"],
+Cell[5881, 135, 487, 9, 71, "Output",ExpressionUUID->"b93245ec-03bc-4fcf-a576-9dea6fdff793"],
+Cell[6371, 146, 499, 10, 59, "Output",ExpressionUUID->"50a9a7bf-2c90-478a-8b67-6f8038260d64"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6907, 161, 599, 11, 48, "Input",ExpressionUUID->"13a45433-da7c-48b3-b716-61b7e0f7a0b0"],
+Cell[6907, 161, 599, 11, 67, "Input",ExpressionUUID->"13a45433-da7c-48b3-b716-61b7e0f7a0b0"],
 Cell[7509, 174, 503, 10, 52, "Output",ExpressionUUID->"ad0dfe0e-b4be-49eb-a95a-a874c15bad9b"]
 }, Open  ]],
 Cell[8027, 187, 561, 12, 32, "Input",ExpressionUUID->"a7ae84c8-e77e-4163-a09b-03f6288de0b4"],
@@ -17140,7 +17249,15 @@ Cell[987184, 16852, 181, 4, 32, "Output",ExpressionUUID->"ba6b52b4-1c7f-4934-9ec
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[987402, 16861, 237, 6, 28, "Input",ExpressionUUID->"0ee77f26-00e3-4d07-8258-f563f42459e8"],
-Cell[987642, 16869, 183, 4, 65, "Output",ExpressionUUID->"14379949-4619-4173-8982-dc61b190c254"]
+Cell[987642, 16869, 183, 4, 32, "Output",ExpressionUUID->"14379949-4619-4173-8982-dc61b190c254"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[987862, 16878, 514, 13, 28, "Input",ExpressionUUID->"ec1f01e6-0c98-4d27-a5e2-855df66a8109"],
+Cell[988379, 16893, 1989, 48, 199, "Output",ExpressionUUID->"15bc44d2-90c3-471b-84cc-e3d802b233e2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[990405, 16946, 240, 5, 28, "Input",ExpressionUUID->"ffbb0c5a-42e1-43fa-b00e-fbd1167bcc81"],
+Cell[990648, 16953, 1546, 29, 127, "PrintTemporary",ExpressionUUID->"61ba2cec-4803-4354-b472-2933cf430891"]
 }, Open  ]]
 }
 ]

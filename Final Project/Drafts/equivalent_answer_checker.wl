@@ -48,7 +48,7 @@ algebratheorems={ForAll[{a,b,c}, g[a, g[b,c]]==g[g[a, b], c]],
 				 ForAll[a, f[a, e]==e],
 				 ForAll[a, f[a, n]==a],
 				 ForAll[a, g[a, inv[a]]==e],
-				 ForAll[a, f[a, inv1[a]]==n]} (*This defines an abelian ring w/ comutivity*)
+				 ForAll[a, f[a, inv1[a]]==n]} (*This defines an abelian ring w/ distributive*)
 				 
 
 
@@ -76,7 +76,9 @@ equivalentAnswer[level_, tags_, answer_, correct_]:=If[correctAnswer[answer, cor
 				If[tags==4, level="calc", level=level];
 				Switch[tags, {0, 3, 4}, If[Simplify[Interpreter["MathExpression"][answer]- Interpreter["MathExpression"][correct]]==0, 
 					If[UnsameQ[Head[Interpreter["MathExpression"][answer]], Failure], 
-						proof:=TimeConstrained[FindEquationalProof[Interpreter["MathExpression"][answer]== Interpreter["MathExpression"][correct], theorems[[level]]],0.1];
+						tanswer=removeProperFormat[Interpreter["MathExpression"][answer]];
+						tcorrectanswer=removeProperFormat[Interpreter["MathExpression"][correct]];
+						proof:=TimeConstrained[FindEquationalProof[tanswer==tcorrectanswer , theorems[[level]]],1];
 							If[proof["Logic"]=="EquationalLogic", 
 								If[Complement[Query[Key[{"SubstitutionLemma", All}]]proof["ProofDataset"]["Statement"], theorems[[level]]]=={}, True, False],
 								False],
@@ -110,4 +112,27 @@ checkforEquivlentanswers[question_, answer_, correct_, level_]:=
 Module[{},
 			t=determinetags[question];
 			equivalentAnswer[level, t, answer, correct]]	
-(*Finished for now, need to add in mixed versus improper fraction issue, matricies as well??*)
+
+
+removeSinCos[given_]:=given/.{Sin->sin, Cos->cos} 
+
+
+removeSinCos[Sin[5]+Cos[x]]
+
+
+replacePlus[given_]:=given/.{Plus-> g, Times[-1, amin_]->inv[amin]}
+
+
+replacePlus[a-b]
+
+
+replaceMulti[given_]:=given/.{Times-> f, Power[adiv_, -1]-> inv1[adiv]}
+
+
+replaceTanSecCscCot[given_]:=given/.{Tan[atan_]-> f[sin[atan],inv1[cos[atan]]], Sec[asec_]-> inv1[cos[asec]], Csc[acsc_]-> inv1[sin[acsc]], Cot[acot_]-> f[inv1[sin[acot]],cos[acot]]}
+
+
+replaceTanSecCscCot[Tan[y]+ Csc[x]]
+
+
+removeProperFormat[given_]:=replacePlus[replaceMulti[removeSinCos[replaceTanSecCscCot[given]]]]
