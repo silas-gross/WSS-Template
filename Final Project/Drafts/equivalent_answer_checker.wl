@@ -39,23 +39,54 @@ expandToSix[answer_, correct_, x_]:=If[Series[answer, {x, 0, 6}]==Series[correct
 calcCheck[answer_, correct_]:= Module[{x}, If[MatchQ[correct, RealDigits],  (*Trying to select what the variable is here*)
 
 
+algebratheorems={ForAll[{a,b,c}, g[a, g[b,c]]==g[g[a, b], c]], 
+				 ForAll[{a,b}, g[a, b]==g[b,a]], 
+				 ForAll[{a,b}, f[a,b]==f[b,a]],
+				 ForAll[{a,b,c}, f[a,f[b,c]]==f[f[a,b],c]],
+				 ForAll[{a,b,c}, f[a, g[c,b]]==g[f[a,c], f[a,b]]],
+				 ForAll[a, g[a,e]==a],
+				 ForAll[a, f[a, e]==e],
+				 ForAll[a, f[a, n]==a],
+				 ForAll[a, g[a, inv[a]]==e],
+				 ForAll[a, f[a, inv1[a]]==n]} (*This defines an abelian ring w/ comutivity*)
+				 
+
+
+algebraandtrigtheorems={ForAll[{a,b,c}, g[a, g[b,c]]==g[g[a, b], c]], 
+				 ForAll[{a,b}, g[a, b]==g[b,a]], 
+				 ForAll[{a,b}, f[a,b]==f[b,a]],
+				 ForAll[{a,b,c}, f[a,f[b,c]]==f[f[a,b],c]],
+				 ForAll[{a,b,c}, f[a, g[c,b]]==g[f[a,c], f[a,b]]],
+				 ForAll[a, g[a,e]==a],
+				 ForAll[a, f[a, e]==e],
+				 ForAll[a, f[a, n]==a],
+				 ForAll[a, g[a, inv[a]]==e],
+				 ForAll[a, f[a, inv1[a]]==n], 
+				 ForAll[{a,b}, sin[g[a,b]]==g[f[sin[a],cos[b]], f[sin[b], cos[a]]]],
+				 ForAll[ {a,b}, cos[g[a,b]]==g[f[cos[a],cos[b]], f[sin[inv[b]], sin[a]]]],
+				 ForAll[a, sin[inv[a]]==inv[sin[a]]],
+				 ForAll[a, cos[inv[a]]==cos[a]],
+				 ForAll[a, g[f[sin[a],sin[a]], f[cos[a], cos[a]]]==n]}
+
+
+theorems=<|"algebra 1"-> {algebratheorems}, "algebra 2"-> {algebraandtrigtheorems}, "calc"-> {algebraandtrigtheorems}|>;
+
+
 equivalentAnswer[level_, tags_, answer_, correct_]:=If[correctAnswer[answer, correct], True, 
 				If[tags==4, level="calc", level=level];
-				Switch[tags, {0, 4}, If[Simplify[Interpreter["MathExpression"][answer]- Interpreter["MathExpression"][correct]]==0, 
+				Switch[tags, {0, 3, 4}, If[Simplify[Interpreter["MathExpression"][answer]- Interpreter["MathExpression"][correct]]==0, 
 					If[UnsameQ[Head[Interpreter["MathExpression"][answer]], Failure], 
-						proof:=Switch[level, 
-									"algebra 1", TimeConstrained[FindEquationalProof[Interpreter["MathExpression"][answer]== Interpreter["MathExpression"][correct], AxiomaticTheory["AbelianGroupAxioms"]],0.1] , 
-									"algebra 2" , TimeConstrained[FindEquationalProof[Interpreter["MathExpression"][answer]== Interpreter["MathExpression"][correct], AxiomaticTheory["GroupAxioms"]], 1]]; 
+						proof:=TimeConstrained[FindEquationalProof[Interpreter["MathExpression"][answer]== Interpreter["MathExpression"][correct], theorems[[level]]],0.1];
 							If[proof["Logic"]=="EquationalLogic", 
-								If{Complement[Query[Key[{"SubstitutionLemma", All}]]proof["ProofDataset"]["Statement"], theorems[level]]=={}, True, False],
+								If[Complement[Query[Key[{"SubstitutionLemma", All}]]proof["ProofDataset"]["Statement"], theorems[[level]]]=={}, True, False],
 								False],
 						False],
 					False],
 				1, False, 
 				2, False, 
-				3, (* check if the points can be written in any other way*),  
-				5, (*commute the points*), 
-				6, (*commute the points*)]];
+				5, If[Complement[StringSplit[answer, "),("], StringSplit[correct, "),("]]=={}, True, False],  
+				6, If[Complement[StringSplit[answer, "),("], StringSplit[correct, "),("]]=={}, True, False]
+				]];
 
 
 determinetags[question_]:=If[allpoints[question], If[turnOffEquivFrac[question], 5, If[decForm[question], 6, 3]], If[turnOffEquivFrac[question], 1, If[decForm[question], 2, If[isCalc[question], 4, 0]]]];  (*Want this to return an value for tag*)
@@ -75,5 +106,8 @@ determinetags[question_]:=If[allpoints[question], If[turnOffEquivFrac[question],
 (*}*)
 
 
-(*Basic Idea: Patern match w/ context to pull which of the proof objects I need. Put the proof objects into an array that is multi level and can be accessed by way of the value of tags*)
-(*expand to six will only be for calc, make tags a number*)
+checkforEquivlentanswers[question_, answer_, correct_, level_]:=
+Module[{},
+			t=determinetags[question];
+			equivalentAnswer[level, t, answer, correct]]	
+(*Finished for now, need to add in mixed versus improper fraction issue, matricies as well??*)
