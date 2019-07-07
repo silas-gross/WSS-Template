@@ -19,7 +19,8 @@ cos2[x_]:=Cos[x]-> Power[Cos[x/2], 2]*2-1;
 cos2alt1[x_]:=Cos[x]-> -1Power[Sin[x/2], 2]*2+1;
 cos2alt2[x_]:=Cos[x]-> Power[Cos[x/2], 2]-Power[Sin[x/2], 2]
 decForm[question_]:=StringMatchQ[question, "*ecimal form*"]
-isCalc[question_]:=StringMatchQ[question, {"*erivative*", "*ifferniate*", "*ntegra*", "*aylor*xpand*", "*acLa*xpand*"}]
+isCalc[question_]:=StringMatchQ[question, {"*erivative*", "*ifferniate*", "*ntegra*", "*aylor*xpand*", "*acLa*xpand*", "*imit*"}]
+mixedNumber[question_]:=StringMatchQ[question, "*ixed number*"]
 (*This is the wrong way to do it, patern matching is better here*)
 
 
@@ -35,21 +36,42 @@ commutemultiProof[cmanswer_, correct_]:=FindEquationalProof[cmanswer==correct, {
 expandToSix[answer_, correct_, x_]:=If[Series[answer, {x, 0, 6}]==Series[correct, {x, 0, 6}], True, False]
 
 
-equivalentAnswer[level_, tags_, answer_, correct_]:=If[correctAnswer[answer, correct], True, (*some opporations go here, tags is an array of binary switches (context)*)]
+calcCheck[answer_, correct_]:= Module[{x}, If[MatchQ[correct, RealDigits],  (*Trying to select what the variable is here*)
 
 
-determinetags[question_]:=If[allpoints[question], 3, If[turnOffEquivFrac[question], 1, If[decForm[question], 2, If[isCalc[question], 4, 0]]]];  (*Want this to return an value for tag*)
+equivalentAnswer[level_, tags_, answer_, correct_]:=If[correctAnswer[answer, correct], True, 
+				If[tags==4, level="calc", level=level];
+				Switch[tags, {0, 4}, If[Simplify[Interpreter["MathExpression"][answer]- Interpreter["MathExpression"][correct]]==0, 
+					If[UnsameQ[Head[Interpreter["MathExpression"][answer]], Failure], 
+						proof:=Switch[level, 
+									"algebra 1", TimeConstrained[FindEquationalProof[Interpreter["MathExpression"][answer]== Interpreter["MathExpression"][correct], AxiomaticTheory["AbelianGroupAxioms"]],0.1] , 
+									"algebra 2" , TimeConstrained[FindEquationalProof[Interpreter["MathExpression"][answer]== Interpreter["MathExpression"][correct], AxiomaticTheory["GroupAxioms"]], 1]]; 
+							If[proof["Logic"]=="EquationalLogic", 
+								If{Complement[Query[Key[{"SubstitutionLemma", All}]]proof["ProofDataset"]["Statement"], theorems[level]]=={}, True, False],
+								False],
+						False],
+					False],
+				1, False, 
+				2, False, 
+				3, (* check if the points can be written in any other way*),  
+				5, (*commute the points*), 
+				6, (*commute the points*)]];
+
+
+determinetags[question_]:=If[allpoints[question], If[turnOffEquivFrac[question], 5, If[decForm[question], 6, 3]], If[turnOffEquivFrac[question], 1, If[decForm[question], 2, If[isCalc[question], 4, 0]]]];  (*Want this to return an value for tag*)
 
 
 (* ::Text:: *)
-(*Tags have the following values:*)
+(*	Tags have the following values:*)
 (*{*)
 (* {Value, Meaning},*)
 (* {0, No Context restrictions},*)
 (* {1, Simplest Form Fraction},*)
 (* {2, Decimal Representation},*)
 (* {3, A set of points},*)
-(* {4, Calculus}*)
+(* {4, Calculus},*)
+(* {5 , A set of Points of simplest fractions},*)
+(* {6, A set of points in decimal }*)
 (*}*)
 
 
