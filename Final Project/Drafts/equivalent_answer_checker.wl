@@ -4,39 +4,18 @@ correctAnswer[answer_, correct_]:=MatchQ[answer, correct]
 
 
 turnOffEquivFrac[question_]:=StringMatchQ[question, {"*raction*implest form"}];
-equivilentFraction[x_, y_, n_]:= n*x/y ;/turnOffEquivFrac==False;
 isMatrix[answer_]:=MatchQ[answer, MatrixForm];
 allpoints[question_]:=StringMatchQ[question, {"*all points*"}];
 eitherPointfirst[a_, b_,c_, d_]:= {{"(",a, b, ")"},{"("c, d ")"}}-> {{"("c, d ")"},{"(",a, b, ")"}}
 isPoint[answer_]:=StringMatchQ[answer, {"(*,*)"}];
-commutative[a_,b_]:=a+b-> b+a;
-distributive[a_,b_, c_]:=a*(b+c)-> a*b+a*c/; isMatrix==False;
-commutativemulti[a_, b_]:=a*b-> b*a;/;isMatrix==False;
-associative[a_, b_, c_]:=a+(b+c)-> (a+b)+c;
-associativemulti[a_, b_,c_]:=a*(b*c)-> (a*b)*c;
-sin2[x_]:=Sin[x]-> 2Sin[x/2]Cos[x/2];
-cos2[x_]:=Cos[x]-> Power[Cos[x/2], 2]*2-1;
-cos2alt1[x_]:=Cos[x]-> -1Power[Sin[x/2], 2]*2+1;
-cos2alt2[x_]:=Cos[x]-> Power[Cos[x/2], 2]-Power[Sin[x/2], 2]
-decForm[question_]:=StringMatchQ[question, "*ecimal form*"]
-isCalc[question_]:=StringMatchQ[question, {"*erivative*", "*ifferniate*", "*ntegra*", "*aylor*xpand*", "*acLa*xpand*", "*imit*"}]
-mixedNumber[question_]:=StringMatchQ[question, "*ixed number*"]
+improperFraction[question_]:=StringMatchQ[question, "*mproper fraction*"];
+decForm[question_]:=StringMatchQ[question, "*ecimal form*"];
+isCalc[question_]:=StringMatchQ[question, {"*erivative*", "*ifferniate*", "*ntegra*", "*aylor*xpand*", "*acLa*xpand*", "*imit*"}];
+mixedNumber[question_]:=StringMatchQ[question, "*ixed number*"];
 (*This is the wrong way to do it, patern matching is better here*)
 
 
-canCommute[correct_]:=MatchQ[correct,"*+*"]|| MatchQ[correct, "*\times*"]
-
-
-commuteProof[commuteanswer_, correct_]:=FindEquationalProof[commuteanswer==correct, a+b=b+a]
-
-
-commutemultiProof[cmanswer_, correct_]:=FindEquationalProof[cmanswer==correct, {a*b=b*a, a+b=b+a}]
-
-
 expandToSix[answer_, correct_, x_]:=If[Series[answer, {x, 0, 6}]==Series[correct, {x, 0, 6}], True, False]
-
-
-calcCheck[answer_, correct_]:= Module[{x}, If[MatchQ[correct, RealDigits],  (*Trying to select what the variable is here*)
 
 
 algebratheorems={ForAll[{a,b,c}, g[a, g[b,c]]==g[g[a, b], c]], 
@@ -76,11 +55,11 @@ equivalentAnswer[level_, tags_, answer_, correct_]:=If[correctAnswer[answer, cor
 				If[tags==4, level="calc", level=level];
 				Switch[tags, {0, 3, 4}, If[Simplify[Interpreter["MathExpression"][answer]- Interpreter["MathExpression"][correct]]==0, 
 					If[UnsameQ[Head[Interpreter["MathExpression"][answer]], Failure], 
-						tanswer=removeProperFormat[Interpreter["MathExpression"][answer]];
-						tcorrectanswer=removeProperFormat[Interpreter["MathExpression"][correct]];
-						proof:=TimeConstrained[FindEquationalProof[tanswer==tcorrectanswer , theorems[[level]]],1];
+						formattedanswer=removeProperFormat[Interpreter["MathExpression"][answer]];
+						formattedcorrectanswer=removeProperFormat[Interpreter["MathExpression"][correct]];
+						proof:=TimeConstrained[FindEquationalProof[formattedanswer==formattedcorrectanswer , theorems[level]],1];
 							If[proof["Logic"]=="EquationalLogic", 
-								If[Complement[Query[Key[{"SubstitutionLemma", All}]]proof["ProofDataset"]["Statement"], theorems[[level]]]=={}, True, False],
+								If[Complement[Query[Key[{"SubstitutionLemma", All}]]proof["ProofDataset"]["Statement"], theorems[level]]=={}, True, False],
 								False],
 						False],
 					False],
