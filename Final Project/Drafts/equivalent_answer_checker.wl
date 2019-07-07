@@ -18,6 +18,8 @@ sin2[x_]:=Sin[x]-> 2Sin[x/2]Cos[x/2];
 cos2[x_]:=Cos[x]-> Power[Cos[x/2], 2]*2-1;
 cos2alt1[x_]:=Cos[x]-> -1Power[Sin[x/2], 2]*2+1;
 cos2alt2[x_]:=Cos[x]-> Power[Cos[x/2], 2]-Power[Sin[x/2], 2]
+decForm[question_]:=StringMatchQ[question, "*ecimal form*"]
+isCalc[question_]:=StringMatchQ[question, {"*erivative*", "*ifferniate*", "*ntegra*", "*aylor*xpand*", "*acLa*xpand*"}]
 (*This is the wrong way to do it, patern matching is better here*)
 
 
@@ -36,7 +38,7 @@ expandToSix[answer_, correct_, x_]:=If[Series[answer, {x, 0, 6}]==Series[correct
 equivalentAnswer[level_, tags_, answer_, correct_]:=If[correctAnswer[answer, correct], True, (*some opporations go here, tags is an array of binary switches (context)*)]
 
 
-determinetags[question_]:= (*Want this to return an value for tag*)
+determinetags[question_]:=If[allpoints[question], 3, If[turnOffEquivFrac[question], 1, If[decForm[question], 2, If[isCalc[question], 4, 0]]]];  (*Want this to return an value for tag*)
 
 
 (* ::Text:: *)
@@ -46,8 +48,8 @@ determinetags[question_]:= (*Want this to return an value for tag*)
 (* {0, No Context restrictions},*)
 (* {1, Simplest Form Fraction},*)
 (* {2, Decimal Representation},*)
-(* {3, Matrix (no comm)},*)
-(* {4, Unassigned}*)
+(* {3, A set of points},*)
+(* {4, Calculus}*)
 (*}*)
 
 
