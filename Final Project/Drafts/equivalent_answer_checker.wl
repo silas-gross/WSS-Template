@@ -1,6 +1,6 @@
 (* ::Package:: *)
 
-correctAnswer[answer_, correct_]:=MatchQ[answer, correct]
+correctAnswer[answer_, correct_]:=MatchQ[Interpreter["MathExpression"][answer], Interpreter["MathExpression"][correct]]
 
 
 turnOffEquivFrac[question_]:=StringMatchQ[question, {"*raction*implest form"}];
@@ -51,10 +51,6 @@ algebraandtrigtheorems={ForAll[{a,b,c}, g[a, g[b,c]]==g[g[a, b], c]],
 theorems=<|"algebra 1"-> {algebratheorems}, "algebra 2"-> {algebraandtrigtheorems}, "calc"-> {algebraandtrigtheorems}|>;
 
 
-checkforEquivlentanswers[question_, answer_, correct_, level_]:=
-Module[{},
-			t=determinetags[question];
-			equivalentAnswer[level, t, answer, correct]]	
 removeSinCos[given_]:=given/.{Sin->sin, Cos->cos} 
 removeSinCos[Sin[5]+Cos[x]]
 replacePlus[given_]:=given/.{Plus-> g, Times[-1, amin_]->inv[amin]}
@@ -96,25 +92,35 @@ determinetags[question_]:=If[allpoints[question],
 (*}*)
 
 
-equivalentAnswer[level_, tags_, answer_, correct_]:=If[correctAnswer[answer, correct], True, 
+equivalentAnswer[level_, tags_, answer_, correct_]:=
+Module[{formattedanswer, formattedcorrectanswer, proof}, 
+			
 				If[tags==4, level="calc"];
-				Switch[tags, {0, 3, 4}, If[Simplify[Interpreter["MathExpression"][answer]- Interpreter["MathExpression"][correct]]==0, 
+				Switch[tags, 
+				0| 3| 4, If[correctAnswer[answer, correct], True, If[Simplify[Interpreter["MathExpression"][answer]- Interpreter["MathExpression"][correct]]==0, 
 					If[UnsameQ[Head[Interpreter["MathExpression"][answer]], Failure], 
-						formattedanswer=removeProperFormat[Interpreter["MathExpression"][answer]];
+						formattedanswer:=removeProperFormat[Interpreter["MathExpression"][answer]];
 						formattedcorrectanswer=removeProperFormat[Interpreter["MathExpression"][correct]];
 						proof=TimeConstrained[FindEquationalProof[formattedanswer==formattedcorrectanswer , theorems[level]],1];
 							If[proof["Logic"]=="EquationalLogic", 
 								If[Complement[Query[Key[{"SubstitutionLemma", All}proof["ProofDataset"]["Statement"]]], theorems[level]]=={}, True, False],
 								False],
 						False],
-					False],
-				1, False, 
-				2, False, 
+					False]],
+				1, If[correctAnswer[answer, correct], True, False], 
+				2, If[correctAnswer[answer, correct], True, False], 
 				5, If[Complement[StringSplit[answer, "),("], StringSplit[correct, "),("]]=={}, True, False],  
 				6, If[Complement[StringSplit[answer, "),("], StringSplit[correct, "),("]]=={}, True, False],
-				7, False,
-				8, False
-				]]; (*Why is this not evaluating correctly?*)
+				_, MatchQ[answer, correct] (*exact match is default case*)
+				
+				]] 
+				
 
 
-equivalentAnswer["algebra 1", 0, "a+b", "b+a"]
+checkforEquivlentanswers[question_, answer_, correct_, level_]:=
+Module[{t},
+			t=determinetags[question];
+			equivalentAnswer[level, t, answer, correct]]	
+
+
+equivalentAnswer["algebra 1", 7, "1 1/4", "5/4"]
