@@ -52,14 +52,14 @@ theorems=<|"algebra 1"-> {algebratheorems}, "algebra 2"-> {algebraandtrigtheorem
 
 
 equivalentAnswer[level_, tags_, answer_, correct_]:=If[correctAnswer[answer, correct], True, 
-				If[tags==4, level="calc", level=level];
+				If[tags==4, level="calc"];
 				Switch[tags, {0, 3, 4}, If[Simplify[Interpreter["MathExpression"][answer]- Interpreter["MathExpression"][correct]]==0, 
 					If[UnsameQ[Head[Interpreter["MathExpression"][answer]], Failure], 
 						formattedanswer=removeProperFormat[Interpreter["MathExpression"][answer]];
 						formattedcorrectanswer=removeProperFormat[Interpreter["MathExpression"][correct]];
 						proof:=TimeConstrained[FindEquationalProof[formattedanswer==formattedcorrectanswer , theorems[level]],1];
 							If[proof["Logic"]=="EquationalLogic", 
-								If[Complement[Query[Key[{"SubstitutionLemma", All}]]proof["ProofDataset"]["Statement"], theorems[level]]=={}, True, False],
+								If[Complement[Query[Key[{"SubstitutionLemma", All}proof["ProofDataset"]["Statement"]]], theorems[level]]=={}, True, False],
 								False],
 						False],
 					False],
@@ -115,3 +115,6 @@ replaceTanSecCscCot[Tan[y]+ Csc[x]]
 
 
 removeProperFormat[given_]:=replacePlus[replaceMulti[removeSinCos[replaceTanSecCscCot[given]]]]
+
+
+equivalentAnswer["algebra 1", 0, "a+b", "b+a"]
