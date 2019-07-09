@@ -27,7 +27,7 @@ algebratheorems={ForAll[{a,b,c}, g[a, g[b,c]]==g[g[a, b], c]],
 				 ForAll[a, f[a, e]==e],
 				 ForAll[a, f[a, n]==a],
 				 ForAll[a, g[a, inv[a]]==e],
-				 ForAll[a, f[a, inv1[a]]==n]} (*This defines an abelian ring w/ distributive*)
+				 ForAll[a, f[a, inv1[a]]==n]} (*This defines an abelian ring w/ distributive property*)
 				 
 
 
