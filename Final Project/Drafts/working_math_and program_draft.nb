@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    300272,       6086]
-NotebookOptionsPosition[    287137,       5914]
-NotebookOutlinePosition[    287478,       5929]
-CellTagsIndexPosition[    287435,       5926]
+NotebookDataLength[    302888,       6149]
+NotebookOptionsPosition[    289331,       5971]
+NotebookOutlinePosition[    289672,       5986]
+CellTagsIndexPosition[    289629,       5983]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -5838,73 +5838,130 @@ Cell[BoxData[{
   "In[147]:=",ExpressionUUID->"f3db1e26-1581-406e-a061-507b95ca5f3c"],
 
 Cell[BoxData[
- RowBox[{"DynamicModule", "[", 
-  RowBox[{
-   RowBox[{"{", 
+ RowBox[{
+  RowBox[{"l", ":=", 
+   RowBox[{"FormFunction", "[", 
     RowBox[{
-    "question", ",", " ", "type", ",", " ", "answer", ",", " ", 
-     "correctanswer", ",", " ", "f"}], "}"}], ",", "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"pnumber", "=", 
-     RowBox[{"RandomInteger", "[", 
-      RowBox[{"{", 
-       RowBox[{"0", ",", 
-        RowBox[{"Length", "[", "algebra2Qsq", "]"}]}], "}"}], "]"}]}], ";", 
-    "\[IndentingNewLine]", 
-    RowBox[{"FormFunction", "[", 
-     RowBox[{
-      RowBox[{"{", "\[IndentingNewLine]", "\t\t\t", 
-       RowBox[{
-        RowBox[{"\"\<Type of Problem\>\"", "\[Rule]", " ", 
-         RowBox[{
-          RowBox[{"Restricted", "[", 
-           RowBox[{"\"\<String\>\"", ",", " ", 
-            RowBox[{"{", 
-             RowBox[{
-             "\"\<Algebra 1\>\"", ",", " ", "\"\<Algebra 2 and Trig\>\"", ",",
-               " ", "\"\<Calculus\>\""}], "}"}]}], "]"}], "\[Rule]", " ", 
-          "\"\<Algebra 1\>\""}]}], ",", " ", "\[IndentingNewLine]", "\t\t\t", 
-        RowBox[{"#level", "&"}], ",", " ", "\[IndentingNewLine]", "\t\t\t", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"problems", "[", 
-           RowBox[{"TemplateSlot", "[", "\"\<level\>\"", "]"}], "]"}], 
-          "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-         "\[LeftDoubleBracket]", 
-         RowBox[{"RandomInteger", "[", 
+     RowBox[{"{", "\[IndentingNewLine]", "\t\t\t", 
+      RowBox[{
+       RowBox[{"\"\<Type of Problem\>\"", "\[Rule]", " ", 
+        RowBox[{"Restricted", "[", 
+         RowBox[{"\"\<String\>\"", ",", " ", 
           RowBox[{"{", 
-           RowBox[{"0", ",", " ", "120"}], "}"}], "]"}], 
-         "\[RightDoubleBracket]"}], " ", ",", "\[IndentingNewLine]", "\t\t\t", 
-        RowBox[{"\"\<Answer\>\"", "\[Rule]", " ", "\"\<String\>\""}]}], "}"}],
-       ",", "\[IndentingNewLine]", "\t\t\t  ", 
-      RowBox[{"AppearanceRules", "\[Rule]", " ", 
-       RowBox[{"<|", 
-        RowBox[{
+           RowBox[{
+           "\"\<Algebra 1\>\"", ",", " ", "\"\<Algebra 2\>\"", ",", " ", 
+            "\"\<Calculus\>\""}], "}"}]}], "]"}]}], ",", " ", 
+       "\[IndentingNewLine]", "\t\t\t ", 
+       RowBox[{"\"\<question\>\"", "\[Rule]", " ", 
+        RowBox[{"Switch", "[", 
          RowBox[{
-         "\"\<Title\>\"", "\[Rule]", " ", 
-          "\"\<Student Problem Generator\>\""}], ",", " ", 
-         RowBox[{
-         "\"\<Description\>\"", "\[Rule]", 
-          "\"\<Randomly Generated problems in selected topic\>\""}], ",", " ", 
-         RowBox[{
-         "\"\<SubmitLabel\>\"", "\[Rule]", " ", "\"\<Check Answer\>\""}], ",",
+          RowBox[{"TemplateSlot", "[", "\"\<Type of Problem\>\"", "]"}], ",", 
+          " ", "\"\<Algebra 1\>\"", ",", " ", 
+          RowBox[{
+           RowBox[{"p", "=", 
+            RowBox[{"RandomInteger", "[", "100", "]"}]}], ";", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+             "problems", "\[LeftDoubleBracket]", "1", 
+              "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "1", 
+             "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "p", 
+            "\[RightDoubleBracket]"}]}], ",", " ", "\"\<Algebra 2\>\"", ",", 
           " ", 
-         RowBox[{"\"\<BackgroundColor\>\"", "\[Rule]", "LightBlue"}]}], 
-        "|>"}]}], ",", "\[IndentingNewLine]", "\t\t\t", "f"}], "]"}], ";"}]}],
-   "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"p", "=", 
+            RowBox[{"RandomInteger", "[", "100", "]"}]}], ";", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+             "problems", "\[LeftDoubleBracket]", "2", 
+              "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "1", 
+             "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "p", 
+            "\[RightDoubleBracket]"}]}], ",", " ", "\"\<Calculus\>\"", ",", 
+          " ", 
+          RowBox[{
+           RowBox[{"p", "=", 
+            RowBox[{"RandomInteger", "[", "100", "]"}]}], ";", " ", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+             "problems", "\[LeftDoubleBracket]", "2", 
+              "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "1", 
+             "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "p", 
+            "\[RightDoubleBracket]"}]}]}], "]"}]}]}], "\[IndentingNewLine]", 
+      "\t\t\t", "}"}], ",", "\[IndentingNewLine]", "\t\t\t  ", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{"AppearanceRules", "\[Rule]", " ", 
+        RowBox[{"<|", 
+         RowBox[{
+          RowBox[{
+          "\"\<Title\>\"", "\[Rule]", " ", 
+           "\"\<Student Problem Generator\>\""}], ",", " ", 
+          RowBox[{
+          "\"\<Description\>\"", "\[Rule]", 
+           "\"\<Randomly Generated problems in selected topic\>\""}], ",", 
+          " ", 
+          RowBox[{
+          "\"\<SubmitLabel\>\"", "\[Rule]", " ", "\"\<Check Answer\>\""}]}], 
+         "|>"}]}], ","}], "*)"}], "\[IndentingNewLine]", "\t\t\t", "f"}], 
+    "]"}]}], "\[IndentingNewLine]", 
   RowBox[{"(*", 
    RowBox[{
    "Need", " ", "to", " ", "add", " ", "in", " ", "the", " ", "data", " ", 
     "from", " ", "the", " ", "package", " ", "to", " ", "automatically", " ", 
-    "update"}], "*)"}], "\[IndentingNewLine]", "]"}]], "Input",
+    "update"}], "*)"}], "\[IndentingNewLine]"}]], "Input",
  CellChangeTimes->{{3.7716193609957495`*^9, 3.771619628475986*^9}, {
   3.7716196632396436`*^9, 3.7716197316361494`*^9}, {3.771619864695011*^9, 
   3.771619865328465*^9}, {3.7716656527607594`*^9, 3.771665848414017*^9}, {
   3.7716660376069775`*^9, 3.7716660869045076`*^9}, {3.771666134542119*^9, 
   3.771666196740011*^9}, {3.7716662503032417`*^9, 3.7716663210738974`*^9}, {
-  3.7716664257036486`*^9, 
-  3.771666486532082*^9}},ExpressionUUID->"7df9818f-7970-442a-ad5c-\
-7bac674a6ed3"],
+  3.7716664257036486`*^9, 3.771666486532082*^9}, {3.771682481173129*^9, 
+  3.7716824904327044`*^9}, {3.771682538627778*^9, 3.7716825500422*^9}, {
+  3.771682640538252*^9, 3.7716826622541227`*^9}, {3.771682814573312*^9, 
+  3.771682955910718*^9}, {3.771683140439166*^9, 3.7716834660729475`*^9}},
+ CellLabel->
+  "In[365]:=",ExpressionUUID->"7df9818f-7970-442a-ad5c-7bac674a6ed3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"l", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.771682513934575*^9, 3.7716825176423693`*^9}, {
+  3.7716834201013002`*^9, 3.771683421273239*^9}},
+ CellLabel->
+  "In[366]:=",ExpressionUUID->"95c1fbb0-862b-4855-83da-4c15d5b00b2d"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Restricted","nvldstrpat",
+   "\"Pattern restriction is not a valid string pattern.\"",2,366,68,
+   15904545399117069771,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.771683434236772*^9, 3.7716834709794583`*^9},
+ CellLabel->
+  "During evaluation of \
+In[366]:=",ExpressionUUID->"298a0793-3154-42b8-8901-9ec5ffb45c65"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "FormFunction","nvldform",
+   "\"FormFunction expects a rule, a list of rules, an association or a \
+FormObject as first argument.\"",2,366,69,15904545399117069771,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.771683434236772*^9, 3.7716834709794583`*^9},
+ CellLabel->
+  "During evaluation of \
+In[366]:=",ExpressionUUID->"77a6aa77-9423-43e4-b71a-95aa215cf7ae"],
+
+Cell[BoxData[
+ RowBox[{"$Failed", "[", "]"}]], "Output",
+ CellChangeTimes->{{3.7716825181720047`*^9, 3.7716825526710205`*^9}, {
+   3.7716828338035192`*^9, 3.7716828721107407`*^9}, {3.771683381649602*^9, 
+   3.7716834342524133`*^9}, 3.7716834709950676`*^9},
+ CellLabel->
+  "Out[366]=",ExpressionUUID->"b391f2ca-212a-4299-a0eb-309e73739efc"]
+}, Open  ]],
 
 Cell[BoxData[""], "Input",
  CellChangeTimes->{{3.7716303477787666`*^9, 3.771630391808444*^9}, 
@@ -5998,7 +6055,7 @@ Cell[123231, 2380, 65264, 1229, 71, "Output",ExpressionUUID->"fe9f20fb-7a26-42b3
 Cell[188510, 3612, 3530, 80, 181, "Input",ExpressionUUID->"5652c7f2-04fa-4c09-af67-9f4f252f0675"],
 Cell[CellGroupData[{
 Cell[192065, 3696, 1527, 32, 67, "Input",ExpressionUUID->"1571ed99-a23c-4960-8b79-e86ea7951882"],
-Cell[193595, 3730, 4029, 93, 242, "Output",ExpressionUUID->"8b716d30-7605-42d9-851f-79d5de588bee"]
+Cell[193595, 3730, 4029, 93, 275, "Output",ExpressionUUID->"8b716d30-7605-42d9-851f-79d5de588bee"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[197661, 3828, 1340, 30, 105, "Input",ExpressionUUID->"a58ec1c8-41a6-4b44-8b8b-48c35008ce34"],
@@ -6016,7 +6073,7 @@ Cell[225456, 4405, 514, 8, 32, "Output",ExpressionUUID->"9d932847-2ccb-45b3-b27a
 Cell[225973, 4415, 514, 8, 32, "Output",ExpressionUUID->"9223d28a-5608-4eac-8c28-3f085586597c"],
 Cell[226490, 4425, 512, 8, 32, "Output",ExpressionUUID->"ff74c44f-6b94-45ca-b0cb-03e7250c4198"],
 Cell[227005, 4435, 514, 8, 32, "Output",ExpressionUUID->"bdb79fc4-e5c4-461e-ac9b-729789297535"],
-Cell[227522, 4445, 516, 8, 65, "Output",ExpressionUUID->"00807156-ae0b-4129-b772-abfb52ec5fb1"]
+Cell[227522, 4445, 516, 8, 32, "Output",ExpressionUUID->"00807156-ae0b-4129-b772-abfb52ec5fb1"]
 }, Open  ]],
 Cell[228053, 4456, 393, 6, 67, "Input",ExpressionUUID->"9a0f02f8-0dcb-4fa0-a434-3dab92e35e3d"],
 Cell[228449, 4464, 205, 4, 28, "Input",ExpressionUUID->"410c0451-9b50-4726-838d-507ca1520553"],
@@ -6064,19 +6121,19 @@ Cell[253088, 5083, 270, 6, 32, "Output",ExpressionUUID->"085e5347-ea36-4e84-b17f
 Cell[CellGroupData[{
 Cell[253395, 5094, 17016, 413, 1093, "Input",ExpressionUUID->"8c8e2431-52ff-4e89-b5a1-6f79f7eed696"],
 Cell[270414, 5509, 493, 11, 21, "Message",ExpressionUUID->"fe7868d4-4f63-4d6e-af62-8a670d65c7e3"],
-Cell[270910, 5522, 922, 18, 40, "Message",ExpressionUUID->"8a37e0fc-1e17-4e59-9782-1a87a580b6d0"],
-Cell[271835, 5542, 920, 18, 40, "Message",ExpressionUUID->"b3ff3114-f420-4eb4-9d85-51f45115d90a"],
+Cell[270910, 5522, 922, 18, 75, "Message",ExpressionUUID->"8a37e0fc-1e17-4e59-9782-1a87a580b6d0"],
+Cell[271835, 5542, 920, 18, 75, "Message",ExpressionUUID->"b3ff3114-f420-4eb4-9d85-51f45115d90a"],
 Cell[272758, 5562, 462, 11, 21, "Message",ExpressionUUID->"1ed710a5-720c-44e1-8623-9eaf351271fa"],
-Cell[273223, 5575, 920, 18, 40, "Message",ExpressionUUID->"07495a41-89e1-41e0-9cd6-7be0129667fe"],
+Cell[273223, 5575, 920, 18, 75, "Message",ExpressionUUID->"07495a41-89e1-41e0-9cd6-7be0129667fe"],
 Cell[274146, 5595, 498, 11, 21, "Message",ExpressionUUID->"2689dd67-ba4d-48f3-9cb9-7038b2bcc005"],
 Cell[274647, 5608, 464, 11, 21, "Message",ExpressionUUID->"10fd043f-8999-4ee3-bfc6-3397dc817d26"],
 Cell[275114, 5621, 442, 10, 21, "Message",ExpressionUUID->"e75b2974-e112-4bf9-a875-b256d7e227fb"],
 Cell[275559, 5633, 444, 10, 21, "Message",ExpressionUUID->"c617a937-979e-42b1-80cc-e4ac06bc9c00"],
 Cell[276006, 5645, 444, 10, 21, "Message",ExpressionUUID->"c60aefaa-14dd-45a3-94ec-66b1d8796f29"],
 Cell[276453, 5657, 501, 11, 21, "Message",ExpressionUUID->"74f482e7-87de-4ecb-bf35-5d4db074162b"],
-Cell[276957, 5670, 911, 18, 23, "Message",ExpressionUUID->"91ffbf5b-51c9-4309-9e11-d6123c23dd7d"],
-Cell[277871, 5690, 911, 18, 23, "Message",ExpressionUUID->"afc8585e-ef62-41a5-b3ef-bedd9a94c62d"],
-Cell[278785, 5710, 913, 18, 23, "Message",ExpressionUUID->"89eb5a1a-9218-42ac-9a31-18c31895b7be"],
+Cell[276957, 5670, 911, 18, 41, "Message",ExpressionUUID->"91ffbf5b-51c9-4309-9e11-d6123c23dd7d"],
+Cell[277871, 5690, 911, 18, 41, "Message",ExpressionUUID->"afc8585e-ef62-41a5-b3ef-bedd9a94c62d"],
+Cell[278785, 5710, 913, 18, 41, "Message",ExpressionUUID->"89eb5a1a-9218-42ac-9a31-18c31895b7be"],
 Cell[279701, 5730, 494, 11, 21, "Message",ExpressionUUID->"2121f160-5b4f-40a8-85bf-28c728e5fbb3"],
 Cell[280198, 5743, 491, 11, 21, "Message",ExpressionUUID->"a8c41dca-0a5f-4d0a-8918-b5b2a39bdff3"],
 Cell[280692, 5756, 461, 11, 21, "Message",ExpressionUUID->"a4a242f5-6e3f-41cf-b148-80b4a7d73a1f"],
@@ -6086,8 +6143,14 @@ Cell[282150, 5795, 498, 11, 21, "Message",ExpressionUUID->"b4d172a4-3ef2-4edd-84
 Cell[282651, 5808, 213, 4, 32, "Output",ExpressionUUID->"d3db4438-fe76-4d6a-a4c9-4431bd139f27"]
 }, Open  ]],
 Cell[282879, 5815, 1002, 22, 48, "Input",ExpressionUUID->"f3db1e26-1581-406e-a061-507b95ca5f3c"],
-Cell[283884, 5839, 3039, 67, 219, "Input",ExpressionUUID->"7df9818f-7970-442a-ad5c-7bac674a6ed3"],
-Cell[286926, 5908, 207, 4, 28, "Input",ExpressionUUID->"7ba0b456-2053-4106-ac46-7ae287c61fb0"]
+Cell[283884, 5839, 3806, 84, 295, "Input",ExpressionUUID->"7df9818f-7970-442a-ad5c-7bac674a6ed3"],
+Cell[CellGroupData[{
+Cell[287715, 5927, 251, 5, 28, "Input",ExpressionUUID->"95c1fbb0-862b-4855-83da-4c15d5b00b2d"],
+Cell[287969, 5934, 374, 9, 21, "Message",ExpressionUUID->"298a0793-3154-42b8-8901-9ec5ffb45c65"],
+Cell[288346, 5945, 417, 9, 21, "Message",ExpressionUUID->"77a6aa77-9423-43e4-b71a-95aa215cf7ae"],
+Cell[288766, 5956, 339, 6, 32, "Output",ExpressionUUID->"b391f2ca-212a-4299-a0eb-309e73739efc"]
+}, Open  ]],
+Cell[289120, 5965, 207, 4, 28, "Input",ExpressionUUID->"7ba0b456-2053-4106-ac46-7ae287c61fb0"]
 }
 ]
 *)
