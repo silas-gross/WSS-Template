@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     25900,        635]
-NotebookOptionsPosition[     21101,        545]
-NotebookOutlinePosition[     21914,        572]
-CellTagsIndexPosition[     21871,        569]
+NotebookDataLength[     29945,        724]
+NotebookOptionsPosition[     24995,        631]
+NotebookOutlinePosition[     25808,        658]
+CellTagsIndexPosition[     25765,        655]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -139,143 +139,159 @@ two groups, using: \
   3.771584888069783*^9}},ExpressionUUID->"462f756c-54f5-4530-865a-\
 bc0d509c817d"],
 
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"calcIsCalc", "=", 
-   RowBox[{"questionClassifier", "[", 
-    RowBox[{"calcQs", ",", " ", 
-     RowBox[{"{", 
-      RowBox[{"\"\<Probability\>\"", ",", " ", "\"\<calc\>\""}], "}"}]}], 
-    "]"}]}], ";"}], "\n", 
- RowBox[{
-  RowBox[{"calcIsAlgebra1", "=", 
-   RowBox[{"questionClassifier", "[", 
-    RowBox[{"calcQs", ",", " ", 
-     RowBox[{"{", 
-      RowBox[{"\"\<Probability\>\"", ",", " ", "\"\<algebra 1\>\""}], "}"}]}],
-     "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"calcIsAlgebra2", "=", 
-   RowBox[{"questionClassifier", "[", 
-    RowBox[{"calcQs", ",", " ", 
-     RowBox[{"{", 
-      RowBox[{"\"\<Probability\>\"", ",", " ", "\"\<algebra 2\>\""}], "}"}]}],
-     "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"algebra1IsCalc", "=", 
-   RowBox[{"questionClassifier", "[", 
-    RowBox[{"algebra1Questions", ",", " ", 
-     RowBox[{"{", 
-      RowBox[{"\"\<Probability\>\"", ",", " ", "\"\<calc\>\""}], "}"}]}], 
-    "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"algebra1IsAlgebra1", "=", 
-   RowBox[{"questionClassifier", "[", 
-    RowBox[{"algebra1Questions", ",", " ", 
-     RowBox[{"{", 
-      RowBox[{"\"\<Probability\>\"", ",", " ", "\"\<algebra 1\>\""}], "}"}]}],
-     "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"algebra1IsAlgebra2", "=", 
-   RowBox[{"questionClassifier", "[", 
-    RowBox[{"algebra1Questions", ",", " ", 
-     RowBox[{"{", 
-      RowBox[{"\"\<Probability\>\"", ",", " ", "\"\<algebra 2\>\""}], "}"}]}],
-     "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"algebra2IsCalc", "=", 
-   RowBox[{"questionClassifier", "[", 
-    RowBox[{"algebra2Qs", ",", " ", 
-     RowBox[{"{", 
-      RowBox[{"\"\<Probability\>\"", ",", " ", "\"\<calc\>\""}], "}"}]}], 
-    "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"algebra2IsAlgebra1", "=", 
-   RowBox[{"questionClassifier", "[", 
-    RowBox[{"algebra2Qs", ",", " ", 
-     RowBox[{"{", 
-      RowBox[{"\"\<Probability\>\"", ",", " ", "\"\<algebra 1\>\""}], "}"}]}],
-     "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"algebra2IsAlgebra2", "=", 
-   RowBox[{"questionClassifier", "[", 
-    RowBox[{"algebra2Qs", ",", " ", 
-     RowBox[{"{", 
-      RowBox[{"\"\<Probability\>\"", ",", " ", "\"\<algebra 2\>\""}], "}"}]}],
-     "]"}]}], ";"}], "\n", 
- RowBox[{"ListLogPlot", "[", 
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
   RowBox[{
+   RowBox[{"Clear", "[", "questionClassifier", "]"}], "\[IndentingNewLine]", 
+   RowBox[{"questionClassifier", "=", 
+    RowBox[{"Classify", "[", 
+     RowBox[{
+      RowBox[{"<|", 
+       RowBox[{
+        RowBox[{"\"\<algebra 1\>\"", "\[Rule]", "algebra1Questions"}], ",", 
+        " ", 
+        RowBox[{"\"\<algebra 2\>\"", "\[Rule]", "algebra2Qs"}], ",", 
+        RowBox[{"\"\<calc\>\"", "\[Rule]", "calcQs"}]}], "|>"}], " ", ",", 
+      " ", 
+      RowBox[{"PerformanceGoal", "\[Rule]", "\"\<Quality\>\""}]}], "]"}]}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{
+    RowBox[{"calcIsCalc", "=", 
+     RowBox[{"questionClassifier", "[", 
+      RowBox[{"calcQs", ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"\"\<Probability\>\"", ",", " ", "\"\<calc\>\""}], "}"}]}], 
+      "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"calcIsAlgebra1", "=", 
+     RowBox[{"questionClassifier", "[", 
+      RowBox[{"calcQs", ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"\"\<Probability\>\"", ",", " ", "\"\<algebra 1\>\""}], 
+        "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"calcIsAlgebra2", "=", 
+     RowBox[{"questionClassifier", "[", 
+      RowBox[{"calcQs", ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"\"\<Probability\>\"", ",", " ", "\"\<algebra 2\>\""}], 
+        "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"algebra1IsCalc", "=", 
+     RowBox[{"questionClassifier", "[", 
+      RowBox[{"algebra1Questions", ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"\"\<Probability\>\"", ",", " ", "\"\<calc\>\""}], "}"}]}], 
+      "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"algebra1IsAlgebra1", "=", 
+     RowBox[{"questionClassifier", "[", 
+      RowBox[{"algebra1Questions", ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"\"\<Probability\>\"", ",", " ", "\"\<algebra 1\>\""}], 
+        "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"algebra1IsAlgebra2", "=", 
+     RowBox[{"questionClassifier", "[", 
+      RowBox[{"algebra1Questions", ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"\"\<Probability\>\"", ",", " ", "\"\<algebra 2\>\""}], 
+        "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"algebra2IsCalc", "=", 
+     RowBox[{"questionClassifier", "[", 
+      RowBox[{"algebra2Qs", ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"\"\<Probability\>\"", ",", " ", "\"\<calc\>\""}], "}"}]}], 
+      "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"algebra2IsAlgebra1", "=", 
+     RowBox[{"questionClassifier", "[", 
+      RowBox[{"algebra2Qs", ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"\"\<Probability\>\"", ",", " ", "\"\<algebra 1\>\""}], 
+        "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"algebra2IsAlgebra2", "=", 
+     RowBox[{"questionClassifier", "[", 
+      RowBox[{"algebra2Qs", ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"\"\<Probability\>\"", ",", " ", "\"\<algebra 2\>\""}], 
+        "}"}]}], "]"}]}], ";"}], "\n", 
+   RowBox[{"ListLogPlot", "[", 
     RowBox[{
      RowBox[{
       RowBox[{
-      "calcIsCalc", "\[LeftDoubleBracket]", "#", "\[RightDoubleBracket]"}], 
-      "/", 
-      RowBox[{"Max", "[", 
        RowBox[{
         RowBox[{
-        "calcIsAlgebra1", "\[LeftDoubleBracket]", "#", 
-         "\[RightDoubleBracket]"}], ",", 
-        RowBox[{
-        "calcIsAlgebra2", "\[LeftDoubleBracket]", "#", 
-         "\[RightDoubleBracket]"}]}], "]"}]}], "\[IndentingNewLine]", "&"}], 
-    "/", 
-    RowBox[{"Range", "[", "600", "]"}]}], ",", 
-   RowBox[{"AxesLabel", "\[Rule]", 
-    RowBox[{"{", 
-     RowBox[{"\"\<Training Set\>\"", ",", "\"\<Ratio of Probaility\>\""}], 
-     "}"}]}], ",", " ", "\[IndentingNewLine]", 
-   RowBox[{
-   "PlotLabel", "\[Rule]", " ", 
-    "\"\<Correct Identification as Calculus\>\""}]}], "]"}], "\n", 
- RowBox[{"ListLogPlot", "[", 
-  RowBox[{
-   RowBox[{
+        "calcIsCalc", "\[LeftDoubleBracket]", "#", "\[RightDoubleBracket]"}], 
+        "/", 
+        RowBox[{"Max", "[", 
+         RowBox[{
+          RowBox[{
+          "calcIsAlgebra1", "\[LeftDoubleBracket]", "#", 
+           "\[RightDoubleBracket]"}], ",", 
+          RowBox[{
+          "calcIsAlgebra2", "\[LeftDoubleBracket]", "#", 
+           "\[RightDoubleBracket]"}]}], "]"}]}], "\[IndentingNewLine]", "&"}],
+       "/", 
+      RowBox[{"Range", "[", "600", "]"}]}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Training Set\>\"", ",", "\"\<Ratio of Probaility\>\""}], 
+       "}"}]}], ",", " ", "\[IndentingNewLine]", 
+     RowBox[{
+     "PlotLabel", "\[Rule]", " ", 
+      "\"\<Correct Identification as Calculus\>\""}]}], "]"}], "\n", 
+   RowBox[{"ListLogPlot", "[", 
     RowBox[{
      RowBox[{
       RowBox[{
-      "algebra1IsAlgebra1", "\[LeftDoubleBracket]", "#", 
-       "\[RightDoubleBracket]"}], "/", 
-      RowBox[{"Max", "[", 
        RowBox[{
         RowBox[{
-        "algebra1IsCalc", "\[LeftDoubleBracket]", "#", 
-         "\[RightDoubleBracket]"}], ",", 
-        RowBox[{
-        "algebra1IsAlgebra2", "\[LeftDoubleBracket]", "#", 
-         "\[RightDoubleBracket]"}]}], "]"}]}], "\n", "&"}], "/", 
-    RowBox[{"Range", "[", "600", "]"}]}], ",", 
-   RowBox[{"AxesLabel", "\[Rule]", 
-    RowBox[{"{", 
-     RowBox[{"\"\<Training Set\>\"", ",", "\"\<Ratio of Probaility\>\""}], 
-     "}"}]}], ",", " ", "\n", 
-   RowBox[{
-   "PlotLabel", "\[Rule]", " ", 
-    "\"\<Correct Identification as Algebra 1\>\""}]}], "]"}], "\n", 
- RowBox[{"ListLogPlot", "[", 
-  RowBox[{
-   RowBox[{
+        "algebra1IsAlgebra1", "\[LeftDoubleBracket]", "#", 
+         "\[RightDoubleBracket]"}], "/", 
+        RowBox[{"Max", "[", 
+         RowBox[{
+          RowBox[{
+          "algebra1IsCalc", "\[LeftDoubleBracket]", "#", 
+           "\[RightDoubleBracket]"}], ",", 
+          RowBox[{
+          "algebra1IsAlgebra2", "\[LeftDoubleBracket]", "#", 
+           "\[RightDoubleBracket]"}]}], "]"}]}], "\n", "&"}], "/", 
+      RowBox[{"Range", "[", "600", "]"}]}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Training Set\>\"", ",", "\"\<Ratio of Probaility\>\""}], 
+       "}"}]}], ",", " ", "\n", 
+     RowBox[{
+     "PlotLabel", "\[Rule]", " ", 
+      "\"\<Correct Identification as Algebra 1\>\""}]}], "]"}], "\n", 
+   RowBox[{"ListLogPlot", "[", 
     RowBox[{
      RowBox[{
       RowBox[{
-      "algebra2IsAlgebra2", "\[LeftDoubleBracket]", "#", 
-       "\[RightDoubleBracket]"}], "/", 
-      RowBox[{"Max", "[", 
        RowBox[{
         RowBox[{
-        "algebra2IsAlgebra1", "\[LeftDoubleBracket]", "#", 
-         "\[RightDoubleBracket]"}], ",", 
-        RowBox[{
-        "algebra2IsCalc", "\[LeftDoubleBracket]", "#", 
-         "\[RightDoubleBracket]"}]}], "]"}]}], "\n", "&"}], "/", 
-    RowBox[{"Range", "[", "600", "]"}]}], ",", 
-   RowBox[{"AxesLabel", "\[Rule]", 
-    RowBox[{"{", 
-     RowBox[{"\"\<Training Set\>\"", ",", "\"\<Ratio of Probaility\>\""}], 
-     "}"}]}], ",", " ", "\n", 
-   RowBox[{
-   "PlotLabel", "\[Rule]", " ", 
-    "\"\<Correct Identification as Algebra 2\>\""}]}], "]"}]}], "Input",
+        "algebra2IsAlgebra2", "\[LeftDoubleBracket]", "#", 
+         "\[RightDoubleBracket]"}], "/", 
+        RowBox[{"Max", "[", 
+         RowBox[{
+          RowBox[{
+          "algebra2IsAlgebra1", "\[LeftDoubleBracket]", "#", 
+           "\[RightDoubleBracket]"}], ",", 
+          RowBox[{
+          "algebra2IsCalc", "\[LeftDoubleBracket]", "#", 
+           "\[RightDoubleBracket]"}]}], "]"}]}], "\n", "&"}], "/", 
+      RowBox[{"Range", "[", "600", "]"}]}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Training Set\>\"", ",", "\"\<Ratio of Probaility\>\""}], 
+       "}"}]}], ",", " ", "\n", 
+     RowBox[{
+     "PlotLabel", "\[Rule]", " ", 
+      "\"\<Correct Identification as Algebra 2\>\""}]}], "]"}]}]}]], "Input",
+ InitializationCell->True,
  CellChangeTimes->{
   3.7711580435433702`*^9, 3.7711581045325623`*^9, {3.771158178293239*^9, 
    3.7711582669439397`*^9}, {3.7711583616162257`*^9, 
@@ -288,7 +304,9 @@ Cell[BoxData[{
    3.7715385322174683`*^9}, {3.771577831585643*^9, 3.7715778536929884`*^9}, {
    3.771580275496066*^9, 3.7715802930984945`*^9}, {3.7715847314232025`*^9, 
    3.7715847430035048`*^9}, {3.771584823752906*^9, 3.771584826146615*^9}, 
-   3.7715848576086855`*^9},ExpressionUUID->"6375fe16-c12b-4856-85ad-\
+   3.7715848576086855`*^9, 3.7716690929840384`*^9, {3.7716691569470468`*^9, 
+   3.7716691631034513`*^9}, 
+   3.7716691934700003`*^9},ExpressionUUID->"6375fe16-c12b-4856-85ad-\
 d3e811ac366b"],
 
 Cell["\<\
@@ -516,13 +534,81 @@ Cell["Exemplar Implementation", "Section",
 c7b2eb191ace"],
 
 Cell[BoxData[""], "Input",
+ InitializationCell->
+  True,ExpressionUUID->"caaa2a88-020c-446e-8a05-bf143db8d327"],
+
+Cell[BoxData[{
+ RowBox[{"studentModule", "=", 
+  RowBox[{"DynamicModule", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "question", ",", " ", "type", ",", " ", "answer", ",", " ", 
+      "correctanswer", ",", " ", "f"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"pnumber", "=", 
+      RowBox[{"RandomInteger", "[", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", 
+         RowBox[{"Length", "[", "algebra2Qsq", "]"}]}], "}"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"FormFunction", "[", 
+      RowBox[{
+       RowBox[{"{", "\[IndentingNewLine]", "\t\t\t", 
+        RowBox[{
+         RowBox[{"\"\<Type of Problem\>\"", "\[Rule]", " ", 
+          RowBox[{
+           RowBox[{"Restricted", "[", 
+            RowBox[{"\"\<String\>\"", ",", " ", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Algebra 1\>\"", ",", " ", "\"\<Algebra 2 and Trig\>\"", 
+               ",", " ", "\"\<Calculus\>\""}], "}"}]}], "]"}], "\[Rule]", 
+           " ", "\"\<Algebra 1\>\""}]}], ",", " ", "\[IndentingNewLine]", 
+         "\t\t\t", 
+         RowBox[{"#level", "&"}], ",", " ", "\[IndentingNewLine]", "\t\t\t", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"problems", "[", 
+            RowBox[{"TemplateSlot", "[", "\"\<level\>\"", "]"}], "]"}], 
+           "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+          "\[LeftDoubleBracket]", 
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", " ", "120"}], "}"}], "]"}], 
+          "\[RightDoubleBracket]"}], " ", ",", "\[IndentingNewLine]", 
+         "\t\t\t", 
+         RowBox[{"\"\<Answer\>\"", "\[Rule]", " ", "\"\<String\>\""}]}], 
+        "}"}], ",", "\[IndentingNewLine]", "\t\t\t  ", 
+       RowBox[{"AppearanceRules", "\[Rule]", " ", 
+        RowBox[{"<|", 
+         RowBox[{
+          RowBox[{
+          "\"\<Title\>\"", "\[Rule]", " ", 
+           "\"\<Student Problem Generator\>\""}], ",", " ", 
+          RowBox[{
+          "\"\<Description\>\"", "\[Rule]", 
+           "\"\<Randomly Generated problems in selected topic\>\""}], ",", 
+          " ", 
+          RowBox[{
+          "\"\<SubmitLabel\>\"", "\[Rule]", " ", "\"\<Check Answer\>\""}], 
+          ",", " ", 
+          RowBox[{"\"\<BackgroundColor\>\"", "\[Rule]", "LightBlue"}]}], 
+         "|>"}]}], ",", "\[IndentingNewLine]", "\t\t\t", "f"}], "]"}], 
+     ";"}]}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"package", " ", "here"}], "*)"}], "\[IndentingNewLine]", 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"CloudDeploy", "[", "studentModule", "]"}]}], "Input",
  CellChangeTimes->{{3.7716186060714684`*^9, 3.7716186090956354`*^9}, {
   3.7716186417409687`*^9, 3.7716187031115875`*^9}, {3.771618788725581*^9, 
   3.7716187899764614`*^9}, {3.7716188256887817`*^9, 3.771618904567808*^9}, {
   3.771618990413047*^9, 3.771619035937029*^9}, {3.7716191331259193`*^9, 
   3.7716191397866526`*^9}, {3.771619198501766*^9, 3.771619266447056*^9}, {
-  3.7716192986634483`*^9, 
-  3.77161935359449*^9}},ExpressionUUID->"da6afc69-44bc-4440-afe1-\
+  3.7716192986634483`*^9, 3.77161935359449*^9}, {3.771669697714672*^9, 
+  3.7716697108886814`*^9}, {3.771669761339993*^9, 3.7716697667762403`*^9}, {
+  3.7716698122161894`*^9, 
+  3.771669833782019*^9}},ExpressionUUID->"da6afc69-44bc-4440-afe1-\
 83107bc1a0f7"]
 }, Open  ]],
 
@@ -590,51 +676,54 @@ Cell[4450, 108, 337, 5, 67, "Section",ExpressionUUID->"604618ba-ba87-4456-819f-3
 Cell[CellGroupData[{
 Cell[4812, 117, 208, 4, 53, "Subsection",ExpressionUUID->"b1b516ac-247d-4f4f-b944-4938f1218eb3"],
 Cell[5023, 123, 962, 16, 78, "Text",ExpressionUUID->"462f756c-54f5-4530-865a-bc0d509c817d"],
-Cell[5988, 141, 5685, 150, 352, "Input",ExpressionUUID->"6375fe16-c12b-4856-85ad-d3e811ac366b"],
-Cell[11676, 293, 708, 13, 56, "Text",ExpressionUUID->"2121fcad-089f-41b2-bcbb-f0213cf65723"],
-Cell[12387, 308, 160, 3, 44, "Subsubsection",ExpressionUUID->"53e17a2e-e812-46d2-a2ae-57a8cce8642b"],
-Cell[12550, 313, 167, 3, 36, "Subsubsection",ExpressionUUID->"e7c1494e-c535-46cd-bc14-5791bf096e9b"],
-Cell[12720, 318, 175, 3, 36, "Subsubsection",ExpressionUUID->"5ac55906-849b-4d52-b10d-d033f55accf5"],
-Cell[12898, 323, 220, 4, 36, "Subsubsection",ExpressionUUID->"7c53b2cf-883f-4172-b7d6-cb2708dd7fb3"],
-Cell[13121, 329, 173, 3, 36, "Subsubsection",ExpressionUUID->"f153968f-db5c-4c67-bf92-1f286a9e7819"],
-Cell[13297, 334, 170, 3, 36, "Subsubsection",ExpressionUUID->"097eb12d-eea5-4027-b918-f4d4ee033ce3"],
-Cell[13470, 339, 164, 2, 36, "Subsubsection",ExpressionUUID->"0323e150-e97b-4ffb-bd5c-9f27dfd38eb3"],
+Cell[5988, 141, 6722, 168, 444, "Input",ExpressionUUID->"6375fe16-c12b-4856-85ad-d3e811ac366b",
+ InitializationCell->True],
+Cell[12713, 311, 708, 13, 56, "Text",ExpressionUUID->"2121fcad-089f-41b2-bcbb-f0213cf65723"],
+Cell[13424, 326, 160, 3, 44, "Subsubsection",ExpressionUUID->"53e17a2e-e812-46d2-a2ae-57a8cce8642b"],
+Cell[13587, 331, 167, 3, 36, "Subsubsection",ExpressionUUID->"e7c1494e-c535-46cd-bc14-5791bf096e9b"],
+Cell[13757, 336, 175, 3, 36, "Subsubsection",ExpressionUUID->"5ac55906-849b-4d52-b10d-d033f55accf5"],
+Cell[13935, 341, 220, 4, 36, "Subsubsection",ExpressionUUID->"7c53b2cf-883f-4172-b7d6-cb2708dd7fb3"],
+Cell[14158, 347, 173, 3, 36, "Subsubsection",ExpressionUUID->"f153968f-db5c-4c67-bf92-1f286a9e7819"],
+Cell[14334, 352, 170, 3, 36, "Subsubsection",ExpressionUUID->"097eb12d-eea5-4027-b918-f4d4ee033ce3"],
+Cell[14507, 357, 164, 2, 36, "Subsubsection",ExpressionUUID->"0323e150-e97b-4ffb-bd5c-9f27dfd38eb3"],
 Cell[CellGroupData[{
-Cell[13659, 345, 162, 3, 36, "Subsubsection",ExpressionUUID->"cc7d4999-d1a2-42f7-9373-9f3f47eea3a9"],
-Cell[13824, 350, 223, 4, 34, "Text",ExpressionUUID->"a1ae7a9c-7904-4514-9f7f-9af85e0a34a5"]
+Cell[14696, 363, 162, 3, 36, "Subsubsection",ExpressionUUID->"cc7d4999-d1a2-42f7-9373-9f3f47eea3a9"],
+Cell[14861, 368, 223, 4, 34, "Text",ExpressionUUID->"a1ae7a9c-7904-4514-9f7f-9af85e0a34a5"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[14096, 360, 239, 4, 53, "Subsection",ExpressionUUID->"6b6beba0-b5c4-4022-8b92-3a006474990c"],
-Cell[14338, 366, 551, 10, 78, "Text",ExpressionUUID->"d24fc404-17a4-4bcf-87b9-67a5ed820cfe"],
-Cell[14892, 378, 930, 30, 219, "Text",ExpressionUUID->"02e5237a-6632-478d-84b0-b3694f818789"]
+Cell[15133, 378, 239, 4, 53, "Subsection",ExpressionUUID->"6b6beba0-b5c4-4022-8b92-3a006474990c"],
+Cell[15375, 384, 551, 10, 78, "Text",ExpressionUUID->"d24fc404-17a4-4bcf-87b9-67a5ed820cfe"],
+Cell[15929, 396, 930, 30, 219, "Text",ExpressionUUID->"02e5237a-6632-478d-84b0-b3694f818789"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[15871, 414, 205, 3, 67, "Section",ExpressionUUID->"0c299d7e-52e9-44a4-bfe4-741a5a8dfb7a"],
-Cell[16079, 419, 381, 7, 34, "Text",ExpressionUUID->"531fa7ce-50d9-4145-8254-5fbc6fcb731c"],
+Cell[16908, 432, 205, 3, 67, "Section",ExpressionUUID->"0c299d7e-52e9-44a4-bfe4-741a5a8dfb7a"],
+Cell[17116, 437, 381, 7, 34, "Text",ExpressionUUID->"531fa7ce-50d9-4145-8254-5fbc6fcb731c"],
 Cell[CellGroupData[{
-Cell[16485, 430, 222, 4, 53, "Subsection",ExpressionUUID->"c45ad82d-dd33-4013-a3c2-d0791d4a3802"],
-Cell[16710, 436, 370, 7, 34, "Text",ExpressionUUID->"9b154555-ec65-4193-88ee-c49143418f7e"],
-Cell[17083, 445, 421, 8, 34, "Text",ExpressionUUID->"416cb0d8-0e07-4d11-bb87-ee1d01834797"]
+Cell[17522, 448, 222, 4, 53, "Subsection",ExpressionUUID->"c45ad82d-dd33-4013-a3c2-d0791d4a3802"],
+Cell[17747, 454, 370, 7, 34, "Text",ExpressionUUID->"9b154555-ec65-4193-88ee-c49143418f7e"],
+Cell[18120, 463, 421, 8, 34, "Text",ExpressionUUID->"416cb0d8-0e07-4d11-bb87-ee1d01834797"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[17541, 458, 187, 3, 53, "Subsection",ExpressionUUID->"c273f908-ffe4-4ebb-abba-870efb3ad9b2"],
-Cell[17731, 463, 211, 5, 34, "Text",ExpressionUUID->"92bc0b89-8053-40f4-ae89-60fd478f0ad8"],
-Cell[17945, 470, 333, 7, 34, "Text",ExpressionUUID->"76fab179-5cb6-4009-964b-8df3886909fc"]
+Cell[18578, 476, 187, 3, 53, "Subsection",ExpressionUUID->"c273f908-ffe4-4ebb-abba-870efb3ad9b2"],
+Cell[18768, 481, 211, 5, 34, "Text",ExpressionUUID->"92bc0b89-8053-40f4-ae89-60fd478f0ad8"],
+Cell[18982, 488, 333, 7, 34, "Text",ExpressionUUID->"76fab179-5cb6-4009-964b-8df3886909fc"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[18327, 483, 149, 2, 67, "Section",ExpressionUUID->"75fa8d16-64b2-4512-bd89-c01a81e7bb49"],
-Cell[18479, 487, 1278, 19, 122, "Text",ExpressionUUID->"4d877e24-a992-4e78-93ee-cc0668df8a23"]
+Cell[19364, 501, 149, 2, 67, "Section",ExpressionUUID->"75fa8d16-64b2-4512-bd89-c01a81e7bb49"],
+Cell[19516, 505, 1278, 19, 122, "Text",ExpressionUUID->"4d877e24-a992-4e78-93ee-cc0668df8a23"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[19794, 511, 219, 4, 67, "Section",ExpressionUUID->"99fc6342-7af7-4fb5-9314-c7b2eb191ace"],
-Cell[20016, 517, 506, 8, 28, "Input",ExpressionUUID->"da6afc69-44bc-4440-afe1-83107bc1a0f7"]
+Cell[20831, 529, 219, 4, 67, "Section",ExpressionUUID->"99fc6342-7af7-4fb5-9314-c7b2eb191ace"],
+Cell[21053, 535, 111, 2, 44, "Input",ExpressionUUID->"caaa2a88-020c-446e-8a05-bf143db8d327",
+ InitializationCell->True],
+Cell[21167, 539, 3249, 72, 257, "Input",ExpressionUUID->"da6afc69-44bc-4440-afe1-83107bc1a0f7"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[20559, 530, 167, 3, 67, "Section",ExpressionUUID->"dae36e4e-4dd3-4781-a156-916fecd088b5"],
-Cell[20729, 535, 344, 6, 34, "Text",ExpressionUUID->"b70c649b-a958-4202-9f22-238ea1f9c7d4"]
+Cell[24453, 616, 167, 3, 67, "Section",ExpressionUUID->"dae36e4e-4dd3-4781-a156-916fecd088b5"],
+Cell[24623, 621, 344, 6, 34, "Text",ExpressionUUID->"b70c649b-a958-4202-9f22-238ea1f9c7d4"]
 }, Open  ]]
 }, Open  ]]
 }
