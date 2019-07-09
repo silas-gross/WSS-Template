@@ -78,7 +78,7 @@ determinetags[question_]:=If[allpoints[question],
 
 (* ::Text:: *)
 (*	Tags have the following values:*)
-(*{*)
+(*Grid{*)
 (* {Value, Meaning},*)
 (* {0, No Context restrictions},*)
 (* {1, Simplest Form Fraction},*)
@@ -90,6 +90,7 @@ determinetags[question_]:=If[allpoints[question],
 (* {7, Must be mixed Number},*)
 (* {8}, Must be improper fraction}*)
 (*}*)
+(**)
 
 
 equivalentAnswer[level_, tags_, answer_, correct_]:=
