@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    178604,       3808]
-NotebookOptionsPosition[    165616,       3639]
-NotebookOutlinePosition[    165957,       3654]
-CellTagsIndexPosition[    165914,       3651]
+NotebookDataLength[    300272,       6086]
+NotebookOptionsPosition[    287137,       5914]
+NotebookOutlinePosition[    287478,       5929]
+CellTagsIndexPosition[    287435,       5926]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1070,7 +1070,7 @@ Cell[BoxData[{
        RowBox[{"\"\<calc\>\"", "\[Rule]", "calcQs"}]}], "*)"}], "|>"}], " ", 
     ",", " ", 
     RowBox[{"PerformanceGoal", "\[Rule]", "\"\<Quality\>\""}], ",", " ", 
-    RowBox[{"Method", "\[Rule]", "\"\<DecisionTree\>\""}]}], 
+    RowBox[{"Method", "\[Rule]", "\"\<Markov\>\""}]}], 
    "]"}]}], "\[IndentingNewLine]"}], "Input",
  CellChangeTimes->{{3.771063215443462*^9, 3.7710633502457542`*^9}, 
    3.771071823090603*^9, 3.7710828946484957`*^9, {3.771083581540978*^9, 
@@ -1133,219 +1133,1222 @@ Cell[BoxData[{
    3.7716800054357185`*^9}, {3.771680089134348*^9, 3.7716800899433126`*^9}, {
    3.7716802337132325`*^9, 3.771680234402774*^9}, {3.7716803124981933`*^9, 
    3.7716803133343687`*^9}, {3.7716804196382713`*^9, 3.771680421474659*^9}, {
-   3.771680525179906*^9, 3.7716805299123693`*^9}},
+   3.771680525179906*^9, 3.7716805299123693`*^9}, {3.771681683450265*^9, 
+   3.771681684389307*^9}, {3.7716817950012236`*^9, 3.771681795764318*^9}, {
+   3.7716818851761804`*^9, 3.771681885941894*^9}, {3.7716819559848337`*^9, 
+   3.771681957204919*^9}},
  CellLabel->
-  "In[284]:=",ExpressionUUID->"4a6c27e2-f698-4942-9e0f-b4b815b04b6b"],
+  "In[337]:=",ExpressionUUID->"4a6c27e2-f698-4942-9e0f-b4b815b04b6b"],
 
 Cell[BoxData[
- TagBox[
-  TemplateBox[{RowBox[{
-      StyleBox[
-       TagBox["ClassifierFunction", "SummaryHead"], 
-       "NonInterpretableSummary"], 
-      StyleBox["[", "NonInterpretableSummary"], 
-      DynamicModuleBox[{
-       Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
-       TemplateBox[{
-         TemplateBox[{
-           PaneSelectorBox[{False -> GridBox[{{
-                 PaneBox[
-                  ButtonBox[
-                   DynamicBox[
-                    FEPrivate`FrontEndResource[
-                    "FEBitmaps", "SquarePlusIconMedium"]], 
-                   ButtonFunction :> (Typeset`open$$ = True), Appearance -> 
-                   None, Evaluator -> Automatic, Method -> "Preemptive"], 
-                  Alignment -> {Center, Center}, ImageSize -> 
-                  Dynamic[{
-                    Automatic, 3.5 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
-                 GraphicsBox[{{
-                    PointSize[0.13], 
-                    GrayLevel[0.45], 
-                    
-                    PointBox[{{0.9821769431797024, -0.440194219686987}, {
-                    1.1339776261519132`, 0.8056918676854272}, {
-                    0.5279892326667741, 0.6574306661126254}, {
-                    0.022147046479890797`, 1.4937877187998898`}}], 
-                    GrayLevel[0.7], 
-                    
-                    PointBox[{{-0.9815166384819979, 
-                    0.15045697525228735`}, {-0.5923526886966953, \
+ InterpretationBox[
+  RowBox[{
+   TagBox["ClassifierFunction",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    TemplateBox[{PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource[
+               "FEBitmaps", "SquarePlusIconMedium"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              Evaluator -> Automatic, Method -> "Preemptive"], 
+             Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                AbsoluteCurrentValue[Magnification]}]], 
+            GraphicsBox[{{
+               PointSize[0.13], 
+               GrayLevel[0.45], 
+               
+               PointBox[{{0.9821769431797024, -0.440194219686987}, {
+                1.1339776261519132`, 0.8056918676854272}, {0.5279892326667741,
+                 0.6574306661126254}, {0.022147046479890797`, 
+                1.4937877187998898`}}], 
+               GrayLevel[0.7], 
+               
+               PointBox[{{-0.9815166384819979, 
+                0.15045697525228735`}, {-0.5923526886966953, \
 -0.33441771553094035`}, {-0.005656646679640442, -1.462421365651345}, \
 {-1.0734370436522753`, -1.3729645043477454`}}]}, {
-                    GrayLevel[0.55], 
-                    AbsoluteThickness[1.5], 
-                    LineBox[{{-1., 1.5}, {1, -1.6}}]}}, {
-                  Axes -> {False, False}, AxesLabel -> {None, None}, 
-                   AxesOrigin -> {0, 0}, BaseStyle -> {FontFamily -> "Arial", 
-                    AbsoluteThickness[1.5]}, DisplayFunction -> Identity, 
-                   Frame -> {{True, True}, {True, True}}, 
-                   FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> 
-                   Directive[
-                    Thickness[Tiny], 
-                    GrayLevel[0.7]], 
-                   FrameTicks -> {{None, None}, {None, None}}, 
-                   GridLines -> {None, None}, 
-                   LabelStyle -> {FontFamily -> "Arial"}, 
-                   Method -> {"ScalingFunctions" -> None}, 
-                   PlotRange -> {{-1., 1}, {-1.3, 1.1}}, PlotRangeClipping -> 
-                   True, PlotRangePadding -> {{0.7, 0.7}, {0.7, 0.7}}, 
-                   Ticks -> {None, None}}, Axes -> False, AspectRatio -> 1, 
-                  ImageSize -> 
-                  Dynamic[{
-                    Automatic, 3.5 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}], Frame -> True, 
-                  FrameTicks -> None, FrameStyle -> Directive[
-                    Opacity[0.5], 
-                    Thickness[Tiny], 
-                    RGBColor[0.368417, 0.506779, 0.709798]], Background -> 
-                  GrayLevel[0.94]], 
-                 GridBox[{{
-                    RowBox[{
-                    TagBox["\"Input type: \"", "SummaryItemAnnotation"], 
-                    "\[InvisibleSpace]", 
-                    TagBox["\"Nominal\"", "SummaryItem"]}]}, {
-                    RowBox[{
-                    TagBox["\"Classes: \"", "SummaryItemAnnotation"], 
-                    "\[InvisibleSpace]", 
-                    TagBox[
-                    
-                    TemplateBox[{
-                    ",", "\",\"", "\"algebra 1\"", "\"algebra 2\""}, 
-                    "RowWithSeparators"], "SummaryItem"]}]}}, 
-                  GridBoxAlignment -> {
-                   "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
-                  AutoDelete -> False, 
-                  GridBoxItemSize -> {
-                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
-                  GridBoxSpacings -> {
-                   "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
-                  BaseStyle -> {
-                   ShowStringCharacters -> False, NumberMarks -> False, 
-                    PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
-               GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
-               GridBoxItemSize -> {
-                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
-               BaselinePosition -> {1, 1}], True -> GridBox[{{
-                 PaneBox[
-                  ButtonBox[
-                   DynamicBox[
-                    FEPrivate`FrontEndResource[
-                    "FEBitmaps", "SquareMinusIconMedium"]], 
-                   ButtonFunction :> (Typeset`open$$ = False), Appearance -> 
-                   None, Evaluator -> Automatic, Method -> "Preemptive"], 
-                  Alignment -> {Center, Center}, ImageSize -> 
-                  Dynamic[{
-                    Automatic, 3.5 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
-                 GraphicsBox[{{
-                    PointSize[0.13], 
-                    GrayLevel[0.45], 
-                    
-                    PointBox[{{0.9821769431797024, -0.440194219686987}, {
-                    1.1339776261519132`, 0.8056918676854272}, {
-                    0.5279892326667741, 0.6574306661126254}, {
-                    0.022147046479890797`, 1.4937877187998898`}}], 
-                    GrayLevel[0.7], 
-                    
-                    PointBox[{{-0.9815166384819979, 
-                    0.15045697525228735`}, {-0.5923526886966953, \
+               GrayLevel[0.55], 
+               AbsoluteThickness[1.5], 
+               LineBox[{{-1., 1.5}, {1, -1.6}}]}}, {
+             Axes -> {False, False}, AxesLabel -> {None, None}, 
+              AxesOrigin -> {0, 0}, BaseStyle -> {FontFamily -> "Arial", 
+                AbsoluteThickness[1.5]}, DisplayFunction -> Identity, 
+              Frame -> {{True, True}, {True, True}}, 
+              FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> 
+              Directive[
+                Thickness[Tiny], 
+                GrayLevel[0.7]], FrameTicks -> {{None, None}, {None, None}}, 
+              GridLines -> {None, None}, 
+              LabelStyle -> {FontFamily -> "Arial"}, 
+              Method -> {"ScalingFunctions" -> None}, 
+              PlotRange -> {{-1., 1}, {-1.3, 1.1}}, PlotRangeClipping -> True,
+               PlotRangePadding -> {{0.7, 0.7}, {0.7, 0.7}}, 
+              Ticks -> {None, None}}, Axes -> False, AspectRatio -> 1, 
+             ImageSize -> 
+             Dynamic[{
+               Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                AbsoluteCurrentValue[Magnification]}], Frame -> True, 
+             FrameTicks -> None, FrameStyle -> Directive[
+               Opacity[0.5], 
+               Thickness[Tiny], 
+               RGBColor[0.368417, 0.506779, 0.709798]], Background -> 
+             GrayLevel[0.94]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Input type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"Nominal\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Classes: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  
+                  TemplateBox[{
+                   ",", "\",\"", "\"algebra 1\"", "\"algebra 2\""}, 
+                   "RowWithSeparators"], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource[
+               "FEBitmaps", "SquareMinusIconMedium"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              Evaluator -> Automatic, Method -> "Preemptive"], 
+             Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                AbsoluteCurrentValue[Magnification]}]], 
+            GraphicsBox[{{
+               PointSize[0.13], 
+               GrayLevel[0.45], 
+               
+               PointBox[{{0.9821769431797024, -0.440194219686987}, {
+                1.1339776261519132`, 0.8056918676854272}, {0.5279892326667741,
+                 0.6574306661126254}, {0.022147046479890797`, 
+                1.4937877187998898`}}], 
+               GrayLevel[0.7], 
+               
+               PointBox[{{-0.9815166384819979, 
+                0.15045697525228735`}, {-0.5923526886966953, \
 -0.33441771553094035`}, {-0.005656646679640442, -1.462421365651345}, \
 {-1.0734370436522753`, -1.3729645043477454`}}]}, {
-                    GrayLevel[0.55], 
-                    AbsoluteThickness[1.5], 
-                    LineBox[{{-1., 1.5}, {1, -1.6}}]}}, {
-                  Axes -> {False, False}, AxesLabel -> {None, None}, 
-                   AxesOrigin -> {0, 0}, BaseStyle -> {FontFamily -> "Arial", 
-                    AbsoluteThickness[1.5]}, DisplayFunction -> Identity, 
-                   Frame -> {{True, True}, {True, True}}, 
-                   FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> 
-                   Directive[
-                    Thickness[Tiny], 
-                    GrayLevel[0.7]], 
-                   FrameTicks -> {{None, None}, {None, None}}, 
-                   GridLines -> {None, None}, 
-                   LabelStyle -> {FontFamily -> "Arial"}, 
-                   Method -> {"ScalingFunctions" -> None}, 
-                   PlotRange -> {{-1., 1}, {-1.3, 1.1}}, PlotRangeClipping -> 
-                   True, PlotRangePadding -> {{0.7, 0.7}, {0.7, 0.7}}, 
-                   Ticks -> {None, None}}, Axes -> False, AspectRatio -> 1, 
-                  ImageSize -> 
-                  Dynamic[{
-                    Automatic, 3.5 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}], Frame -> True, 
-                  FrameTicks -> None, FrameStyle -> Directive[
-                    Opacity[0.5], 
-                    Thickness[Tiny], 
-                    RGBColor[0.368417, 0.506779, 0.709798]], Background -> 
-                  GrayLevel[0.94]], 
-                 GridBox[{{
-                    RowBox[{
-                    TagBox["\"Input type: \"", "SummaryItemAnnotation"], 
-                    "\[InvisibleSpace]", 
-                    TagBox["\"Nominal\"", "SummaryItem"]}]}, {
-                    RowBox[{
-                    TagBox["\"Classes: \"", "SummaryItemAnnotation"], 
-                    "\[InvisibleSpace]", 
-                    TagBox[
+               GrayLevel[0.55], 
+               AbsoluteThickness[1.5], 
+               LineBox[{{-1., 1.5}, {1, -1.6}}]}}, {
+             Axes -> {False, False}, AxesLabel -> {None, None}, 
+              AxesOrigin -> {0, 0}, BaseStyle -> {FontFamily -> "Arial", 
+                AbsoluteThickness[1.5]}, DisplayFunction -> Identity, 
+              Frame -> {{True, True}, {True, True}}, 
+              FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> 
+              Directive[
+                Thickness[Tiny], 
+                GrayLevel[0.7]], FrameTicks -> {{None, None}, {None, None}}, 
+              GridLines -> {None, None}, 
+              LabelStyle -> {FontFamily -> "Arial"}, 
+              Method -> {"ScalingFunctions" -> None}, 
+              PlotRange -> {{-1., 1}, {-1.3, 1.1}}, PlotRangeClipping -> True,
+               PlotRangePadding -> {{0.7, 0.7}, {0.7, 0.7}}, 
+              Ticks -> {None, None}}, Axes -> False, AspectRatio -> 1, 
+             ImageSize -> 
+             Dynamic[{
+               Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                AbsoluteCurrentValue[Magnification]}], Frame -> True, 
+             FrameTicks -> None, FrameStyle -> Directive[
+               Opacity[0.5], 
+               Thickness[Tiny], 
+               RGBColor[0.368417, 0.506779, 0.709798]], Background -> 
+             GrayLevel[0.94]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Input type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"Nominal\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Classes: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  
+                  TemplateBox[{
+                   ",", "\",\"", "\"algebra 1\"", "\"algebra 2\""}, 
+                   "RowWithSeparators"], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Method: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"Markov\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox[
+                 "\"Number of training examples: \"", 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox["1502", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  ClassifierFunction[
+   Association[
+   "ExampleNumber" -> 1502, "ClassNumber" -> 2, "Input" -> 
+    Association["Preprocessor" -> MachineLearning`MLProcessor["ToMLDataset", 
+        Association[
+        "Input" -> Association["f1" -> Association["Type" -> "Nominal"]], 
+         "Output" -> 
+         Association["f1" -> Association["Type" -> "Nominal", "Weight" -> 1]],
+          "Preprocessor" -> MachineLearning`MLProcessor["Sequence", 
+           Association["Processors" -> {
+              MachineLearning`MLProcessor["List"], 
+              MachineLearning`MLProcessor["WrapMLDataset", 
+               Association[
+               "FeatureTypes" -> {"Nominal"}, "FeatureKeys" -> {"f1"}, 
+                "FeatureWeights" -> Automatic, "ExampleWeights" -> Automatic, 
+                "RawExample" -> Missing["KeyAbsent", "RawExample"]]]}]], 
+         "ScalarFeature" -> True, "Invertibility" -> "Perfect", "Missing" -> 
+         "Allowed"]], "Processor" -> MachineLearning`MLProcessor["Sequence", 
+        Association[
+        "Input" -> Association[
+          "f1" -> Association["Type" -> "Nominal", "Weight" -> 1]], "Output" -> 
+         Association[
+          "f1" -> Association["Type" -> "NominalSequence", "Weight" -> 1]], 
+         "Processors" -> {
+           MachineLearning`MLProcessor["ToVector", 
+            Association[
+            "Invertibility" -> "Perfect", "Missing" -> "Allowed", "Input" -> 
+             Association[
+              "f1" -> Association["Type" -> "Nominal", "Weight" -> 1]], 
+             "Output" -> 
+             Association[
+              "f1" -> Association["Type" -> "NominalVector", "Weight" -> 1]], 
+             "Version" -> {12., 0}, "ID" -> 1537627216228573037]], 
+           MachineLearning`MLProcessor["ImputeMissing", 
+            Association[
+            "Invertibility" -> "Perfect", "Missing" -> "Imputed", "Input" -> 
+             Association[
+              "f1" -> Association["Type" -> "NominalVector", "Weight" -> 1]], 
+             "VectorLength" -> 1, "Output" -> 
+             Association[
+              "f1" -> Association["Type" -> "NominalVector", "Weight" -> 1]], 
+             "Type" -> "NominalVector", "Version" -> {12., 0}, "ID" -> 
+             4026204838636604962]], 
+           MachineLearning`MLProcessor["NominalVectorToNominalSequence", 
+            Association[
+            "Invertibility" -> "Impossible", "Missing" -> "Allowed", "Input" -> 
+             Association[
+              "f1" -> Association["Type" -> "NominalVector", "Weight" -> 1]], 
+             "Version" -> {12., 0}, "ID" -> 2197383365741291739, "Output" -> 
+             Association[
+              "f1" -> Association[
+                "Type" -> "NominalSequence", "Weight" -> 1]]]], 
+           MachineLearning`MLProcessor[
+           "NoninvertibleIntegerEncodeNominalSequence", 
+            Association[
+            "Invertibility" -> "Impossible", "Missing" -> "Imputed", "Input" -> 
+             Association[
+              "f1" -> Association[
+                "Type" -> "NominalSequence", "Weight" -> 1]], "Index" -> 
+             MachineLearning`SortedHashAssociation[
+               Association["KeyHashes" -> CompressedData["
+1:eJxNnUkObMtORV+DPwCKCTAApKiLISDRYgg0kGjR+Mxf7LWPHXnfL969jsxT
+RLj2tvNf/+t///O///a3v/76+z/89ddf//E/f/+/f/8X/eHfbqt19zb7OnvV
+tXavuVDmOfXcus/sY5eWC3XMdUo/bevz8+zbc6HvUdduu6+yy6htvoW11yq1
+zN3O1Ifepfroe7V717irtTZHLugCc85Wtq4/62wrFsrZ5d69b+n91lN3yYW1
+2iq3rVVHH3qOvHmZt/dedfOy92xj7lzorc+qW43jS5230OoYd0491mqzlvoW
+6r6VWxS9/mr9nG/h3K2rzKNn4GbsWy7oJcYaeq46ivZmjVzoZ4w9e+ljlaXl
+uMfRZpdWuu46ztCf3zf0kLtNnZQ2pPcyym9BN9WRcB661xz3LYyr0xqjjVKm
+tqS/hV7n1o7v3UWvd+WCPrP6PrXtyfPtd486dbB69z21/9qs3zfa1jOXscQT
++ktyydln9Xp7HXpqHXEd6y3oEK4WxXg6jVHegjZvtFI29Fq1EW9hjHPEoH20
+qS/Od49Vmm67xY1NL9nLzIUunhKXiJtbnVrNg9q1iwtGX5VXn38slNJmqWKj
+Kv5q973HOqc0RGPosctubxOXthvu2TzCGeXke6w5qx6srKOnFk/u+RbGguGG
+OHFMvX/urq6tDdRLF5in3JLMoH3Tw/ahT7R5xa7v5oWnak0CsLXTZ+Q3xLTa
+29EOm1n17uMttKM3FwvtrkcWs/wWpvj3FkRIUt1zS/Qk1Vx1JIiwa77gnAin
+uHpuiebVEeYCDylBq5KMufSWLRYkYdpuMYPOeFxtVr7H0BbOs/SgQ3cQc8+3
+oFMrelz9V7xw21sYBx64yE7TEZf6FqQtmkRdnyhjiCNiod+rHbp6JD1ukY5Y
+b0HspM3W49XRennnoccXw+9xu/hTuuSkREn2CiqS0xOL1ffmkhnxVT1cflcd
+y1tYVyeoe+ixxDv64Fs4Z0hy95KgLK6bC2LwJY0nxl1Nr9jyUuKzrdOVauht
+6VDeeUhtLj1s0VlJpudTrzrLK80mDpRq1DFJ3b6FIVE+OkC+JxX5vtFOb02a
+et/Gfr7zkADrKZHq2qX2S8ujrVevInZGlQ6UY96j6jzRo20XaTnpzvUWujTJ
+1qnqWCRzvwXJpNQBxzIQwsftFbtSiphWzMKe/L7RpVoxB2PpOOeT2irrU9hw
+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
+/1ujtic=
+                 "], "Values" -> None, "DefaultValue" -> -1, "HashFunction" -> 
+                Function[{
+                  MachineLearning`file152SortedHashAssociation`PackagePrivate`\
+keys$}, 
+                  Switch[
+                  MachineLearning`file152SortedHashAssociation`PackagePrivate`\
+keys$, {
+                    BlankSequence[String]}, 
+                   Data`StringHash[
+                   MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, "Murmur3-64"], 
+                   PatternTest[
+                    Blank[], 
+                    MachineLearning`PackageScope`PackedArrayQ[#, Integer, 
+                    1]& ], MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, 
+                   PatternTest[
+                    Blank[], 
+                    MachineLearning`PackageScope`PackedArrayQ[#, Integer, 
+                    2]& ], 
+                   
+                   Block[{MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q}, 
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q = {
+                    Quotient[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, 2^48], 
+                    Quotient[
+                    Mod[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, 2^48], 2^32], 
+                    Quotient[
+                    Mod[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, 2^32], 2^16], 
+                    Mod[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, 2^16]}; 
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q = Transpose[
+                    MachineLearning`PackageScope`ToPackedArray[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q], {1, 3, 2}]; 
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q = Transpose[
+                    Flatten[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q, 1]]; Data`StringHash[
+                    FromCharacterCode[
+                    Abs[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q]], "Murmur3-64"]], 
+                   Blank[List], 
+                   Map[Switch[#, 
+                    Blank[String], 
+                    Data`StringHash[#, "Murmur3-64"], 
+                    PatternTest[
+                    Blank[], Developer`MachineIntegerQ], #, {
+                    PatternTest[
+                    BlankSequence[], Developer`MachineIntegerQ]}, 
                     
-                    TemplateBox[{
-                    ",", "\",\"", "\"algebra 1\"", "\"algebra 2\""}, 
-                    "RowWithSeparators"], "SummaryItem"]}]}, {
-                    RowBox[{
-                    TagBox["\"Method: \"", "SummaryItemAnnotation"], 
-                    "\[InvisibleSpace]", 
-                    TagBox["\"DecisionTree\"", "SummaryItem"]}]}, {
-                    RowBox[{
-                    TagBox[
-                    "\"Number of training examples: \"", 
-                    "SummaryItemAnnotation"], "\[InvisibleSpace]", 
-                    TagBox["1502", "SummaryItem"]}]}}, 
-                  GridBoxAlignment -> {
-                   "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
-                  AutoDelete -> False, 
-                  GridBoxItemSize -> {
-                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
-                  GridBoxSpacings -> {
-                   "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
-                  BaseStyle -> {
-                   ShowStringCharacters -> False, NumberMarks -> False, 
-                    PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
-               GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
-               GridBoxItemSize -> {
-                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
-               BaselinePosition -> {1, 1}]}, 
-            Dynamic[Typeset`open$$], ImageSize -> Automatic]}, 
-          "SummaryPanel"], 
-         ButtonBox[
-          DynamicBox[
-           ToBoxes[
-            If[
-             
-             Or[$VersionNumber < 11.2, CurrentValue["RunningEvaluator"] =!= 
-              "Local"], 
-             Style["This object cannot be used as input.", "SummaryEmbed"], 
-             BoxForm`EmbedSummaryLabel[ClassifierFunction, 8563536, 
-              Dynamic[Typeset`embedState$$]]], StandardForm]], ButtonFunction :> 
-          BoxForm`EmbedSummaryInterpretation[
-           ClassifierFunction, 
-            5412036353213078414609316458665109446402937054690621898560, 
-            EvaluationBox[], 
-            Dynamic[Typeset`embedState$$], StandardForm], DefaultBaseStyle -> 
-          "SummaryEmbedButton", BaseStyle -> {"DialogStyle"}, Enabled -> 
-          Dynamic[
+                    Block[{MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q}, 
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q = {
+                    Quotient[#, 2^48], 
+                    Quotient[
+                    Mod[#, 2^48], 2^32], 
+                    Quotient[
+                    Mod[#, 2^32], 2^16], 
+                    Mod[#, 2^16]}; 
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q = Flatten[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q]; Data`StringHash[
+                    FromCharacterCode[
+                    Abs[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q]], "Murmur3-64"]], 
+                    Blank[], 
+                    Data`StringHash[
+                    StringJoin[
+                    ToString[#, InputForm], "Cn.i9)P$"], "Murmur3-64"]]& , 
+                    
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$]]], "Version" -> {12., 0}]], "MissingCode" -> 0, 
+             "Version" -> {12., 0}, "ID" -> 897669180820965721, "Output" -> 
+             Association[
+              "f1" -> Association[
+                "Type" -> "NominalSequence", "Weight" -> 1]]]]}, 
+         "Invertibility" -> "Impossible", "Missing" -> "Imputed"]]], "Output" -> 
+    Association["Preprocessor" -> MachineLearning`MLProcessor["ToMLDataset", 
+        Association[
+        "Input" -> Association["f1" -> Association["Type" -> "Nominal"]], 
+         "Output" -> 
+         Association["f1" -> Association["Type" -> "Nominal", "Weight" -> 1]],
+          "Preprocessor" -> MachineLearning`MLProcessor["Sequence", 
+           Association["Processors" -> {
+              MachineLearning`MLProcessor["List"], 
+              MachineLearning`MLProcessor["WrapMLDataset", 
+               Association[
+               "FeatureTypes" -> {"Nominal"}, "FeatureKeys" -> {"f1"}, 
+                "FeatureWeights" -> Automatic, "ExampleWeights" -> Automatic, 
+                "RawExample" -> Missing["KeyAbsent", "RawExample"]]]}]], 
+         "ScalarFeature" -> True, "Invertibility" -> "Perfect", "Missing" -> 
+         "Allowed"]], "Processor" -> MachineLearning`MLProcessor["Sequence", 
+        Association[
+        "Input" -> Association[
+          "f1" -> Association["Type" -> "Nominal", "Weight" -> 1]], "Output" -> 
+         Association["f1" -> Association["Type" -> "Nominal", "Weight" -> 1]],
+          "Processors" -> {
+           MachineLearning`MLProcessor["ToVector", 
+            Association[
+            "Invertibility" -> "Perfect", "Missing" -> "Allowed", "Input" -> 
+             Association[
+              "f1" -> Association["Type" -> "Nominal", "Weight" -> 1]], 
+             "Output" -> 
+             Association[
+              "f1" -> Association["Type" -> "NominalVector", "Weight" -> 1]], 
+             "Version" -> {12., 0}, "ID" -> 639221281190755143]], 
+           MachineLearning`MLProcessor["IntegerEncodeNominalVector", 
+            Association[
+            "Invertibility" -> "Perfect", "Missing" -> "Allowed", "Input" -> 
+             Association[
+              "f1" -> Association["Type" -> "NominalVector", "Weight" -> 1]], 
+             "Index" -> {
+               Association["algebra 1" -> 1, "algebra 2" -> 2]}, 
+             "MissingCode" -> 0, "Version" -> {12., 0}, "ID" -> 
+             9092059385497543421, "Output" -> 
+             Association[
+              "f1" -> Association[
+                "Type" -> "NominalVector", "Weight" -> 1]]]], 
+           MachineLearning`MLProcessor["FromVector", 
+            Association[
+            "Invertibility" -> "Perfect", "Missing" -> "Allowed", "Input" -> 
+             Association[
+              "f1" -> Association[
+                "Type" -> "NominalVector", "Weight" -> 1, "SetSize" -> {2}]], 
+             "Output" -> 
+             Association[
+              "f1" -> Association["Type" -> "Nominal", "Weight" -> 1]], 
+             "Version" -> {12., 0}, "ID" -> 7872287080029735858]], 
+           MachineLearning`MLProcessor["FirstValues", 
+            Association[
+            "Info" -> Association[
+              "Type" -> "Nominal", "Weight" -> 1, "SetSize" -> 2], "Key" -> 
+             "f1", "Invertibility" -> "Perfect", "Missing" -> "Allowed"]]}, 
+         "Invertibility" -> "Perfect", "Missing" -> "Allowed"]], 
+      "ProbabilityPostprocessor" -> Identity, "Name" -> "class", "Marginal" -> 
+      Association[
+       "algebra 1" -> 0.5033244680851063, "algebra 2" -> 0.4966755319148936]],
+     "Prior" -> Automatic, "Utility" -> 
+    SparseArray[
+     Automatic, {2, 3}, 0., {1, {{0, 1, 2}, {{2}, {3}}}, {1., 1.}}], 
+    "Threshold" -> 0, "TieBreaker" -> RandomChoice, "PerformanceGoal" -> 
+    "Quality", "BatchProcessing" -> Automatic, "Model" -> 
+    Association[
+     "ClassPriors" -> 
+      Association[1 -> 0.5033244680851063, 2 -> 0.4966755319148936], 
+      "LogCounts" -> CompressedData["
+1:eJzdnDtKQ0EYhYcL2lgEhCzAPdjHNdjYKymEgIuwt7OyFN2BkErcTXAXYmEz
+EK6/c17GJoz3OvO/znfiJeTs+u5yPbXWjo9a+379fF48nW+2q4ebk7eX2+mj
+X/e/n7s+d3/176vno/evnueuD7tfi9fH1dX7rhzHb9ej/UafN7qfez77flXj
+qfZ77v5qfqPxo/V9aHxi8wednzp/9nlo3qHnrdchOz40j9DzXeURmk9oP2bz
+js3LNL2p9cC+ju5/ej5p+7l56+6v+n72+4M0vqnr744vrb7ouXPrn83r/6Zv
+td7Q/XLPi5o/6f7s5p2bJ6h8/vr/LJp/bP4fOr/d8fbr6vNPtv7YvEDPq9qv
+0vqR5ldsXqnncTTO9Pq69Yzmrdq/1P7Ezq96fvX59n1bTtvN6cXPK5tnaj6k
+8T1NH2nzz84HPa9p/or2M/V8qPun9o+0fqv1g66fmtdsvaHnBR2Pm4dovaf5
+pZof6nl0X2frwb1W+1ua37H9IM2v2Xxjx+v2N7WfuXnF5pf7+bl6ftR8S5sn
+d/3Q/uT2X3R87Plk+4/az93xuevrro9br2n1VvMWPd/serL1nsZndb/Y8z46
+z+76suu9b73v809u/aJ5pD4/zb/YPFDnl+b/bn9P65eav+x80f1C+0Oa/t28
+Vu+n7i/7vNHnb2qeqPs59/kotZ7c/qHmN1tP7v3dfprGLzTf2XpQ64tdL3R8
+7vnv1+jvq3HPm5oHar2n6RddD7XfsuN3r9Xxu+vp/j6Y1v18Afrqqos=
+       "], "LogNorms" -> {6.785167782866855, 6.773799224773074}, 
+      "VocabularyPosition" -> MachineLearning`SortedHashAssociation[
+        Association["KeyHashes" -> CompressedData["
+1:eJwl2EMQGAgSAMBwY9u2bdu2bdvcjW3btm3btm1fp+7RNVXzHyZo2K5i24AB
+AgQIGjRAgL8xEIEJ8jfHPwQjOCEISShCE4awhCM8EYhIJCIThahEIzoxiEks
+YhOHuMQjPglISCISk4SkJCM5KUhJKlKThrSkIz0ZyEgmMpOFrGQjOznISS5y
+k4e85CM/BShIIQpThKIUozglKEkpSlOGspSjPBWoSCUqU4WqVKM6NahJLWpT
+h7rUoz4NaEgjGtOEpjSjOS1oSSta04a2tKM9HehIJzrTha50ozs96EkvetOH
+vvSjPwMYyCAG8y//MYShDGM4IxjJKEYzhrGMYzwTmMgkJjOFqUxjOjOYySxm
+M4e5zGM+C1jIIhazhKUsYzkrWMkqVrOGtaxjPRvYyCY2s4WtbGM7O9jJLnaz
+h73sYz8HOMghDnOEoxzjOCc4ySlOc4aznOM8F7jIJS5zhatc4zo3uMktbnOH
+u9zjPg94yCMe84SnPOM5L3jJK17zhre84z0f+MgnPvOFr3zjOz/4yS9+84e/
+xR+QQAQmCEH5h2AEJwQhCUVowhCWcIQnAhGJRGSiEJVoRCcGMYlFbOIQl3jE
+JwEJSURikpCUZCQnBSlJRWrSkJZ0pCcDGclEZrKQlWxkJwc5yUVu8pCXfOSn
+AAUpRGGKUJRiFKcEJSlFacpQlnKUpwIVqURlqlCValSnBjWpRW3qUJd61KcB
+DWlEY5rQlGY0pwUtaUVr2vC3ebejPR3oSCc604WudKM7PehJL3rTh770oz8D
+GMggBvMv/zGEoQxjOCMYyShGM4axjGM8E5jIJCYzhalMYzozmMksZjOHucxj
+PgtYyCIWs4SlLGM5K1jJKlazhrWsYz0b2MgmNrOFrWxjOzvYyS52s4e97GM/
+BzjIIQ5zhKMc4zgnOMkpTnOGs5zjPBe4yCUuc4WrXOM6N7jJLW5zh7vc4z4P
+eMgjHvOEpzzjOS94ySte84a3vOM9H/jIJz7zha984zs/+MkvfvOHv4M/IIEI
+TBCC8g/BCE4IQhKK0IQhLOEITwQiEonIRCEq0YhODGISi9jEIS7xiE8CEpKI
+xCQhKclITgpSkorUpCEt6UhPBjKSicxkISvZyE4OcpKL3OQhL/nITwEKUojC
+FKEoxShOCUpSitKUoSzlKE8FKlKJylShKtWoTg1qUova1KEu9ahPAxrSiMY0
+oSnNaE4LWtKK1rShLe1oTwc60onOdKEr3ehOD3rSi970oS/96M8ABjKIwfzL
+fwxhKMMYzghGMorRjGEs4xjPBCYyiclMYSrTmM4MZjKL2cxhLvOYzwIWsojF
+LGEpy1jOClayitWsYS3rWM8GNrKJzWxhK9vYzg52sovd7GEv+9jPAQ5yiMMc
+4SjHOM4JTnKK05zhLOc4zwUuconLXOEq17jODW5yi9vc4S73uM8DHvKIxzzh
+Kc94zgte8orXvOEt73jPBz7yic984Svf+M4PfvKL3/zh79IfkEAEJghB+Ydg
+BCcEIQlFaMIQlnCEJwIRiURkohCVaEQnBjGJRWziEJd4xCcBCUlEYpKQlGQk
+JwUpSUVq0pCWdKQnAxnJRGaykJVsZCcHOclFbvKQl3zkpwAFKURhilCUYhSn
+BCUpRWnKUJZylKcCFalEZapQlWpUpwY1qUVt6lCXetSnAQ1pRGOa0JRmNKcF
+LWlFa9rQlna0pwMd6URnutCVbnSnBz3pRW/60Jd+9GcAAxnEYP7lP4YwlGEM
+ZwQjGcVoxjCWcYxnAhOZxGSmMJVpTGcGM5nFbOYwl3nMZwELWcRilrCUZSxn
+BStZxWrWsJZ1rGcDG9nEZrawlW1sZwc72cVu9rCXfeznAAc5xGGOcJRjHOcE
+JznFac5wlnOc5wIXucRlrnCVa1znBje5xW3ucJd73OcBD3nEY57wlGc85wUv
+ecVr3vCWd7znAx/5xGe+8JVvfOcHP/nFb/7w9+APSCACE4Sg/EMwghOCkIQi
+NGEISzjCE4GIRCIyUYhKNKITg5jEIjZxiEs84pOAhCQiMUlISjKSk4KUpCI1
+aUhLOtKTgYxkIjNZyEo2spODnOQiN3nISz7yU4CCFKIwRShKMYpTgpKUojRl
+KEs5ylOBilSiMlWoSjWqU4Oa1KI2dahLPerTgIY0ojFNaEozmtOClrSiNW1o
+Szva04GOdKIzXehKN7rTg570ojd96Es/+jOAgQxiMP/yH0MYyjCGM4KRjGI0
+YxjLOMYzgYlMYjJTmMo0pjODmcxiNnOYyzzms4CFLGIxS1jKMpazgpWsYjVr
+WMs61rOBjWxiM1vYyja2s4Od7GI3e9jLPvZzgIMc4jBHOMoxjnOCk5ziNGc4
+yznOc4GLXOIyV7jKNa5zg5vc4jZ3uMs97vOAhzziMU94yjOe84KXvOI1b3jL
+O97zgY984jNf+Mo3vvODn/ziN3/4++wLSCACEyTo/3+C/wOFQImJ
+          "], "Values" -> None, "DefaultValue" -> -1, "HashFunction" -> 
+         Function[{
+           MachineLearning`file152SortedHashAssociation`PackagePrivate`keys$}, 
+           Switch[
+           MachineLearning`file152SortedHashAssociation`PackagePrivate`keys$, {
+             BlankSequence[String]}, 
+            Data`StringHash[
+            MachineLearning`file152SortedHashAssociation`PackagePrivate`keys$,
+              "Murmur3-64"], 
+            PatternTest[
+             Blank[], 
+             MachineLearning`PackageScope`PackedArrayQ[#, Integer, 1]& ], 
+            MachineLearning`file152SortedHashAssociation`PackagePrivate`keys$, 
+            PatternTest[
+             Blank[], 
+             MachineLearning`PackageScope`PackedArrayQ[#, Integer, 2]& ], 
             
-            And[$VersionNumber >= 11.2, CurrentValue["RunningEvaluator"] === 
-             "Local", Typeset`embedState$$ === "Ready"]], Appearance -> 
-          Inherited, Method -> Inherited, Evaluator -> Automatic]}, 
-        "SummaryEmbedGrid"], DynamicModuleValues :> {}], 
-      StyleBox["]", "NonInterpretableSummary"]}]},
-   "CopyTag",
-   DisplayFunction->(#& ),
-   InterpretationFunction->("ClassifierFunction[\[Ellipsis]]"& )],
-  False,
-  BoxID -> 5412036353213078414609316458665109446402937054690621898560,
+            Block[{MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q}, 
+             MachineLearning`file152SortedHashAssociation`PackagePrivate`q = {
+                Quotient[
+                MachineLearning`file152SortedHashAssociation`PackagePrivate`\
+keys$, 2^48], 
+                Quotient[
+                 Mod[
+                 MachineLearning`file152SortedHashAssociation`PackagePrivate`\
+keys$, 2^48], 2^32], 
+                Quotient[
+                 Mod[
+                 MachineLearning`file152SortedHashAssociation`PackagePrivate`\
+keys$, 2^32], 2^16], 
+                Mod[
+                MachineLearning`file152SortedHashAssociation`PackagePrivate`\
+keys$, 2^16]}; 
+             MachineLearning`file152SortedHashAssociation`PackagePrivate`q = 
+              Transpose[
+                MachineLearning`PackageScope`ToPackedArray[
+                MachineLearning`file152SortedHashAssociation`PackagePrivate`q]\
+, {1, 3, 2}]; 
+             MachineLearning`file152SortedHashAssociation`PackagePrivate`q = 
+              Transpose[
+                Flatten[
+                MachineLearning`file152SortedHashAssociation`PackagePrivate`q,
+                  1]]; Data`StringHash[
+               FromCharacterCode[
+                Abs[
+                MachineLearning`file152SortedHashAssociation`PackagePrivate`q]\
+], "Murmur3-64"]], 
+            Blank[List], 
+            Map[Switch[#, 
+              Blank[String], 
+              Data`StringHash[#, "Murmur3-64"], 
+              PatternTest[
+               Blank[], Developer`MachineIntegerQ], #, {
+               PatternTest[
+                BlankSequence[], Developer`MachineIntegerQ]}, 
+              
+              Block[{MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q}, 
+               MachineLearning`file152SortedHashAssociation`PackagePrivate`q = {
+                  Quotient[#, 2^48], 
+                  Quotient[
+                   Mod[#, 2^48], 2^32], 
+                  Quotient[
+                   Mod[#, 2^32], 2^16], 
+                  Mod[#, 2^16]}; 
+               MachineLearning`file152SortedHashAssociation`PackagePrivate`q = 
+                Flatten[
+                 MachineLearning`file152SortedHashAssociation`PackagePrivate`\
+q]; Data`StringHash[
+                 FromCharacterCode[
+                  Abs[
+                  MachineLearning`file152SortedHashAssociation`PackagePrivate`\
+q]], "Murmur3-64"]], 
+              Blank[], 
+              Data`StringHash[
+               StringJoin[
+                ToString[#, InputForm], "Cn.i9)P$"], "Murmur3-64"]]& , 
+             MachineLearning`file152SortedHashAssociation`PackagePrivate`keys$\
+]]], "Version" -> {12., 0}]], "Processor" -> 
+      MachineLearning`MLProcessor["Sequence", 
+        Association[
+        "Input" -> Association[
+          "f1" -> Association["Type" -> "NominalSequence", "Weight" -> 1]], 
+         "Output" -> 
+         Association[
+          "f1" -> Association["Type" -> "NominalSequence", "Weight" -> 1]], 
+         "Processors" -> {
+           MachineLearning`MLProcessor[
+           "NoninvertibleIntegerEncodeNominalSequence", 
+            Association[
+            "Invertibility" -> "Impossible", "Missing" -> "Imputed", "Input" -> 
+             Association[
+              "f1" -> Association[
+                "Type" -> "NominalSequence", "Weight" -> 1]], "Index" -> 
+             MachineLearning`SortedHashAssociation[
+               Association["KeyHashes" -> CompressedData["
+1:eJwl2EMQGAgSAMBwY9u2bdu2bdvcjW3btm3btm1fp+7RNVXzHyZo2K5i24AB
+AgQIGjRAgL8xEIEJ8jfHPwQjOCEISShCE4awhCM8EYhIJCIThahEIzoxiEks
+YhOHuMQjPglISCISk4SkJCM5KUhJKlKThrSkIz0ZyEgmMpOFrGQjOznISS5y
+k4e85CM/BShIIQpThKIUozglKEkpSlOGspSjPBWoSCUqU4WqVKM6NahJLWpT
+h7rUoz4NaEgjGtOEpjSjOS1oSSta04a2tKM9HehIJzrTha50ozs96EkvetOH
+vvSjPwMYyCAG8y//MYShDGM4IxjJKEYzhrGMYzwTmMgkJjOFqUxjOjOYySxm
+M4e5zGM+C1jIIhazhKUsYzkrWMkqVrOGtaxjPRvYyCY2s4WtbGM7O9jJLnaz
+h73sYz8HOMghDnOEoxzjOCc4ySlOc4aznOM8F7jIJS5zhatc4zo3uMktbnOH
+u9zjPg94yCMe84SnPOM5L3jJK17zhre84z0f+MgnPvOFr3zjOz/4yS9+84e/
+xR+QQAQmCEH5h2AEJwQhCUVowhCWcIQnAhGJRGSiEJVoRCcGMYlFbOIQl3jE
+JwEJSURikpCUZCQnBSlJRWrSkJZ0pCcDGclEZrKQlWxkJwc5yUVu8pCXfOSn
+AAUpRGGKUJRiFKcEJSlFacpQlnKUpwIVqURlqlCValSnBjWpRW3qUJd61KcB
+DWlEY5rQlGY0pwUtaUVr2vC3ebejPR3oSCc604WudKM7PehJL3rTh770oz8D
+GMggBvMv/zGEoQxjOCMYyShGM4axjGM8E5jIJCYzhalMYzozmMksZjOHucxj
+PgtYyCIWs4SlLGM5K1jJKlazhrWsYz0b2MgmNrOFrWxjOzvYyS52s4e97GM/
+BzjIIQ5zhKMc4zgnOMkpTnOGs5zjPBe4yCUuc4WrXOM6N7jJLW5zh7vc4z4P
+eMgjHvOEpzzjOS94ySte84a3vOM9H/jIJz7zha984zs/+MkvfvOHv4M/IIEI
+TBCC8g/BCE4IQhKK0IQhLOEITwQiEonIRCEq0YhODGISi9jEIS7xiE8CEpKI
+xCQhKclITgpSkorUpCEt6UhPBjKSicxkISvZyE4OcpKL3OQhL/nITwEKUojC
+FKEoxShOCUpSitKUoSzlKE8FKlKJylShKtWoTg1qUova1KEu9ahPAxrSiMY0
+oSnNaE4LWtKK1rShLe1oTwc60onOdKEr3ehOD3rSi970oS/96M8ABjKIwfzL
+fwxhKMMYzghGMorRjGEs4xjPBCYyiclMYSrTmM4MZjKL2cxhLvOYzwIWsojF
+LGEpy1jOClayitWsYS3rWM8GNrKJzWxhK9vYzg52sovd7GEv+9jPAQ5yiMMc
+4SjHOM4JTnKK05zhLOc4zwUuconLXOEq17jODW5yi9vc4S73uM8DHvKIxzzh
+Kc94zgte8orXvOEt73jPBz7yic984Svf+M4PfvKL3/zh79IfkEAEJghB+Ydg
+BCcEIQlFaMIQlnCEJwIRiURkohCVaEQnBjGJRWziEJd4xCcBCUlEYpKQlGQk
+JwUpSUVq0pCWdKQnAxnJRGaykJVsZCcHOclFbvKQl3zkpwAFKURhilCUYhSn
+BCUpRWnKUJZylKcCFalEZapQlWpUpwY1qUVt6lCXetSnAQ1pRGOa0JRmNKcF
+LWlFa9rQlna0pwMd6URnutCVbnSnBz3pRW/60Jd+9GcAAxnEYP7lP4YwlGEM
+ZwQjGcVoxjCWcYxnAhOZxGSmMJVpTGcGM5nFbOYwl3nMZwELWcRilrCUZSxn
+BStZxWrWsJZ1rGcDG9nEZrawlW1sZwc72cVu9rCXfeznAAc5xGGOcJRjHOcE
+JznFac5wlnOc5wIXucRlrnCVa1znBje5xW3ucJd73OcBD3nEY57wlGc85wUv
+ecVr3vCWd7znAx/5xGe+8JVvfOcHP/nFb/7w9+APSCACE4Sg/EMwghOCkIQi
+NGEISzjCE4GIRCIyUYhKNKITg5jEIjZxiEs84pOAhCQiMUlISjKSk4KUpCI1
+aUhLOtKTgYxkIjNZyEo2spODnOQiN3nISz7yU4CCFKIwRShKMYpTgpKUojRl
+KEs5ylOBilSiMlWoSjWqU4Oa1KI2dahLPerTgIY0ojFNaEozmtOClrSiNW1o
+Szva04GOdKIzXehKN7rTg570ojd96Es/+jOAgQxiMP/yH0MYyjCGM4KRjGI0
+YxjLOMYzgYlMYjJTmMo0pjODmcxiNnOYyzzms4CFLGIxS1jKMpazgpWsYjVr
+WMs61rOBjWxiM1vYyja2s4Od7GI3e9jLPvZzgIMc4jBHOMoxjnOCk5ziNGc4
+yznOc4GLXOIyV7jKNa5zg5vc4jZ3uMs97vOAhzziMU94yjOe84KXvOI1b3jL
+O97zgY984jNf+Mo3vvODn/ziN3/4++wLSCACEyTo/3+C/wOFQImJ
+                 "], "Values" -> None, "DefaultValue" -> -1, "HashFunction" -> 
+                Function[{
+                  MachineLearning`file152SortedHashAssociation`PackagePrivate`\
+keys$}, 
+                  Switch[
+                  MachineLearning`file152SortedHashAssociation`PackagePrivate`\
+keys$, {
+                    BlankSequence[String]}, 
+                   Data`StringHash[
+                   MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, "Murmur3-64"], 
+                   PatternTest[
+                    Blank[], 
+                    MachineLearning`PackageScope`PackedArrayQ[#, Integer, 
+                    1]& ], MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, 
+                   PatternTest[
+                    Blank[], 
+                    MachineLearning`PackageScope`PackedArrayQ[#, Integer, 
+                    2]& ], 
+                   
+                   Block[{MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q}, 
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q = {
+                    Quotient[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, 2^48], 
+                    Quotient[
+                    Mod[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, 2^48], 2^32], 
+                    Quotient[
+                    Mod[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, 2^32], 2^16], 
+                    Mod[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, 2^16]}; 
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q = Transpose[
+                    MachineLearning`PackageScope`ToPackedArray[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q], {1, 3, 2}]; 
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q = Transpose[
+                    Flatten[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q, 1]]; Data`StringHash[
+                    FromCharacterCode[
+                    Abs[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q]], "Murmur3-64"]], 
+                   Blank[List], 
+                   Map[Switch[#, 
+                    Blank[String], 
+                    Data`StringHash[#, "Murmur3-64"], 
+                    PatternTest[
+                    Blank[], Developer`MachineIntegerQ], #, {
+                    PatternTest[
+                    BlankSequence[], Developer`MachineIntegerQ]}, 
+                    
+                    Block[{MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q}, 
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q = {
+                    Quotient[#, 2^48], 
+                    Quotient[
+                    Mod[#, 2^48], 2^32], 
+                    Quotient[
+                    Mod[#, 2^32], 2^16], 
+                    Mod[#, 2^16]}; 
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q = Flatten[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q]; Data`StringHash[
+                    FromCharacterCode[
+                    Abs[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q]], "Murmur3-64"]], 
+                    Blank[], 
+                    Data`StringHash[
+                    StringJoin[
+                    ToString[#, InputForm], "Cn.i9)P$"], "Murmur3-64"]]& , 
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$]]], "Version" -> {12., 0}]], "MissingCode" -> 0, 
+             "Version" -> {12., 0}, "ID" -> 7409463108238227965, "Output" -> 
+             Association[
+              "f1" -> Association[
+                "Type" -> "NominalSequence", "Weight" -> 1]]]], 
+           MachineLearning`MLProcessor["FirstValues", 
+            Association[
+            "Info" -> Association["Type" -> "NominalSequence", "Weight" -> 1],
+              "Key" -> "f1", "Invertibility" -> "Perfect", "Missing" -> 
+             "Allowed"]]}, "Invertibility" -> "Impossible", "Missing" -> 
+         "Imputed"]], "Method" -> "Markov", "PostProcessor" -> 
+      MachineLearning`MLProcessor["Identity"], "Options" -> 
+      Association[
+       "Order" -> Association["Value" -> 0, "Options" -> Association[]], 
+        "AdditiveSmoothing" -> 
+        Association["Value" -> 0.1, "Options" -> Association[]], 
+        "MinimumTokenCount" -> 
+        Association["Value" -> 1, "Options" -> Association[]], 
+        "ExcludedTokens" -> 
+        Association["Value" -> {}, "Options" -> Association[]]]], 
+    "TrainingInformation" -> 
+    Association[
+     "PanelCell" -> CellObject[189361], "TrainingFunction" -> Classify, 
+      "EMIterations" -> Missing["KeyAbsent", "EMIterations"], 
+      "ProcessorEntropyShift" -> 0, "PreprocessingTime" -> 
+      0.5993521`7.229227024836775, "LossName" -> "MeanCrossEntropy", 
+      "BestModelInformation" -> Dataset[
+        Association[
+        "MeanCrossEntropy" -> 
+         Around[0.6933493464164097, 0.0018628917984561898`], "Accuracy" -> 
+         Around[0.4978318131319365, 0.016110080452591206`], "EvaluationTime" -> 
+         0.000024486917418368696`, "TestSize" -> 1000, "ModelMemory" -> 
+         76888., "ModelUtility" -> 0.038194860922244334`, "TrainingSize" -> 
+         1202, "TrainingTime" -> 0.013893125240609453`, "TrainingMemory" -> 
+         238144., "ExperimentCount" -> 4, "MeanCrossEntropyHistory" -> {
+           Around[0.6932159557147594, 0.004159225008669831], 
+           Around[0.6935565528970014, 0.004162166317810283], 
+           Around[0.6934352433458102, 0.003398864877986439], 
+           Around[0.6931896337080675, 0.003395994711872854]}, 
+         "AccuracyHistory" -> {
+           Around[0.48991327750075264`, 0.035227737894883315`], 
+           Around[0.4949549430651121, 0.03526241672812715], 
+           Around[0.5032136471305346, 0.02881221312139945], 
+           Around[0.5032453848313464, 0.028804708950307165`]}, 
+         "Configuration" -> {
+          "Markov", "Order" -> Automatic, "AdditiveSmoothing" -> 0.1, 
+           "MinimumTokenCount" -> Automatic, "ExcludedTokens" -> {}}, 
+         "FinalTrainingSize" -> 1502], 
+        TypeSystem`Struct[{
+         "MeanCrossEntropy", "Accuracy", "EvaluationTime", "TestSize", 
+          "ModelMemory", "ModelUtility", "TrainingSize", "TrainingTime", 
+          "TrainingMemory", "ExperimentCount", "MeanCrossEntropyHistory", 
+          "AccuracyHistory", "Configuration", "FinalTrainingSize"}, {
+         TypeSystem`AnyType, TypeSystem`AnyType, 
+          TypeSystem`Atom[Real], 
+          TypeSystem`Atom[Integer], 
+          TypeSystem`Atom[Real], 
+          TypeSystem`Atom[Real], 
+          TypeSystem`Atom[Integer], 
+          TypeSystem`Atom[Real], 
+          TypeSystem`Atom[Real], 
+          TypeSystem`Atom[Integer], 
+          TypeSystem`Vector[TypeSystem`AnyType, 4], 
+          TypeSystem`Vector[TypeSystem`AnyType, 4], 
+          TypeSystem`Tuple[{
+            TypeSystem`Atom[String], TypeSystem`AnyType, TypeSystem`AnyType, 
+            TypeSystem`AnyType, TypeSystem`AnyType}], 
+          TypeSystem`Atom[Integer]}], 
+        Association["ID" -> 179740260514664]], "Configurations" -> Dataset[
+        Association[
+        Association[
+          "Value" -> "Markov", "Options" -> 
+           Association[
+            "Order" -> Association["Value" -> Automatic], "AdditiveSmoothing" -> 
+             Association["Value" -> 0.1], "MinimumTokenCount" -> 
+             Association["Value" -> Automatic], "ExcludedTokens" -> 
+             Association["Value" -> {}]]] -> Association["Experiments" -> {
+             Association[
+             "MeanCrossEntropy" -> 
+              Around[0.8064518968392153, 0.030229978710723946`], "Accuracy" -> 
+              Around[0.4978540099593882, 0.03152097335829362], 
+              "EvaluationTime" -> 0.00002353241206123506, "TestSize" -> 500, 
+              "ModelMemory" -> 30192, "ModelUtility" -> -0.2778785158714254, 
+              "TrainingSize" -> 10, "TrainingTime" -> 0.007943282347242814, 
+              "TrainingMemory" -> 55576, "ExperimentCount" -> 1, 
+              "MeanCrossEntropyHistory" -> {
+                Around[0.8064518968392153, 0.021375822941477867`]}, 
+              "AccuracyHistory" -> {
+                Around[0.4978540099593882, 0.022288694011249915`]}], 
+             Association[
+             "MeanCrossEntropy" -> 
+              Around[0.7062037895232458, 0.01177304479993173], "Accuracy" -> 
+              Around[0.4504951589335808, 0.07029074892223756], 
+              "EvaluationTime" -> 0.000025118864315095795`, "TestSize" -> 100,
+               "ModelMemory" -> 30800, 
+              "ModelUtility" -> -0.004116980624291777, "TrainingSize" -> 50, 
+              "TrainingTime" -> 0.007943282347242814, "TrainingMemory" -> 
+              63376, "ExperimentCount" -> 1, "MeanCrossEntropyHistory" -> {
+                Around[0.7062037895232458, 0.008324799813244747]}, 
+              "AccuracyHistory" -> {
+                Around[0.4504951589335808, 0.04970306521759519]}], 
+             Association[
+             "MeanCrossEntropy" -> 
+              Around[0.698646116136614, 0.003856431441478461], "Accuracy" -> 
+              Around[0.4702450138007046, 0.03489416486734818], 
+              "EvaluationTime" -> 0.000018938909388106014`, "TestSize" -> 300,
+               "ModelMemory" -> 39768., "ModelUtility" -> 
+              0.021850487536631547`, "TrainingSize" -> 250, "TrainingTime" -> 
+              0.007943282347242814, "TrainingMemory" -> 75357.33333333333, 
+              "ExperimentCount" -> 2, "MeanCrossEntropyHistory" -> {
+                Around[0.6995822426371943, 0.007156926504360843], 
+                Around[0.6977099896360336, 0.004388356871817479]}, 
+              "AccuracyHistory" -> {
+                Around[0.4504951589335808, 0.04970306521759519], 
+                Around[0.48999486866782843`, 0.035276090771863555`]}], 
+             Association[
+             "MeanCrossEntropy" -> 
+              Around[0.6933493464164097, 0.0018628917984561898`], "Accuracy" -> 
+              Around[0.4978318131319365, 0.016110080452591206`], 
+              "EvaluationTime" -> 0.000024486917418368696`, "TestSize" -> 
+              1000, "ModelMemory" -> 76888., "ModelUtility" -> 
+              0.038194860922244334`, "TrainingSize" -> 1202, "TrainingTime" -> 
+              0.013893125240609453`, "TrainingMemory" -> 238144., 
+              "ExperimentCount" -> 4, "MeanCrossEntropyHistory" -> {
+                Around[0.6932159557147594, 0.004159225008669831], 
+                Around[0.6935565528970014, 0.004162166317810283], 
+                Around[0.6934352433458102, 0.003398864877986439], 
+                Around[0.6931896337080675, 0.003395994711872854]}, 
+              "AccuracyHistory" -> {
+                Around[0.48991327750075264`, 0.035227737894883315`], 
+                Around[0.4949549430651121, 0.03526241672812715], 
+                Around[0.5032136471305346, 0.02881221312139945], 
+                Around[0.5032453848313464, 0.028804708950307165`]}]}, 
+           "PredictedPerformances" -> 
+           Association[
+            "EvaluationTime" -> 0.000024486917418368696`, "MeanCrossEntropy" -> 
+             Around[0.6933493464164097, 0.0018628917984561898`], 
+             "ModelMemory" -> 76888., "TrainingMemory" -> 238144., 
+             "TrainingTime" -> 0.025303909727771433`], "Index" -> 1]], 
+        TypeSystem`Assoc[
+         TypeSystem`Struct[{"Value", "Options"}, {
+           TypeSystem`Atom[String], 
+           TypeSystem`Assoc[
+            TypeSystem`Atom[String], 
+            TypeSystem`Struct[{"Value"}, {TypeSystem`AnyType}], 4]}], 
+         TypeSystem`Struct[{"Experiments", "PredictedPerformances", "Index"}, {
+           TypeSystem`Vector[
+            
+            TypeSystem`Struct[{
+             "MeanCrossEntropy", "Accuracy", "EvaluationTime", "TestSize", 
+              "ModelMemory", "ModelUtility", "TrainingSize", "TrainingTime", 
+              "TrainingMemory", "ExperimentCount", "MeanCrossEntropyHistory", 
+              "AccuracyHistory"}, {TypeSystem`AnyType, TypeSystem`AnyType, 
+              TypeSystem`Atom[Real], 
+              TypeSystem`Atom[Integer], 
+              TypeSystem`Atom[Real], 
+              TypeSystem`Atom[Real], 
+              TypeSystem`Atom[Integer], 
+              TypeSystem`Atom[Real], 
+              TypeSystem`Atom[Real], 
+              TypeSystem`Atom[Integer], 
+              TypeSystem`Vector[TypeSystem`AnyType, TypeSystem`AnyLength], 
+              TypeSystem`Vector[TypeSystem`AnyType, TypeSystem`AnyLength]}], 
+            4], 
+           
+           TypeSystem`Struct[{
+            "EvaluationTime", "MeanCrossEntropy", "ModelMemory", 
+             "TrainingMemory", "TrainingTime"}, {
+             TypeSystem`Atom[Real], TypeSystem`AnyType, 
+             TypeSystem`Atom[Real], 
+             TypeSystem`Atom[Real], 
+             TypeSystem`Atom[Real]}], 
+           TypeSystem`Atom[Integer]}], 1], 
+        Association["ID" -> 179735965547368]], "MaxTrainingSize" -> 1502, 
+      "PreprocessorEvaluationTime" -> 5.4355168003546`2.*^-6, 
+      "PreprocessorMemory" -> 35192, "InputDimension" -> 1, "OutputDimension" -> 
+      1, "BaselineLogProbability" -> -0.6931250762209797, "VariableBudget" -> 
+      True, "CheckpointingInfo" -> Association["Checkpointing" -> False], 
+      "UserStop" -> False, "NaturalStop" -> True, "AbortStop" -> False, 
+      "LastReportingTime" -> 3.7716675599115977`17.32910839558512*^9, 
+      "RoundPartitioning" -> Dataset[{
+         Association[
+         "TrainingSizes" -> 10, "TimeBudgets" -> 0.0026658784941343446`, 
+          "ElapsedTimes" -> 0.0315279, "ExperimentCounts" -> 1], 
+         Association[
+         "TrainingSizes" -> 50, "TimeBudgets" -> 0.013329392470671723`, 
+          "ElapsedTimes" -> 0.0119952, "ExperimentCounts" -> 1], 
+         Association[
+         "TrainingSizes" -> 250, "TimeBudgets" -> 0.06664696235335864, 
+          "ElapsedTimes" -> 0.067999, "ExperimentCounts" -> 2], 
+         Association[
+         "TrainingSizes" -> 1202, "TimeBudgets" -> 0.3332348117667933, 
+          "ElapsedTimes" -> 0.4720517, "ExperimentCounts" -> 4]}, 
+        TypeSystem`Vector[
+         TypeSystem`Struct[{
+          "TrainingSizes", "TimeBudgets", "ElapsedTimes", 
+           "ExperimentCounts"}, {
+           TypeSystem`Atom[Integer], 
+           TypeSystem`Atom[Real], 
+           TypeSystem`Atom[Real], 
+           TypeSystem`Atom[Integer]}], 4], 
+        Association[
+        "Origin" -> HoldComplete[GeneralUtilities`AssociationTranspose, 
+           Dataset`DatasetHandle[179744555481960]], "ID" -> 
+         179748850449256]]], "Log" -> 
+    Association["Example" -> MachineLearning`MLDataset[
+        Association[
+        "f1" -> Association["Type" -> "Nominal", "Weight" -> 1, "Values" -> {
+             Row[{"What are the values of ", $CellContext`y, " such that ", 
+               HoldForm[Equal][
+                HoldForm[Plus][
+                 HoldForm[Times][-4, 
+                  HoldForm[Power][6, 
+                   Rational[1, 2]]], 
+                 Abs[
+                  HoldForm[Plus][-16, 
+                   HoldForm[Times][-2, $CellContext`y]]]], 0], "?"}]}, "ID" -> 
+           2825882393954120476]], 
+        Association[
+        "ExampleNumber" -> 1, "ExampleWeights" -> 1, "LogDensityRatios" -> 0, 
+         "RawExample" -> False]], "TrainingTime" -> 1.4950097486190566`, 
+      "MaxTrainingMemory" -> 1064896, "DataMemory" -> 8209600, 
+      "FunctionMemory" -> 193184, "LanguageVersion" -> {12., 0}, "Date" -> 
+      DateObject[{2019, 7, 9, 13, 25, 59.9515828`9.530375481762857}, 
+        "Instant", "Gregorian", -4.], "ProcessorCount" -> 2, "ProcessorType" -> 
+      "x86-64", "OperatingSystem" -> "Windows", "SystemWordLength" -> 64, 
+      "Evaluations" -> {}]]],
   Editable->False,
   SelectWithContents->True,
   Selectable->False]], "Output",
@@ -1354,17 +2357,1258 @@ Cell[BoxData[
   3.7716705150049543`*^9, 3.7716792821112585`*^9, 3.771679349679925*^9, 
   3.7716794094299755`*^9, 3.771679443753901*^9, 3.7716800069375343`*^9, 
   3.771680092100526*^9, 3.7716802435513034`*^9, 3.771680315263536*^9, 
-  3.7716804259427958`*^9, 3.77168053159542*^9, 3.771680582302932*^9},
+  3.7716804259427958`*^9, 3.77168053159542*^9, 3.771680582302932*^9, 
+  3.77168173055595*^9, 3.7716818005355654`*^9, 3.7716818872642326`*^9, 
+  3.7716819599915857`*^9},
  CellLabel->
-  "Out[285]=",ExpressionUUID->"c000dacf-793d-4844-9cf6-27153042dbd9"]
+  "Out[338]=",ExpressionUUID->"a3d610ce-fa76-4795-929b-34343ea328d3"]
 }, Open  ]],
 
-Cell[BoxData[""], "Input",
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DumpSave", "[", 
+  RowBox[{
+  "\"\<final_project_markov_classifier.mx\>\"", ",", " ", 
+   "questionClassifier"}], "]"}]], "Input",
  CellChangeTimes->{{3.7715087584565554`*^9, 3.771508760556711*^9}, {
    3.771538510676405*^9, 3.7715385199238358`*^9}, {3.7715803499865*^9, 
-   3.7715803583031516`*^9}, 
-   3.7716135847669897`*^9},ExpressionUUID->"60c92252-fe5c-46b2-af32-\
-5525ecaa013f"],
+   3.7715803583031516`*^9}, 3.7716135847669897`*^9, {3.7716822793413205`*^9, 
+   3.7716823042481947`*^9}},
+ CellLabel->
+  "In[339]:=",ExpressionUUID->"60c92252-fe5c-46b2-af32-5525ecaa013f"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  InterpretationBox[
+   RowBox[{
+    TagBox["ClassifierFunction",
+     "SummaryHead"], "[", 
+    DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+     TemplateBox[{PaneSelectorBox[{False -> GridBox[{{
+             PaneBox[
+              ButtonBox[
+               DynamicBox[
+                FEPrivate`FrontEndResource[
+                "FEBitmaps", "SquarePlusIconMedium"]], 
+               ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+               Evaluator -> Automatic, Method -> "Preemptive"], 
+              Alignment -> {Center, Center}, ImageSize -> 
+              Dynamic[{
+                Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                 AbsoluteCurrentValue[Magnification]}]], 
+             GraphicsBox[{{
+                PointSize[0.13], 
+                GrayLevel[0.45], 
+                
+                PointBox[{{0.9821769431797024, -0.440194219686987}, {
+                 1.1339776261519132`, 0.8056918676854272}, {
+                 0.5279892326667741, 0.6574306661126254}, {
+                 0.022147046479890797`, 1.4937877187998898`}}], 
+                GrayLevel[0.7], 
+                
+                PointBox[{{-0.9815166384819979, 
+                 0.15045697525228735`}, {-0.5923526886966953, \
+-0.33441771553094035`}, {-0.005656646679640442, -1.462421365651345}, \
+{-1.0734370436522753`, -1.3729645043477454`}}]}, {
+                GrayLevel[0.55], 
+                AbsoluteThickness[1.5], 
+                LineBox[{{-1., 1.5}, {1, -1.6}}]}}, {
+              Axes -> {False, False}, AxesLabel -> {None, None}, 
+               AxesOrigin -> {0, 0}, BaseStyle -> {FontFamily -> "Arial", 
+                 AbsoluteThickness[1.5]}, DisplayFunction -> Identity, 
+               Frame -> {{True, True}, {True, True}}, 
+               FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> 
+               Directive[
+                 Thickness[Tiny], 
+                 GrayLevel[0.7]], FrameTicks -> {{None, None}, {None, None}}, 
+               GridLines -> {None, None}, 
+               LabelStyle -> {FontFamily -> "Arial"}, 
+               Method -> {"ScalingFunctions" -> None}, 
+               PlotRange -> {{-1., 1}, {-1.3, 1.1}}, PlotRangeClipping -> 
+               True, PlotRangePadding -> {{0.7, 0.7}, {0.7, 0.7}}, 
+               Ticks -> {None, None}}, Axes -> False, AspectRatio -> 1, 
+              ImageSize -> 
+              Dynamic[{
+                Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                 AbsoluteCurrentValue[Magnification]}], Frame -> True, 
+              FrameTicks -> None, FrameStyle -> Directive[
+                Opacity[0.5], 
+                Thickness[Tiny], 
+                RGBColor[0.368417, 0.506779, 0.709798]], Background -> 
+              GrayLevel[0.94]], 
+             GridBox[{{
+                RowBox[{
+                  TagBox["\"Input type: \"", "SummaryItemAnnotation"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["\"Nominal\"", "SummaryItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Classes: \"", "SummaryItemAnnotation"], 
+                  "\[InvisibleSpace]", 
+                  TagBox[
+                   
+                   TemplateBox[{
+                    ",", "\",\"", "\"algebra 1\"", "\"algebra 2\""}, 
+                    "RowWithSeparators"], "SummaryItem"]}]}}, 
+              GridBoxAlignment -> {
+               "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+              False, GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              GridBoxSpacings -> {
+               "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+              BaseStyle -> {
+               ShowStringCharacters -> False, NumberMarks -> False, 
+                PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+           GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+           GridBoxItemSize -> {
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+           BaselinePosition -> {1, 1}], True -> GridBox[{{
+             PaneBox[
+              ButtonBox[
+               DynamicBox[
+                FEPrivate`FrontEndResource[
+                "FEBitmaps", "SquareMinusIconMedium"]], 
+               ButtonFunction :> (Typeset`open$$ = False), Appearance -> None,
+                Evaluator -> Automatic, Method -> "Preemptive"], 
+              Alignment -> {Center, Center}, ImageSize -> 
+              Dynamic[{
+                Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                 AbsoluteCurrentValue[Magnification]}]], 
+             GraphicsBox[{{
+                PointSize[0.13], 
+                GrayLevel[0.45], 
+                
+                PointBox[{{0.9821769431797024, -0.440194219686987}, {
+                 1.1339776261519132`, 0.8056918676854272}, {
+                 0.5279892326667741, 0.6574306661126254}, {
+                 0.022147046479890797`, 1.4937877187998898`}}], 
+                GrayLevel[0.7], 
+                
+                PointBox[{{-0.9815166384819979, 
+                 0.15045697525228735`}, {-0.5923526886966953, \
+-0.33441771553094035`}, {-0.005656646679640442, -1.462421365651345}, \
+{-1.0734370436522753`, -1.3729645043477454`}}]}, {
+                GrayLevel[0.55], 
+                AbsoluteThickness[1.5], 
+                LineBox[{{-1., 1.5}, {1, -1.6}}]}}, {
+              Axes -> {False, False}, AxesLabel -> {None, None}, 
+               AxesOrigin -> {0, 0}, BaseStyle -> {FontFamily -> "Arial", 
+                 AbsoluteThickness[1.5]}, DisplayFunction -> Identity, 
+               Frame -> {{True, True}, {True, True}}, 
+               FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> 
+               Directive[
+                 Thickness[Tiny], 
+                 GrayLevel[0.7]], FrameTicks -> {{None, None}, {None, None}}, 
+               GridLines -> {None, None}, 
+               LabelStyle -> {FontFamily -> "Arial"}, 
+               Method -> {"ScalingFunctions" -> None}, 
+               PlotRange -> {{-1., 1}, {-1.3, 1.1}}, PlotRangeClipping -> 
+               True, PlotRangePadding -> {{0.7, 0.7}, {0.7, 0.7}}, 
+               Ticks -> {None, None}}, Axes -> False, AspectRatio -> 1, 
+              ImageSize -> 
+              Dynamic[{
+                Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                 AbsoluteCurrentValue[Magnification]}], Frame -> True, 
+              FrameTicks -> None, FrameStyle -> Directive[
+                Opacity[0.5], 
+                Thickness[Tiny], 
+                RGBColor[0.368417, 0.506779, 0.709798]], Background -> 
+              GrayLevel[0.94]], 
+             GridBox[{{
+                RowBox[{
+                  TagBox["\"Input type: \"", "SummaryItemAnnotation"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["\"Nominal\"", "SummaryItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Classes: \"", "SummaryItemAnnotation"], 
+                  "\[InvisibleSpace]", 
+                  TagBox[
+                   
+                   TemplateBox[{
+                    ",", "\",\"", "\"algebra 1\"", "\"algebra 2\""}, 
+                    "RowWithSeparators"], "SummaryItem"]}]}, {
+                RowBox[{
+                  TagBox["\"Method: \"", "SummaryItemAnnotation"], 
+                  "\[InvisibleSpace]", 
+                  TagBox["\"Markov\"", "SummaryItem"]}]}, {
+                RowBox[{
+                  TagBox[
+                  "\"Number of training examples: \"", 
+                   "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                  TagBox["1502", "SummaryItem"]}]}}, 
+              GridBoxAlignment -> {
+               "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+              False, GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              GridBoxSpacings -> {
+               "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+              BaseStyle -> {
+               ShowStringCharacters -> False, NumberMarks -> False, 
+                PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+           GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+           GridBoxItemSize -> {
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+           BaselinePosition -> {1, 1}]}, 
+        Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+      "SummaryPanel"],
+     DynamicModuleValues:>{}], "]"}],
+   ClassifierFunction[
+    Association[
+    "ExampleNumber" -> 1502, "ClassNumber" -> 2, "Input" -> 
+     Association["Preprocessor" -> MachineLearning`MLProcessor["ToMLDataset", 
+         Association[
+         "Input" -> Association["f1" -> Association["Type" -> "Nominal"]], 
+          "Output" -> 
+          Association[
+           "f1" -> Association["Type" -> "Nominal", "Weight" -> 1]], 
+          "Preprocessor" -> MachineLearning`MLProcessor["Sequence", 
+            Association["Processors" -> {
+               MachineLearning`MLProcessor["List"], 
+               MachineLearning`MLProcessor["WrapMLDataset", 
+                Association[
+                "FeatureTypes" -> {"Nominal"}, "FeatureKeys" -> {"f1"}, 
+                 "FeatureWeights" -> Automatic, "ExampleWeights" -> Automatic,
+                  "RawExample" -> Missing["KeyAbsent", "RawExample"]]]}]], 
+          "ScalarFeature" -> True, "Invertibility" -> "Perfect", "Missing" -> 
+          "Allowed"]], "Processor" -> MachineLearning`MLProcessor["Sequence", 
+         Association[
+         "Input" -> Association[
+           "f1" -> Association["Type" -> "Nominal", "Weight" -> 1]], "Output" -> 
+          Association[
+           "f1" -> Association["Type" -> "NominalSequence", "Weight" -> 1]], 
+          "Processors" -> {
+            MachineLearning`MLProcessor["ToVector", 
+             Association[
+             "Invertibility" -> "Perfect", "Missing" -> "Allowed", "Input" -> 
+              Association[
+               "f1" -> Association["Type" -> "Nominal", "Weight" -> 1]], 
+              "Output" -> 
+              Association[
+               "f1" -> Association["Type" -> "NominalVector", "Weight" -> 1]],
+               "Version" -> {12., 0}, "ID" -> 1537627216228573037]], 
+            MachineLearning`MLProcessor["ImputeMissing", 
+             Association[
+             "Invertibility" -> "Perfect", "Missing" -> "Imputed", "Input" -> 
+              Association[
+               "f1" -> Association["Type" -> "NominalVector", "Weight" -> 1]],
+               "VectorLength" -> 1, "Output" -> 
+              Association[
+               "f1" -> Association["Type" -> "NominalVector", "Weight" -> 1]],
+               "Type" -> "NominalVector", "Version" -> {12., 0}, "ID" -> 
+              4026204838636604962]], 
+            MachineLearning`MLProcessor["NominalVectorToNominalSequence", 
+             Association[
+             "Invertibility" -> "Impossible", "Missing" -> "Allowed", "Input" -> 
+              Association[
+               "f1" -> Association["Type" -> "NominalVector", "Weight" -> 1]],
+               "Version" -> {12., 0}, "ID" -> 2197383365741291739, "Output" -> 
+              Association[
+               "f1" -> Association[
+                 "Type" -> "NominalSequence", "Weight" -> 1]]]], 
+            MachineLearning`MLProcessor[
+            "NoninvertibleIntegerEncodeNominalSequence", 
+             Association[
+             "Invertibility" -> "Impossible", "Missing" -> "Imputed", "Input" -> 
+              Association[
+               "f1" -> Association[
+                 "Type" -> "NominalSequence", "Weight" -> 1]], "Index" -> 
+              MachineLearning`SortedHashAssociation[
+                Association["KeyHashes" -> CompressedData["
+1:eJxNnUkObMtORV+DPwCKCTAApKiLISDRYgg0kGjR+Mxf7LWPHXnfL969jsxT
+RLj2tvNf/+t///O///a3v/76+z/89ddf//E/f/+/f/8X/eHfbqt19zb7OnvV
+tXavuVDmOfXcus/sY5eWC3XMdUo/bevz8+zbc6HvUdduu6+yy6htvoW11yq1
+zN3O1Ifepfroe7V717irtTZHLugCc85Wtq4/62wrFsrZ5d69b+n91lN3yYW1
+2iq3rVVHH3qOvHmZt/dedfOy92xj7lzorc+qW43jS5230OoYd0491mqzlvoW
+6r6VWxS9/mr9nG/h3K2rzKNn4GbsWy7oJcYaeq46ivZmjVzoZ4w9e+ljlaXl
+uMfRZpdWuu46ztCf3zf0kLtNnZQ2pPcyym9BN9WRcB661xz3LYyr0xqjjVKm
+tqS/hV7n1o7v3UWvd+WCPrP6PrXtyfPtd486dbB69z21/9qs3zfa1jOXscQT
++ktyydln9Xp7HXpqHXEd6y3oEK4WxXg6jVHegjZvtFI29Fq1EW9hjHPEoH20
+qS/Od49Vmm67xY1NL9nLzIUunhKXiJtbnVrNg9q1iwtGX5VXn38slNJmqWKj
+Kv5q973HOqc0RGPosctubxOXthvu2TzCGeXke6w5qx6srKOnFk/u+RbGguGG
+OHFMvX/urq6tDdRLF5in3JLMoH3Tw/ahT7R5xa7v5oWnak0CsLXTZ+Q3xLTa
+29EOm1n17uMttKM3FwvtrkcWs/wWpvj3FkRIUt1zS/Qk1Vx1JIiwa77gnAin
+uHpuiebVEeYCDylBq5KMufSWLRYkYdpuMYPOeFxtVr7H0BbOs/SgQ3cQc8+3
+oFMrelz9V7xw21sYBx64yE7TEZf6FqQtmkRdnyhjiCNiod+rHbp6JD1ukY5Y
+b0HspM3W49XRennnoccXw+9xu/hTuuSkREn2CiqS0xOL1ffmkhnxVT1cflcd
+y1tYVyeoe+ixxDv64Fs4Z0hy95KgLK6bC2LwJY0nxl1Nr9jyUuKzrdOVauht
+6VDeeUhtLj1s0VlJpudTrzrLK80mDpRq1DFJ3b6FIVE+OkC+JxX5vtFOb02a
+et/Gfr7zkADrKZHq2qX2S8ujrVevInZGlQ6UY96j6jzRo20XaTnpzvUWujTJ
+1qnqWCRzvwXJpNQBxzIQwsftFbtSiphWzMKe/L7RpVoxB2PpOOeT2irrU9hw
+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
+/1ujtic=
+                  "], "Values" -> None, "DefaultValue" -> -1, "HashFunction" -> 
+                 Function[{
+                   MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$}, 
+                   Switch[
+                   MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, {
+                    BlankSequence[String]}, 
+                    Data`StringHash[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, "Murmur3-64"], 
+                    PatternTest[
+                    Blank[], 
+                    MachineLearning`PackageScope`PackedArrayQ[#, Integer, 
+                    1]& ], MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, 
+                    PatternTest[
+                    Blank[], 
+                    MachineLearning`PackageScope`PackedArrayQ[#, Integer, 
+                    2]& ], 
+                    
+                    Block[{MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q}, 
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q = {
+                    Quotient[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, 2^48], 
+                    Quotient[
+                    Mod[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, 2^48], 2^32], 
+                    Quotient[
+                    Mod[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, 2^32], 2^16], 
+                    Mod[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, 2^16]}; 
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q = Transpose[
+                    MachineLearning`PackageScope`ToPackedArray[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q], {1, 3, 2}]; 
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q = Transpose[
+                    Flatten[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q, 1]]; Data`StringHash[
+                    FromCharacterCode[
+                    Abs[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q]], "Murmur3-64"]], 
+                    Blank[List], 
+                    Map[Switch[#, 
+                    Blank[String], 
+                    Data`StringHash[#, "Murmur3-64"], 
+                    PatternTest[
+                    Blank[], Developer`MachineIntegerQ], #, {
+                    PatternTest[
+                    BlankSequence[], Developer`MachineIntegerQ]}, 
+                    
+                    Block[{MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q}, 
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q = {
+                    Quotient[#, 2^48], 
+                    Quotient[
+                    Mod[#, 2^48], 2^32], 
+                    Quotient[
+                    Mod[#, 2^32], 2^16], 
+                    Mod[#, 2^16]}; 
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q = Flatten[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q]; Data`StringHash[
+                    FromCharacterCode[
+                    Abs[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q]], "Murmur3-64"]], 
+                    Blank[], 
+                    Data`StringHash[
+                    StringJoin[
+                    ToString[#, InputForm], "Cn.i9)P$"], "Murmur3-64"]]& , 
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$]]], "Version" -> {12., 0}]], "MissingCode" -> 0, 
+              "Version" -> {12., 0}, "ID" -> 897669180820965721, "Output" -> 
+              Association[
+               "f1" -> Association[
+                 "Type" -> "NominalSequence", "Weight" -> 1]]]]}, 
+          "Invertibility" -> "Impossible", "Missing" -> "Imputed"]]], 
+     "Output" -> Association[
+      "Preprocessor" -> MachineLearning`MLProcessor["ToMLDataset", 
+         Association[
+         "Input" -> Association["f1" -> Association["Type" -> "Nominal"]], 
+          "Output" -> 
+          Association[
+           "f1" -> Association["Type" -> "Nominal", "Weight" -> 1]], 
+          "Preprocessor" -> MachineLearning`MLProcessor["Sequence", 
+            Association["Processors" -> {
+               MachineLearning`MLProcessor["List"], 
+               MachineLearning`MLProcessor["WrapMLDataset", 
+                Association[
+                "FeatureTypes" -> {"Nominal"}, "FeatureKeys" -> {"f1"}, 
+                 "FeatureWeights" -> Automatic, "ExampleWeights" -> Automatic,
+                  "RawExample" -> Missing["KeyAbsent", "RawExample"]]]}]], 
+          "ScalarFeature" -> True, "Invertibility" -> "Perfect", "Missing" -> 
+          "Allowed"]], "Processor" -> MachineLearning`MLProcessor["Sequence", 
+         Association[
+         "Input" -> Association[
+           "f1" -> Association["Type" -> "Nominal", "Weight" -> 1]], "Output" -> 
+          Association[
+           "f1" -> Association["Type" -> "Nominal", "Weight" -> 1]], 
+          "Processors" -> {
+            MachineLearning`MLProcessor["ToVector", 
+             Association[
+             "Invertibility" -> "Perfect", "Missing" -> "Allowed", "Input" -> 
+              Association[
+               "f1" -> Association["Type" -> "Nominal", "Weight" -> 1]], 
+              "Output" -> 
+              Association[
+               "f1" -> Association["Type" -> "NominalVector", "Weight" -> 1]],
+               "Version" -> {12., 0}, "ID" -> 639221281190755143]], 
+            MachineLearning`MLProcessor["IntegerEncodeNominalVector", 
+             Association[
+             "Invertibility" -> "Perfect", "Missing" -> "Allowed", "Input" -> 
+              Association[
+               "f1" -> Association["Type" -> "NominalVector", "Weight" -> 1]],
+               "Index" -> {
+                Association["algebra 1" -> 1, "algebra 2" -> 2]}, 
+              "MissingCode" -> 0, "Version" -> {12., 0}, "ID" -> 
+              9092059385497543421, "Output" -> 
+              Association[
+               "f1" -> Association[
+                 "Type" -> "NominalVector", "Weight" -> 1]]]], 
+            MachineLearning`MLProcessor["FromVector", 
+             Association[
+             "Invertibility" -> "Perfect", "Missing" -> "Allowed", "Input" -> 
+              Association[
+               "f1" -> Association[
+                 "Type" -> "NominalVector", "Weight" -> 1, "SetSize" -> {2}]],
+               "Output" -> 
+              Association[
+               "f1" -> Association["Type" -> "Nominal", "Weight" -> 1]], 
+              "Version" -> {12., 0}, "ID" -> 7872287080029735858]], 
+            MachineLearning`MLProcessor["FirstValues", 
+             Association[
+             "Info" -> Association[
+               "Type" -> "Nominal", "Weight" -> 1, "SetSize" -> 2], "Key" -> 
+              "f1", "Invertibility" -> "Perfect", "Missing" -> "Allowed"]]}, 
+          "Invertibility" -> "Perfect", "Missing" -> "Allowed"]], 
+       "ProbabilityPostprocessor" -> Identity, "Name" -> "class", "Marginal" -> 
+       Association[
+        "algebra 1" -> 0.5033244680851063, "algebra 2" -> 
+         0.4966755319148936]], "Prior" -> Automatic, "Utility" -> 
+     SparseArray[
+      Automatic, {2, 3}, 0., {1, {{0, 1, 2}, {{2}, {3}}}, {1., 1.}}], 
+     "Threshold" -> 0, "TieBreaker" -> RandomChoice, "PerformanceGoal" -> 
+     "Quality", "BatchProcessing" -> Automatic, "Model" -> 
+     Association[
+      "ClassPriors" -> 
+       Association[1 -> 0.5033244680851063, 2 -> 0.4966755319148936], 
+       "LogCounts" -> CompressedData["
+1:eJzdnDtKQ0EYhYcL2lgEhCzAPdjHNdjYKymEgIuwt7OyFN2BkErcTXAXYmEz
+EK6/c17GJoz3OvO/znfiJeTs+u5yPbXWjo9a+379fF48nW+2q4ebk7eX2+mj
+X/e/n7s+d3/176vno/evnueuD7tfi9fH1dX7rhzHb9ej/UafN7qfez77flXj
+qfZ77v5qfqPxo/V9aHxi8wednzp/9nlo3qHnrdchOz40j9DzXeURmk9oP2bz
+js3LNL2p9cC+ju5/ej5p+7l56+6v+n72+4M0vqnr744vrb7ouXPrn83r/6Zv
+td7Q/XLPi5o/6f7s5p2bJ6h8/vr/LJp/bP4fOr/d8fbr6vNPtv7YvEDPq9qv
+0vqR5ldsXqnncTTO9Pq69Yzmrdq/1P7Ezq96fvX59n1bTtvN6cXPK5tnaj6k
+8T1NH2nzz84HPa9p/or2M/V8qPun9o+0fqv1g66fmtdsvaHnBR2Pm4dovaf5
+pZof6nl0X2frwb1W+1ua37H9IM2v2Xxjx+v2N7WfuXnF5pf7+bl6ftR8S5sn
+d/3Q/uT2X3R87Plk+4/az93xuevrro9br2n1VvMWPd/serL1nsZndb/Y8z46
+z+76suu9b73v809u/aJ5pD4/zb/YPFDnl+b/bn9P65eav+x80f1C+0Oa/t28
+Vu+n7i/7vNHnb2qeqPs59/kotZ7c/qHmN1tP7v3dfprGLzTf2XpQ64tdL3R8
+7vnv1+jvq3HPm5oHar2n6RddD7XfsuN3r9Xxu+vp/j6Y1v18Afrqqos=
+        "], "LogNorms" -> {6.785167782866855, 6.773799224773074}, 
+       "VocabularyPosition" -> MachineLearning`SortedHashAssociation[
+         Association["KeyHashes" -> CompressedData["
+1:eJwl2EMQGAgSAMBwY9u2bdu2bdvcjW3btm3btm1fp+7RNVXzHyZo2K5i24AB
+AgQIGjRAgL8xEIEJ8jfHPwQjOCEISShCE4awhCM8EYhIJCIThahEIzoxiEks
+YhOHuMQjPglISCISk4SkJCM5KUhJKlKThrSkIz0ZyEgmMpOFrGQjOznISS5y
+k4e85CM/BShIIQpThKIUozglKEkpSlOGspSjPBWoSCUqU4WqVKM6NahJLWpT
+h7rUoz4NaEgjGtOEpjSjOS1oSSta04a2tKM9HehIJzrTha50ozs96EkvetOH
+vvSjPwMYyCAG8y//MYShDGM4IxjJKEYzhrGMYzwTmMgkJjOFqUxjOjOYySxm
+M4e5zGM+C1jIIhazhKUsYzkrWMkqVrOGtaxjPRvYyCY2s4WtbGM7O9jJLnaz
+h73sYz8HOMghDnOEoxzjOCc4ySlOc4aznOM8F7jIJS5zhatc4zo3uMktbnOH
+u9zjPg94yCMe84SnPOM5L3jJK17zhre84z0f+MgnPvOFr3zjOz/4yS9+84e/
+xR+QQAQmCEH5h2AEJwQhCUVowhCWcIQnAhGJRGSiEJVoRCcGMYlFbOIQl3jE
+JwEJSURikpCUZCQnBSlJRWrSkJZ0pCcDGclEZrKQlWxkJwc5yUVu8pCXfOSn
+AAUpRGGKUJRiFKcEJSlFacpQlnKUpwIVqURlqlCValSnBjWpRW3qUJd61KcB
+DWlEY5rQlGY0pwUtaUVr2vC3ebejPR3oSCc604WudKM7PehJL3rTh770oz8D
+GMggBvMv/zGEoQxjOCMYyShGM4axjGM8E5jIJCYzhalMYzozmMksZjOHucxj
+PgtYyCIWs4SlLGM5K1jJKlazhrWsYz0b2MgmNrOFrWxjOzvYyS52s4e97GM/
+BzjIIQ5zhKMc4zgnOMkpTnOGs5zjPBe4yCUuc4WrXOM6N7jJLW5zh7vc4z4P
+eMgjHvOEpzzjOS94ySte84a3vOM9H/jIJz7zha984zs/+MkvfvOHv4M/IIEI
+TBCC8g/BCE4IQhKK0IQhLOEITwQiEonIRCEq0YhODGISi9jEIS7xiE8CEpKI
+xCQhKclITgpSkorUpCEt6UhPBjKSicxkISvZyE4OcpKL3OQhL/nITwEKUojC
+FKEoxShOCUpSitKUoSzlKE8FKlKJylShKtWoTg1qUova1KEu9ahPAxrSiMY0
+oSnNaE4LWtKK1rShLe1oTwc60onOdKEr3ehOD3rSi970oS/96M8ABjKIwfzL
+fwxhKMMYzghGMorRjGEs4xjPBCYyiclMYSrTmM4MZjKL2cxhLvOYzwIWsojF
+LGEpy1jOClayitWsYS3rWM8GNrKJzWxhK9vYzg52sovd7GEv+9jPAQ5yiMMc
+4SjHOM4JTnKK05zhLOc4zwUuconLXOEq17jODW5yi9vc4S73uM8DHvKIxzzh
+Kc94zgte8orXvOEt73jPBz7yic984Svf+M4PfvKL3/zh79IfkEAEJghB+Ydg
+BCcEIQlFaMIQlnCEJwIRiURkohCVaEQnBjGJRWziEJd4xCcBCUlEYpKQlGQk
+JwUpSUVq0pCWdKQnAxnJRGaykJVsZCcHOclFbvKQl3zkpwAFKURhilCUYhSn
+BCUpRWnKUJZylKcCFalEZapQlWpUpwY1qUVt6lCXetSnAQ1pRGOa0JRmNKcF
+LWlFa9rQlna0pwMd6URnutCVbnSnBz3pRW/60Jd+9GcAAxnEYP7lP4YwlGEM
+ZwQjGcVoxjCWcYxnAhOZxGSmMJVpTGcGM5nFbOYwl3nMZwELWcRilrCUZSxn
+BStZxWrWsJZ1rGcDG9nEZrawlW1sZwc72cVu9rCXfeznAAc5xGGOcJRjHOcE
+JznFac5wlnOc5wIXucRlrnCVa1znBje5xW3ucJd73OcBD3nEY57wlGc85wUv
+ecVr3vCWd7znAx/5xGe+8JVvfOcHP/nFb/7w9+APSCACE4Sg/EMwghOCkIQi
+NGEISzjCE4GIRCIyUYhKNKITg5jEIjZxiEs84pOAhCQiMUlISjKSk4KUpCI1
+aUhLOtKTgYxkIjNZyEo2spODnOQiN3nISz7yU4CCFKIwRShKMYpTgpKUojRl
+KEs5ylOBilSiMlWoSjWqU4Oa1KI2dahLPerTgIY0ojFNaEozmtOClrSiNW1o
+Szva04GOdKIzXehKN7rTg570ojd96Es/+jOAgQxiMP/yH0MYyjCGM4KRjGI0
+YxjLOMYzgYlMYjJTmMo0pjODmcxiNnOYyzzms4CFLGIxS1jKMpazgpWsYjVr
+WMs61rOBjWxiM1vYyja2s4Od7GI3e9jLPvZzgIMc4jBHOMoxjnOCk5ziNGc4
+yznOc4GLXOIyV7jKNa5zg5vc4jZ3uMs97vOAhzziMU94yjOe84KXvOI1b3jL
+O97zgY984jNf+Mo3vvODn/ziN3/4++wLSCACEyTo/3+C/wOFQImJ
+           "], "Values" -> None, "DefaultValue" -> -1, "HashFunction" -> 
+          Function[{
+            MachineLearning`file152SortedHashAssociation`PackagePrivate`keys$}\
+, 
+            Switch[
+            MachineLearning`file152SortedHashAssociation`PackagePrivate`keys$,\
+ {
+              BlankSequence[String]}, 
+             Data`StringHash[
+             MachineLearning`file152SortedHashAssociation`PackagePrivate`keys$\
+, "Murmur3-64"], 
+             PatternTest[
+              Blank[], 
+              MachineLearning`PackageScope`PackedArrayQ[#, Integer, 1]& ], 
+             MachineLearning`file152SortedHashAssociation`PackagePrivate`keys$\
+, 
+             PatternTest[
+              Blank[], 
+              MachineLearning`PackageScope`PackedArrayQ[#, Integer, 2]& ], 
+             
+             Block[{MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q}, 
+              MachineLearning`file152SortedHashAssociation`PackagePrivate`q = {
+                 Quotient[
+                 MachineLearning`file152SortedHashAssociation`PackagePrivate`\
+keys$, 2^48], 
+                 Quotient[
+                  Mod[
+                  MachineLearning`file152SortedHashAssociation`PackagePrivate`\
+keys$, 2^48], 2^32], 
+                 Quotient[
+                  Mod[
+                  MachineLearning`file152SortedHashAssociation`PackagePrivate`\
+keys$, 2^32], 2^16], 
+                 Mod[
+                 MachineLearning`file152SortedHashAssociation`PackagePrivate`\
+keys$, 2^16]}; 
+              MachineLearning`file152SortedHashAssociation`PackagePrivate`q = 
+               Transpose[
+                 MachineLearning`PackageScope`ToPackedArray[
+                 MachineLearning`file152SortedHashAssociation`PackagePrivate`\
+q], {1, 3, 2}]; 
+              MachineLearning`file152SortedHashAssociation`PackagePrivate`q = 
+               Transpose[
+                 Flatten[
+                 MachineLearning`file152SortedHashAssociation`PackagePrivate`\
+q, 1]]; Data`StringHash[
+                FromCharacterCode[
+                 Abs[
+                 MachineLearning`file152SortedHashAssociation`PackagePrivate`\
+q]], "Murmur3-64"]], 
+             Blank[List], 
+             Map[Switch[#, 
+               Blank[String], 
+               Data`StringHash[#, "Murmur3-64"], 
+               PatternTest[
+                Blank[], Developer`MachineIntegerQ], #, {
+                PatternTest[
+                 BlankSequence[], Developer`MachineIntegerQ]}, 
+               
+               Block[{MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q}, 
+                MachineLearning`file152SortedHashAssociation`PackagePrivate`q = {
+                   Quotient[#, 2^48], 
+                   Quotient[
+                    Mod[#, 2^48], 2^32], 
+                   Quotient[
+                    Mod[#, 2^32], 2^16], 
+                   Mod[#, 2^16]}; 
+                MachineLearning`file152SortedHashAssociation`PackagePrivate`q = 
+                 Flatten[
+                  MachineLearning`file152SortedHashAssociation`PackagePrivate`\
+q]; Data`StringHash[
+                  FromCharacterCode[
+                   Abs[
+                   MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q]], "Murmur3-64"]], 
+               Blank[], 
+               Data`StringHash[
+                StringJoin[
+                 ToString[#, InputForm], "Cn.i9)P$"], "Murmur3-64"]]& , 
+              MachineLearning`file152SortedHashAssociation`PackagePrivate`\
+keys$]]], "Version" -> {12., 0}]], "Processor" -> 
+       MachineLearning`MLProcessor["Sequence", 
+         Association[
+         "Input" -> Association[
+           "f1" -> Association["Type" -> "NominalSequence", "Weight" -> 1]], 
+          "Output" -> 
+          Association[
+           "f1" -> Association["Type" -> "NominalSequence", "Weight" -> 1]], 
+          "Processors" -> {
+            MachineLearning`MLProcessor[
+            "NoninvertibleIntegerEncodeNominalSequence", 
+             Association[
+             "Invertibility" -> "Impossible", "Missing" -> "Imputed", "Input" -> 
+              Association[
+               "f1" -> Association[
+                 "Type" -> "NominalSequence", "Weight" -> 1]], "Index" -> 
+              MachineLearning`SortedHashAssociation[
+                Association["KeyHashes" -> CompressedData["
+1:eJwl2EMQGAgSAMBwY9u2bdu2bdvcjW3btm3btm1fp+7RNVXzHyZo2K5i24AB
+AgQIGjRAgL8xEIEJ8jfHPwQjOCEISShCE4awhCM8EYhIJCIThahEIzoxiEks
+YhOHuMQjPglISCISk4SkJCM5KUhJKlKThrSkIz0ZyEgmMpOFrGQjOznISS5y
+k4e85CM/BShIIQpThKIUozglKEkpSlOGspSjPBWoSCUqU4WqVKM6NahJLWpT
+h7rUoz4NaEgjGtOEpjSjOS1oSSta04a2tKM9HehIJzrTha50ozs96EkvetOH
+vvSjPwMYyCAG8y//MYShDGM4IxjJKEYzhrGMYzwTmMgkJjOFqUxjOjOYySxm
+M4e5zGM+C1jIIhazhKUsYzkrWMkqVrOGtaxjPRvYyCY2s4WtbGM7O9jJLnaz
+h73sYz8HOMghDnOEoxzjOCc4ySlOc4aznOM8F7jIJS5zhatc4zo3uMktbnOH
+u9zjPg94yCMe84SnPOM5L3jJK17zhre84z0f+MgnPvOFr3zjOz/4yS9+84e/
+xR+QQAQmCEH5h2AEJwQhCUVowhCWcIQnAhGJRGSiEJVoRCcGMYlFbOIQl3jE
+JwEJSURikpCUZCQnBSlJRWrSkJZ0pCcDGclEZrKQlWxkJwc5yUVu8pCXfOSn
+AAUpRGGKUJRiFKcEJSlFacpQlnKUpwIVqURlqlCValSnBjWpRW3qUJd61KcB
+DWlEY5rQlGY0pwUtaUVr2vC3ebejPR3oSCc604WudKM7PehJL3rTh770oz8D
+GMggBvMv/zGEoQxjOCMYyShGM4axjGM8E5jIJCYzhalMYzozmMksZjOHucxj
+PgtYyCIWs4SlLGM5K1jJKlazhrWsYz0b2MgmNrOFrWxjOzvYyS52s4e97GM/
+BzjIIQ5zhKMc4zgnOMkpTnOGs5zjPBe4yCUuc4WrXOM6N7jJLW5zh7vc4z4P
+eMgjHvOEpzzjOS94ySte84a3vOM9H/jIJz7zha984zs/+MkvfvOHv4M/IIEI
+TBCC8g/BCE4IQhKK0IQhLOEITwQiEonIRCEq0YhODGISi9jEIS7xiE8CEpKI
+xCQhKclITgpSkorUpCEt6UhPBjKSicxkISvZyE4OcpKL3OQhL/nITwEKUojC
+FKEoxShOCUpSitKUoSzlKE8FKlKJylShKtWoTg1qUova1KEu9ahPAxrSiMY0
+oSnNaE4LWtKK1rShLe1oTwc60onOdKEr3ehOD3rSi970oS/96M8ABjKIwfzL
+fwxhKMMYzghGMorRjGEs4xjPBCYyiclMYSrTmM4MZjKL2cxhLvOYzwIWsojF
+LGEpy1jOClayitWsYS3rWM8GNrKJzWxhK9vYzg52sovd7GEv+9jPAQ5yiMMc
+4SjHOM4JTnKK05zhLOc4zwUuconLXOEq17jODW5yi9vc4S73uM8DHvKIxzzh
+Kc94zgte8orXvOEt73jPBz7yic984Svf+M4PfvKL3/zh79IfkEAEJghB+Ydg
+BCcEIQlFaMIQlnCEJwIRiURkohCVaEQnBjGJRWziEJd4xCcBCUlEYpKQlGQk
+JwUpSUVq0pCWdKQnAxnJRGaykJVsZCcHOclFbvKQl3zkpwAFKURhilCUYhSn
+BCUpRWnKUJZylKcCFalEZapQlWpUpwY1qUVt6lCXetSnAQ1pRGOa0JRmNKcF
+LWlFa9rQlna0pwMd6URnutCVbnSnBz3pRW/60Jd+9GcAAxnEYP7lP4YwlGEM
+ZwQjGcVoxjCWcYxnAhOZxGSmMJVpTGcGM5nFbOYwl3nMZwELWcRilrCUZSxn
+BStZxWrWsJZ1rGcDG9nEZrawlW1sZwc72cVu9rCXfeznAAc5xGGOcJRjHOcE
+JznFac5wlnOc5wIXucRlrnCVa1znBje5xW3ucJd73OcBD3nEY57wlGc85wUv
+ecVr3vCWd7znAx/5xGe+8JVvfOcHP/nFb/7w9+APSCACE4Sg/EMwghOCkIQi
+NGEISzjCE4GIRCIyUYhKNKITg5jEIjZxiEs84pOAhCQiMUlISjKSk4KUpCI1
+aUhLOtKTgYxkIjNZyEo2spODnOQiN3nISz7yU4CCFKIwRShKMYpTgpKUojRl
+KEs5ylOBilSiMlWoSjWqU4Oa1KI2dahLPerTgIY0ojFNaEozmtOClrSiNW1o
+Szva04GOdKIzXehKN7rTg570ojd96Es/+jOAgQxiMP/yH0MYyjCGM4KRjGI0
+YxjLOMYzgYlMYjJTmMo0pjODmcxiNnOYyzzms4CFLGIxS1jKMpazgpWsYjVr
+WMs61rOBjWxiM1vYyja2s4Od7GI3e9jLPvZzgIMc4jBHOMoxjnOCk5ziNGc4
+yznOc4GLXOIyV7jKNa5zg5vc4jZ3uMs97vOAhzziMU94yjOe84KXvOI1b3jL
+O97zgY984jNf+Mo3vvODn/ziN3/4++wLSCACEyTo/3+C/wOFQImJ
+                  "], "Values" -> None, "DefaultValue" -> -1, "HashFunction" -> 
+                 Function[{
+                   MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$}, 
+                   Switch[
+                   MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, {
+                    BlankSequence[String]}, 
+                    Data`StringHash[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, "Murmur3-64"], 
+                    PatternTest[
+                    Blank[], 
+                    MachineLearning`PackageScope`PackedArrayQ[#, Integer, 
+                    1]& ], MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, 
+                    PatternTest[
+                    Blank[], 
+                    MachineLearning`PackageScope`PackedArrayQ[#, Integer, 
+                    2]& ], 
+                    
+                    Block[{MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q}, 
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q = {
+                    Quotient[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, 2^48], 
+                    Quotient[
+                    Mod[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, 2^48], 2^32], 
+                    Quotient[
+                    Mod[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, 2^32], 2^16], 
+                    Mod[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$, 2^16]}; 
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q = Transpose[
+                    MachineLearning`PackageScope`ToPackedArray[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q], {1, 3, 2}]; 
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q = Transpose[
+                    Flatten[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q, 1]]; Data`StringHash[
+                    FromCharacterCode[
+                    Abs[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q]], "Murmur3-64"]], 
+                    Blank[List], 
+                    Map[Switch[#, 
+                    Blank[String], 
+                    Data`StringHash[#, "Murmur3-64"], 
+                    PatternTest[
+                    Blank[], Developer`MachineIntegerQ], #, {
+                    PatternTest[
+                    BlankSequence[], Developer`MachineIntegerQ]}, 
+                    
+                    Block[{MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q}, 
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q = {
+                    Quotient[#, 2^48], 
+                    Quotient[
+                    Mod[#, 2^48], 2^32], 
+                    Quotient[
+                    Mod[#, 2^32], 2^16], 
+                    Mod[#, 2^16]}; 
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q = Flatten[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q]; Data`StringHash[
+                    FromCharacterCode[
+                    Abs[
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`q]], "Murmur3-64"]], 
+                    Blank[], 
+                    Data`StringHash[
+                    StringJoin[
+                    ToString[#, InputForm], "Cn.i9)P$"], "Murmur3-64"]]& , 
+                    MachineLearning`file152SortedHashAssociation`\
+PackagePrivate`keys$]]], "Version" -> {12., 0}]], "MissingCode" -> 0, 
+              "Version" -> {12., 0}, "ID" -> 7409463108238227965, "Output" -> 
+              Association[
+               "f1" -> Association[
+                 "Type" -> "NominalSequence", "Weight" -> 1]]]], 
+            MachineLearning`MLProcessor["FirstValues", 
+             Association[
+             "Info" -> Association[
+               "Type" -> "NominalSequence", "Weight" -> 1], "Key" -> "f1", 
+              "Invertibility" -> "Perfect", "Missing" -> "Allowed"]]}, 
+          "Invertibility" -> "Impossible", "Missing" -> "Imputed"]], "Method" -> 
+       "Markov", "PostProcessor" -> MachineLearning`MLProcessor["Identity"], 
+       "Options" -> 
+       Association[
+        "Order" -> Association["Value" -> 0, "Options" -> Association[]], 
+         "AdditiveSmoothing" -> 
+         Association["Value" -> 0.1, "Options" -> Association[]], 
+         "MinimumTokenCount" -> 
+         Association["Value" -> 1, "Options" -> Association[]], 
+         "ExcludedTokens" -> 
+         Association["Value" -> {}, "Options" -> Association[]]]], 
+     "TrainingInformation" -> 
+     Association[
+      "PanelCell" -> CellObject[189361], "TrainingFunction" -> Classify, 
+       "EMIterations" -> Missing["KeyAbsent", "EMIterations"], 
+       "ProcessorEntropyShift" -> 0, "PreprocessingTime" -> 
+       0.5993521`7.229227024836775, "LossName" -> "MeanCrossEntropy", 
+       "BestModelInformation" -> Dataset[
+         Association[
+         "MeanCrossEntropy" -> 
+          Around[0.6933493464164097, 0.0018628917984561898`], "Accuracy" -> 
+          Around[0.4978318131319365, 0.016110080452591206`], "EvaluationTime" -> 
+          0.000024486917418368696`, "TestSize" -> 1000, "ModelMemory" -> 
+          76888., "ModelUtility" -> 0.038194860922244334`, "TrainingSize" -> 
+          1202, "TrainingTime" -> 0.013893125240609453`, "TrainingMemory" -> 
+          238144., "ExperimentCount" -> 4, "MeanCrossEntropyHistory" -> {
+            Around[0.6932159557147594, 0.004159225008669831], 
+            Around[0.6935565528970014, 0.004162166317810283], 
+            Around[0.6934352433458102, 0.003398864877986439], 
+            Around[0.6931896337080675, 0.003395994711872854]}, 
+          "AccuracyHistory" -> {
+            Around[0.48991327750075264`, 0.035227737894883315`], 
+            Around[0.4949549430651121, 0.03526241672812715], 
+            Around[0.5032136471305346, 0.02881221312139945], 
+            Around[0.5032453848313464, 0.028804708950307165`]}, 
+          "Configuration" -> {
+           "Markov", "Order" -> Automatic, "AdditiveSmoothing" -> 0.1, 
+            "MinimumTokenCount" -> Automatic, "ExcludedTokens" -> {}}, 
+          "FinalTrainingSize" -> 1502], 
+         TypeSystem`Struct[{
+          "MeanCrossEntropy", "Accuracy", "EvaluationTime", "TestSize", 
+           "ModelMemory", "ModelUtility", "TrainingSize", "TrainingTime", 
+           "TrainingMemory", "ExperimentCount", "MeanCrossEntropyHistory", 
+           "AccuracyHistory", "Configuration", "FinalTrainingSize"}, {
+          TypeSystem`AnyType, TypeSystem`AnyType, 
+           TypeSystem`Atom[Real], 
+           TypeSystem`Atom[Integer], 
+           TypeSystem`Atom[Real], 
+           TypeSystem`Atom[Real], 
+           TypeSystem`Atom[Integer], 
+           TypeSystem`Atom[Real], 
+           TypeSystem`Atom[Real], 
+           TypeSystem`Atom[Integer], 
+           TypeSystem`Vector[TypeSystem`AnyType, 4], 
+           TypeSystem`Vector[TypeSystem`AnyType, 4], 
+           TypeSystem`Tuple[{
+             TypeSystem`Atom[String], TypeSystem`AnyType, TypeSystem`AnyType, 
+             TypeSystem`AnyType, TypeSystem`AnyType}], 
+           TypeSystem`Atom[Integer]}], 
+         Association["ID" -> 179740260514664]], "Configurations" -> Dataset[
+         Association[
+         Association[
+           "Value" -> "Markov", "Options" -> 
+            Association[
+             "Order" -> Association["Value" -> Automatic], 
+              "AdditiveSmoothing" -> Association["Value" -> 0.1], 
+              "MinimumTokenCount" -> Association["Value" -> Automatic], 
+              "ExcludedTokens" -> Association["Value" -> {}]]] -> 
+          Association["Experiments" -> {
+              Association[
+              "MeanCrossEntropy" -> 
+               Around[0.8064518968392153, 0.030229978710723946`], "Accuracy" -> 
+               Around[0.4978540099593882, 0.03152097335829362], 
+               "EvaluationTime" -> 0.00002353241206123506, "TestSize" -> 500, 
+               "ModelMemory" -> 30192, "ModelUtility" -> -0.2778785158714254, 
+               "TrainingSize" -> 10, "TrainingTime" -> 0.007943282347242814, 
+               "TrainingMemory" -> 55576, "ExperimentCount" -> 1, 
+               "MeanCrossEntropyHistory" -> {
+                 Around[0.8064518968392153, 0.021375822941477867`]}, 
+               "AccuracyHistory" -> {
+                 Around[0.4978540099593882, 0.022288694011249915`]}], 
+              Association[
+              "MeanCrossEntropy" -> 
+               Around[0.7062037895232458, 0.01177304479993173], "Accuracy" -> 
+               Around[0.4504951589335808, 0.07029074892223756], 
+               "EvaluationTime" -> 0.000025118864315095795`, "TestSize" -> 
+               100, "ModelMemory" -> 30800, 
+               "ModelUtility" -> -0.004116980624291777, "TrainingSize" -> 50, 
+               "TrainingTime" -> 0.007943282347242814, "TrainingMemory" -> 
+               63376, "ExperimentCount" -> 1, "MeanCrossEntropyHistory" -> {
+                 Around[0.7062037895232458, 0.008324799813244747]}, 
+               "AccuracyHistory" -> {
+                 Around[0.4504951589335808, 0.04970306521759519]}], 
+              Association[
+              "MeanCrossEntropy" -> 
+               Around[0.698646116136614, 0.003856431441478461], "Accuracy" -> 
+               Around[0.4702450138007046, 0.03489416486734818], 
+               "EvaluationTime" -> 0.000018938909388106014`, "TestSize" -> 
+               300, "ModelMemory" -> 39768., "ModelUtility" -> 
+               0.021850487536631547`, "TrainingSize" -> 250, "TrainingTime" -> 
+               0.007943282347242814, "TrainingMemory" -> 75357.33333333333, 
+               "ExperimentCount" -> 2, "MeanCrossEntropyHistory" -> {
+                 Around[0.6995822426371943, 0.007156926504360843], 
+                 Around[0.6977099896360336, 0.004388356871817479]}, 
+               "AccuracyHistory" -> {
+                 Around[0.4504951589335808, 0.04970306521759519], 
+                 Around[0.48999486866782843`, 0.035276090771863555`]}], 
+              Association[
+              "MeanCrossEntropy" -> 
+               Around[0.6933493464164097, 0.0018628917984561898`], "Accuracy" -> 
+               Around[0.4978318131319365, 0.016110080452591206`], 
+               "EvaluationTime" -> 0.000024486917418368696`, "TestSize" -> 
+               1000, "ModelMemory" -> 76888., "ModelUtility" -> 
+               0.038194860922244334`, "TrainingSize" -> 1202, "TrainingTime" -> 
+               0.013893125240609453`, "TrainingMemory" -> 238144., 
+               "ExperimentCount" -> 4, "MeanCrossEntropyHistory" -> {
+                 Around[0.6932159557147594, 0.004159225008669831], 
+                 Around[0.6935565528970014, 0.004162166317810283], 
+                 Around[0.6934352433458102, 0.003398864877986439], 
+                 Around[0.6931896337080675, 0.003395994711872854]}, 
+               "AccuracyHistory" -> {
+                 Around[0.48991327750075264`, 0.035227737894883315`], 
+                 Around[0.4949549430651121, 0.03526241672812715], 
+                 Around[0.5032136471305346, 0.02881221312139945], 
+                 Around[0.5032453848313464, 0.028804708950307165`]}]}, 
+            "PredictedPerformances" -> 
+            Association[
+             "EvaluationTime" -> 0.000024486917418368696`, "MeanCrossEntropy" -> 
+              Around[0.6933493464164097, 0.0018628917984561898`], 
+              "ModelMemory" -> 76888., "TrainingMemory" -> 238144., 
+              "TrainingTime" -> 0.025303909727771433`], "Index" -> 1]], 
+         TypeSystem`Assoc[
+          TypeSystem`Struct[{"Value", "Options"}, {
+            TypeSystem`Atom[String], 
+            TypeSystem`Assoc[
+             TypeSystem`Atom[String], 
+             TypeSystem`Struct[{"Value"}, {TypeSystem`AnyType}], 4]}], 
+          
+          TypeSystem`Struct[{
+           "Experiments", "PredictedPerformances", "Index"}, {
+            TypeSystem`Vector[
+             
+             TypeSystem`Struct[{
+              "MeanCrossEntropy", "Accuracy", "EvaluationTime", "TestSize", 
+               "ModelMemory", "ModelUtility", "TrainingSize", "TrainingTime", 
+               "TrainingMemory", "ExperimentCount", "MeanCrossEntropyHistory",
+                "AccuracyHistory"}, {TypeSystem`AnyType, TypeSystem`AnyType, 
+               TypeSystem`Atom[Real], 
+               TypeSystem`Atom[Integer], 
+               TypeSystem`Atom[Real], 
+               TypeSystem`Atom[Real], 
+               TypeSystem`Atom[Integer], 
+               TypeSystem`Atom[Real], 
+               TypeSystem`Atom[Real], 
+               TypeSystem`Atom[Integer], 
+               TypeSystem`Vector[TypeSystem`AnyType, TypeSystem`AnyLength], 
+               TypeSystem`Vector[TypeSystem`AnyType, TypeSystem`AnyLength]}], 
+             4], 
+            
+            TypeSystem`Struct[{
+             "EvaluationTime", "MeanCrossEntropy", "ModelMemory", 
+              "TrainingMemory", "TrainingTime"}, {
+              TypeSystem`Atom[Real], TypeSystem`AnyType, 
+              TypeSystem`Atom[Real], 
+              TypeSystem`Atom[Real], 
+              TypeSystem`Atom[Real]}], 
+            TypeSystem`Atom[Integer]}], 1], 
+         Association["ID" -> 179735965547368]], "MaxTrainingSize" -> 1502, 
+       "PreprocessorEvaluationTime" -> 5.4355168003546`2.*^-6, 
+       "PreprocessorMemory" -> 35192, "InputDimension" -> 1, 
+       "OutputDimension" -> 1, 
+       "BaselineLogProbability" -> -0.6931250762209797, "VariableBudget" -> 
+       True, "CheckpointingInfo" -> Association["Checkpointing" -> False], 
+       "UserStop" -> False, "NaturalStop" -> True, "AbortStop" -> False, 
+       "LastReportingTime" -> 3.7716675599115977`17.32910839558512*^9, 
+       "RoundPartitioning" -> Dataset[{
+          Association[
+          "TrainingSizes" -> 10, "TimeBudgets" -> 0.0026658784941343446`, 
+           "ElapsedTimes" -> 0.0315279, "ExperimentCounts" -> 1], 
+          Association[
+          "TrainingSizes" -> 50, "TimeBudgets" -> 0.013329392470671723`, 
+           "ElapsedTimes" -> 0.0119952, "ExperimentCounts" -> 1], 
+          Association[
+          "TrainingSizes" -> 250, "TimeBudgets" -> 0.06664696235335864, 
+           "ElapsedTimes" -> 0.067999, "ExperimentCounts" -> 2], 
+          Association[
+          "TrainingSizes" -> 1202, "TimeBudgets" -> 0.3332348117667933, 
+           "ElapsedTimes" -> 0.4720517, "ExperimentCounts" -> 4]}, 
+         TypeSystem`Vector[
+          
+          TypeSystem`Struct[{
+           "TrainingSizes", "TimeBudgets", "ElapsedTimes", 
+            "ExperimentCounts"}, {
+            TypeSystem`Atom[Integer], 
+            TypeSystem`Atom[Real], 
+            TypeSystem`Atom[Real], 
+            TypeSystem`Atom[Integer]}], 4], 
+         Association[
+         "Origin" -> HoldComplete[GeneralUtilities`AssociationTranspose, 
+            Dataset`DatasetHandle[179744555481960]], "ID" -> 
+          179748850449256]]], "Log" -> 
+     Association["Example" -> MachineLearning`MLDataset[
+         Association[
+         "f1" -> Association["Type" -> "Nominal", "Weight" -> 1, "Values" -> {
+              Row[{"What are the values of ", $CellContext`y, " such that ", 
+                HoldForm[Equal][
+                 HoldForm[Plus][
+                  HoldForm[Times][-4, 
+                   HoldForm[Power][6, 
+                    Rational[1, 2]]], 
+                  Abs[
+                   HoldForm[Plus][-16, 
+                    HoldForm[Times][-2, $CellContext`y]]]], 0], "?"}]}, "ID" -> 
+            2825882393954120476]], 
+         Association[
+         "ExampleNumber" -> 1, "ExampleWeights" -> 1, "LogDensityRatios" -> 0,
+           "RawExample" -> False]], "TrainingTime" -> 1.4950097486190566`, 
+       "MaxTrainingMemory" -> 1064896, "DataMemory" -> 8209600, 
+       "FunctionMemory" -> 193184, "LanguageVersion" -> {12., 0}, "Date" -> 
+       DateObject[{2019, 7, 9, 13, 25, 59.9515828`9.530375481762857}, 
+         "Instant", "Gregorian", -4.], "ProcessorCount" -> 2, "ProcessorType" -> 
+       "x86-64", "OperatingSystem" -> "Windows", "SystemWordLength" -> 64, 
+       "Evaluations" -> {}]]],
+   Editable->False,
+   SelectWithContents->True,
+   Selectable->False], "}"}]], "Output",
+ CellChangeTimes->{3.771682305236293*^9},
+ CellLabel->
+  "Out[339]=",ExpressionUUID->"fe9f20fb-7a26-42b3-bd74-37d5f2941fc0"]
+}, Open  ]],
 
 Cell[BoxData[
  RowBox[{
@@ -1446,7 +3690,7 @@ Cell[BoxData[
    3.771586009783102*^9, 3.771586015373057*^9}, {3.771613533071394*^9, 
    3.771613543104066*^9}, {3.771670437191862*^9, 3.7716704483550196`*^9}},
  CellLabel->
-  "In[286]:=",ExpressionUUID->"5652c7f2-04fa-4c09-af67-9f4f252f0675"],
+  "In[326]:=",ExpressionUUID->"5652c7f2-04fa-4c09-af67-9f4f252f0675"],
 
 Cell[CellGroupData[{
 
@@ -1612,40 +3856,41 @@ Cell[BoxData[
   3.771173076851448*^9, 3.7711731307854276`*^9}, {3.771679946788433*^9, 
   3.771679968849145*^9}},
  CellLabel->
-  "In[290]:=",ExpressionUUID->"a58ec1c8-41a6-4b44-8b8b-48c35008ce34"],
+  "In[330]:=",ExpressionUUID->"a58ec1c8-41a6-4b44-8b8b-48c35008ce34"],
 
 Cell[BoxData[
  GraphicsBox[{{}, {
     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.007333333333333334], 
      AbsoluteThickness[1.6], PointBox[CompressedData["
-1:eJxd0TlsNUkVBeArRDDhCwgcEDQIIQsh1GyDgYG/htXszbCZvRhmwKzT7GYv
-GBZLJB06rNBhhyaiQocdOqzQYQcEDgGBhPy94D197+ro6Khe8/xLz734ioj4
-57+//vP738/+5O9P/+PlVz7ztyf/+yM99lP4gF+Fj/Cr8YBfi1+HX4+P8Rvw
-G/Gb8IjfjN+C34rfht+On8bvwCf4nfhd+N34Gfwe/F78BKfHLjie5Y7jfdxx
-vJ87jg9wx/FB7jg+xB3Hh7njOOWO4yPccXyUO46Pccfxce44PsEdxye54/gU
-dxzTYydccMPxafK44IbjOfK44IbjM+RxwQ3HZ8njghuOz5HHBTccnyePC244
-vkAeF9xwnJHHBTccXySPC244vkQeF9xwfJk8Lrjh+Ap5XHDD8VXyuOCG42vk
-ccENx9fJ44IbjvzYA04444Irbrjj+Ab9OOGMC6644Y7jefpxwhkXXHHDHcc3
-6ccJZ1xwxQ13HC/QjxPOuOCKG+44XqQfJ5xxwRU33HF8i36ccMYFV9xwx/Ft
-+nHCGRdcccMdxzn9OOGMC6644Y7jO/TjhDMuuOKGO47v0o8TzrjgihvuOL5H
-P04444Irbrjj+D79OOGMC6644Y7jB/TjhDMuuOKGO44f0o8TzrjgihvuOF6i
-HyecccEVN9xxzI99wAMeccITznjGBS+44hU3vOGOdxw/Yj8e8IgTnnDGMy54
-wRWvuOENd7zj+DH78YBHnPCEM55xwQuueMUNb7jjHcdP2I8HPOKEJ5zxjAte
-cMUrbnjDHe84fsp+POARJzzhjGdc8IIrXnHDG+54x/Ez9uMBjzjhCWc844IX
-XPGKG95wxzuOn7MfD3jECU844xkXvOCKV9zwhjvecfyC/XjAI054whnPuOAF
-V7zihjfc8Y7jgv14wCNOeMIZz7jgBVe84oY33PGO45fsxwMeccITznjGBS+4
-4hU3vOGOdxy/Yj8e8IgTnnDGMy54wRWvuOENd7zj+DX78YBHnPCEM55xwQuu
-eMUNb7jjHcdv2I8HPOKEJ5zxjAtecMUrbnjDHe84fst+POARJzzhjGdc8IIr
-XnHDG+54x/E79uMBjzjhCWc844IXXPGKG95wxzuO37MfD3jECU844xkXvOCK
-V9zwhjvecZTHfgof8BEe8DEe8QlO+BRP+AxnfI5nfIELvsQLvsIVX+MV3+CG
-b/GG73DH93jHDzj+wPvjAz7CAz7GIz7BCZ/iCZ/hjM/xjC9wwZd4wVe44mu8
-4hvc8C3e8B3u+B7v+AHHH3l/fMBHeMDHeMQnOOFTPOEznPE5nvEFLvgSL/gK
-V3yNV3yDG77FG77DHd/jHT/geJn3xwd8hAd8jEd8ghM+xRM+wxmf4xlf4IIv
-8YKvcMXXeMU3uOFbvOE73PE93vEDjj/x/viAj/CAj/GIT3DCp3jCZzjjczzj
-C1zwJV7wFa74Gq/4Bjd8izd8hzu+xzt+wPFn3h8f8BEe8DEe8QlO+BRP+Axn
-fI5nfIELvsQLvsIVX+MV3+CGb/GG73DH93jHDzj+wvvjAz7CAz7GIz7BCZ/i
-CZ/hjM/xjC9wwZd4wVe44mu84hvc8C3e8B3u+B7v+AHHX3l/fMBHeMDHeMQn
-OOFTPOEznPE5nvEFLvgSL/gK1//7Xwnr22Y=
+1:eJxd2TuILUkdBvDC6CbCCQwmEGlF5SAq7Xt83lqfo3fVdn2N7l0tV1fP+tp2
+fY26aqlXnUg7PGEFBhM2mEyiVjhhm8hkFggyyUIjBhOq3AU5vwnO8JuPj4//
+VHhe/uQzjz31ohDCv//78b/fD3/Wu38aX/y7e93L4gt/iIe+gzf4JfgIvxR3
++BX4lfjVeItfg1+LX497/Ab8Rvwm/Gb8FvxW/DZ8jN+O34Hfid+F343fg+/i
+eOgc46t+X//2z2e7F/JHyHF4LzkO7yPH4f3kOHyAHIcPkuPwIXIcTshx+DA5
+Dh8hx+He4f8z3yN/lP6j8e7N/nX/+sdf//Iw/+ihMw4fI8fh4+Q4DIeOOOOK
+wyfo44wrDo/RxxlXHD5JH2dccfgUfZxxxeHT9HHGFYfP0McZVxw+Sx9nXHE4
+pY8zrjh8jj7OuOLwefo444rD4/RxxhWH+/RxxhWHJ+jjjCsOX6CPM644fJE+
+zrjikA7d4YgTzrjgihsOX2IfR5xwxgVX3HB4kn0cccIZF1xxw+HL7OOIE864
+4IobDl9hH0eccMYFV9xweIp9HHHCGRdcccPhq+zjiBPOuOCKGw5fYx9HnHDG
+BVfccNixjyNOOOOCK244PM0+jjjhjAuuuOHwdfZxxAlnXHDFDYdvsI8jTjjj
+gituOHyTfRxxwhkXXHHD4Vvs44gTzrjgihsO32YfR5xwxgVX3HB4hn0cccIZ
+F1xxw2E89AZ3uMcRDzjhEWc84YJnXPGCG15x+A734w73OOIBJzzijCdc8Iwr
+XnDDKw7Pcj/ucI8jHnDCI854wgXPuOIFN7zi8F3uxx3uccQDTnjEGU+44BlX
+vOCGVxy+x/24wz2OeMAJjzjjCRc844oX3PCKw/e5H3e4xxEPOOERZzzhgmdc
+8YIbXnH4AffjDvc44gEnPOKMJ1zwjCtecMMrDj/kftzhHkc84IRHnPGEC55x
+xQtueMXhjPtxh3sc8YATHnHGEy54xhUvuOEVhx9xP+5wjyMecMIjznjCBc+4
+4gU3vOLwY+7HHe5xxANOeMQZT7jgGVe84IZXHH7C/bjDPY54wAmPOOMJFzzj
+ihfc8IrDc9yPO9zjiAec8Igznp47/D6k4BlXvOCGVxx+eugN7nCPIx5wwiPO
+eMIFz7jiBTe84vAz7scd7nHEA054xBlPuOAZV7zghlccfs79uMM9jnjACY84
+4wkXPOOKF9zwikM+9B28wUe4w1vc42Mc8Qke8ClOeIdHfIYzPscT3uOCL/CM
+L3HFV3jB17jhG7ziWxx+wfvjDT7CHd7iHh/jiE/wgE9xwjs84jOc8Tme8B4X
+fIFnfIkrvsILvsYN3+AV3+LwS94fb/AR7vAW9/gYR3yCB3yKE97hEZ/hjM/x
+hPe44As840tc8RVe8DVu+Aav+BaHX/H+eIOPcIe3uMfHOOITPOBTnPAOj/gM
+Z3yOJ7zHBV/gGV/iiq/wgq9xwzd4xbc4POD98QYf4Q5vcY+PccQneMCnOOEd
+HvEZzvj8QXxw/+9/uP/H5//88P3xHhd8gWd8iSu+wgu+xg3f4BXf4vDrQ9/B
+G3yEO7zFPT7GEZ/gAZ/ihHd4xGc443M84T0u+ALP+BJXfIUXfI0bvsErvsXh
+N7w/3uAj3OEt7vExjvgED/gUJ7zDIz7DGZ/jCe9xwRd4xpe44iu84Gvc8A1e
+8S0Ov+X98QYf4Q5vcY+PccQneMCnOOEdHvEZzvgcT3iPy//9Hz7IMyw=
       "]]}, {
      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.007333333333333334],
        AbsoluteThickness[1.6]}, {}}, {
@@ -1655,7 +3900,7 @@ OOFTPOEznPE5nvEFLvgSL/gK1//7Xwnr22Y=
   Axes->{True, True},
   AxesLabel->{
     FormBox["\"Data\"", TraditionalForm], None},
-  AxesOrigin->{0., -0.0020812986235444635`},
+  AxesOrigin->{0., -0.9450204694375857},
   DisplayFunction->Identity,
   Frame->{{False, False}, {False, False}},
   FrameLabel->{{None, None}, {None, None}},
@@ -1676,7 +3921,7 @@ OOFTPOEznPE5nvEFLvgSL/gK1//7Xwnr22Y=
         (Exp[#]& )[
          Part[#, 2]]}& )}},
   PlotLabel->FormBox["\"Algebra 1 \"", TraditionalForm],
-  PlotRange->{{0., 756}, {-0.0020812986235444635`, 0.02659613660926283}},
+  PlotRange->{{0., 756}, {-0.9450204694375857, 8.224417410856015}},
   PlotRangeClipping->True,
   PlotRangePadding->{{
      Scaled[0.02], 
@@ -1685,136 +3930,151 @@ OOFTPOEznPE5nvEFLvgSL/gK1//7Xwnr22Y=
      Scaled[0.05]}},
   Ticks->FrontEndValueCache[{Automatic, 
      Charting`ScaledTicks[{Log, Exp}]}, {Automatic, {{0., 
-       FormBox[
-        TagBox[
-         InterpretationBox["\"1.000\"", 1., AutoDelete -> True], 
-         NumberForm[#, {
-           DirectedInfinity[1], 3}]& ], TraditionalForm], {0.01, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.004987541511038968, 
-       FormBox[
-        TagBox[
-         InterpretationBox["\"1.005\"", 1.005, AutoDelete -> True], 
-         NumberForm[#, {
-           DirectedInfinity[1], 3}]& ], TraditionalForm], {0.01, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.009950330853168092, 
-       FormBox[
-        TagBox[
-         InterpretationBox["\"1.010\"", 1.01, AutoDelete -> True], 
-         NumberForm[#, {
-           DirectedInfinity[1], 3}]& ], TraditionalForm], {0.01, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.014888612493750559`, 
-       FormBox[
-        TagBox[
-         InterpretationBox["\"1.015\"", 1.015, AutoDelete -> True], 
-         NumberForm[#, {
-           DirectedInfinity[1], 3}]& ], TraditionalForm], {0.01, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.01980262729617973, 
-       FormBox[
-        TagBox[
-         InterpretationBox["\"1.020\"", 1.02, AutoDelete -> True], 
-         NumberForm[#, {
-           DirectedInfinity[1], 3}]& ], TraditionalForm], {0.01, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.024692612590371414`, 
-       FormBox[
-        TagBox[
-         InterpretationBox["\"1.025\"", 1.025, AutoDelete -> True], 
-         NumberForm[#, {
-           DirectedInfinity[1], 3}]& ], TraditionalForm], {0.01, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.005012541823544286, 
+       FormBox["1", TraditionalForm], {0.01, 0.}, {
+        AbsoluteThickness[0.1]}}, {2.302585092994046, 
+       FormBox["10", TraditionalForm], {0.01, 0.}, {
+        AbsoluteThickness[0.1]}}, {4.605170185988092, 
+       FormBox["100", TraditionalForm], {0.01, 0.}, {
+        AbsoluteThickness[0.1]}}, {6.907755278982137, 
+       FormBox["1000", TraditionalForm], {0.01, 0.}, {
+        AbsoluteThickness[0.1]}}, {-2.3025850929940455`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.004008021397538822, 
+        AbsoluteThickness[0.1]}}, {-1.6094379124341003`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.0030045090202987243`, 
+        AbsoluteThickness[0.1]}}, {-1.2039728043259361`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.0020020026706730793`, 
+        AbsoluteThickness[0.1]}}, {-0.916290731874155, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.0010005003335835344`, 
+        AbsoluteThickness[0.1]}}, {-0.6931471805599453, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.0009995003330834232, 
+        AbsoluteThickness[0.1]}}, {-0.5108256237659907, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.001998002662673058, 
+        AbsoluteThickness[0.1]}}, {-0.35667494393873245`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.002995508979798371, 
+        AbsoluteThickness[0.1]}}, {-0.2231435513142097, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.003992021269537457, 
+        AbsoluteThickness[0.1]}}, {-0.10536051565782628`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.005982071677547469, 
+        AbsoluteThickness[0.1]}}, {0.6931471805599453, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.006975613736425138, 
+        AbsoluteThickness[0.1]}}, {1.0986122886681098`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.007968169649176881, 
+        AbsoluteThickness[0.1]}}, {1.3862943611198906`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.008959741371471801, 
+        AbsoluteThickness[0.1]}}, {1.6094379124341003`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.010939940038334263`, 
+        AbsoluteThickness[0.1]}}, {1.791759469228055, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.011928570865273812`, 
+        AbsoluteThickness[0.1]}}, {1.9459101490553132`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.01291622526654623, 
+        AbsoluteThickness[0.1]}}, {2.0794415416798357`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.013902905168991434`, 
+        AbsoluteThickness[0.1]}}, {2.1972245773362196`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.015873349156290163`, 
+        AbsoluteThickness[0.1]}}, {2.995732273553991, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.016857117066422806`, 
+        AbsoluteThickness[0.1]}}, {3.4011973816621555`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.017839918128331016`, 
+        AbsoluteThickness[0.1]}}, {3.6888794541139363`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.018821754240587667`, 
+        AbsoluteThickness[0.1]}}, {3.912023005428146, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.02078253918252841, 
+        AbsoluteThickness[0.1]}}, {4.0943445622221, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.02176149178151271, 
+        AbsoluteThickness[0.1]}}, {4.248495242049359, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.02273948696948934, 
+        AbsoluteThickness[0.1]}}, {4.382026634673881, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.023716526617316065`, 
+        AbsoluteThickness[0.1]}}, {4.499809670330265, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.025667746748577813`, 
+        AbsoluteThickness[0.1]}}, {5.298317366548036, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.026641930946421092`, 
+        AbsoluteThickness[0.1]}}, {5.703782474656201, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.02761516703297339, 
+        AbsoluteThickness[0.1]}}, {5.991464547107982, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.028587456851912472`, 
+        AbsoluteThickness[0.1]}}, {6.214608098422191, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.02955880224154443, 
+        AbsoluteThickness[0.1]}}, {6.396929655216146, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {6.551080335043404, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {6.684611727667927, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {6.802394763324311, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {7.600902459542082, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {8.006367567650246, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {8.294049640102028, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {8.517193191416238, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {8.699514748210191, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {8.85366542803745, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {8.987196820661973, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {9.104979856318357, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {9.210340371976184, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {9.903487552536127, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {10.308952660644293`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
         AbsoluteThickness[0.1]}}}}]]], "Output",
  CellChangeTimes->{3.771680124798004*^9, 3.771680252660652*^9, 
-  3.7716803279419975`*^9, 3.771680433725155*^9, 3.77168059046391*^9},
+  3.7716803279419975`*^9, 3.771680433725155*^9, 3.77168059046391*^9, 
+  3.7716817369983654`*^9, 3.7716818106552563`*^9, 3.7716819034825983`*^9},
  CellLabel->
-  "Out[290]=",ExpressionUUID->"960af946-9e3c-4028-93d1-a8bc6e9064f9"]
+  "Out[330]=",ExpressionUUID->"9c2f8386-a96a-4e96-b39c-9b35f665651f"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1870,40 +4130,42 @@ Cell[BoxData[
    3.771679453165453*^9}, {3.77167986650409*^9, 3.771679912046054*^9}, 
    3.771680021890868*^9},
  CellLabel->
-  "In[291]:=",ExpressionUUID->"5f8ee03a-5a6c-4fc8-b268-7b1aba34af42"],
+  "In[331]:=",ExpressionUUID->"5f8ee03a-5a6c-4fc8-b268-7b1aba34af42"],
 
 Cell[BoxData[
  GraphicsBox[{{}, {
     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.007333333333333334], 
      AbsoluteThickness[1.6], PointBox[CompressedData["
-1:eJxd0TlsBVcZBeBfiCLlKyhcUAwIIQuhaNiCgUBuWM0+hM1s4RIImDXDbvYL
-YbFEM6XLKyqXU7rLLV1O6fKWFtWULgGBhPy94j1979fR0dF93QsvPffiqyLi
-n//++s/vfz/7M/946pWXX/3031/53x/psZ/AB/wafIRfiwf8evwG/EZ8jN+E
-34yfxCN+C34rfht+O34Hfgq/E5/gd+F34/fgp/F78fvwMzg9dsHxLHcc7+eO
-4wPccXyQO44PccfxYe44PsIdxyl3HB/ljuNj3HF8nDuOT3DH8UnuOD7FHcen
-ueOYHjvhghuOz5DHBTccz5HHBTccnyWPC244PkceF9xwfJ48Lrjh+AJ5XHDD
-8UXyuOCG44w8Lrjh+BJ5XHDD8WXyuOCG4yvkccENx1fJ44Ibjq+RxwU3HM+T
-xwU3HF8njwtuOPJjDzjhjAuuuOGO4xv044QzLrjihjuOF+jHCWdccMUNdxzf
-pB8nnHHBFTfccXyLfpxwxgVX3HDH8SL9OOGMC6644Y7j2/TjhDMuuOKGO47v
-0I8TzrjgihvuOM7pxwlnXHDFDXcc36UfJ5xxwRU33HF8j36ccMYFV9xwx/F9
-+nHCGRdcccMdxw/oxwlnXHDFDXccP6QfJ5xxwRU33HH8iH6ccMYFV9xwx/ES
-/TjhjAuuuOGOY37sAx7wiBOecMYzLnjBFa+44Q13vOP4MfvxgEec8IQznnHB
-C654xQ1vuOMdx0/Yjwc84oQnnPGMC15wxStueMMd7zh+yn484BEnPOGMZ1zw
-giteccMb7njH8TP24wGPOOEJZzzjghdc8Yob3nDHO46fsx8PeMQJTzjjGRe8
-4IpX3PCGO95x/IL9eMAjTnjCGc+44AVXvOKGN9zxjuOX7McDHnHCE854xgUv
-uOIVN7zhjnccF+zHAx5xwhPOeMYFL7jiFTe84Y53HL9iPx7wiBOecMYzLnjB
-Fa+44Q13vOP4NfvxgEec8IQznnHBC654xQ1vuOMdx2/Yjwc84oQnnPGMC15w
-xStueMMd7zh+y3484BEnPOGMZ1zwgiteccMb7njH8Tv24wGPOOEJZzzjghdc
-8Yob3nDHO47fsx8PeMQJTzjjGRe84IpX3PCGO95x/IH9eMAjTnjCGc+44AVX
-vOKGN9zxjqM89hP4gI/wgI/xiE9wwqd4wmc443M84wtc8CVe8BWu+Bqv+AY3
-fIs3fIc7vsc7fsDxR94fH/ARHvAxHvEJTvgUT/gMZ3yOZ3yBC77EC77CFV/j
-Fd/ghm/xhu9wx/d4xw84/sT74wM+wgM+xiM+wQmf4gmf4YzP8YwvcMGXeMFX
-uOJrvOIb3PAt3vAd7vge7/gBx8u8Pz7gIzzgYzziE5zwKZ7wGc74HM/4Ahd8
-iRd8hSu+xiu+wQ3f4g3f4Y7v8Y4fcPyZ98cHfIQHfIxHfIITPsUTPsMZn+MZ
-X+CCL/GCr3DF13jFN7jhW7zhO9zxPd7xA46/8P74gI/wgI/xiE9wwqd4wmc4
-43M84wtc8CVe8BWu+Bqv+AY3fIs3fIc7vsc7fsDxV94fH/ARHvAxHvEJTvgU
-T/gMZ3yOZ3yBC77EC77CFV/jFd/ghm/xhu9wx/d4xw84/sb74wM+wgM+xiM+
-wQmf4un//hcI1+B5
+1:eJxd2DmMLEcZB/ASkcMJCCawUHMIrdADNfdwvVecXu7mcS1gQ/HAsJxuDLbH
+Nkdxb4LU4ZJVQLBhSyQbVrhhk21GSRCsLCG1EMGKCNCzhOY3wYx+8/++/uZT
+9Uwwr37w1P0nXxFCeOm/T/97ffhY7/3rj3//9/3uVfHlN+KhH8Eb/Eq8xY/i
+LtbX3vnDS093L/s1+HXUvx4f4TfgO/hNuMdvxm/Bb8Vvw2/H78DvxDv8Lvxu
+/B78Xvw+fBffw/HQGYf3k+PwAXIcPkiOw4fIcfgwOQ4fIcfhMfLH4p1H//qn
+x//8j7sP8+NDZxw+So7Dx8hx+Dg5Dp8gx+GT5Dh8ihyHT5PjMBw64owrDp+h
+H2dccbhPP8644vBZ+nHGFYfP0Y8zrjh8nn6cccXhC/TjjCsOX6QfZ1xxOKEf
+Z1xx+BL9OOOKw5fpxxlXHL5CP8644vA4/TjjisMT9OOMKw5fpR9nXHH4Gv04
+44pDOnSHI04444Irbjh8nfk44oQzLrjihsMD5uOI04N49+b8jf/821/uPZyP
+C6644fCNQ3c44oQzLrjihsM3mY8jTjjjgituODzJfBxxwhkXXHHD4VvMxxEn
+nHHBFTccvs18HHHCGRdcccPhlPk44oQzLrjihsN3mI8jTjjjgituOHyX+Tji
+hDMuuOKGw/eYjyNOOOOCK244fJ/5OOKEMy644obDD5iPI04444Irbjj8kPk4
+4oQzLrjihsNTzMcRJ5xxwRU3HMZDb3CHexzxgBMeccYTLnjGFS+44RWHH7E/
+7nCPIx5wwiPOeMIFz7jiBTe84vA0++MO9zjiASc84ownXPCMK15wwysOP2Z/
+3OEeRzzghEec8YQLnnHFC254xeEn7I873OOIB5zwiDOecMEzrnjBDa84PMP+
+uMM9jnjACY844wkXPD9z+H9WJV/IG16pD88e5ptn2Z+8J4/kA07Uj+SZfMKF
++hlXvOCGVxyeY3/c4R5HPOD0HPuTZzxRX8hn8kq+4IZXHPbsj7s99z+O1A84
+UT+SZ/IJF+pnXPGCG9dbycPzfP+fZ3/c44gHrpfIR/JMPuFC/Ywr9Qt5I19x
+eIH9X2B/3FMfyQec8IgznnBh3kxe8UJ9I19xeJH7/0V+/8h7HPGAEx5xxhMu
+fJ6ZvJIv5A2v1Iefcv64wz2OeMAJjzjjCRc844oX3PCKw8/YH3e4xxEPOOER
+Zzzhgmdc8YIbXnH4OfvjDvc44gEnPOKMJ1zwjCtecMMrDr9gf9zhHkc84IRH
+nPGEC55xxQtueMUhH/oRvMFb3OEj3OMdjvgYD/gEJ3yKR7zHGZ/hCZ/jgi/w
+jC9xxVd4wde44Ru84lscfsn54w3e4g4f4R7vcMTHeMAnOOFTPOI9zvgMT/gc
+F3yBZ3yJK77CC77GDd/gFd/i8CvOH2/wFnf4CPd4hyM+xgM+wQmf4hHvccZn
+eMLnuOALPONLXPEVXvA1bvgGr/gWh19z/niDt7jDR7jHOxzxMR7wCU74FI94
+jzM+wxM+xwVf4Blf4oqv8IKvccM3eMW3OPyG88cbvMUdPsI93uGIj/GAT3DC
+p3jEe5zxGZ7wOS74As/4Eld8hRd8jRu+wSu+xeG3nD/e4C3u8BHu8Q5HfIwH
+fIITPsUj3uOMz/CEz3HBF3jGl7jiK7zga9zwDV7xLQ6/4/zxBm9xh49wj3c4
+4mM84BOc8Cke8R5nfIYnfI4LvsAzvsQVX+EFX+OGb/CKb3H4PeePN3iLO3yE
+e7zDER/j4f/+D6KVtbM=
       "]]}, {
      {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.007333333333333334],
        AbsoluteThickness[1.6]}, {}}, {
@@ -1913,7 +4175,7 @@ wQmf4un//hcI1+B5
   Axes->{True, True},
   AxesLabel->{
     FormBox["\"Data\"", TraditionalForm], None},
-  AxesOrigin->{0., -0.028677435232807212`},
+  AxesOrigin->{0., -0.6435942821342421},
   DisplayFunction->Identity,
   Frame->{{False, False}, {False, False}},
   FrameLabel->{{None, None}, {None, None}},
@@ -1934,7 +4196,7 @@ wQmf4un//hcI1+B5
         (Exp[#]& )[
          Part[#, 2]]}& )}},
   PlotLabel->FormBox["\"Algebra 2\"", TraditionalForm],
-  PlotRange->{{0., 746}, {-0.028677435232807212`, 0}},
+  PlotRange->{{0., 746}, {-0.6435942821342421, 8.2244457355863}},
   PlotRangeClipping->True,
   PlotRangePadding->{{
      Scaled[0.02], 
@@ -1942,142 +4204,150 @@ wQmf4un//hcI1+B5
      Scaled[0.02], 
      Scaled[0.05]}},
   Ticks->FrontEndValueCache[{Automatic, 
-     Charting`ScaledTicks[{Log, Exp}]}, {Automatic, {{-0.025317807984289897`, 
-       FormBox[
-        TagBox[
-         InterpretationBox["\"0.975\"", 0.975, AutoDelete -> True], 
-         NumberForm[#, {
-           DirectedInfinity[1], 3}]& ], TraditionalForm], {0.01, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.020202707317519466`, 
-       FormBox[
-        TagBox[
-         InterpretationBox["\"0.980\"", 0.98, AutoDelete -> True], 
-         NumberForm[#, {
-           DirectedInfinity[1], 3}]& ], TraditionalForm], {0.01, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.015113637810048184`, 
-       FormBox[
-        TagBox[
-         InterpretationBox["\"0.985\"", 0.985, AutoDelete -> True], 
-         NumberForm[#, {
-           DirectedInfinity[1], 3}]& ], TraditionalForm], {0.01, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.01005033585350145, 
-       FormBox[
-        TagBox[
-         InterpretationBox["\"0.990\"", 0.99, AutoDelete -> True], 
-         NumberForm[#, {
-           DirectedInfinity[1], 3}]& ], TraditionalForm], {0.01, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.005012541823544286, 
-       FormBox[
-        TagBox[
-         InterpretationBox["\"0.995\"", 0.995, AutoDelete -> True], 
-         NumberForm[#, {
-           DirectedInfinity[1], 3}]& ], TraditionalForm], {0.01, 0.}, {
-        AbsoluteThickness[0.1]}}, {0., 
-       FormBox[
-        TagBox[
-         InterpretationBox["\"1.000\"", 1., AutoDelete -> True], 
-         NumberForm[#, {
-           DirectedInfinity[1], 3}]& ], TraditionalForm], {0.01, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.030459207484708574`, 
+     Charting`ScaledTicks[{Log, Exp}]}, {Automatic, {{0., 
+       FormBox["1", TraditionalForm], {0.01, 0.}, {
+        AbsoluteThickness[0.1]}}, {2.302585092994046, 
+       FormBox["10", TraditionalForm], {0.01, 0.}, {
+        AbsoluteThickness[0.1]}}, {4.605170185988092, 
+       FormBox["100", TraditionalForm], {0.01, 0.}, {
+        AbsoluteThickness[0.1]}}, {6.907755278982137, 
+       FormBox["1000", TraditionalForm], {0.01, 0.}, {
+        AbsoluteThickness[0.1]}}, {-2.3025850929940455`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.029428810690812168`, 
+        AbsoluteThickness[0.1]}}, {-1.6094379124341003`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.028399474521698, 
+        AbsoluteThickness[0.1]}}, {-1.2039728043259361`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.027371196796132015`, 
+        AbsoluteThickness[0.1]}}, {-0.916290731874155, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.026343975339601977`, 
+        AbsoluteThickness[0.1]}}, {-0.6931471805599453, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.024292692569044587`, 
+        AbsoluteThickness[0.1]}}, {-0.5108256237659907, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.02326862693935433, 
+        AbsoluteThickness[0.1]}}, {-0.35667494393873245`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.022245608947319737`, 
+        AbsoluteThickness[0.1]}}, {-0.2231435513142097, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.021223636451626688`, 
+        AbsoluteThickness[0.1]}}, {-0.10536051565782628`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.019182819416773987`, 
+        AbsoluteThickness[0.1]}}, {0.6931471805599453, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.01816397062767118, 
+        AbsoluteThickness[0.1]}}, {1.0986122886681098`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.017146158834970514`, 
+        AbsoluteThickness[0.1]}}, {1.3862943611198906`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.016129381929883644`, 
+        AbsoluteThickness[0.1]}}, {1.6094379124341003`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.014098924379501648`, 
+        AbsoluteThickness[0.1]}}, {1.791759469228055, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.01308523954865548, 
+        AbsoluteThickness[0.1]}}, {1.9459101490553132`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.012072581234269249`, 
+        AbsoluteThickness[0.1]}}, {2.0794415416798357`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.011060947359424948`, 
+        AbsoluteThickness[0.1]}}, {2.1972245773362196`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.00904074465214907, 
+        AbsoluteThickness[0.1]}}, {2.995732273553991, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.008032171697264267, 
+        AbsoluteThickness[0.1]}}, {3.4011973816621555`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.007024614936964466, 
+        AbsoluteThickness[0.1]}}, {3.6888794541139363`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.006018072325563021, 
+        AbsoluteThickness[0.1]}}, {3.912023005428146, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.004008021397538822, 
+        AbsoluteThickness[0.1]}}, {4.0943445622221, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.0030045090202987243`, 
+        AbsoluteThickness[0.1]}}, {4.248495242049359, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.0020020026706730793`, 
+        AbsoluteThickness[0.1]}}, {4.382026634673881, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {-0.0010005003335835344`, 
+        AbsoluteThickness[0.1]}}, {4.499809670330265, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.0009995003330834232, 
+        AbsoluteThickness[0.1]}}, {5.298317366548036, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.001998002662673058, 
+        AbsoluteThickness[0.1]}}, {5.703782474656201, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.002995508979798371, 
+        AbsoluteThickness[0.1]}}, {5.991464547107982, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.003992021269537457, 
+        AbsoluteThickness[0.1]}}, {6.214608098422191, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
-        AbsoluteThickness[0.1]}}, {0.004987541511038968, 
+        AbsoluteThickness[0.1]}}, {6.396929655216146, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {6.551080335043404, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {6.684611727667927, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {6.802394763324311, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {7.600902459542082, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {8.006367567650246, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {8.294049640102028, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {8.517193191416238, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {8.699514748210191, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {8.85366542803745, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {8.987196820661973, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {9.104979856318357, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {9.210340371976184, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {9.903487552536127, 
+       FormBox[
+        TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
+        AbsoluteThickness[0.1]}}, {10.308952660644293`, 
        FormBox[
         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {0.005, 0.}, {
         AbsoluteThickness[0.1]}}}}]]], "Output",
- CellChangeTimes->{
-  3.771670222314725*^9, 3.771670376403938*^9, 3.7716704136441746`*^9, 
-   3.771670479945941*^9, {3.771670528991989*^9, 3.771670538526181*^9}, 
-   3.7716792949731607`*^9, 3.7716793922581425`*^9, 3.7716794224589076`*^9, 
-   3.7716794695910487`*^9, {3.771679879321369*^9, 3.7716799129934626`*^9}, 
-   3.771680027505992*^9, 3.7716801438024435`*^9, 3.7716802632158637`*^9, 
-   3.771680341003984*^9, 3.7716804493878436`*^9, 3.7716805964603434`*^9},
+ CellChangeTimes->{3.771681822308239*^9, 3.7716819250744*^9},
  CellLabel->
-  "Out[291]=",ExpressionUUID->"e74b00df-d0ae-4e05-b072-0988b15e913b"]
+  "Out[331]=",ExpressionUUID->"35cbd12c-7085-4acd-95b3-12a236e95fa2"]
 }, Open  ]],
 
 Cell[BoxData["\"\<C:\\\\Users\\\\Silas \
@@ -2131,52 +4401,57 @@ Cell[BoxData[{
    3.771512750138853*^9}, {3.771588520802679*^9, 3.771588522210788*^9}, 
    3.7715891632979856`*^9, {3.7716182500696297`*^9, 3.771618264497698*^9}},
  CellLabel->
-  "In[292]:=",ExpressionUUID->"1927aef9-607f-4a49-a59a-07062997209f"],
+  "In[332]:=",ExpressionUUID->"1927aef9-607f-4a49-a59a-07062997209f"],
 
-Cell[BoxData["\<\"algebra 1\"\>"], "Output",
+Cell[BoxData["\<\"algebra 2\"\>"], "Output",
  CellChangeTimes->{3.7716702303976917`*^9, 3.7716703785944023`*^9, 
   3.7716704197980475`*^9, 3.7716704860395436`*^9, 3.7716705433737097`*^9, 
   3.771679482772247*^9, 3.7716800638769693`*^9, 3.771680159522644*^9, 
   3.7716802923544254`*^9, 3.7716803594007893`*^9, 3.7716804740998116`*^9, 
-  3.7716806231791344`*^9},
+  3.7716806231791344`*^9, 3.771681773998393*^9, 3.771681855669752*^9, 
+  3.7716819422772512`*^9},
  CellLabel->
-  "Out[292]=",ExpressionUUID->"3b59d3a5-06fc-4202-93f5-808d0ca47940"],
+  "Out[332]=",ExpressionUUID->"9d932847-2ccb-45b3-b27a-34ca30ad1f46"],
 
-Cell[BoxData["\<\"algebra 1\"\>"], "Output",
+Cell[BoxData["\<\"algebra 2\"\>"], "Output",
  CellChangeTimes->{3.7716702303976917`*^9, 3.7716703785944023`*^9, 
   3.7716704197980475`*^9, 3.7716704860395436`*^9, 3.7716705433737097`*^9, 
   3.771679482772247*^9, 3.7716800638769693`*^9, 3.771680159522644*^9, 
   3.7716802923544254`*^9, 3.7716803594007893`*^9, 3.7716804740998116`*^9, 
-  3.7716806231831355`*^9},
+  3.7716806231791344`*^9, 3.771681773998393*^9, 3.771681855669752*^9, 
+  3.7716819422812524`*^9},
  CellLabel->
-  "Out[293]=",ExpressionUUID->"08eb1296-45b4-4e11-a283-27ff1543f26a"],
+  "Out[333]=",ExpressionUUID->"9223d28a-5608-4eac-8c28-3f085586597c"],
 
-Cell[BoxData["\<\"algebra 1\"\>"], "Output",
+Cell[BoxData["\<\"algebra 2\"\>"], "Output",
  CellChangeTimes->{3.7716702303976917`*^9, 3.7716703785944023`*^9, 
   3.7716704197980475`*^9, 3.7716704860395436`*^9, 3.7716705433737097`*^9, 
   3.771679482772247*^9, 3.7716800638769693`*^9, 3.771680159522644*^9, 
   3.7716802923544254`*^9, 3.7716803594007893`*^9, 3.7716804740998116`*^9, 
-  3.7716806231871357`*^9},
+  3.7716806231791344`*^9, 3.771681773998393*^9, 3.771681855669752*^9, 
+  3.771681942285268*^9},
  CellLabel->
-  "Out[294]=",ExpressionUUID->"dbe11c6a-4d5b-45c8-8507-432443a8f5eb"],
+  "Out[334]=",ExpressionUUID->"ff74c44f-6b94-45ca-b0cb-03e7250c4198"],
 
-Cell[BoxData["\<\"algebra 1\"\>"], "Output",
+Cell[BoxData["\<\"algebra 2\"\>"], "Output",
  CellChangeTimes->{3.7716702303976917`*^9, 3.7716703785944023`*^9, 
   3.7716704197980475`*^9, 3.7716704860395436`*^9, 3.7716705433737097`*^9, 
   3.771679482772247*^9, 3.7716800638769693`*^9, 3.771680159522644*^9, 
   3.7716802923544254`*^9, 3.7716803594007893`*^9, 3.7716804740998116`*^9, 
-  3.7716806231951375`*^9},
+  3.7716806231791344`*^9, 3.771681773998393*^9, 3.771681855669752*^9, 
+  3.7716819422892513`*^9},
  CellLabel->
-  "Out[295]=",ExpressionUUID->"0f614f44-3a14-4ac3-9479-5e19be0958c2"],
+  "Out[335]=",ExpressionUUID->"bdb79fc4-e5c4-461e-ac9b-729789297535"],
 
-Cell[BoxData["0.5033288948069241`"], "Output",
+Cell[BoxData["0.6671105193075899`"], "Output",
  CellChangeTimes->{3.7716702303976917`*^9, 3.7716703785944023`*^9, 
   3.7716704197980475`*^9, 3.7716704860395436`*^9, 3.7716705433737097`*^9, 
   3.771679482772247*^9, 3.7716800638769693`*^9, 3.771680159522644*^9, 
   3.7716802923544254`*^9, 3.7716803594007893`*^9, 3.7716804740998116`*^9, 
-  3.7716806233551826`*^9},
+  3.7716806231791344`*^9, 3.771681773998393*^9, 3.771681855669752*^9, 
+  3.7716819424352894`*^9},
  CellLabel->
-  "Out[296]=",ExpressionUUID->"afc9ea80-12d4-4119-8275-b4c07ca186d3"]
+  "Out[336]=",ExpressionUUID->"00807156-ae0b-4129-b772-abfb52ec5fb1"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -3713,103 +5988,106 @@ Cell[51739, 1043, 230, 4, 32, "Output",ExpressionUUID->"41967ef8-fa45-4b23-bb9e-
 }, Open  ]],
 Cell[51984, 1050, 233, 4, 28, "Input",ExpressionUUID->"187d233d-aa24-4306-9202-9f40811fac3b"],
 Cell[CellGroupData[{
-Cell[52242, 1058, 5282, 79, 105, "Input",ExpressionUUID->"4a6c27e2-f698-4942-9e0f-b4b815b04b6b"],
-Cell[57527, 1139, 11132, 219, 90, "Output",ExpressionUUID->"c000dacf-793d-4844-9cf6-27153042dbd9"]
-}, Open  ]],
-Cell[68674, 1361, 281, 5, 28, "Input",ExpressionUUID->"60c92252-fe5c-46b2-af32-5525ecaa013f"],
-Cell[68958, 1368, 3530, 80, 181, "Input",ExpressionUUID->"5652c7f2-04fa-4c09-af67-9f4f252f0675"],
-Cell[CellGroupData[{
-Cell[72513, 1452, 1527, 32, 67, "Input",ExpressionUUID->"1571ed99-a23c-4960-8b79-e86ea7951882"],
-Cell[74043, 1486, 4029, 93, 242, "Output",ExpressionUUID->"8b716d30-7605-42d9-851f-79d5de588bee"]
+Cell[52242, 1058, 5478, 82, 105, "Input",ExpressionUUID->"4a6c27e2-f698-4942-9e0f-b4b815b04b6b"],
+Cell[57723, 1142, 64983, 1221, 71, "Output",ExpressionUUID->"a3d610ce-fa76-4795-929b-34343ea328d3"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[78109, 1584, 1340, 30, 105, "Input",ExpressionUUID->"a58ec1c8-41a6-4b44-8b8b-48c35008ce34"],
-Cell[79452, 1616, 9522, 200, 234, "Output",ExpressionUUID->"960af946-9e3c-4028-93d1-a8bc6e9064f9"]
+Cell[122743, 2368, 485, 10, 28, "Input",ExpressionUUID->"60c92252-fe5c-46b2-af32-5525ecaa013f"],
+Cell[123231, 2380, 65264, 1229, 71, "Output",ExpressionUUID->"fe9f20fb-7a26-42b3-bd74-37d5f2941fc0"]
+}, Open  ]],
+Cell[188510, 3612, 3530, 80, 181, "Input",ExpressionUUID->"5652c7f2-04fa-4c09-af67-9f4f252f0675"],
+Cell[CellGroupData[{
+Cell[192065, 3696, 1527, 32, 67, "Input",ExpressionUUID->"1571ed99-a23c-4960-8b79-e86ea7951882"],
+Cell[193595, 3730, 4029, 93, 242, "Output",ExpressionUUID->"8b716d30-7605-42d9-851f-79d5de588bee"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[89011, 1821, 2806, 51, 105, "Input",ExpressionUUID->"5f8ee03a-5a6c-4fc8-b268-7b1aba34af42"],
-Cell[91820, 1874, 9837, 205, 267, "Output",ExpressionUUID->"e74b00df-d0ae-4e05-b072-0988b15e913b"]
-}, Open  ]],
-Cell[101672, 2082, 293, 5, 48, InheritFromParent,ExpressionUUID->"23db8008-720f-49a7-b7d1-ad495983ae3f"],
-Cell[101968, 2089, 179, 3, 28, "Input",ExpressionUUID->"075af11f-332b-44ef-b6ed-18482c0a4326"],
-Cell[CellGroupData[{
-Cell[102172, 2096, 2113, 37, 186, "Input",ExpressionUUID->"1927aef9-607f-4a49-a59a-07062997209f"],
-Cell[104288, 2135, 443, 7, 32, "Output",ExpressionUUID->"3b59d3a5-06fc-4202-93f5-808d0ca47940"],
-Cell[104734, 2144, 443, 7, 32, "Output",ExpressionUUID->"08eb1296-45b4-4e11-a283-27ff1543f26a"],
-Cell[105180, 2153, 443, 7, 32, "Output",ExpressionUUID->"dbe11c6a-4d5b-45c8-8507-432443a8f5eb"],
-Cell[105626, 2162, 443, 7, 32, "Output",ExpressionUUID->"0f614f44-3a14-4ac3-9479-5e19be0958c2"],
-Cell[106072, 2171, 445, 7, 32, "Output",ExpressionUUID->"afc9ea80-12d4-4119-8275-b4c07ca186d3"]
-}, Open  ]],
-Cell[106532, 2181, 393, 6, 67, "Input",ExpressionUUID->"9a0f02f8-0dcb-4fa0-a434-3dab92e35e3d"],
-Cell[106928, 2189, 205, 4, 28, "Input",ExpressionUUID->"410c0451-9b50-4726-838d-507ca1520553"],
-Cell[107136, 2195, 231, 4, 28, "Input",ExpressionUUID->"266398ea-08f6-44ac-9796-54783f49bc3b"],
-Cell[107370, 2201, 186, 2, 28, "Input",ExpressionUUID->"8a2df4ce-9c44-47a1-bde1-ff1c4d183497"],
-Cell[107559, 2205, 284, 5, 28, "Input",ExpressionUUID->"c65c0dd0-81b7-4955-8c52-e9b2bed36fa7"],
-Cell[107846, 2212, 280, 5, 28, "Input",ExpressionUUID->"9bdfa35f-8e9a-4070-8882-15d68d851348"],
-Cell[108129, 2219, 278, 5, 28, "Input",ExpressionUUID->"3917c014-4521-4d91-8543-b5d914f1cc18"],
-Cell[108410, 2226, 329, 6, 28, "Input",ExpressionUUID->"467d54c9-fca1-43d0-97cf-f2d46c7284b1"],
-Cell[108742, 2234, 388, 7, 28, "Input",ExpressionUUID->"f8bb0306-7bc5-4dc8-9d8e-1e8f7ab2e834"],
-Cell[109133, 2243, 467, 9, 48, "Input",ExpressionUUID->"5e485a53-0caa-4994-a3a3-d3d69cde3b52"],
-Cell[109603, 2254, 341, 6, 28, "Input",ExpressionUUID->"9db4f7e5-a195-45b4-868f-2359598971c3"],
-Cell[109947, 2262, 1798, 36, 105, "Input",ExpressionUUID->"87f57da9-00aa-4b46-ab12-6608300fc354"],
-Cell[111748, 2300, 517, 11, 48, "Input",ExpressionUUID->"855d2f73-4d92-458c-92f8-4997982eeb95"],
-Cell[112268, 2313, 260, 4, 28, "Input",ExpressionUUID->"c5d465ea-1c08-42a8-9ef9-344addb687c8"],
-Cell[112531, 2319, 245, 4, 28, "Input",ExpressionUUID->"fbec490a-a8cf-4334-a943-dcc80a67bcec"],
-Cell[112779, 2325, 402, 9, 48, "Input",ExpressionUUID->"53522faf-b64c-4e4b-98e4-8562af9b3595"],
-Cell[113184, 2336, 252, 4, 28, "Input",ExpressionUUID->"cb59bb07-5383-42bf-81be-5f35fcdab709"],
-Cell[113439, 2342, 463, 10, 59, "Input",ExpressionUUID->"0355aab1-cd18-479e-ba9f-08006c50833e"],
-Cell[113905, 2354, 256, 4, 28, "Input",ExpressionUUID->"d08078e9-646b-410d-b3da-7b07d3631460"],
-Cell[114164, 2360, 425, 8, 28, "Input",ExpressionUUID->"42c8cf32-1946-44b8-9562-13038f11fb94"],
-Cell[114592, 2370, 1215, 23, 28, "Input",ExpressionUUID->"0ab75f01-46a1-4e5f-adf2-7d5307d5762b"],
-Cell[115810, 2395, 590, 12, 28, "Input",ExpressionUUID->"6140b4bf-cb5c-4e9a-960e-e3b85328145c"],
-Cell[116403, 2409, 442, 11, 28, "Input",ExpressionUUID->"95b96204-eca8-4b83-b10f-34c442d68937"],
-Cell[116848, 2422, 313, 7, 28, "Input",ExpressionUUID->"dd10fb84-5fff-4fba-9083-85431c8f6cfd"],
-Cell[117164, 2431, 267, 4, 28, "Input",ExpressionUUID->"6b6d0541-3708-4f05-905e-00057789ec1f"],
-Cell[CellGroupData[{
-Cell[117456, 2439, 579, 10, 28, "Input",ExpressionUUID->"504bd9cc-d90b-476c-be9f-d82b78e41ae7"],
-Cell[118038, 2451, 8911, 231, 92, "Output",ExpressionUUID->"6ecbe811-85cd-4095-a7f1-cc5421138ccd"]
-}, Open  ]],
-Cell[126964, 2685, 254, 4, 28, "Input",ExpressionUUID->"a0308418-3e41-4b79-b3be-d01011649c9a"],
-Cell[127221, 2691, 457, 9, 28, "Input",ExpressionUUID->"c152a1f2-bf7c-435c-8fac-a14c7491d047"],
-Cell[127681, 2702, 510, 12, 28, "Input",ExpressionUUID->"ec1f01e6-0c98-4d27-a5e2-855df66a8109"],
-Cell[128194, 2716, 310, 5, 28, "Input",ExpressionUUID->"ffbb0c5a-42e1-43fa-b00e-fbd1167bcc81"],
-Cell[128507, 2723, 346, 9, 28, "Input",ExpressionUUID->"b68c28b1-390d-4e11-bf02-e99af307d723"],
-Cell[128856, 2734, 234, 4, 28, "Input",ExpressionUUID->"5894fa79-36f3-4950-a90e-e02be9581f8f"],
-Cell[129093, 2740, 529, 11, 28, "Input",ExpressionUUID->"f3690453-162f-4c6c-8828-7843d42eaa19"],
-Cell[129625, 2753, 234, 5, 28, "Input",ExpressionUUID->"00592a83-5a67-4eae-b706-9bac75f88449"],
-Cell[129862, 2760, 209, 4, 28, "Input",ExpressionUUID->"4b0d0f4c-bb21-42e3-bd4d-c901c4bea261"],
-Cell[CellGroupData[{
-Cell[130096, 2768, 1019, 26, 143, "Input",ExpressionUUID->"7f4b6a14-683b-4f05-b6fa-5d2f9d3cff05"],
-Cell[131118, 2796, 446, 10, 21, "Message",ExpressionUUID->"ebd7fdf0-d4b2-402e-8233-82953684a793"],
-Cell[131567, 2808, 270, 6, 32, "Output",ExpressionUUID->"085e5347-ea36-4e84-b17f-d5ee71c44107"]
+Cell[197661, 3828, 1340, 30, 105, "Input",ExpressionUUID->"a58ec1c8-41a6-4b44-8b8b-48c35008ce34"],
+Cell[199004, 3860, 10550, 216, 236, "Output",ExpressionUUID->"9c2f8386-a96a-4e96-b39c-9b35f665651f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[131874, 2819, 17016, 413, 1093, "Input",ExpressionUUID->"8c8e2431-52ff-4e89-b5a1-6f79f7eed696"],
-Cell[148893, 3234, 493, 11, 21, "Message",ExpressionUUID->"fe7868d4-4f63-4d6e-af62-8a670d65c7e3"],
-Cell[149389, 3247, 922, 18, 40, "Message",ExpressionUUID->"8a37e0fc-1e17-4e59-9782-1a87a580b6d0"],
-Cell[150314, 3267, 920, 18, 40, "Message",ExpressionUUID->"b3ff3114-f420-4eb4-9d85-51f45115d90a"],
-Cell[151237, 3287, 462, 11, 21, "Message",ExpressionUUID->"1ed710a5-720c-44e1-8623-9eaf351271fa"],
-Cell[151702, 3300, 920, 18, 40, "Message",ExpressionUUID->"07495a41-89e1-41e0-9cd6-7be0129667fe"],
-Cell[152625, 3320, 498, 11, 21, "Message",ExpressionUUID->"2689dd67-ba4d-48f3-9cb9-7038b2bcc005"],
-Cell[153126, 3333, 464, 11, 21, "Message",ExpressionUUID->"10fd043f-8999-4ee3-bfc6-3397dc817d26"],
-Cell[153593, 3346, 442, 10, 21, "Message",ExpressionUUID->"e75b2974-e112-4bf9-a875-b256d7e227fb"],
-Cell[154038, 3358, 444, 10, 21, "Message",ExpressionUUID->"c617a937-979e-42b1-80cc-e4ac06bc9c00"],
-Cell[154485, 3370, 444, 10, 21, "Message",ExpressionUUID->"c60aefaa-14dd-45a3-94ec-66b1d8796f29"],
-Cell[154932, 3382, 501, 11, 21, "Message",ExpressionUUID->"74f482e7-87de-4ecb-bf35-5d4db074162b"],
-Cell[155436, 3395, 911, 18, 23, "Message",ExpressionUUID->"91ffbf5b-51c9-4309-9e11-d6123c23dd7d"],
-Cell[156350, 3415, 911, 18, 23, "Message",ExpressionUUID->"afc8585e-ef62-41a5-b3ef-bedd9a94c62d"],
-Cell[157264, 3435, 913, 18, 23, "Message",ExpressionUUID->"89eb5a1a-9218-42ac-9a31-18c31895b7be"],
-Cell[158180, 3455, 494, 11, 21, "Message",ExpressionUUID->"2121f160-5b4f-40a8-85bf-28c728e5fbb3"],
-Cell[158677, 3468, 491, 11, 21, "Message",ExpressionUUID->"a8c41dca-0a5f-4d0a-8918-b5b2a39bdff3"],
-Cell[159171, 3481, 461, 11, 21, "Message",ExpressionUUID->"a4a242f5-6e3f-41cf-b148-80b4a7d73a1f"],
-Cell[159635, 3494, 497, 11, 21, "Message",ExpressionUUID->"a169295e-ee57-4e34-b1c3-f8df7ee1a489"],
-Cell[160135, 3507, 491, 11, 21, "Message",ExpressionUUID->"b25d9682-7383-4409-9518-f0dd7029e691"],
-Cell[160629, 3520, 498, 11, 21, "Message",ExpressionUUID->"b4d172a4-3ef2-4edd-8485-934e1a127cad"],
-Cell[161130, 3533, 213, 4, 32, "Output",ExpressionUUID->"d3db4438-fe76-4d6a-a4c9-4431bd139f27"]
+Cell[209591, 4081, 2806, 51, 105, "Input",ExpressionUUID->"5f8ee03a-5a6c-4fc8-b268-7b1aba34af42"],
+Cell[212400, 4134, 10425, 215, 236, "Output",ExpressionUUID->"35cbd12c-7085-4acd-95b3-12a236e95fa2"]
 }, Open  ]],
-Cell[161358, 3540, 1002, 22, 48, "Input",ExpressionUUID->"f3db1e26-1581-406e-a061-507b95ca5f3c"],
-Cell[162363, 3564, 3039, 67, 219, "Input",ExpressionUUID->"7df9818f-7970-442a-ad5c-7bac674a6ed3"],
-Cell[165405, 3633, 207, 4, 28, "Input",ExpressionUUID->"7ba0b456-2053-4106-ac46-7ae287c61fb0"]
+Cell[222840, 4352, 293, 5, 48, InheritFromParent,ExpressionUUID->"23db8008-720f-49a7-b7d1-ad495983ae3f"],
+Cell[223136, 4359, 179, 3, 28, "Input",ExpressionUUID->"075af11f-332b-44ef-b6ed-18482c0a4326"],
+Cell[CellGroupData[{
+Cell[223340, 4366, 2113, 37, 186, "Input",ExpressionUUID->"1927aef9-607f-4a49-a59a-07062997209f"],
+Cell[225456, 4405, 514, 8, 32, "Output",ExpressionUUID->"9d932847-2ccb-45b3-b27a-34ca30ad1f46"],
+Cell[225973, 4415, 514, 8, 32, "Output",ExpressionUUID->"9223d28a-5608-4eac-8c28-3f085586597c"],
+Cell[226490, 4425, 512, 8, 32, "Output",ExpressionUUID->"ff74c44f-6b94-45ca-b0cb-03e7250c4198"],
+Cell[227005, 4435, 514, 8, 32, "Output",ExpressionUUID->"bdb79fc4-e5c4-461e-ac9b-729789297535"],
+Cell[227522, 4445, 516, 8, 65, "Output",ExpressionUUID->"00807156-ae0b-4129-b772-abfb52ec5fb1"]
+}, Open  ]],
+Cell[228053, 4456, 393, 6, 67, "Input",ExpressionUUID->"9a0f02f8-0dcb-4fa0-a434-3dab92e35e3d"],
+Cell[228449, 4464, 205, 4, 28, "Input",ExpressionUUID->"410c0451-9b50-4726-838d-507ca1520553"],
+Cell[228657, 4470, 231, 4, 28, "Input",ExpressionUUID->"266398ea-08f6-44ac-9796-54783f49bc3b"],
+Cell[228891, 4476, 186, 2, 28, "Input",ExpressionUUID->"8a2df4ce-9c44-47a1-bde1-ff1c4d183497"],
+Cell[229080, 4480, 284, 5, 28, "Input",ExpressionUUID->"c65c0dd0-81b7-4955-8c52-e9b2bed36fa7"],
+Cell[229367, 4487, 280, 5, 28, "Input",ExpressionUUID->"9bdfa35f-8e9a-4070-8882-15d68d851348"],
+Cell[229650, 4494, 278, 5, 28, "Input",ExpressionUUID->"3917c014-4521-4d91-8543-b5d914f1cc18"],
+Cell[229931, 4501, 329, 6, 28, "Input",ExpressionUUID->"467d54c9-fca1-43d0-97cf-f2d46c7284b1"],
+Cell[230263, 4509, 388, 7, 28, "Input",ExpressionUUID->"f8bb0306-7bc5-4dc8-9d8e-1e8f7ab2e834"],
+Cell[230654, 4518, 467, 9, 48, "Input",ExpressionUUID->"5e485a53-0caa-4994-a3a3-d3d69cde3b52"],
+Cell[231124, 4529, 341, 6, 28, "Input",ExpressionUUID->"9db4f7e5-a195-45b4-868f-2359598971c3"],
+Cell[231468, 4537, 1798, 36, 105, "Input",ExpressionUUID->"87f57da9-00aa-4b46-ab12-6608300fc354"],
+Cell[233269, 4575, 517, 11, 48, "Input",ExpressionUUID->"855d2f73-4d92-458c-92f8-4997982eeb95"],
+Cell[233789, 4588, 260, 4, 28, "Input",ExpressionUUID->"c5d465ea-1c08-42a8-9ef9-344addb687c8"],
+Cell[234052, 4594, 245, 4, 28, "Input",ExpressionUUID->"fbec490a-a8cf-4334-a943-dcc80a67bcec"],
+Cell[234300, 4600, 402, 9, 48, "Input",ExpressionUUID->"53522faf-b64c-4e4b-98e4-8562af9b3595"],
+Cell[234705, 4611, 252, 4, 28, "Input",ExpressionUUID->"cb59bb07-5383-42bf-81be-5f35fcdab709"],
+Cell[234960, 4617, 463, 10, 59, "Input",ExpressionUUID->"0355aab1-cd18-479e-ba9f-08006c50833e"],
+Cell[235426, 4629, 256, 4, 28, "Input",ExpressionUUID->"d08078e9-646b-410d-b3da-7b07d3631460"],
+Cell[235685, 4635, 425, 8, 28, "Input",ExpressionUUID->"42c8cf32-1946-44b8-9562-13038f11fb94"],
+Cell[236113, 4645, 1215, 23, 28, "Input",ExpressionUUID->"0ab75f01-46a1-4e5f-adf2-7d5307d5762b"],
+Cell[237331, 4670, 590, 12, 28, "Input",ExpressionUUID->"6140b4bf-cb5c-4e9a-960e-e3b85328145c"],
+Cell[237924, 4684, 442, 11, 28, "Input",ExpressionUUID->"95b96204-eca8-4b83-b10f-34c442d68937"],
+Cell[238369, 4697, 313, 7, 28, "Input",ExpressionUUID->"dd10fb84-5fff-4fba-9083-85431c8f6cfd"],
+Cell[238685, 4706, 267, 4, 28, "Input",ExpressionUUID->"6b6d0541-3708-4f05-905e-00057789ec1f"],
+Cell[CellGroupData[{
+Cell[238977, 4714, 579, 10, 28, "Input",ExpressionUUID->"504bd9cc-d90b-476c-be9f-d82b78e41ae7"],
+Cell[239559, 4726, 8911, 231, 92, "Output",ExpressionUUID->"6ecbe811-85cd-4095-a7f1-cc5421138ccd"]
+}, Open  ]],
+Cell[248485, 4960, 254, 4, 28, "Input",ExpressionUUID->"a0308418-3e41-4b79-b3be-d01011649c9a"],
+Cell[248742, 4966, 457, 9, 28, "Input",ExpressionUUID->"c152a1f2-bf7c-435c-8fac-a14c7491d047"],
+Cell[249202, 4977, 510, 12, 28, "Input",ExpressionUUID->"ec1f01e6-0c98-4d27-a5e2-855df66a8109"],
+Cell[249715, 4991, 310, 5, 28, "Input",ExpressionUUID->"ffbb0c5a-42e1-43fa-b00e-fbd1167bcc81"],
+Cell[250028, 4998, 346, 9, 28, "Input",ExpressionUUID->"b68c28b1-390d-4e11-bf02-e99af307d723"],
+Cell[250377, 5009, 234, 4, 28, "Input",ExpressionUUID->"5894fa79-36f3-4950-a90e-e02be9581f8f"],
+Cell[250614, 5015, 529, 11, 28, "Input",ExpressionUUID->"f3690453-162f-4c6c-8828-7843d42eaa19"],
+Cell[251146, 5028, 234, 5, 28, "Input",ExpressionUUID->"00592a83-5a67-4eae-b706-9bac75f88449"],
+Cell[251383, 5035, 209, 4, 28, "Input",ExpressionUUID->"4b0d0f4c-bb21-42e3-bd4d-c901c4bea261"],
+Cell[CellGroupData[{
+Cell[251617, 5043, 1019, 26, 143, "Input",ExpressionUUID->"7f4b6a14-683b-4f05-b6fa-5d2f9d3cff05"],
+Cell[252639, 5071, 446, 10, 21, "Message",ExpressionUUID->"ebd7fdf0-d4b2-402e-8233-82953684a793"],
+Cell[253088, 5083, 270, 6, 32, "Output",ExpressionUUID->"085e5347-ea36-4e84-b17f-d5ee71c44107"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[253395, 5094, 17016, 413, 1093, "Input",ExpressionUUID->"8c8e2431-52ff-4e89-b5a1-6f79f7eed696"],
+Cell[270414, 5509, 493, 11, 21, "Message",ExpressionUUID->"fe7868d4-4f63-4d6e-af62-8a670d65c7e3"],
+Cell[270910, 5522, 922, 18, 40, "Message",ExpressionUUID->"8a37e0fc-1e17-4e59-9782-1a87a580b6d0"],
+Cell[271835, 5542, 920, 18, 40, "Message",ExpressionUUID->"b3ff3114-f420-4eb4-9d85-51f45115d90a"],
+Cell[272758, 5562, 462, 11, 21, "Message",ExpressionUUID->"1ed710a5-720c-44e1-8623-9eaf351271fa"],
+Cell[273223, 5575, 920, 18, 40, "Message",ExpressionUUID->"07495a41-89e1-41e0-9cd6-7be0129667fe"],
+Cell[274146, 5595, 498, 11, 21, "Message",ExpressionUUID->"2689dd67-ba4d-48f3-9cb9-7038b2bcc005"],
+Cell[274647, 5608, 464, 11, 21, "Message",ExpressionUUID->"10fd043f-8999-4ee3-bfc6-3397dc817d26"],
+Cell[275114, 5621, 442, 10, 21, "Message",ExpressionUUID->"e75b2974-e112-4bf9-a875-b256d7e227fb"],
+Cell[275559, 5633, 444, 10, 21, "Message",ExpressionUUID->"c617a937-979e-42b1-80cc-e4ac06bc9c00"],
+Cell[276006, 5645, 444, 10, 21, "Message",ExpressionUUID->"c60aefaa-14dd-45a3-94ec-66b1d8796f29"],
+Cell[276453, 5657, 501, 11, 21, "Message",ExpressionUUID->"74f482e7-87de-4ecb-bf35-5d4db074162b"],
+Cell[276957, 5670, 911, 18, 23, "Message",ExpressionUUID->"91ffbf5b-51c9-4309-9e11-d6123c23dd7d"],
+Cell[277871, 5690, 911, 18, 23, "Message",ExpressionUUID->"afc8585e-ef62-41a5-b3ef-bedd9a94c62d"],
+Cell[278785, 5710, 913, 18, 23, "Message",ExpressionUUID->"89eb5a1a-9218-42ac-9a31-18c31895b7be"],
+Cell[279701, 5730, 494, 11, 21, "Message",ExpressionUUID->"2121f160-5b4f-40a8-85bf-28c728e5fbb3"],
+Cell[280198, 5743, 491, 11, 21, "Message",ExpressionUUID->"a8c41dca-0a5f-4d0a-8918-b5b2a39bdff3"],
+Cell[280692, 5756, 461, 11, 21, "Message",ExpressionUUID->"a4a242f5-6e3f-41cf-b148-80b4a7d73a1f"],
+Cell[281156, 5769, 497, 11, 21, "Message",ExpressionUUID->"a169295e-ee57-4e34-b1c3-f8df7ee1a489"],
+Cell[281656, 5782, 491, 11, 21, "Message",ExpressionUUID->"b25d9682-7383-4409-9518-f0dd7029e691"],
+Cell[282150, 5795, 498, 11, 21, "Message",ExpressionUUID->"b4d172a4-3ef2-4edd-8485-934e1a127cad"],
+Cell[282651, 5808, 213, 4, 32, "Output",ExpressionUUID->"d3db4438-fe76-4d6a-a4c9-4431bd139f27"]
+}, Open  ]],
+Cell[282879, 5815, 1002, 22, 48, "Input",ExpressionUUID->"f3db1e26-1581-406e-a061-507b95ca5f3c"],
+Cell[283884, 5839, 3039, 67, 219, "Input",ExpressionUUID->"7df9818f-7970-442a-ad5c-7bac674a6ed3"],
+Cell[286926, 5908, 207, 4, 28, "Input",ExpressionUUID->"7ba0b456-2053-4106-ac46-7ae287c61fb0"]
 }
 ]
 *)
