@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     91031,       1969]
-NotebookOptionsPosition[     84242,       1888]
-NotebookOutlinePosition[     84583,       1903]
-CellTagsIndexPosition[     84540,       1900]
+NotebookDataLength[    102766,       2193]
+NotebookOptionsPosition[     94541,       2092]
+NotebookOutlinePosition[     94882,       2107]
+CellTagsIndexPosition[     94839,       2104]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -222,7 +222,7 @@ are fundamental and which are removable?\>\"", ",", " ",
    3.771083696942418*^9, 3.7710837178362527`*^9}, 3.7711012136346254`*^9, {
    3.771103066357688*^9, 3.771103174458703*^9}, {3.7711034741487684`*^9, 
    3.771103548963587*^9}, {3.7715849646875687`*^9, 3.7715849857825613`*^9}},
- CellLabel->"In[9]:=",ExpressionUUID->"82a03de3-0e12-4c59-bb42-528749c4d97e"],
+ CellLabel->"In[27]:=",ExpressionUUID->"82a03de3-0e12-4c59-bb42-528749c4d97e"],
 
 Cell[BoxData[
  RowBox[{
@@ -432,212 +432,126 @@ Cell[BoxData[
    3.7715850019582925`*^9},
  CellLabel->"In[14]:=",ExpressionUUID->"ecc237eb-c7c5-4f4c-802d-a347edb29d8d"],
 
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.7714110458842516`*^9, 3.77141110989114*^9}, {
-   3.771428209703794*^9, 3.7714282311370287`*^9}, {3.771429002195444*^9, 
-   3.7714290156219864`*^9}, 3.771492072930728*^9, 
-   3.771613481188868*^9},ExpressionUUID->"27ab713a-2eff-460c-a212-\
-f7c044730315"],
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "calcQs", "]"}]], "Input",
+ CellChangeTimes->{{3.771626438276768*^9, 3.771626444183092*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"63eed01c-6a50-4ee8-9af9-19e2b218d0bf"],
+
+Cell[BoxData["69"], "Output",
+ CellChangeTimes->{3.771626445542491*^9},
+ CellLabel->"Out[15]=",ExpressionUUID->"ddbe82f6-829f-49ae-bcdf-66f085fdd9e4"]
+}, Open  ]],
 
 Cell[BoxData[{
  RowBox[{
+  RowBox[{"calcQs", "=", 
+   RowBox[{"AppendTo", "[", 
+    RowBox[{"calcQs", ",", " ", 
+     RowBox[{"RandomWord", "[", 
+      RowBox[{"\"\<CommonWords\>\"", ",", " ", "700"}], "]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"calcQs", "=", 
+   RowBox[{"Flatten", "[", "calcQs", "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.7714110458842516`*^9, 3.77141110989114*^9}, {
+   3.771428209703794*^9, 3.7714282311370287`*^9}, {3.771429002195444*^9, 
+   3.7714290156219864`*^9}, 3.771492072930728*^9, 3.771613481188868*^9, {
+   3.771626291795644*^9, 3.7716263904244146`*^9}, 3.771626484386755*^9, {
+   3.771626548200103*^9, 
+   3.7716265643878202`*^9}},ExpressionUUID->"27ab713a-2eff-460c-a212-\
+f7c044730315"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "algebra1Questions", "]"}]], "Input",
+ CellChangeTimes->{{3.771626494871214*^9, 3.7716265051995296`*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"ef8147fe-4b4b-47ba-86e7-246f71743788"],
+
+Cell[BoxData["57"], "Output",
+ CellChangeTimes->{3.7716265077932787`*^9, 3.7716266448963656`*^9},
+ CellLabel->"Out[22]=",ExpressionUUID->"8386144b-44ce-422a-9162-d6fc51db369a"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"algebra1Questions", "=", 
+   RowBox[{"AppendTo", "[", 
+    RowBox[{"algebra1Questions", ",", " ", 
+     RowBox[{"RandomWord", "[", 
+      RowBox[{"\"\<CommonWords\>\"", ",", " ", "800"}], "]"}]}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.7716265399812446`*^9, 3.771626585169343*^9}, {
+  3.7716266513964567`*^9, 3.7716266545684233`*^9}},
+ CellLabel->"In[20]:=",ExpressionUUID->"8d37071a-2d7e-470b-a07e-86906c372724"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "algebra2Qs", "]"}]], "Input",
+ CellChangeTimes->{{3.77162661189598*^9, 3.771626619771083*^9}},
+ CellLabel->"In[28]:=",ExpressionUUID->"a7e4b37f-6894-4419-9c9e-8fd27c9de71f"],
+
+Cell[BoxData["46"], "Output",
+ CellChangeTimes->{
+  3.771626620442934*^9, {3.771626716147314*^9, 3.7716267386319885`*^9}},
+ CellLabel->"Out[28]=",ExpressionUUID->"170babdb-6abb-4f36-ba6a-decfc7f44009"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"algebra2Qs", "=", 
+   RowBox[{"AppendTo", "[", 
+    RowBox[{"algebra2Qs", ",", " ", 
+     RowBox[{"RandomWord", "[", 
+      RowBox[{"\"\<CommonWords\>\"", ",", " ", "800"}], "]"}]}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.7716266707873864`*^9, 3.7716266842250643`*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"fff664df-37dc-45c5-a151-5513a5ce7da1"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"algebra1Questions", "=", 
+   RowBox[{"Flatten", "[", "algebra1Questions", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"algebra2Qs", "=", 
+   RowBox[{"Flatten", "[", "algebra2Qs", "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.7716267446164947`*^9, 3.771626775710656*^9}},
+ CellLabel->"In[31]:=",ExpressionUUID->"8e7aa741-c0b6-4ceb-8805-44060c400998"],
+
+Cell[BoxData[
+ RowBox[{
   RowBox[{"For", " ", "[", 
    RowBox[{
     RowBox[{"i", "=", "1"}], ",", " ", 
     RowBox[{"i", "\[LessEqual]", " ", "100"}], ",", " ", 
     RowBox[{"i", "++"}], ",", " ", 
     RowBox[{
-     RowBox[{"calcQs", "=", 
-      RowBox[{"AppendTo", "[", 
-       RowBox[{"calcQs", ",", " ", 
-        RowBox[{"callAPI", "[", 
-         RowBox[{
-         "\"\<BasicIntegrate\>\"", ",", " ", "1", ",", "\"\<Intermediate\>\"",
-           ",", " ", "False"}], "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"algebra1Questions", "=", 
-      RowBox[{"AppendTo", "[", 
-       RowBox[{"algebra1Questions", ",", " ", 
-        RowBox[{"callAPI", "[", 
-         RowBox[{
-         "\"\<IntegerAddition\>\"", ",", " ", "1", ",", " ", 
-          "\"\<Intermediate\>\"", ",", " ", "False"}], "]"}]}], "]"}]}], ";", 
-     RowBox[{"algebra2Qs", "=", 
-      RowBox[{"AppendTo", "[", 
-       RowBox[{"algebra2Qs", ",", " ", 
-        RowBox[{"callAPI", "[", 
-         RowBox[{
-         "\"\<RationalExpressions\>\"", ",", " ", "1", ",", " ", 
-          "\"\<Intermidiate\>\"", ",", " ", "False"}], "]"}]}], "]"}]}], 
-     ";"}]}], "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"For", " ", "[", 
-    RowBox[{
-     RowBox[{"i", "=", "1"}], ",", " ", 
-     RowBox[{"i", "\[LessEqual]", " ", "100"}], ",", " ", 
-     RowBox[{"i", "++"}], ",", " ", 
      RowBox[{
-      RowBox[{"calcQs", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"calcQs", ",", " ", 
-         RowBox[{"callAPI", "[", 
-          RowBox[{
-          "\"\<IntegratebyParts\>\"", ",", " ", "1", ",", 
-           "\"\<Intermediate\>\"", ",", " ", "False"}], "]"}]}], "]"}]}], ";",
-       "\[IndentingNewLine]", 
-      RowBox[{"algebra1Questions", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra1Questions", ",", " ", 
-         RowBox[{"callAPI", "[", 
-          RowBox[{
-          "\"\<IntegerGCD\>\"", ",", " ", "1", ",", " ", 
-           "\"\<Intermediate\>\"", ",", " ", "False"}], "]"}]}], "]"}]}], ";", 
-      RowBox[{"algebra1Questions", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra1Questions", ",", " ", 
-         RowBox[{"callAPI", "[", 
-          RowBox[{
-          "\"\<FactorPolynomial\>\"", ",", " ", "1", ",", " ", 
-           "\"\<Beginner\>\"", ",", " ", "False"}], "]"}]}], "]"}]}], ";"}]}],
-     "\[IndentingNewLine]", "]"}], ";"}], " "}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"For", " ", "[", 
-   RowBox[{
-    RowBox[{"i", "=", "1"}], ",", " ", 
-    RowBox[{"i", "\[LessEqual]", " ", "100"}], ",", " ", 
-    RowBox[{"i", "++"}], ",", " ", 
-    RowBox[{
-     RowBox[{"calcQs", "=", 
-      RowBox[{"AppendTo", "[", 
-       RowBox[{"calcQs", ",", " ", 
-        RowBox[{"callAPI", "[", 
-         RowBox[{
-         "\"\<IntegrateUSub\>\"", ",", " ", "1", ",", "\"\<Intermediate\>\"", 
-          ",", " ", "False"}], "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"algebra1Questions", "=", 
-      RowBox[{"AppendTo", "[", 
-       RowBox[{"algebra1Questions", ",", " ", 
-        RowBox[{"callAPI", "[", 
-         RowBox[{
-         "\"\<RationalSimplify\>\"", ",", " ", "1", ",", " ", 
-          "\"\<Intermediate\>\"", ",", " ", "False"}], "]"}]}], "]"}]}], ";", 
-     RowBox[{"algebra2Qs", "=", 
-      RowBox[{"AppendTo", "[", 
-       RowBox[{"algebra2Qs", ",", " ", 
-        RowBox[{"callAPI", "[", 
-         RowBox[{
-         "\"\<AddSingleRadicals\>\"", ",", " ", "1", ",", " ", 
-          "\"\<Intermidiate\>\"", ",", " ", "False"}], "]"}]}], "]"}]}], 
-     ";"}]}], "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"For", " ", "[", 
-    RowBox[{
-     RowBox[{"i", "=", "1"}], ",", " ", 
-     RowBox[{"i", "\[LessEqual]", " ", "100"}], ",", " ", 
-     RowBox[{"i", "++"}], ",", " ", 
+      RowBox[{"calcQs", "\[LeftDoubleBracket]", 
+       RowBox[{"69", "+", "i"}], "\[RightDoubleBracket]"}], "=", " ", 
+      RowBox[{"callAPI", "[", 
+       RowBox[{
+       "\"\<BasicIntegrate\>\"", ",", " ", "1", ",", "\"\<Intermediate\>\"", 
+        ",", " ", "False"}], "]"}]}], ";", "\[IndentingNewLine]", 
      RowBox[{
-      RowBox[{"calcQs", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"calcQs", ",", " ", 
-         RowBox[{"callAPI", "[", 
-          RowBox[{
-          "\"\<FunctionsDerivativeChainRule\>\"", ",", " ", "1", ",", 
-           "\"\<Intermediate\>\"", ",", " ", "False"}], "]"}]}], "]"}]}], ";",
-       "\[IndentingNewLine]", 
-      RowBox[{"algebra1Questions", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra1Questions", ",", " ", 
-         RowBox[{"callAPI", "[", 
-          RowBox[{
-          "\"\<FractionMultiplication\>\"", ",", " ", "1", ",", " ", 
-           "\"\<Intermediate\>\"", ",", " ", "False"}], "]"}]}], "]"}]}], ";", 
-      RowBox[{"algebra2Qs", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra2Qs", ",", " ", 
-         RowBox[{"callAPI", "[", 
-          RowBox[{
-          "\"\<RadicalMultiplication\>\"", ",", " ", "1", ",", " ", 
-           "\"\<Advanced\>\"", ",", " ", "False"}], "]"}]}], "]"}]}], ";"}]}],
-     "\[IndentingNewLine]", "]"}], ";"}], " "}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"For", " ", "[", 
-   RowBox[{
-    RowBox[{"i", "=", "1"}], ",", " ", 
-    RowBox[{"i", "\[LessEqual]", " ", "75"}], ",", " ", 
-    RowBox[{"i", "++"}], ",", " ", 
-    RowBox[{
-     RowBox[{"calcQs", "=", 
-      RowBox[{"AppendTo", "[", 
-       RowBox[{"calcQs", ",", " ", 
-        RowBox[{"callAPI", "[", 
-         RowBox[{
-         "\"\<FunctionsDerivativePower\>\"", ",", " ", "1", ",", 
-          "\"\<Intermediate\>\"", ",", " ", "False"}], "]"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"algebra1Questions", "=", 
-      RowBox[{"AppendTo", "[", 
-       RowBox[{"algebra1Questions", ",", " ", 
-        RowBox[{"callAPI", "[", 
-         RowBox[{
-         "\"\<FractionAdditionUncommonDenominator\>\"", ",", " ", "1", ",", 
-          " ", "\"\<Intermediate\>\"", ",", " ", "False"}], "]"}]}], "]"}]}], 
-     ";", 
-     RowBox[{"algebra2Qs", "=", 
-      RowBox[{"AppendTo", "[", 
-       RowBox[{"algebra2Qs", ",", " ", 
-        RowBox[{"callAPI", "[", 
-         RowBox[{
-         "\"\<ComplexDivision\>\"", ",", " ", "1", ",", " ", 
-          "\"\<Intermidiate\>\"", ",", " ", "False"}], "]"}]}], "]"}]}], 
-     ";"}]}], "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"For", " ", "[", 
-    RowBox[{
-     RowBox[{"i", "=", "1"}], ",", " ", 
-     RowBox[{"i", "\[LessEqual]", " ", "75"}], ",", " ", 
-     RowBox[{"i", "++"}], ",", " ", 
+      RowBox[{"algebra1Questions", "\[LeftDoubleBracket]", 
+       RowBox[{"56", "+", "i"}], "\[RightDoubleBracket]"}], "=", " ", 
+      RowBox[{"callAPI", "[", 
+       RowBox[{
+       "\"\<IntegerAddition\>\"", ",", " ", "1", ",", " ", 
+        "\"\<Intermediate\>\"", ",", " ", "False"}], "]"}]}], ";", 
      RowBox[{
-      RowBox[{"calcQs", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"calcQs", ",", " ", 
-         RowBox[{"callAPI", "[", 
-          RowBox[{
-          "\"\<FunctionsDerivativeProductRule\>\"", ",", " ", "1", ",", 
-           "\"\<Intermediate\>\"", ",", " ", "False"}], "]"}]}], "]"}]}], ";",
-       "\[IndentingNewLine]", 
-      RowBox[{"algebra1Questions", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra1Questions", ",", " ", 
-         RowBox[{"callAPI", "[", 
-          RowBox[{
-          "\"\<OrderofOperations\>\"", ",", " ", "1", ",", " ", 
-           "\"\<Intermediate\>\"", ",", " ", "False"}], "]"}]}], "]"}]}], ";", 
-      RowBox[{"algebra2Qs", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra2Qs", ",", " ", 
-         RowBox[{"callAPI", "[", 
-          RowBox[{
-          "\"\<TwoStepRadicalAbsEquation\>\"", ",", " ", "1", ",", " ", 
-           "\"\<Advanced\>\"", ",", " ", "False"}], "]"}]}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"algebra2Qs", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra2Qs", ",", " ", 
-         RowBox[{"callAPI", "[", 
-          RowBox[{
-          "\"\<HigherOrderEquations\>\"", ",", " ", "1", ",", " ", 
-           "\"\<Advanced\>\"", ",", " ", "False"}], "]"}]}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"algebra2Qs", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra2Qs", ",", " ", 
-         RowBox[{"callAPI", "[", 
-          RowBox[{
-          "\"\<QuadraticEquationComplexSolution\>\"", ",", " ", "1", ",", 
-           " ", "\"\<Advanced\>\"", ",", " ", "False"}], "]"}]}], "]"}]}], 
-      ";"}]}], "\[IndentingNewLine]", "]"}], ";"}], " "}]}], "Input",
+      RowBox[{"algebra2Qs", "\[LeftDoubleBracket]", 
+       RowBox[{"46", "+", "i"}], "\[RightDoubleBracket]"}], "=", " ", 
+      RowBox[{"callAPI", "[", 
+       RowBox[{
+       "\"\<RationalExpressions\>\"", ",", " ", "1", ",", " ", 
+        "\"\<Intermidiate\>\"", ",", " ", "False"}], "]"}]}], ";"}]}], 
+   "\[IndentingNewLine]", "]"}], ";"}]], "Input",
  CellChangeTimes->{{3.771431233399534*^9, 3.771431347410571*^9}, {
    3.771492059437797*^9, 3.7714920638300953`*^9}, {3.7714927926328416`*^9, 
    3.771492796225038*^9}, {3.7715105635792522`*^9, 3.771510599345747*^9}, {
@@ -647,8 +561,261 @@ Cell[BoxData[{
    3.77158048333167*^9, 3.77158054508357*^9}, {3.771580581579486*^9, 
    3.771580656492838*^9}, {3.771580725838653*^9, 3.771580733683885*^9}, {
    3.7716089583376102`*^9, 3.7716090838217764`*^9}, {3.7716129055611687`*^9, 
-   3.771613232928527*^9}, {3.7716132848442645`*^9, 3.7716134461028175`*^9}},
- CellLabel->"In[15]:=",ExpressionUUID->"d115907f-0489-4c18-846c-70d8b91076f7"],
+   3.771613232928527*^9}, {3.7716132848442645`*^9, 3.7716134461028175`*^9}, 
+   3.77162140278736*^9, {3.771621452175637*^9, 3.7716214677852535`*^9}, 
+   3.7716232943513985`*^9, {3.771626454808196*^9, 3.7716264752772045`*^9}, {
+   3.7716265130433903`*^9, 3.7716265279029584`*^9}, {3.7716266250680285`*^9, 
+   3.771626642208881*^9}},
+ CellLabel->"In[33]:=",ExpressionUUID->"d115907f-0489-4c18-846c-70d8b91076f7"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"For", " ", "[", 
+   RowBox[{
+    RowBox[{"i", "=", "1"}], ",", " ", 
+    RowBox[{"i", "\[LessEqual]", " ", "100"}], ",", " ", 
+    RowBox[{"i", "++"}], ",", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"calcQs", "\[LeftDoubleBracket]", 
+       RowBox[{"169", "+", "i"}], "\[RightDoubleBracket]"}], "=", " ", 
+      RowBox[{"callAPI", "[", 
+       RowBox[{
+       "\"\<IntegratebyParts\>\"", ",", " ", "1", ",", "\"\<Intermediate\>\"",
+         ",", " ", "False"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"algebra1Questions", "\[LeftDoubleBracket]", 
+       RowBox[{"156", "+", "i"}], "\[RightDoubleBracket]"}], "=", " ", 
+      RowBox[{"callAPI", "[", 
+       RowBox[{
+       "\"\<IntegerGCD\>\"", ",", " ", "1", ",", " ", "\"\<Intermediate\>\"", 
+        ",", " ", "False"}], "]"}]}], ";", 
+     RowBox[{
+      RowBox[{"algebra1Questions", "\[LeftDoubleBracket]", 
+       RowBox[{"256", "+", "i"}], "\[RightDoubleBracket]"}], "=", " ", 
+      RowBox[{"callAPI", "[", 
+       RowBox[{
+       "\"\<FactorPolynomial\>\"", ",", " ", "1", ",", " ", 
+        "\"\<Beginner\>\"", ",", " ", "False"}], "]"}]}], ";"}]}], 
+   "\[IndentingNewLine]", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.771431233399534*^9, 3.771431347410571*^9}, {
+   3.771492059437797*^9, 3.7714920638300953`*^9}, {3.7714927926328416`*^9, 
+   3.771492796225038*^9}, {3.7715105635792522`*^9, 3.771510599345747*^9}, {
+   3.7715383541023245`*^9, 3.7715383545029726`*^9}, {3.7715782655224595`*^9, 
+   3.7715782659752913`*^9}, {3.771579030438421*^9, 3.7715790434394007`*^9}, {
+   3.7715790974133267`*^9, 3.771579107679143*^9}, 3.7715793925178785`*^9, {
+   3.77158048333167*^9, 3.77158054508357*^9}, {3.771580581579486*^9, 
+   3.771580656492838*^9}, {3.771580725838653*^9, 3.771580733683885*^9}, {
+   3.7716089583376102`*^9, 3.7716090838217764`*^9}, {3.7716129055611687`*^9, 
+   3.771613232928527*^9}, {3.7716132848442645`*^9, 3.7716134461028175`*^9}, 
+   3.77162140278736*^9, {3.771621452175637*^9, 3.7716214677852535`*^9}, {
+   3.7716232943513985`*^9, 3.771623297882659*^9}, {3.7716268011560264`*^9, 
+   3.7716268557817535`*^9}},
+ CellLabel->"In[34]:=",ExpressionUUID->"fe42750d-28a2-4441-b225-77a6ecd38177"],
+
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{
+   RowBox[{"For", " ", "[", 
+    RowBox[{
+     RowBox[{"i", "=", "1"}], ",", " ", 
+     RowBox[{"i", "\[LessEqual]", " ", "100"}], ",", " ", 
+     RowBox[{"i", "++"}], ",", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"calcQs", "\[LeftDoubleBracket]", 
+        RowBox[{"269", "+", "i"}], "\[RightDoubleBracket]"}], "=", " ", 
+       RowBox[{"callAPI", "[", 
+        RowBox[{
+        "\"\<IntegrateUSub\>\"", ",", " ", "1", ",", "\"\<Intermediate\>\"", 
+         ",", " ", "False"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"algebra1Questions", "\[LeftDoubleBracket]", 
+        RowBox[{"356", "+", "i"}], "\[RightDoubleBracket]"}], "=", 
+       RowBox[{"callAPI", "[", 
+        RowBox[{
+        "\"\<RationalSimplify\>\"", ",", " ", "1", ",", " ", 
+         "\"\<Intermediate\>\"", ",", " ", "False"}], "]"}]}], ";", 
+      RowBox[{
+       RowBox[{"algebra2Qs", "\[LeftDoubleBracket]", 
+        RowBox[{"146", "+", "i"}], "\[RightDoubleBracket]"}], "=", " ", 
+       RowBox[{"callAPI", "[", 
+        RowBox[{
+        "\"\<AddSingleRadicals\>\"", ",", " ", "1", ",", " ", 
+         "\"\<Intermidiate\>\"", ",", " ", "False"}], "]"}]}], ";"}]}], 
+    "\[IndentingNewLine]", "]"}], ";"}]}]], "Input",
+ CellChangeTimes->{{3.771431233399534*^9, 3.771431347410571*^9}, {
+   3.771492059437797*^9, 3.7714920638300953`*^9}, {3.7714927926328416`*^9, 
+   3.771492796225038*^9}, {3.7715105635792522`*^9, 3.771510599345747*^9}, {
+   3.7715383541023245`*^9, 3.7715383545029726`*^9}, {3.7715782655224595`*^9, 
+   3.7715782659752913`*^9}, {3.771579030438421*^9, 3.7715790434394007`*^9}, {
+   3.7715790974133267`*^9, 3.771579107679143*^9}, 3.7715793925178785`*^9, {
+   3.77158048333167*^9, 3.77158054508357*^9}, {3.771580581579486*^9, 
+   3.771580656492838*^9}, {3.771580725838653*^9, 3.771580733683885*^9}, {
+   3.7716089583376102`*^9, 3.7716090838217764`*^9}, {3.7716129055611687`*^9, 
+   3.771613232928527*^9}, {3.7716132848442645`*^9, 3.7716134461028175`*^9}, 
+   3.77162140278736*^9, {3.771621452175637*^9, 3.7716214677852535`*^9}, {
+   3.7716232943513985`*^9, 3.771623301163986*^9}, {3.7716268751570125`*^9, 
+   3.771626929126443*^9}, 3.771627650566016*^9},
+ CellLabel->"In[39]:=",ExpressionUUID->"fa71334c-2c4d-4177-b391-a16c5a369790"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"For", " ", "[", 
+   RowBox[{
+    RowBox[{"i", "=", "1"}], ",", " ", 
+    RowBox[{"i", "\[LessEqual]", " ", "100"}], ",", " ", 
+    RowBox[{"i", "++"}], ",", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"calcQs", "\[LeftDoubleBracket]", 
+       RowBox[{"369", "+", "i"}], "\[RightDoubleBracket]"}], "=", 
+      RowBox[{"callAPI", "[", 
+       RowBox[{
+       "\"\<FunctionsDerivativeChainRule\>\"", ",", " ", "1", ",", 
+        "\"\<Intermediate\>\"", ",", " ", "False"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"algebra1Questions", "\[LeftDoubleBracket]", 
+       RowBox[{"456", "+", "i"}], "\[RightDoubleBracket]"}], "=", " ", 
+      RowBox[{"callAPI", "[", 
+       RowBox[{
+       "\"\<FractionMultiplication\>\"", ",", " ", "1", ",", " ", 
+        "\"\<Intermediate\>\"", ",", " ", "False"}], "]"}]}], ";", 
+     RowBox[{
+      RowBox[{"algebra2Qs", "\[LeftDoubleBracket]", 
+       RowBox[{"246", "+", "i"}], "\[RightDoubleBracket]"}], "=", " ", 
+      RowBox[{"callAPI", "[", 
+       RowBox[{
+       "\"\<RadicalMultiplication\>\"", ",", " ", "1", ",", " ", 
+        "\"\<Advanced\>\"", ",", " ", "False"}], "]"}]}], ";"}]}], 
+   "\[IndentingNewLine]", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.771431233399534*^9, 3.771431347410571*^9}, {
+   3.771492059437797*^9, 3.7714920638300953`*^9}, {3.7714927926328416`*^9, 
+   3.771492796225038*^9}, {3.7715105635792522`*^9, 3.771510599345747*^9}, {
+   3.7715383541023245`*^9, 3.7715383545029726`*^9}, {3.7715782655224595`*^9, 
+   3.7715782659752913`*^9}, {3.771579030438421*^9, 3.7715790434394007`*^9}, {
+   3.7715790974133267`*^9, 3.771579107679143*^9}, 3.7715793925178785`*^9, {
+   3.77158048333167*^9, 3.77158054508357*^9}, {3.771580581579486*^9, 
+   3.771580656492838*^9}, {3.771580725838653*^9, 3.771580733683885*^9}, {
+   3.7716089583376102`*^9, 3.7716090838217764`*^9}, {3.7716129055611687`*^9, 
+   3.771613232928527*^9}, {3.7716132848442645`*^9, 3.7716134461028175`*^9}, 
+   3.77162140278736*^9, {3.771621452175637*^9, 3.7716214677852535`*^9}, {
+   3.7716232943513985`*^9, 3.7716233049765396`*^9}, {3.7716270742144156`*^9, 
+   3.7716271339257336`*^9}},
+ CellLabel->"In[36]:=",ExpressionUUID->"c4da6db5-a747-4d48-9c3b-868160004192"],
+
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{
+   RowBox[{"For", " ", "[", 
+    RowBox[{
+     RowBox[{"i", "=", "1"}], ",", " ", 
+     RowBox[{"i", "\[LessEqual]", " ", "100"}], ",", " ", 
+     RowBox[{"i", "++"}], ",", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"calcQs", "\[LeftDoubleBracket]", 
+        RowBox[{"469", "+", "i"}], "\[RightDoubleBracket]"}], "=", " ", 
+       RowBox[{"callAPI", "[", 
+        RowBox[{
+        "\"\<FunctionsDerivativePower\>\"", ",", " ", "1", ",", 
+         "\"\<Intermediate\>\"", ",", " ", "False"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"algebra1Questions", "\[LeftDoubleBracket]", 
+        RowBox[{"556", "+", "i"}], "\[RightDoubleBracket]"}], "=", " ", 
+       RowBox[{"callAPI", "[", 
+        RowBox[{
+        "\"\<FractionAdditionUncommonDenominator\>\"", ",", " ", "1", ",", 
+         " ", "\"\<Intermediate\>\"", ",", " ", "False"}], "]"}]}], ";", 
+      RowBox[{
+       RowBox[{"algebra2Qs", "\[LeftDoubleBracket]", 
+        RowBox[{"346", "+", "i"}], "\[RightDoubleBracket]"}], "=", " ", 
+       RowBox[{"callAPI", "[", 
+        RowBox[{
+        "\"\<ComplexDivision\>\"", ",", " ", "1", ",", " ", 
+         "\"\<Intermidiate\>\"", ",", " ", "False"}], "]"}]}], ";"}]}], 
+    "\[IndentingNewLine]", "]"}], ";"}]}]], "Input",
+ CellChangeTimes->{{3.771431233399534*^9, 3.771431347410571*^9}, {
+   3.771492059437797*^9, 3.7714920638300953`*^9}, {3.7714927926328416`*^9, 
+   3.771492796225038*^9}, {3.7715105635792522`*^9, 3.771510599345747*^9}, {
+   3.7715383541023245`*^9, 3.7715383545029726`*^9}, {3.7715782655224595`*^9, 
+   3.7715782659752913`*^9}, {3.771579030438421*^9, 3.7715790434394007`*^9}, {
+   3.7715790974133267`*^9, 3.771579107679143*^9}, 3.7715793925178785`*^9, {
+   3.77158048333167*^9, 3.77158054508357*^9}, {3.771580581579486*^9, 
+   3.771580656492838*^9}, {3.771580725838653*^9, 3.771580733683885*^9}, {
+   3.7716089583376102`*^9, 3.7716090838217764`*^9}, {3.7716129055611687`*^9, 
+   3.771613232928527*^9}, {3.7716132848442645`*^9, 3.7716134461028175`*^9}, 
+   3.77162140278736*^9, {3.771621452175637*^9, 3.7716214677852535`*^9}, {
+   3.7716232943513985`*^9, 3.771623313664158*^9}, {3.771627148816556*^9, 
+   3.7716272213955956`*^9}, 3.7716276551598315`*^9},
+ CellLabel->"In[40]:=",ExpressionUUID->"1bee0ad8-fc07-49ea-993e-72d476bc7d91"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"For", " ", "[", 
+    RowBox[{
+     RowBox[{"i", "=", "1"}], ",", " ", 
+     RowBox[{"i", "\[LessEqual]", " ", "100"}], ",", " ", 
+     RowBox[{"i", "++"}], ",", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"calcQs", "\[LeftDoubleBracket]", 
+        RowBox[{"569", "+", "i"}], "\[RightDoubleBracket]"}], "=", " ", 
+       RowBox[{"callAPI", "[", 
+        RowBox[{
+        "\"\<FunctionsDerivativeProductRule\>\"", ",", " ", "1", ",", 
+         "\"\<Intermediate\>\"", ",", " ", "False"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"algebra1Questions", "\[LeftDoubleBracket]", 
+        RowBox[{"656", "+", "i"}], "\[RightDoubleBracket]"}], "=", " ", 
+       RowBox[{"callAPI", "[", 
+        RowBox[{
+        "\"\<OrderofOperations\>\"", ",", " ", "1", ",", " ", 
+         "\"\<Intermediate\>\"", ",", " ", "False"}], "]"}]}], ";", 
+      RowBox[{
+       RowBox[{"algebra2Qs", "\[LeftDoubleBracket]", 
+        RowBox[{"446", "+", "i"}], "\[RightDoubleBracket]"}], "=", 
+       RowBox[{"callAPI", "[", 
+        RowBox[{
+        "\"\<TwoStepRadicalAbsEquation\>\"", ",", " ", "1", ",", " ", 
+         "\"\<Advanced\>\"", ",", " ", "False"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"algebra2Qs", "\[LeftDoubleBracket]", 
+        RowBox[{"546", "+", "i"}], "\[RightDoubleBracket]"}], "=", 
+       RowBox[{"AppendTo", "[", 
+        RowBox[{"algebra2Qs", ",", " ", 
+         RowBox[{"callAPI", "[", 
+          RowBox[{
+          "\"\<HigherOrderEquations\>\"", ",", " ", "1", ",", " ", 
+           "\"\<Advanced\>\"", ",", " ", "False"}], "]"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"algebra2Qs", "\[LeftDoubleBracket]", 
+        RowBox[{"646", "+", "i"}], "\[RightDoubleBracket]"}], "=", " ", 
+       RowBox[{"callAPI", "[", 
+        RowBox[{
+        "\"\<QuadraticEquationComplexSolution\>\"", ",", " ", "1", ",", " ", 
+         "\"\<Advanced\>\"", ",", " ", "False"}], "]"}]}], ";"}]}], 
+    "\[IndentingNewLine]", "]"}], ";"}], " "}]], "Input",
+ CellChangeTimes->{{3.771431233399534*^9, 3.771431347410571*^9}, {
+   3.771492059437797*^9, 3.7714920638300953`*^9}, {3.7714927926328416`*^9, 
+   3.771492796225038*^9}, {3.7715105635792522`*^9, 3.771510599345747*^9}, {
+   3.7715383541023245`*^9, 3.7715383545029726`*^9}, {3.7715782655224595`*^9, 
+   3.7715782659752913`*^9}, {3.771579030438421*^9, 3.7715790434394007`*^9}, {
+   3.7715790974133267`*^9, 3.771579107679143*^9}, 3.7715793925178785`*^9, {
+   3.77158048333167*^9, 3.77158054508357*^9}, {3.771580581579486*^9, 
+   3.771580656492838*^9}, {3.771580725838653*^9, 3.771580733683885*^9}, {
+   3.7716089583376102`*^9, 3.7716090838217764`*^9}, {3.7716129055611687`*^9, 
+   3.771613232928527*^9}, {3.7716132848442645`*^9, 3.7716134461028175`*^9}, 
+   3.77162140278736*^9, {3.771621452175637*^9, 3.7716214677852535`*^9}, {
+   3.7716232943513985`*^9, 3.7716233232423716`*^9}, {3.77162727518513*^9, 
+   3.7716273855147233`*^9}},
+ CellLabel->"In[41]:=",ExpressionUUID->"a1037d7e-60ba-47e7-8fa3-372684ab6712"],
 
 Cell[BoxData[
  RowBox[{"Length", "[", "algebra2Qs", "]"}]], "Input",
@@ -672,7 +839,7 @@ Cell[BoxData[{
  CellChangeTimes->{{3.7714256793003793`*^9, 3.7714256913789573`*^9}, {
   3.7715811143138447`*^9, 3.7715811158044252`*^9}, {3.7715836869628496`*^9, 
   3.771583693371149*^9}},
- CellLabel->"In[18]:=",ExpressionUUID->"30fa7177-112c-4b2f-8d75-ad044976cb11"],
+ CellLabel->"In[42]:=",ExpressionUUID->"30fa7177-112c-4b2f-8d75-ad044976cb11"],
 
 Cell[BoxData[
  RowBox[{"Length", "[", "algebra2Qs", "]"}]], "Input",
@@ -685,56 +852,51 @@ Cell[BoxData[
  CellChangeTimes->{{3.771578955716302*^9, 3.7715789645798535`*^9}},
  CellLabel->"In[23]:=",ExpressionUUID->"2a2b975d-a82b-4ee1-843e-495e2667752a"],
 
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"randindiex", "=", 
-   RowBox[{"RandomInteger", "[", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"0", ",", 
-       RowBox[{"Min", "[", 
-        RowBox[{
-         RowBox[{"Length", "[", "algebra1Questions", "]"}], ",", " ", 
-         RowBox[{"Length", "[", "algebra2Qs", "]"}]}], "]"}]}], "}"}], ",", 
-     " ", "600"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"algebra1Questions", "=", 
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
    RowBox[{
-   "algebra1Questions", "\[LeftDoubleBracket]", "randindiex", 
-    "\[RightDoubleBracket]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"algebra2Qs", "=", 
+    RowBox[{"algebra1Questions", "=", 
+     RowBox[{"algebra1Questions", "\[LeftDoubleBracket]", 
+      RowBox[{"1", ";;", "756"}], "\[RightDoubleBracket]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
    RowBox[{
-   "algebra2Qs", "\[LeftDoubleBracket]", "randindiex", 
-    "\[RightDoubleBracket]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"calcQs", "=", 
-   RowBox[{"calcQs", "\[LeftDoubleBracket]", 
-    RowBox[{"1", ";;", "600"}], "\[RightDoubleBracket]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"calcQs", "=", 
-   RowBox[{"Flatten", "[", "calcQs", "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"algebra2Qs", "=", 
-   RowBox[{"Flatten", "[", "algebra2Qs", "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"algebra1Questions", "=", 
-   RowBox[{"Flatten", "[", "algebra1Questions", "]"}]}], ";"}]}], "Input",
+    RowBox[{"algebra2Qs", "=", 
+     RowBox[{"algebra2Qs", "\[LeftDoubleBracket]", 
+      RowBox[{"1", ";;", "746"}], "\[RightDoubleBracket]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"calcQs", "=", 
+     RowBox[{"calcQs", "\[LeftDoubleBracket]", 
+      RowBox[{"1", ";;", "669"}], "\[RightDoubleBracket]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"calcQs", "=", 
+     RowBox[{"Flatten", "[", "calcQs", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"algebra2Qs", "=", 
+     RowBox[{"Flatten", "[", "algebra2Qs", "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"algebra1Questions", "=", 
+     RowBox[{"Flatten", "[", "algebra1Questions", "]"}]}], ";"}]}]}]], "Input",
  CellChangeTimes->{{3.7715780711315084`*^9, 3.7715782533519335`*^9}, {
    3.7715787545615344`*^9, 3.771578779847546*^9}, {3.771578820424283*^9, 
    3.7715789012005377`*^9}, {3.7715807750235744`*^9, 3.771580798636224*^9}, {
    3.7715810046341553`*^9, 3.771581039637493*^9}, 3.7715810884470024`*^9, {
    3.771583650045514*^9, 3.7715836515297585`*^9}, 3.771584527748005*^9, {
    3.771613502196126*^9, 3.771613516850237*^9}, {3.77161459885559*^9, 
-   3.771614610308692*^9}},ExpressionUUID->"c4b1c5fb-0acb-42ec-a4e7-\
+   3.771614610308692*^9}, {3.771627431734085*^9, 
+   3.771627461565521*^9}},ExpressionUUID->"c4b1c5fb-0acb-42ec-a4e7-\
 a8e2ff7ecf61"],
 
 Cell[BoxData[
- RowBox[{"Length", "[", "calcQs", "]"}]], "Input",
- CellChangeTimes->{{3.7715788532084827`*^9, 3.7715788729873676`*^9}},
- CellLabel->"In[31]:=",ExpressionUUID->"7c6139b6-1f00-414f-bd41-e6629a3d316d"],
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"Length", "[", "calcQs", "]"}]}]], "Input",
+ CellChangeTimes->{{3.7715788532084827`*^9, 3.7715788729873676`*^9}, 
+   3.7716182353399916`*^9, {3.771630229761569*^9, 
+   3.771630233120989*^9}},ExpressionUUID->"7c6139b6-1f00-414f-bd41-\
+e6629a3d316d"],
 
 Cell[BoxData[{
  RowBox[{"Clear", "[", "questionClassifier", "]"}], "\[IndentingNewLine]", 
@@ -1012,39 +1174,32 @@ sNOxp8TxvLdavGTy1OF/HsLR9g==
   "In[282]:=",ExpressionUUID->"5f8ee03a-5a6c-4fc8-b268-7b1aba34af42"],
 
 Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.771183039335494*^9, 3.7711830410035667`*^9}},
- CellLabel->"In[58]:=",ExpressionUUID->"075af11f-332b-44ef-b6ed-18482c0a4326"],
+ CellChangeTimes->{{3.771183039335494*^9, 3.7711830410035667`*^9}, 
+   3.7716182678710785`*^9},ExpressionUUID->"075af11f-332b-44ef-b6ed-\
+18482c0a4326"],
 
-Cell[BoxData[
+Cell[BoxData[{
  RowBox[{
+  RowBox[{"questionClassifier", "[", "\"\<What is 10% of 110\>\"", "]"}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{"questionClassifier", "[", "\"\<sin(x)\>\"", "]"}], "\n", 
   RowBox[{"(*", 
    RowBox[{
-   "include", " ", "the", " ", "above", " ", "graphs", " ", "and", " ", "the",
-     " ", "test", " ", "functions", " ", "to", " ", "show", " ", 
-    "infeasiability", " ", "of", " ", "doing", " ", "the", " ", 
-    "classifier"}], "*)"}], "\n", "\n", 
-  RowBox[{
-   RowBox[{"questionClassifier", "[", "\"\<What is 10% of 110\>\"", "]"}], 
-   "\n", "\[IndentingNewLine]", 
-   RowBox[{"questionClassifier", "[", "\"\<sin(x)\>\"", "]"}], "\n", 
-   RowBox[{"(*", 
     RowBox[{
-     RowBox[{
-     "Need", " ", "to", " ", "add", " ", "more", " ", "training", " ", 
-      "about", " ", "sine", " ", "to", " ", "a2"}], ",", " ", 
-     RowBox[{"derivative", " ", "to", " ", "calc"}]}], "*)"}], "\n", "\n", 
-   RowBox[{"questionClassifier", "[", "\"\<315+315\>\"", "]"}], "\n", 
-   RowBox[{
-   "questionClassifier", "[", 
-    "\"\<Derivative of \!\(\*SuperscriptBox[\(x\), \(6\)]\)\>\"", "]"}], "\n", 
-   RowBox[{"ClassifierMeasurements", "[", 
-    RowBox[{"questionClassifier", ",", " ", 
-     RowBox[{"<|", 
-      RowBox[{
-       RowBox[{"\"\<algebra 1\>\"", "\[Rule]", " ", "algebra1Questions"}], 
-       ",", 
-       RowBox[{"\"\<algebra 2\>\"", "\[Rule]", " ", "algebra2Qs"}]}], " ", 
-      "|>"}], ",", "\"\<Accuracy\>\""}], "]"}]}]}]], "Input",
+    "Need", " ", "to", " ", "add", " ", "more", " ", "training", " ", "about",
+      " ", "sine", " ", "to", " ", "a2"}], ",", " ", 
+    RowBox[{"derivative", " ", "to", " ", "calc"}]}], "*)"}], "\n"}], "\n", 
+ RowBox[{"questionClassifier", "[", "\"\<315+315\>\"", "]"}], "\n", 
+ RowBox[{"questionClassifier", "[", 
+  "\"\<Derivative of \!\(\*SuperscriptBox[\(x\), \(6\)]\)\>\"", "]"}], "\n", 
+ RowBox[{"ClassifierMeasurements", "[", 
+  RowBox[{"questionClassifier", ",", " ", 
+   RowBox[{"<|", 
+    RowBox[{
+     RowBox[{"\"\<algebra 1\>\"", "\[Rule]", " ", "algebra1Questions"}], ",", 
+     RowBox[{"\"\<algebra 2\>\"", "\[Rule]", " ", "algebra2Qs"}]}], " ", 
+    "|>"}], ",", "\"\<Accuracy\>\""}], "]"}]}], "Input",
  CellChangeTimes->{{3.771088662797636*^9, 3.7710886895019336`*^9}, 
    3.7711017977833295`*^9, {3.7711019578388124`*^9, 3.7711019757038107`*^9}, 
    3.77110252488804*^9, {3.7711040215410056`*^9, 3.771104055131591*^9}, 
@@ -1058,9 +1213,9 @@ Cell[BoxData[
    3.771428183914912*^9}, {3.771428826909436*^9, 3.7714288332399554`*^9}, {
    3.7715096735205946`*^9, 3.7715096889497137`*^9}, {3.7715126854492145`*^9, 
    3.771512750138853*^9}, {3.771588520802679*^9, 3.771588522210788*^9}, 
-   3.7715891632979856`*^9},
- CellLabel->
-  "In[289]:=",ExpressionUUID->"1927aef9-607f-4a49-a59a-07062997209f"],
+   3.7715891632979856`*^9, {3.7716182500696297`*^9, 
+   3.771618264497698*^9}},ExpressionUUID->"1927aef9-607f-4a49-a59a-\
+07062997209f"],
 
 Cell[BoxData[
  RowBox[{"questionClassifier", "[", 
@@ -1070,71 +1225,17 @@ income to be $5.\>\"", "]"}]], "Input",
  CellChangeTimes->{{3.77117350100593*^9, 3.771173526311931*^9}},
  CellLabel->"In[53]:=",ExpressionUUID->"9a0f02f8-0dcb-4fa0-a434-3dab92e35e3d"],
 
-Cell[BoxData[
- RowBox[{
-  RowBox[{"(*", 
-   RowBox[{
-    RowBox[{
-    "Have", " ", "a", " ", "working", " ", "classifier", " ", "on", " ", 
-     "algebra", " ", "1", " ", "and", " ", "2"}], ",", " ", 
-    RowBox[{
-    "to", " ", "add", " ", "calc", " ", "would", " ", "need", " ", "an", " ", 
-     "extra", " ", "data", " ", "set"}]}], "*)"}], 
-  "\[IndentingNewLine]"}]], "Input",
- CellChangeTimes->{{3.771173538075275*^9, 3.771173570911613*^9}},
- CellLabel->"In[65]:=",ExpressionUUID->"410c0451-9b50-4726-838d-507ca1520553"],
-
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"correctAnswer", "[", 
-   RowBox[{"answer_", ",", " ", "correct_"}], "]"}], ":=", 
-  RowBox[{"MatchQ", "[", 
-   RowBox[{"answer", ",", " ", "correct"}], "]"}]}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"setLevel", "[", 
-   RowBox[{"question_", ",", " ", "tag_"}], "]"}], ":=", 
-  RowBox[{"If", "[", 
-   RowBox[{
-    RowBox[{"UnsameQ", "[", 
-     RowBox[{"tag", ",", " ", "\"\<\>\""}], "]"}], ",", " ", "tag", ",", " ", 
-    RowBox[{"questionClassifier", "[", "question", "]"}]}], "]"}]}]}], "Input",
- CellChangeTimes->{{3.7711736593103347`*^9, 3.7711737074880314`*^9}, {
-  3.771173871939076*^9, 3.771173874042588*^9}, {3.7712336619774513`*^9, 
-  3.7712338084910626`*^9}, {3.771233866828873*^9, 3.771233956929276*^9}, {
-  3.771347249512906*^9, 3.7713472771428676`*^9}},
- CellLabel->"In[54]:=",ExpressionUUID->"25eb0e56-d2cb-4e3c-833f-4d9862c278b6"],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"tagAssociations", ":=", 
-   RowBox[{"<|", 
-    RowBox[{
-     RowBox[{"\"\<algebra 1 theorems\>\"", "\[Rule]", " ", 
-      RowBox[{"{", 
-       RowBox[{
-       "commutativeAddition", ",", " ", "commutativemulti", ",", " ", 
-        "distributive", ",", " ", "associative", ",", " ", "associativemulti",
-         ",", " ", "equivilentFraction"}], "}"}]}], ",", " ", 
-     RowBox[{"\"\<algebra 2 theorems\>\"", "\[Rule]", " ", 
-      RowBox[{"{", 
-       RowBox[{
-       "isMatrix", ",", " ", "sin2", ",", " ", "cos2", ",", " ", "cos2alt1", 
-        ",", " ", "cos2alt2", ",", " ", "eitherPointfirst", ",", " ", 
-        "isPoint", ",", " ", "commutativeAddition", ",", " ", 
-        "commutativemulti", ",", " ", "distributive", ",", " ", "associative",
-         ",", " ", "associativemulti", ",", " ", "equivilentFraction"}], 
-       "}"}]}]}], "|>"}]}], "\[IndentingNewLine]"}]], "Input",
- CellChangeTimes->{{3.771234300395832*^9, 3.7712343261973624`*^9}, {
-   3.7712349783800793`*^9, 3.7712350377545757`*^9}, {3.7713246875147505`*^9, 
-   3.7713247160686665`*^9}, {3.771324750887334*^9, 3.7713248208968925`*^9}, 
-   3.7713469260459433`*^9, {3.771346958148202*^9, 3.771346967732873*^9}, {
-   3.7713473319306927`*^9, 3.7713473600851464`*^9}},
- CellLabel->"In[56]:=",ExpressionUUID->"66e41b82-96ad-4d5a-885b-44a2b04ac964"],
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.771173538075275*^9, 3.771173570911613*^9}, {
+  3.7716182753353825`*^9, 
+  3.7716182800224133`*^9}},ExpressionUUID->"410c0451-9b50-4726-838d-\
+507ca1520553"],
 
 Cell[BoxData[""], "Input",
  CellChangeTimes->{{3.7713403299709625`*^9, 3.7713403451194363`*^9}, {
-  3.7713472317837057`*^9, 3.771347238884147*^9}},
- CellLabel->"In[69]:=",ExpressionUUID->"266398ea-08f6-44ac-9796-54783f49bc3b"],
+   3.7713472317837057`*^9, 3.771347238884147*^9}, 
+   3.771618285814513*^9},ExpressionUUID->"266398ea-08f6-44ac-9796-\
+54783f49bc3b"],
 
 Cell[BoxData["polydiffurl"], "Input",
  CellChangeTimes->{{3.7712383301870437`*^9, 3.7712383336152873`*^9}},
@@ -1366,21 +1467,21 @@ Cell[BoxData[
   "In[101]:=",ExpressionUUID->"dd10fb84-5fff-4fba-9083-85431c8f6cfd"],
 
 Cell[BoxData[
- RowBox[{"(*", 
-  RowBox[{
-  "Need", " ", "to", " ", "create", " ", "the", " ", "Gui", " ", "using", " ",
-    "Dynmaic", " ", "Module"}], "*)"}]], "Input",
- CellChangeTimes->{{3.7713536464785004`*^9, 3.771353664571615*^9}},
- CellLabel->
-  "In[102]:=",ExpressionUUID->"504bd9cc-d90b-476c-be9f-d82b78e41ae7"],
-
-Cell[BoxData[
  RowBox[{"DumpSave", "[", 
-  RowBox[{"\"\<final_progect.mx\>\"", ",", " ", "arrays"}], "]"}]], "Input",
+  RowBox[{"\"\<final_project_trainingdata.mx\>\"", ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"calcQs", ",", " ", "algebra1Questions", ",", " ", "algebra2Qs"}],
+     "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7713536464785004`*^9, 3.771353664571615*^9}, {
+  3.7716183123983607`*^9, 3.7716183164072075`*^9}, {3.771630269058918*^9, 
+  3.771630307309473*^9}},ExpressionUUID->"504bd9cc-d90b-476c-be9f-\
+d82b78e41ae7"],
+
+Cell[BoxData[""], "Input",
  CellChangeTimes->{{3.7713616243121543`*^9, 3.7713616393978906`*^9}, {
-  3.7713616722922544`*^9, 3.7713616744753747`*^9}},
- CellLabel->
-  "In[103]:=",ExpressionUUID->"a0308418-3e41-4b79-b3be-d01011649c9a"],
+  3.7713616722922544`*^9, 3.7713616744753747`*^9}, {3.77161831969862*^9, 
+  3.771618323545369*^9}},ExpressionUUID->"a0308418-3e41-4b79-b3be-\
+d01011649c9a"],
 
 Cell[BoxData[
  RowBox[{
@@ -1486,405 +1587,508 @@ Cell[BoxData[{
 5d2f9d3cff05"],
 
 Cell[BoxData[
- RowBox[{"Module", "[", 
-  RowBox[{
-   RowBox[{"{", 
-    RowBox[{"temp1", ",", " ", "temp2", ",", " ", "temp3"}], "}"}], 
-   ","}]}]], "Input",
- CellChangeTimes->{{3.7716138199803567`*^9, 
-  3.7716138419298873`*^9}},ExpressionUUID->"8c8e2431-52ff-4e89-b5a1-\
+ RowBox[{
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"temp1", ",", " ", "temp2", ",", " ", "temp3"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"For", " ", "[", 
+      RowBox[{
+       RowBox[{"i", "=", "1"}], ",", " ", 
+       RowBox[{"i", "\[LessEqual]", " ", "10"}], ",", " ", 
+       RowBox[{"i", "++"}], ",", " ", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"temp1", "=", " ", 
+         RowBox[{"callAPI", "[", 
+          RowBox[{
+          "\"\<BasicIntegrate\>\"", ",", " ", "1", ",", 
+           "\"\<Intermediate\>\"", ",", " ", "True"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"calcQsq", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"calcQsq", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"calcQsA", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"caclQsA", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"temp2", "=", 
+         RowBox[{"callAPI", "[", 
+          RowBox[{
+          "\"\<IntegerAddition\>\"", ",", " ", "1", ",", " ", 
+           "\"\<Intermediate\>\"", ",", " ", "True"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"algebra1Qsq", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"algebra1Qsq", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"algebra1QsA", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"algebra1QsA", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"temp3", "=", " ", 
+         RowBox[{"callAPI", "[", 
+          RowBox[{
+          "\"\<RationalExpressions\>\"", ",", " ", "1", ",", " ", 
+           "\"\<Intermidiate\>\"", ",", " ", "False"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"algebra2Qsq", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"algebra2Qsq", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"algebra2QsA", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"algebra2QsA", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"temp1", "=", " ", 
+         RowBox[{"callAPI", "[", 
+          RowBox[{
+          "\"\<IntegratebyParts\>\"", ",", " ", "1", ",", 
+           "\"\<Intermediate\>\"", ",", " ", "True"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"calcQsq", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"calcQsq", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"calcQsA", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"caclQsA", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"temp2", "=", 
+         RowBox[{"callAPI", "[", 
+          RowBox[{
+          "\"\<IntegerGCD\>\"", ",", " ", "1", ",", " ", 
+           "\"\<Intermediate\>\"", ",", " ", "True"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"algebra1Qsq", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"algebra1Qsq", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"algebra1QsA", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"algebra1QsA", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"temp3", "=", " ", 
+         RowBox[{"callAPI", "[", 
+          RowBox[{
+          "\"\<FactorPolynomial\>\"", ",", " ", "1", ",", " ", 
+           "\"\<Beginner\>\"", ",", " ", "False"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"algebra1Qsq", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"algebra1Qsq", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"algebra1QsA", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"algebra1QsA", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"temp1", "=", " ", 
+         RowBox[{"callAPI", "[", 
+          RowBox[{
+          "\"\<IntegrateUSub\>\"", ",", " ", "1", ",", "\"\<Intermediate\>\"",
+            ",", " ", "True"}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"calcQsq", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"calcQsq", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"calcQsA", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"caclQsA", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"temp2", "=", 
+         RowBox[{"callAPI", "[", 
+          RowBox[{
+          "\"\<RationalSimplify\>\"", ",", " ", "1", ",", " ", 
+           "\"\<Intermediate\>\"", ",", " ", "True"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"algebra1Qsq", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"algebra1Qsq", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"algebra1QsA", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"algebra1QsA", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"temp3", "=", " ", 
+         RowBox[{"callAPI", "[", 
+          RowBox[{
+          "\"\<AddSingleRadicals\>\"", ",", " ", "1", ",", " ", 
+           "\"\<Intermidiate\>\"", ",", " ", "False"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"algebra2Qsq", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"algebra2Qsq", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"algebra2QsA", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"algebra2QsA", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"temp1", "=", " ", 
+         RowBox[{"callAPI", "[", 
+          RowBox[{
+          "\"\<FunctionsDerivativeChainRule\>\"", ",", " ", "1", ",", 
+           "\"\<Intermediate\>\"", ",", " ", "True"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"calcQsq", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"calcQsq", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"calcQsA", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"caclQsA", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"temp2", "=", 
+         RowBox[{"callAPI", "[", 
+          RowBox[{
+          "\"\<FractionMultiplication\>\"", ",", " ", "1", ",", " ", 
+           "\"\<Intermediate\>\"", ",", " ", "True"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"algebra1Qsq", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"algebra1Qsq", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"algebra1QsA", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"algebra1QsA", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"temp3", "=", " ", 
+         RowBox[{"callAPI", "[", 
+          RowBox[{
+          "\"\<RadicalMultiplication\>\"", ",", " ", "1", ",", " ", 
+           "\"\<Intermidiate\>\"", ",", " ", "False"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"algebra2Qsq", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"algebra2Qsq", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"algebra2QsA", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"algebra2QsA", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"temp1", "=", " ", 
+         RowBox[{"callAPI", "[", 
+          RowBox[{
+          "\"\<FunctionsDerivativePower\>\"", ",", " ", "1", ",", 
+           "\"\<Intermediate\>\"", ",", " ", "True"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"calcQsq", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"calcQsq", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"calcQsA", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"caclQsA", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"temp2", "=", 
+         RowBox[{"callAPI", "[", 
+          RowBox[{
+          "\"\<FractionAdditionUncommonDenominator\>\"", ",", " ", "1", ",", 
+           " ", "\"\<Intermediate\>\"", ",", " ", "True"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"algebra1Qsq", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"algebra1Qsq", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"algebra1QsA", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"algebra1QsA", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"temp3", "=", " ", 
+         RowBox[{"callAPI", "[", 
+          RowBox[{
+          "\"\<ComplexDivision\>\"", ",", " ", "1", ",", " ", 
+           "\"\<Intermidiate\>\"", ",", " ", "False"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"algebra2Qsq", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"algebra2Qsq", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"algebra2QsA", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"algebra2QsA", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"temp1", "=", " ", 
+         RowBox[{"callAPI", "[", 
+          RowBox[{
+          "\"\<FunctionsDerivativeProductRule\>\"", ",", " ", "1", ",", 
+           "\"\<Intermediate\>\"", ",", " ", "True"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"calcQsq", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"calcQsq", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"calcQsA", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"caclQsA", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"temp2", "=", 
+         RowBox[{"callAPI", "[", 
+          RowBox[{
+          "\"\<OrderofOpperations\>\"", ",", " ", "1", ",", " ", 
+           "\"\<Intermediate\>\"", ",", " ", "True"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"algebra1Qsq", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"algebra1Qsq", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"algebra1QsA", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"algebra1QsA", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"temp3", "=", " ", 
+         RowBox[{"callAPI", "[", 
+          RowBox[{
+          "\"\<QuadraticEquationComplexSolution\>\"", ",", " ", "1", ",", 
+           " ", "\"\<Intermidiate\>\"", ",", " ", "False"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"algebra2Qsq", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"algebra2Qsq", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"algebra2QsA", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"algebra2QsA", ",", " ", 
+           RowBox[{
+            RowBox[{
+            "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";"}]}], 
+      "\[IndentingNewLine]", "]"}], ";"}]}], "]"}], " "}]], "Input",
+ CellChangeTimes->{{3.7716138199803567`*^9, 3.7716138419298873`*^9}, {
+   3.771618367753741*^9, 3.7716183691177263`*^9}, 
+   3.7716303312941737`*^9},ExpressionUUID->"8c8e2431-52ff-4e89-b5a1-\
 6f79f7eed696"],
 
-Cell[BoxData[
+Cell[BoxData[{
  RowBox[{
-  RowBox[{
-   RowBox[{"For", " ", "[", 
+  RowBox[{"problems", "=", 
+   RowBox[{"<|", 
     RowBox[{
-     RowBox[{"i", "=", "1"}], ",", " ", 
-     RowBox[{"i", "\[LessEqual]", " ", "100"}], ",", " ", 
-     RowBox[{"i", "++"}], ",", " ", "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"temp1", "=", " ", 
-       RowBox[{"callAPI", "[", 
-        RowBox[{
-        "\"\<BasicIntegrate\>\"", ",", " ", "1", ",", "\"\<Intermediate\>\"", 
-         ",", " ", "True"}], "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"calcQsq", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"calcQsq", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"calcQsA", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"caclQsA", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"temp2", "=", 
-       RowBox[{"callAPI", "[", 
-        RowBox[{
-        "\"\<IntegerAddition\>\"", ",", " ", "1", ",", " ", 
-         "\"\<Intermediate\>\"", ",", " ", "True"}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"algebra1Qsq", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra1Qsq", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"algebra1QsA", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra1QsA", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"temp3", "=", " ", 
-       RowBox[{"callAPI", "[", 
-        RowBox[{
-        "\"\<RationalExpressions\>\"", ",", " ", "1", ",", " ", 
-         "\"\<Intermidiate\>\"", ",", " ", "False"}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"algebra2Qsq", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra2Qsq", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"algebra2QsA", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra2QsA", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"temp1", "=", " ", 
-       RowBox[{"callAPI", "[", 
-        RowBox[{
-        "\"\<IntegratebyParts\>\"", ",", " ", "1", ",", 
-         "\"\<Intermediate\>\"", ",", " ", "True"}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"calcQsq", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"calcQsq", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"calcQsA", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"caclQsA", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"temp2", "=", 
-       RowBox[{"callAPI", "[", 
-        RowBox[{
-        "\"\<IntegerGCD\>\"", ",", " ", "1", ",", " ", "\"\<Intermediate\>\"",
-          ",", " ", "True"}], "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"algebra1Qsq", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra1Qsq", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"algebra1QsA", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra1QsA", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"temp3", "=", " ", 
-       RowBox[{"callAPI", "[", 
-        RowBox[{
-        "\"\<FactorPolynomial\>\"", ",", " ", "1", ",", " ", 
-         "\"\<Beginner\>\"", ",", " ", "False"}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"algebra1Qsq", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra1Qsq", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"algebra1QsA", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra1QsA", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"temp1", "=", " ", 
-       RowBox[{"callAPI", "[", 
-        RowBox[{
-        "\"\<IntegrateUSub\>\"", ",", " ", "1", ",", "\"\<Intermediate\>\"", 
-         ",", " ", "True"}], "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"calcQsq", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"calcQsq", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"calcQsA", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"caclQsA", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"temp2", "=", 
-       RowBox[{"callAPI", "[", 
-        RowBox[{
-        "\"\<RationalSimplify\>\"", ",", " ", "1", ",", " ", 
-         "\"\<Intermediate\>\"", ",", " ", "True"}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"algebra1Qsq", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra1Qsq", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"algebra1QsA", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra1QsA", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"temp3", "=", " ", 
-       RowBox[{"callAPI", "[", 
-        RowBox[{
-        "\"\<AddSingleRadicals\>\"", ",", " ", "1", ",", " ", 
-         "\"\<Intermidiate\>\"", ",", " ", "False"}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"algebra2Qsq", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra2Qsq", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"algebra2QsA", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra2QsA", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"temp1", "=", " ", 
-       RowBox[{"callAPI", "[", 
-        RowBox[{
-        "\"\<FunctionsDerivativeChainRule\>\"", ",", " ", "1", ",", 
-         "\"\<Intermediate\>\"", ",", " ", "True"}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"calcQsq", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"calcQsq", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"calcQsA", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"caclQsA", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"temp2", "=", 
-       RowBox[{"callAPI", "[", 
-        RowBox[{
-        "\"\<FractionMultiplication\>\"", ",", " ", "1", ",", " ", 
-         "\"\<Intermediate\>\"", ",", " ", "True"}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"algebra1Qsq", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra1Qsq", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"algebra1QsA", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra1QsA", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"temp3", "=", " ", 
-       RowBox[{"callAPI", "[", 
-        RowBox[{
-        "\"\<RadicalMultiplication\>\"", ",", " ", "1", ",", " ", 
-         "\"\<Intermidiate\>\"", ",", " ", "False"}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"algebra2Qsq", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra2Qsq", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"algebra2QsA", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra2QsA", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"temp1", "=", " ", 
-       RowBox[{"callAPI", "[", 
-        RowBox[{
-        "\"\<FunctionsDerivativePower\>\"", ",", " ", "1", ",", 
-         "\"\<Intermediate\>\"", ",", " ", "True"}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"calcQsq", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"calcQsq", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"calcQsA", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"caclQsA", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"temp2", "=", 
-       RowBox[{"callAPI", "[", 
-        RowBox[{
-        "\"\<FractionAdditionUncommonDenominator\>\"", ",", " ", "1", ",", 
-         " ", "\"\<Intermediate\>\"", ",", " ", "True"}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"algebra1Qsq", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra1Qsq", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"algebra1QsA", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra1QsA", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"temp3", "=", " ", 
-       RowBox[{"callAPI", "[", 
-        RowBox[{
-        "\"\<ComplexDivision\>\"", ",", " ", "1", ",", " ", 
-         "\"\<Intermidiate\>\"", ",", " ", "False"}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"algebra2Qsq", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra2Qsq", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"algebra2QsA", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra2QsA", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"temp1", "=", " ", 
-       RowBox[{"callAPI", "[", 
-        RowBox[{
-        "\"\<FunctionsDerivativeProductRule\>\"", ",", " ", "1", ",", 
-         "\"\<Intermediate\>\"", ",", " ", "True"}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"calcQsq", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"calcQsq", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"calcQsA", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"caclQsA", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"temp2", "=", 
-       RowBox[{"callAPI", "[", 
-        RowBox[{
-        "\"\<OrderofOpperations\>\"", ",", " ", "1", ",", " ", 
-         "\"\<Intermediate\>\"", ",", " ", "True"}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"algebra1Qsq", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra1Qsq", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"algebra1QsA", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra1QsA", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"temp3", "=", " ", 
-       RowBox[{"callAPI", "[", 
-        RowBox[{
-        "\"\<QuadraticEquationComplexSolution\>\"", ",", " ", "1", ",", " ", 
-         "\"\<Intermidiate\>\"", ",", " ", "False"}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"algebra2Qsq", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra2Qsq", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Question\>\"", "]"}]}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"algebra2QsA", "=", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"algebra2QsA", ",", " ", 
-         RowBox[{
-          RowBox[{
-          "temp2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          "[", "\"\<Answer\>\"", "]"}]}], "]"}]}], ";"}]}], 
-    "\[IndentingNewLine]", "]"}], ";"}], " "}]], "Input",
+     RowBox[{"\"\<Algebra 1\>\"", "\[Rule]", " ", "algebra1Qsq"}], ",", " ", 
+     RowBox[{"\"\<Algebra 2\>\"", "\[Rule]", " ", "algebra2Qsq"}], ",", " ", 
+     RowBox[{"\"\<Calculus\>\"", "\[Rule]", " ", "calcQsq"}]}], "|>"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"answers", "=", 
+   RowBox[{"<|", 
+    RowBox[{
+     RowBox[{"\"\<Algebra 1\>\"", "\[Rule]", " ", "algebra1QsA"}], ",", " ", 
+     RowBox[{"\"\<Algebra 2\>\"", "\[Rule]", " ", "algebra2QsA"}], ",", " ", 
+     RowBox[{"\"\<Calculus\>\"", "\[Rule]", " ", "calcQsA"}]}], "|>"}]}], 
+  ";"}]}], "Input",
  CellChangeTimes->{
   3.7716137302168846`*^9, {3.7716138154360576`*^9, 3.7716138156000643`*^9}, {
-   3.7716138508785286`*^9, 
-   3.771614523849601*^9}},ExpressionUUID->"f3db1e26-1581-406e-a061-\
-507b95ca5f3c"]
+   3.7716138508785286`*^9, 3.771614523849601*^9}, {3.7716183497212925`*^9, 
+   3.7716183657262993`*^9}, {3.7716198591790905`*^9, 
+   3.7716199878213744`*^9}},ExpressionUUID->"f3db1e26-1581-406e-a061-\
+507b95ca5f3c"],
+
+Cell[BoxData[
+ RowBox[{"DynamicModule", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "question", ",", " ", "type", ",", " ", "answer", ",", " ", 
+     "correctanswer", ",", " ", "pnumber", ",", " ", "f"}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"pnumber", "=", 
+     RowBox[{"RandomInteger", "[", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", 
+        RowBox[{"Length", "[", "algebra2Qsq", "]"}]}], "}"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"FormFunction", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Student Quiz\>\"", ",", " ", "\[IndentingNewLine]", "\t\t\t", 
+        RowBox[{"\"\<Type of Problem\>\"", "\[Rule]", " ", 
+         RowBox[{
+          RowBox[{"Restricted", "[", 
+           RowBox[{"\"\<String\>\"", ",", " ", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Algebra 1\>\"", ",", " ", "\"\<Algebra 2 and Trig\>\"", ",",
+               " ", "\"\<Calculus\>\""}], "}"}]}], "]"}], "\[Rule]", " ", 
+          "\"\<Algebra 1\>\""}]}], ",", " ", 
+        RowBox[{
+         RowBox[{"problems", "[", 
+          RowBox[{"#", "[", "\"\<Type of Problem\>\"", "]"}], "]"}], 
+         "\[LeftDoubleBracket]", "pnumber", "\[RightDoubleBracket]"}], ",", 
+        " ", "\[IndentingNewLine]", 
+        RowBox[{"\"\<Answer\>\"", "\[Rule]", " ", "\"\<String\>\""}], ",", 
+        " ", "\[IndentingNewLine]", 
+        RowBox[{"Button", "[", 
+         RowBox[{
+         "\"\<New Question\>\"", ",", " ", "\[IndentingNewLine]", "\t", 
+          RowBox[{"pnumber", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", 
+              RowBox[{"Length", "[", "algebra2Qsq", "]"}]}], "}"}], "]"}]}]}],
+          "\[IndentingNewLine]", "\t", "]"}]}], "}"}], ",", 
+      "\[IndentingNewLine]", "\t ", "f"}], "]"}], ";"}]}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Need", " ", "to", " ", "add", " ", "in", " ", "the", " ", "data", " ", 
+    "from", " ", "the", " ", "package", " ", "to", " ", "automatically", " ", 
+    "update"}], "*)"}], "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.7716193609957495`*^9, 3.771619628475986*^9}, {
+  3.7716196632396436`*^9, 3.7716197316361494`*^9}, {3.771619864695011*^9, 
+  3.771619865328465*^9}},ExpressionUUID->"7df9818f-7970-442a-ad5c-\
+7bac674a6ed3"],
+
+Cell[BoxData[
+ RowBox[{"DumpSave", "[", 
+  RowBox[{"\"\<final_project_question_repos.mx\>\"", ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"problems", ",", " ", "answers"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7716303477787666`*^9, 
+  3.771630391808444*^9}},ExpressionUUID->"7ba0b456-2053-4106-ac46-\
+7ae287c61fb0"]
 },
 WindowSize->{767, 772},
 WindowMargins->{{Automatic, -7}, {Automatic, 0}},
@@ -1910,67 +2114,87 @@ Cell[4345, 99, 380, 9, 28, "Input",ExpressionUUID->"e9cacc85-48d6-4d31-ab94-5d75
 Cell[4728, 110, 588, 12, 32, "Input",ExpressionUUID->"7421c56f-d5af-4df6-8034-ece5d5384058"],
 Cell[5319, 124, 1629, 26, 200, "Input",ExpressionUUID->"e86a1b17-fc00-41b9-8941-ba78eb4e043a"],
 Cell[6951, 152, 580, 12, 67, "Input",ExpressionUUID->"5d0e39cd-11b1-4595-aeb9-0fdbd16ece9d"],
-Cell[7534, 166, 3650, 58, 493, "Input",ExpressionUUID->"82a03de3-0e12-4c59-bb42-528749c4d97e"],
-Cell[11187, 226, 2616, 45, 381, "Input",ExpressionUUID->"a376c96d-0f17-43df-a243-6359725f0331"],
-Cell[13806, 273, 3380, 57, 419, "Input",ExpressionUUID->"222a3863-676a-4a91-8ed5-bf086815e19f"],
-Cell[17189, 332, 2705, 44, 261, "Input",ExpressionUUID->"82bd9a2c-9f48-402b-90c8-7cb9d90eee9e"],
-Cell[19897, 378, 447, 10, 28, "Input",ExpressionUUID->"9c835307-f52b-4c42-8b0e-c58da6c73503"],
-Cell[20347, 390, 2087, 42, 297, "Input",ExpressionUUID->"ecc237eb-c7c5-4f4c-802d-a347edb29d8d"],
-Cell[22437, 434, 302, 5, 28, "Input",ExpressionUUID->"27ab713a-2eff-460c-a212-f7c044730315"],
-Cell[22742, 441, 8854, 209, 846, "Input",ExpressionUUID->"d115907f-0489-4c18-846c-70d8b91076f7"],
-Cell[31599, 652, 217, 3, 28, "Input",ExpressionUUID->"49fb64bd-c780-4770-9119-692d1f0ed3a7"],
-Cell[31819, 657, 739, 17, 86, "Input",ExpressionUUID->"30fa7177-112c-4b2f-8d75-ad044976cb11"],
-Cell[32561, 676, 263, 4, 28, "Input",ExpressionUUID->"f6d4d22f-6a89-4e27-873a-76ae645cd594"],
-Cell[32827, 682, 211, 3, 28, "Input",ExpressionUUID->"2a2b975d-a82b-4ee1-843e-495e2667752a"],
-Cell[33041, 687, 1819, 44, 143, "Input",ExpressionUUID->"c4b1c5fb-0acb-42ec-a4e7-a8e2ff7ecf61"],
-Cell[34863, 733, 213, 3, 28, "Input",ExpressionUUID->"7c6139b6-1f00-414f-bd41-e6629a3d316d"],
-Cell[35079, 738, 4559, 67, 105, "Input",ExpressionUUID->"4a6c27e2-f698-4942-9e0f-b4b815b04b6b"],
-Cell[39641, 807, 281, 5, 28, "Input",ExpressionUUID->"60c92252-fe5c-46b2-af32-5525ecaa013f"],
-Cell[39925, 814, 3279, 78, 181, "Input",ExpressionUUID->"5652c7f2-04fa-4c09-af67-9f4f252f0675"],
-Cell[43207, 894, 1639, 37, 67, "Input",ExpressionUUID->"1571ed99-a23c-4960-8b79-e86ea7951882"],
-Cell[44849, 933, 1333, 32, 86, "Input",ExpressionUUID->"a58ec1c8-41a6-4b44-8b8b-48c35008ce34"],
-Cell[46185, 967, 1690, 44, 143, "Input",ExpressionUUID->"5f8ee03a-5a6c-4fc8-b268-7b1aba34af42"],
-Cell[47878, 1013, 173, 2, 28, "Input",ExpressionUUID->"075af11f-332b-44ef-b6ed-18482c0a4326"],
-Cell[48054, 1017, 2385, 45, 243, "Input",ExpressionUUID->"1927aef9-607f-4a49-a59a-07062997209f"],
-Cell[50442, 1064, 393, 6, 67, "Input",ExpressionUUID->"9a0f02f8-0dcb-4fa0-a434-3dab92e35e3d"],
-Cell[50838, 1072, 526, 12, 48, "Input",ExpressionUUID->"410c0451-9b50-4726-838d-507ca1520553"],
-Cell[51367, 1086, 886, 18, 48, "Input",ExpressionUUID->"25eb0e56-d2cb-4e3c-833f-4d9862c278b6"],
-Cell[52256, 1106, 1354, 25, 143, "Input",ExpressionUUID->"66e41b82-96ad-4d5a-885b-44a2b04ac964"],
-Cell[53613, 1133, 226, 3, 28, "Input",ExpressionUUID->"266398ea-08f6-44ac-9796-54783f49bc3b"],
-Cell[53842, 1138, 186, 2, 28, "Input",ExpressionUUID->"8a2df4ce-9c44-47a1-bde1-ff1c4d183497"],
-Cell[54031, 1142, 284, 5, 28, "Input",ExpressionUUID->"c65c0dd0-81b7-4955-8c52-e9b2bed36fa7"],
-Cell[54318, 1149, 280, 5, 28, "Input",ExpressionUUID->"9bdfa35f-8e9a-4070-8882-15d68d851348"],
-Cell[54601, 1156, 278, 5, 28, "Input",ExpressionUUID->"3917c014-4521-4d91-8543-b5d914f1cc18"],
-Cell[54882, 1163, 329, 6, 28, "Input",ExpressionUUID->"467d54c9-fca1-43d0-97cf-f2d46c7284b1"],
-Cell[55214, 1171, 388, 7, 28, "Input",ExpressionUUID->"f8bb0306-7bc5-4dc8-9d8e-1e8f7ab2e834"],
-Cell[55605, 1180, 467, 9, 48, "Input",ExpressionUUID->"5e485a53-0caa-4994-a3a3-d3d69cde3b52"],
-Cell[56075, 1191, 341, 6, 28, "Input",ExpressionUUID->"9db4f7e5-a195-45b4-868f-2359598971c3"],
-Cell[56419, 1199, 1798, 36, 105, "Input",ExpressionUUID->"87f57da9-00aa-4b46-ab12-6608300fc354"],
-Cell[58220, 1237, 517, 11, 48, "Input",ExpressionUUID->"855d2f73-4d92-458c-92f8-4997982eeb95"],
-Cell[58740, 1250, 260, 4, 28, "Input",ExpressionUUID->"c5d465ea-1c08-42a8-9ef9-344addb687c8"],
-Cell[59003, 1256, 245, 4, 28, "Input",ExpressionUUID->"fbec490a-a8cf-4334-a943-dcc80a67bcec"],
-Cell[59251, 1262, 402, 9, 48, "Input",ExpressionUUID->"53522faf-b64c-4e4b-98e4-8562af9b3595"],
-Cell[59656, 1273, 252, 4, 28, "Input",ExpressionUUID->"cb59bb07-5383-42bf-81be-5f35fcdab709"],
-Cell[59911, 1279, 463, 10, 59, "Input",ExpressionUUID->"0355aab1-cd18-479e-ba9f-08006c50833e"],
-Cell[60377, 1291, 256, 4, 28, "Input",ExpressionUUID->"d08078e9-646b-410d-b3da-7b07d3631460"],
-Cell[60636, 1297, 425, 8, 28, "Input",ExpressionUUID->"42c8cf32-1946-44b8-9562-13038f11fb94"],
-Cell[61064, 1307, 1215, 23, 28, "Input",ExpressionUUID->"0ab75f01-46a1-4e5f-adf2-7d5307d5762b"],
-Cell[62282, 1332, 590, 12, 28, "Input",ExpressionUUID->"6140b4bf-cb5c-4e9a-960e-e3b85328145c"],
-Cell[62875, 1346, 442, 11, 28, "Input",ExpressionUUID->"95b96204-eca8-4b83-b10f-34c442d68937"],
-Cell[63320, 1359, 283, 6, 28, "Input",ExpressionUUID->"dd10fb84-5fff-4fba-9083-85431c8f6cfd"],
-Cell[63606, 1367, 320, 7, 28, "Input",ExpressionUUID->"504bd9cc-d90b-476c-be9f-d82b78e41ae7"],
-Cell[63929, 1376, 323, 6, 28, "Input",ExpressionUUID->"a0308418-3e41-4b79-b3be-d01011649c9a"],
-Cell[64255, 1384, 457, 9, 28, "Input",ExpressionUUID->"c152a1f2-bf7c-435c-8fac-a14c7491d047"],
-Cell[64715, 1395, 510, 12, 28, "Input",ExpressionUUID->"ec1f01e6-0c98-4d27-a5e2-855df66a8109"],
-Cell[65228, 1409, 310, 5, 28, "Input",ExpressionUUID->"ffbb0c5a-42e1-43fa-b00e-fbd1167bcc81"],
-Cell[65541, 1416, 346, 9, 28, "Input",ExpressionUUID->"b68c28b1-390d-4e11-bf02-e99af307d723"],
-Cell[65890, 1427, 234, 4, 28, "Input",ExpressionUUID->"5894fa79-36f3-4950-a90e-e02be9581f8f"],
-Cell[66127, 1433, 529, 11, 28, "Input",ExpressionUUID->"f3690453-162f-4c6c-8828-7843d42eaa19"],
-Cell[66659, 1446, 234, 5, 28, "Input",ExpressionUUID->"00592a83-5a67-4eae-b706-9bac75f88449"],
-Cell[66896, 1453, 209, 4, 28, "Input",ExpressionUUID->"4b0d0f4c-bb21-42e3-bd4d-c901c4bea261"],
-Cell[67108, 1459, 996, 26, 143, "Input",ExpressionUUID->"7f4b6a14-683b-4f05-b6fa-5d2f9d3cff05"],
-Cell[68107, 1487, 287, 8, 28, "Input",ExpressionUUID->"8c8e2431-52ff-4e89-b5a1-6f79f7eed696"],
-Cell[68397, 1497, 15841, 389, 1074, "Input",ExpressionUUID->"f3db1e26-1581-406e-a061-507b95ca5f3c"]
+Cell[7534, 166, 3651, 58, 493, "Input",ExpressionUUID->"82a03de3-0e12-4c59-bb42-528749c4d97e"],
+Cell[11188, 226, 2616, 45, 381, "Input",ExpressionUUID->"a376c96d-0f17-43df-a243-6359725f0331"],
+Cell[13807, 273, 3380, 57, 419, "Input",ExpressionUUID->"222a3863-676a-4a91-8ed5-bf086815e19f"],
+Cell[17190, 332, 2705, 44, 261, "Input",ExpressionUUID->"82bd9a2c-9f48-402b-90c8-7cb9d90eee9e"],
+Cell[19898, 378, 447, 10, 28, "Input",ExpressionUUID->"9c835307-f52b-4c42-8b0e-c58da6c73503"],
+Cell[20348, 390, 2087, 42, 297, "Input",ExpressionUUID->"ecc237eb-c7c5-4f4c-802d-a347edb29d8d"],
+Cell[CellGroupData[{
+Cell[22460, 436, 209, 3, 28, "Input",ExpressionUUID->"63eed01c-6a50-4ee8-9af9-19e2b218d0bf"],
+Cell[22672, 441, 150, 2, 32, "Output",ExpressionUUID->"ddbe82f6-829f-49ae-bcdf-66f085fdd9e4"]
+}, Open  ]],
+Cell[22837, 446, 755, 17, 48, "Input",ExpressionUUID->"27ab713a-2eff-460c-a212-f7c044730315"],
+Cell[CellGroupData[{
+Cell[23617, 467, 222, 3, 28, "Input",ExpressionUUID->"ef8147fe-4b4b-47ba-86e7-246f71743788"],
+Cell[23842, 472, 176, 2, 32, "Output",ExpressionUUID->"8386144b-44ce-422a-9162-d6fc51db369a"]
+}, Open  ]],
+Cell[24033, 477, 460, 10, 28, "Input",ExpressionUUID->"8d37071a-2d7e-470b-a07e-86906c372724"],
+Cell[CellGroupData[{
+Cell[24518, 491, 212, 3, 28, "Input",ExpressionUUID->"a7e4b37f-6894-4419-9c9e-8fd27c9de71f"],
+Cell[24733, 496, 201, 3, 32, "Output",ExpressionUUID->"170babdb-6abb-4f36-ba6a-decfc7f44009"]
+}, Open  ]],
+Cell[24949, 502, 395, 9, 28, "Input",ExpressionUUID->"fff664df-37dc-45c5-a151-5513a5ce7da1"],
+Cell[25347, 513, 407, 9, 48, "Input",ExpressionUUID->"8e7aa741-c0b6-4ceb-8805-44060c400998"],
+Cell[25757, 524, 2311, 44, 105, "Input",ExpressionUUID->"d115907f-0489-4c18-846c-70d8b91076f7"],
+Cell[28071, 570, 2235, 43, 105, "Input",ExpressionUUID->"fe42750d-28a2-4441-b225-77a6ecd38177"],
+Cell[30309, 615, 2297, 44, 105, "Input",ExpressionUUID->"fa71334c-2c4d-4177-b391-a16c5a369790"],
+Cell[32609, 661, 2260, 44, 105, "Input",ExpressionUUID->"c4da6db5-a747-4d48-9c3b-868160004192"],
+Cell[34872, 707, 2339, 45, 124, "Input",ExpressionUUID->"1bee0ad8-fc07-49ea-993e-72d476bc7d91"],
+Cell[37214, 754, 3107, 63, 162, "Input",ExpressionUUID->"a1037d7e-60ba-47e7-8fa3-372684ab6712"],
+Cell[40324, 819, 217, 3, 28, "Input",ExpressionUUID->"49fb64bd-c780-4770-9119-692d1f0ed3a7"],
+Cell[40544, 824, 739, 17, 86, "Input",ExpressionUUID->"30fa7177-112c-4b2f-8d75-ad044976cb11"],
+Cell[41286, 843, 263, 4, 28, "Input",ExpressionUUID->"f6d4d22f-6a89-4e27-873a-76ae645cd594"],
+Cell[41552, 849, 211, 3, 28, "Input",ExpressionUUID->"2a2b975d-a82b-4ee1-843e-495e2667752a"],
+Cell[41766, 854, 1604, 36, 143, "Input",ExpressionUUID->"c4b1c5fb-0acb-42ec-a4e7-a8e2ff7ecf61"],
+Cell[43373, 892, 305, 6, 48, "Input",ExpressionUUID->"7c6139b6-1f00-414f-bd41-e6629a3d316d"],
+Cell[43681, 900, 4559, 67, 105, "Input",ExpressionUUID->"4a6c27e2-f698-4942-9e0f-b4b815b04b6b"],
+Cell[48243, 969, 281, 5, 28, "Input",ExpressionUUID->"60c92252-fe5c-46b2-af32-5525ecaa013f"],
+Cell[48527, 976, 3279, 78, 181, "Input",ExpressionUUID->"5652c7f2-04fa-4c09-af67-9f4f252f0675"],
+Cell[51809, 1056, 1639, 37, 67, "Input",ExpressionUUID->"1571ed99-a23c-4960-8b79-e86ea7951882"],
+Cell[53451, 1095, 1333, 32, 86, "Input",ExpressionUUID->"a58ec1c8-41a6-4b44-8b8b-48c35008ce34"],
+Cell[54787, 1129, 1690, 44, 143, "Input",ExpressionUUID->"5f8ee03a-5a6c-4fc8-b268-7b1aba34af42"],
+Cell[56480, 1175, 179, 3, 28, "Input",ExpressionUUID->"075af11f-332b-44ef-b6ed-18482c0a4326"],
+Cell[56662, 1180, 2091, 37, 186, "Input",ExpressionUUID->"1927aef9-607f-4a49-a59a-07062997209f"],
+Cell[58756, 1219, 393, 6, 67, "Input",ExpressionUUID->"9a0f02f8-0dcb-4fa0-a434-3dab92e35e3d"],
+Cell[59152, 1227, 205, 4, 28, "Input",ExpressionUUID->"410c0451-9b50-4726-838d-507ca1520553"],
+Cell[59360, 1233, 231, 4, 28, "Input",ExpressionUUID->"266398ea-08f6-44ac-9796-54783f49bc3b"],
+Cell[59594, 1239, 186, 2, 28, "Input",ExpressionUUID->"8a2df4ce-9c44-47a1-bde1-ff1c4d183497"],
+Cell[59783, 1243, 284, 5, 28, "Input",ExpressionUUID->"c65c0dd0-81b7-4955-8c52-e9b2bed36fa7"],
+Cell[60070, 1250, 280, 5, 28, "Input",ExpressionUUID->"9bdfa35f-8e9a-4070-8882-15d68d851348"],
+Cell[60353, 1257, 278, 5, 28, "Input",ExpressionUUID->"3917c014-4521-4d91-8543-b5d914f1cc18"],
+Cell[60634, 1264, 329, 6, 28, "Input",ExpressionUUID->"467d54c9-fca1-43d0-97cf-f2d46c7284b1"],
+Cell[60966, 1272, 388, 7, 28, "Input",ExpressionUUID->"f8bb0306-7bc5-4dc8-9d8e-1e8f7ab2e834"],
+Cell[61357, 1281, 467, 9, 48, "Input",ExpressionUUID->"5e485a53-0caa-4994-a3a3-d3d69cde3b52"],
+Cell[61827, 1292, 341, 6, 28, "Input",ExpressionUUID->"9db4f7e5-a195-45b4-868f-2359598971c3"],
+Cell[62171, 1300, 1798, 36, 105, "Input",ExpressionUUID->"87f57da9-00aa-4b46-ab12-6608300fc354"],
+Cell[63972, 1338, 517, 11, 48, "Input",ExpressionUUID->"855d2f73-4d92-458c-92f8-4997982eeb95"],
+Cell[64492, 1351, 260, 4, 28, "Input",ExpressionUUID->"c5d465ea-1c08-42a8-9ef9-344addb687c8"],
+Cell[64755, 1357, 245, 4, 28, "Input",ExpressionUUID->"fbec490a-a8cf-4334-a943-dcc80a67bcec"],
+Cell[65003, 1363, 402, 9, 48, "Input",ExpressionUUID->"53522faf-b64c-4e4b-98e4-8562af9b3595"],
+Cell[65408, 1374, 252, 4, 28, "Input",ExpressionUUID->"cb59bb07-5383-42bf-81be-5f35fcdab709"],
+Cell[65663, 1380, 463, 10, 59, "Input",ExpressionUUID->"0355aab1-cd18-479e-ba9f-08006c50833e"],
+Cell[66129, 1392, 256, 4, 28, "Input",ExpressionUUID->"d08078e9-646b-410d-b3da-7b07d3631460"],
+Cell[66388, 1398, 425, 8, 28, "Input",ExpressionUUID->"42c8cf32-1946-44b8-9562-13038f11fb94"],
+Cell[66816, 1408, 1215, 23, 28, "Input",ExpressionUUID->"0ab75f01-46a1-4e5f-adf2-7d5307d5762b"],
+Cell[68034, 1433, 590, 12, 28, "Input",ExpressionUUID->"6140b4bf-cb5c-4e9a-960e-e3b85328145c"],
+Cell[68627, 1447, 442, 11, 28, "Input",ExpressionUUID->"95b96204-eca8-4b83-b10f-34c442d68937"],
+Cell[69072, 1460, 283, 6, 28, "Input",ExpressionUUID->"dd10fb84-5fff-4fba-9083-85431c8f6cfd"],
+Cell[69358, 1468, 456, 9, 28, "Input",ExpressionUUID->"504bd9cc-d90b-476c-be9f-d82b78e41ae7"],
+Cell[69817, 1479, 254, 4, 28, "Input",ExpressionUUID->"a0308418-3e41-4b79-b3be-d01011649c9a"],
+Cell[70074, 1485, 457, 9, 28, "Input",ExpressionUUID->"c152a1f2-bf7c-435c-8fac-a14c7491d047"],
+Cell[70534, 1496, 510, 12, 28, "Input",ExpressionUUID->"ec1f01e6-0c98-4d27-a5e2-855df66a8109"],
+Cell[71047, 1510, 310, 5, 28, "Input",ExpressionUUID->"ffbb0c5a-42e1-43fa-b00e-fbd1167bcc81"],
+Cell[71360, 1517, 346, 9, 28, "Input",ExpressionUUID->"b68c28b1-390d-4e11-bf02-e99af307d723"],
+Cell[71709, 1528, 234, 4, 28, "Input",ExpressionUUID->"5894fa79-36f3-4950-a90e-e02be9581f8f"],
+Cell[71946, 1534, 529, 11, 28, "Input",ExpressionUUID->"f3690453-162f-4c6c-8828-7843d42eaa19"],
+Cell[72478, 1547, 234, 5, 28, "Input",ExpressionUUID->"00592a83-5a67-4eae-b706-9bac75f88449"],
+Cell[72715, 1554, 209, 4, 28, "Input",ExpressionUUID->"4b0d0f4c-bb21-42e3-bd4d-c901c4bea261"],
+Cell[72927, 1560, 996, 26, 143, "Input",ExpressionUUID->"7f4b6a14-683b-4f05-b6fa-5d2f9d3cff05"],
+Cell[73926, 1588, 16942, 412, 1093, "Input",ExpressionUUID->"8c8e2431-52ff-4e89-b5a1-6f79f7eed696"],
+Cell[90871, 2002, 980, 22, 48, "Input",ExpressionUUID->"f3db1e26-1581-406e-a061-507b95ca5f3c"],
+Cell[91854, 2026, 2358, 55, 257, "Input",ExpressionUUID->"7df9818f-7970-442a-ad5c-7bac674a6ed3"],
+Cell[94215, 2083, 322, 7, 28, "Input",ExpressionUUID->"7ba0b456-2053-4106-ac46-7ae287c61fb0"]
 }
 ]
 *)
