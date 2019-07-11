@@ -102,7 +102,7 @@ Module[{formattedanswer, formattedcorrectanswer, proof},
 					If[UnsameQ[Head[Interpreter["MathExpression"][answer]], Failure], 
 						formattedanswer:=removeProperFormat[Interpreter["MathExpression"][answer]];
 						formattedcorrectanswer=removeProperFormat[Interpreter["MathExpression"][correct]];
-						proof=TimeConstrained[FindEquationalProof[formattedanswer==formattedcorrectanswer , theorems[level]],1];
+						proof=TimeConstrained[FindEquationalProof[formattedanswer==formattedcorrectanswer , theorems[level]],10];
 							If[proof["Logic"]=="EquationalLogic", 
 								If[Complement[Query[Key[{"SubstitutionLemma", All}proof["ProofDataset"]["Statement"]]], theorems[level]]=={}, True, False],
 								False],
@@ -124,4 +124,17 @@ Module[{t},
 			equivalentAnswer[level, t, answer, correct]]	
 
 
-equivalentAnswer["algebra 1", 7, "1 1/4", "5/4"]
+checkforEquivlentanswers["What is cos(a+b)", 
+"cos(a)*cos(b)-sin(a)*sin(b)", 
+"cos(b)*cos(a)-sin(a)*sin(b)", "algebra 2"]
+
+
+checkforEquivlentanswers["What is the derivative of Power[x,6] at x=2", "181", "6*2^5", "algebra 1"]
+
+
+(* ::Message:: *)
+(*Set::setraw*)
+
+
+(* ::Message:: *)
+(*Set::setraw*)

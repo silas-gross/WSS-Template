@@ -11380,7 +11380,7 @@ Cell[BoxData[
 }, Open  ]]
 },
 WindowSize->{766, 772},
-WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+WindowMargins->{{-7, Automatic}, {Automatic, 0}},
 DockedCells->{
   Cell[
    TextData[{
@@ -11478,12 +11478,12 @@ Cell[224438, 4455, 166, 3, 53, "Subsection",ExpressionUUID->"fd6dcab9-0d98-41fe-
 Cell[224607, 4460, 739, 13, 100, "Text",ExpressionUUID->"e68bbfa6-0b99-4677-a56c-56478d258f03"],
 Cell[CellGroupData[{
 Cell[225371, 4477, 2439, 61, 162, "Input",ExpressionUUID->"1f39055f-ea5b-40cb-a145-444c98a80b1e"],
-Cell[227813, 4540, 6034, 163, 245, "Output",ExpressionUUID->"1b58e184-7133-4d7d-bfbc-a2a007397d71"]
+Cell[227813, 4540, 6034, 163, 239, "Output",ExpressionUUID->"1b58e184-7133-4d7d-bfbc-a2a007397d71"]
 }, Open  ]],
 Cell[233862, 4706, 198, 3, 34, "Text",ExpressionUUID->"2ded8b7d-10d0-41d4-99c8-13b4a8a5aca9"],
 Cell[CellGroupData[{
 Cell[234085, 4713, 1847, 47, 162, "Input",ExpressionUUID->"5366b6eb-bb72-44f1-b75c-969ce7628e9e"],
-Cell[235935, 4762, 4515, 123, 320, "Output",ExpressionUUID->"dab07c83-fba4-45db-8d9f-9a7bd31a0047"]
+Cell[235935, 4762, 4515, 123, 312, "Output",ExpressionUUID->"dab07c83-fba4-45db-8d9f-9a7bd31a0047"]
 }, Open  ]],
 Cell[240465, 4888, 494, 9, 78, "Text",ExpressionUUID->"a808c465-6a43-4730-9478-2fe75064ab1f"]
 }, Open  ]],
